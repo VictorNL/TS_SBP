@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_LIST_CANALESPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsListCanal2View1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsListCanal2View1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsListCanal2View1Iterator"
+          id="SbpSlsListCanal2View1">
+      <nodeDefinition DefName="vo.SbpSlsListCanal2View"
+                      Name="SbpSlsListCanal2View10">
+        <AttrNames>
+          <Item Value="IdCanal"/>
+          <Item Value="NomCanal"/>
+          <Item Value="Cantidad"/>
+          <Item Value="PartyNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

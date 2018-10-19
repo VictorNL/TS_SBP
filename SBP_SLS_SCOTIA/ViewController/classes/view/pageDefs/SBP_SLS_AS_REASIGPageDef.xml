@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_AS_REASIGPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsAsigReasReporteView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsAsigReasReporteView1Iterator"/>
+    <iterator Binds="SbpSlsAsigReasReporte2View1" RangeSize="-1"
+              DataControl="amSBPDataControl"
+              id="SbpSlsAsigReasReporte2View1Iterator"/>
+    <iterator Binds="SbpSlsAsigReasReporte3View1" RangeSize="-1"
+              DataControl="amSBPDataControl"
+              id="SbpSlsAsigReasReporte3View1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsAsigReasReporteView1Iterator"
+          id="SbpSlsAsigReasReporteView1">
+      <nodeDefinition DefName="vo.SbpSlsAsigReasReporteView"
+                      Name="SbpSlsAsigReasReporteView10">
+        <AttrNames>
+          <Item Value="UsuarioEjecucion"/>
+          <Item Value="UsuarioEjecucionPerfil"/>
+          <Item Value="Perfil"/>
+          <Item Value="CampaniaId"/>
+          <Item Value="CampaniaNombre"/>
+          <Item Value="CanalId"/>
+          <Item Value="CanalNombre"/>
+          <Item Value="JefeCanalId"/>
+          <Item Value="JefeCanalNombre"/>
+          <Item Value="SupervisorId"/>
+          <Item Value="SupervisorNombre"/>
+          <Item Value="EjecutivoId"/>
+          <Item Value="EjecutivoNombre"/>
+          <Item Value="Fecha"/>
+          <Item Value="CantidadAsignada"/>
+          <Item Value="CantidadReasignada"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <pivotTable IterBinding="SbpSlsAsigReasReporteView1Iterator"
+                id="SbpSlsAsigReasReporteView11"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap>
+        <columns>
+          <item value="Fecha" itemLabel="Fecha" label="Fecha"/>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM" itemLabel="xxx">
+            <item label="Asignación" value="CantidadAsignada"/>
+            <item label="Reasignación" value="CantidadReasignada"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="CampaniaNombre" itemLabel="Campaña" label="CampaniaNombre"/>
+          <item value="CanalNombre" itemLabel="Vendor" label="CanalNombre"/>
+          <item value="JefeCanalNombre" itemLabel="Jefe Canal" label="JefeCanalNombre"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+    <tree IterBinding="SbpSlsAsigReasReporte2View1Iterator"
+          id="SbpSlsAsigReasReporte2View1">
+      <nodeDefinition DefName="vo.SbpSlsAsigReasReporte2View"
+                      Name="SbpSlsAsigReasReporte2View10">
+        <AttrNames>
+          <Item Value="IdTbl"/>
+          <Item Value="UsuarioEjecucion"/>
+          <Item Value="UsuarioEjecucionPerfil"/>
+          <Item Value="Perfil"/>
+          <Item Value="CampaniaId"/>
+          <Item Value="CampaniaNombre"/>
+          <Item Value="CanalId"/>
+          <Item Value="CanalNombre"/>
+          <Item Value="JefeCanalId"/>
+          <Item Value="JefeCanalNombre"/>
+          <Item Value="SupervisorId"/>
+          <Item Value="SupervisorNombre"/>
+          <Item Value="EjecutivoId"/>
+          <Item Value="EjecutivoNombre"/>
+          <Item Value="Fecha"/>
+          <Item Value="CantidadAsignada"/>
+          <Item Value="CantidadReasignada"/>
+          <Item Value="RowID"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <pivotTable IterBinding="SbpSlsAsigReasReporte2View1Iterator"
+                id="SbpSlsAsigReasReporte2View11"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap>
+        <columns>
+          <item value="Fecha" itemLabel="Fecha" label="Fecha"/>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item label="Asignación" value="CantidadAsignada"/>
+            <item label="Reasignación" value="CantidadReasignada"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="CampaniaNombre" label="CampaniaNombre"
+                itemLabel="Campaña"/>
+          <item value="CanalNombre" label="CanalNombre" itemLabel="Canal"/>
+          <item value="JefeCanalNombre" label="JefeCanalNombre"
+                itemLabel="Jefe Canal"/>
+          <item value="SupervisorNombre" label="SupervisorNombre"
+                itemLabel="Supervisor"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+    <tree IterBinding="SbpSlsAsigReasReporte3View1Iterator"
+          id="SbpSlsAsigReasReporte3View1">
+      <nodeDefinition DefName="vo.SbpSlsAsigReasReporte3View"
+                      Name="SbpSlsAsigReasReporte3View10">
+        <AttrNames>
+          <Item Value="IdTbl"/>
+          <Item Value="UsuarioEjecucion"/>
+          <Item Value="UsuarioEjecucionPerfil"/>
+          <Item Value="Perfil"/>
+          <Item Value="CampaniaId"/>
+          <Item Value="CampaniaNombre"/>
+          <Item Value="CanalId"/>
+          <Item Value="CanalNombre"/>
+          <Item Value="JefeCanalId"/>
+          <Item Value="JefeCanalNombre"/>
+          <Item Value="SupervisorId"/>
+          <Item Value="SupervisorNombre"/>
+          <Item Value="EjecutivoId"/>
+          <Item Value="EjecutivoNombre"/>
+          <Item Value="Fecha"/>
+          <Item Value="CantidadAsignada"/>
+          <Item Value="CantidadReasignada"/>
+          <Item Value="RowID"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <pivotTable IterBinding="SbpSlsAsigReasReporte3View1Iterator"
+                id="SbpSlsAsigReasReporte3View11"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap>
+        <columns>
+          <item value="Fecha" itemLabel="Fecha>" label="Fecha"/>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item label="Asignación" value="CantidadAsignada"/>
+            <item label="Reasignación" value="CantidadReasignada"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="CampaniaNombre" itemLabel="Campania"
+                label="CampaniaNombre"/>
+          <item value="CanalNombre" itemLabel="Canal" label="CanalNombre"/>
+          <item value="SupervisorNombre" itemLabel="Supervisor"
+                label="SupervisorNombre"/>
+          <item value="EjecutivoNombre" itemLabel="Ejecutivo"
+                label="EjecutivoNombre"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+  </bindings>
+</pageDefinition>

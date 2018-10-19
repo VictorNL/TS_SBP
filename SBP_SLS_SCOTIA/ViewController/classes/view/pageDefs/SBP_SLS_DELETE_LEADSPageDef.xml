@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_DELETE_LEADSPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsDeleteLoteView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsDeleteLoteView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsDeleteLoteView1Iterator"
+          id="SbpSlsDeleteLoteView1">
+      <nodeDefinition DefName="vo.SbpSlsDeleteLoteView"
+                      Name="SbpSlsDeleteLoteView10">
+        <AttrNames>
+          <Item Value="IdCarga"/>
+          <Item Value="FecCarga"/>
+          <Item Value="Usuario"/>
+          <Item Value="CantLead"/>
+          <Item Value="Estado"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

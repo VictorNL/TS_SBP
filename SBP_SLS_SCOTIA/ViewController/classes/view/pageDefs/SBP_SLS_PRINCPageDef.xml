@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_PRINCPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EvoLpSctView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="EvoLpSctView1Iterator"/>
+    <iterator Binds="SbpSlsListEvXSupView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsListEvXSupView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="NomCampania">
+      <AttrNames>
+        <Item Value="NomCampania"/>
+      </AttrNames>
+    </attributeValues>
+    <button IterBinding="EvoLpSctView1Iterator" id="Estado"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Estado"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
+    <methodAction id="url" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="url" IsViewObjectMethod="true"
+                  DataControl="amSBPDataControl"
+                  InstanceName="amSBPDataControl.EvoLpSctView1"
+                  IterBinding="EvoLpSctView1Iterator">
+      <NamedData NDName="cpgId" NDType="java.lang.String"
+                 NDValue="#{bindings.CodCampania.inputValue}"/>
+    </methodAction>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="PeriodoCpg">
+      <AttrNames>
+        <Item Value="PeriodoCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="CodCampania">
+      <AttrNames>
+        <Item Value="CodCampania"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="FecIni">
+      <AttrNames>
+        <Item Value="FecIni"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="FecFin">
+      <AttrNames>
+        <Item Value="FecFin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="CantOpp">
+      <AttrNames>
+        <Item Value="CantOpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="CantOfertas">
+      <AttrNames>
+        <Item Value="CantOfertas"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="ProductoBase">
+      <AttrNames>
+        <Item Value="ProductoBase"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="Estado1">
+      <AttrNames>
+        <Item Value="Estado"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EvoLpSctView1Iterator" id="Asignado">
+      <AttrNames>
+        <Item Value="Asignado"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="SbpSlsListEvXSupView1Iterator"
+          id="SbpSlsListEvXSupView1">
+      <nodeDefinition DefName="vo.SbpSlsListEvXSupView"
+                      Name="SbpSlsListEvXSupView10">
+        <AttrNames>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup"/>
+          <Item Value="IdEjVenta"/>
+          <Item Value="NomEjVenta"/>
+          <Item Value="Cantidad"/>
+          <Item Value="CantLeadGest"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

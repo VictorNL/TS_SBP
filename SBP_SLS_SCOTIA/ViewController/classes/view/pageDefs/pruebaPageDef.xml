@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="pruebaPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="testVO1" RangeSize="25" DataControl="amSBPDataControl"
+              id="testVO1Iterator"/>
+    <iterator Binds="SbpSlsProd1VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd1VO1Iterator"/>
+    <iterator Binds="SbpSlsProd2VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd2VO1Iterator"/>
+    <iterator Binds="SbpSlsProd3VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd3VO1Iterator"/>
+    <iterator Binds="SbpSlsAsigEvXSupFilView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsAsigEvXSupFilView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="testVO1Iterator" id="CreateInsert"
+            InstanceName="amSBPDataControl.testVO1"
+            DataControl="amSBPDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <list IterBinding="SbpSlsProd1VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProd1VO1Iterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="SbpSlsProd2VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProd2VO1Iterator" id="CreateInsert2"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="SbpSlsProd3VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin2" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProd3VO1Iterator" id="CreateInsert3"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <tree IterBinding="SbpSlsAsigEvXSupFilView1Iterator"
+          id="SbpSlsAsigEvXSupFilView1">
+      <nodeDefinition DefName="vo.SbpSlsAsigEvXSupFilView"
+                      Name="SbpSlsAsigEvXSupFilView10">
+        <AttrNames>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup"/>
+          <Item Value="IdEjVenta"/>
+          <Item Value="NomEjVenta"/>
+          <Item Value="Cantidad"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

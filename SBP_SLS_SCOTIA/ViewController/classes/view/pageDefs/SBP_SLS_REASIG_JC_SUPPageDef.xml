@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_REASIG_JC_SUPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsListSupXJcReasignView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsListSupXJcReasignView1Iterator"/>
+    <searchRegion Binds="SbpSlsListSupXJcReasignView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SbpSlsListSupXJcReasignView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsListSupXJcReasignView1Iterator"
+          id="SbpSlsListSupXJcReasignView1">
+      <nodeDefinition DefName="vo.SbpSlsListSupXJcReasignView"
+                      Name="SbpSlsListSupXJcReasignView10">
+        <AttrNames>
+          <Item Value="IdCanal"/>
+          <Item Value="NomCanal"/>
+          <Item Value="IdJefCanal"/>
+          <Item Value="JefCanal"/>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup"/>
+          <Item Value="Cantidad"/>
+          <Item Value="IdTbl"/>
+          <Item Value="PorcQuitar"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="SbpSlsListSupXJcReasignView1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="amSBPDataControl"/>
+  </bindings>
+</pageDefinition>

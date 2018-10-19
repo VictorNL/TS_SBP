@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_CONF_CPG_SPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <iterator Binds="SbpSlsLeadDosifVView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsLeadDosifVView1Iterator"/>
+    <iterator Binds="SbpSlsProdMaestroVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProdMaestroVO1Iterator"/>
+    <iterator Binds="SbpSlsProdMaestro2_1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProdMaestro2_1Iterator"/>
+    <iterator Binds="SbpSlsProdMaestro3VO1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsProdMaestro3VO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsLeadDosifVView1Iterator"
+          id="SbpSlsLeadDosifVView1">
+      <nodeDefinition DefName="vo.SbpSlsLeadDosifVView"
+                      Name="SbpSlsLeadDosifVView10">
+        <AttrNames>
+          <Item Value="IdCampania"/>
+          <Item Value="NombreCampania"/>
+          <Item Value="IdCanal"/>
+          <Item Value="NombreCanal"/>
+          <Item Value="IdSupervisor"/>
+          <Item Value="NombreSupervisor"/>
+          <Item Value="IdEjecutivo"/>
+          <Item Value="NombreEjecutivo"/>
+          <Item Value="CantLeadBolsa"/>
+          <Item Value="PorcAsignado"/>
+          <Item Value="Cantidad"/>
+          <Item Value="PorcRep"/>
+          <Item Value="CalcRepetidos"/>
+          <Item Value="CalcNuevos"/>
+          <Item Value="Total"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="SbpSlsProdMaestroVO1Iterator" StaticList="false"
+          Uses="LOV_binDesc" id="binDesc" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProdMaestroVO1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="SbpSlsProdMaestro2_1Iterator" StaticList="false"
+          Uses="LOV_binDesc" id="binDesc1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProdMaestro2_1Iterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="SbpSlsProdMaestro3VO1Iterator" StaticList="false"
+          Uses="LOV_binDesc" id="binDesc2" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProdMaestro3VO1Iterator" id="CreateInsert2"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

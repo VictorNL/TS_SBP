@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="SBP_SLS_VENTAS_X_EV_OBSPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsVentasObsEvVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsVentasObsEvVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsVentasObsEvVO1Iterator" id="SbpSlsVentasObsEvVO1">
+      <nodeDefinition DefName="vo.SbpSlsVentasObsEvVO"
+                      Name="SbpSlsVentasObsEvVO10">
+        <AttrNames>
+          <Item Value="idEjVenta"/>
+          <Item Value="ejVenta"/>
+          <Item Value="dni"/>
+          <Item Value="producto"/>
+          <Item Value="monto"/>
+          <Item Value="telf"/>
+          <Item Value="leadName"/>
+          <Item Value="idLead"/>
+          <Item Value="estado"/>
+          <Item Value="motivoObs"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

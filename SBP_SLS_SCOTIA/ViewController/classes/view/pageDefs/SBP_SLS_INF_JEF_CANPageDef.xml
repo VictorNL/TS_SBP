@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_INF_JEF_CANPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsInfJefCanView1" RangeSize="-1"
+              DataControl="amSBPDataControl" id="SbpSlsInfJefCanView1Iterator"/>
+  </executables>
+  <bindings>
+    <pivotTable IterBinding="SbpSlsInfJefCanView1Iterator"
+                id="SbpSlsInfJefCanView11"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap>
+        <columns>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="Cantleadejventa" label="Cantidad Leads/Ejecutivo"/>
+            <item value="CantVentEjVenta" label="Cantidad Ventas/Ejecutivo"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="Nomcpg" label="Nomcpg" itemLabel="Campaña"/>
+          <item value="Cantleadcpg" label="Cantleadcpg"
+                itemLabel="Leads/Campaña"/>
+          <item value="Nomsup" label="Nomsup" itemLabel="Supervisor"/>
+          <item value="Cantleadsup" label="Cantleadsup"
+                itemLabel="Leads/Supervisor"/>
+          <item value="Nomejventa" label="Nomejventa"
+                itemLabel="Ejecutivo Venta"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+    <tree IterBinding="SbpSlsInfJefCanView1Iterator" id="SbpSlsInfJefCanView1">
+      <nodeDefinition DefName="vo.SbpSlsInfJefCanView"
+                      Name="SbpSlsInfJefCanView10">
+        <AttrNames>
+          <Item Value="Nomcpg"/>
+          <Item Value="Cantleadcpg"/>
+          <Item Value="Idsup"/>
+          <Item Value="Nomsup"/>
+          <Item Value="Cantleadsup"/>
+          <Item Value="Idejventa"/>
+          <Item Value="Nomejventa"/>
+          <Item Value="Cantleadejventa"/>
+          <Item Value="IdTbl"/>
+          <Item Value="IdCpg"/>
+          <Item Value="CantVentEjVenta"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

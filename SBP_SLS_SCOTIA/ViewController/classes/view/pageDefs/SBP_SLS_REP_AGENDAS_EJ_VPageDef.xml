@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_REP_AGENDAS_EJ_VPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsRepAgendaEjVenta1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsRepAgendaEjVenta1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsRepAgendaEjVenta1Iterator"
+          id="SbpSlsRepAgendaEjVenta1">
+      <nodeDefinition DefName="vo.SbpSlsRepAgendaEjVenta"
+                      Name="SbpSlsRepAgendaEjVenta10">
+        <AttrNames>
+          <Item Value="idEjVenta"/>
+          <Item Value="ejVenta"/>
+          <Item Value="idLead"/>
+          <Item Value="dni"/>
+          <Item Value="producto"/>
+          <Item Value="monto"/>
+          <Item Value="telf"/>
+          <Item Value="fecha2daLlam"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
