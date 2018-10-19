@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.f1}"
+               usesUpload="true">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox id="pb0" text="Mantenimiento de Cargas">
+              <af:inputText label="Usuario" id="txtUsu" binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.txtUsu}" visible="false"/>
+              <af:panelBox id="pb1" text="Carga Masiva">
+                <af:panelFormLayout>
+                <af:inputText label="Cantidad de registros por grupo : "
+                              id="txtCxg"
+                              binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.txtCxg}"
+                              converter="org.apache.myfaces.trinidad.Number"
+                              immediate="true" readOnly="true"/>
+                <af:inputText label="Maximo de hilos en paralelo : "
+                              id="txtPll"
+                              converter="org.apache.myfaces.trinidad.Number"
+                              binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.txtPll}"
+                              readOnly="true"/>
+                <af:inputFile label="Archivo : " 
+                              id="if1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.if1}"
+                              value="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.file}"
+                              maximumFiles="1"/>
+                </af:panelFormLayout>
+                <af:commandButton text="Cargar Contactos" id="cbCargarContactos" actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.processFileUploadContactoCsv}"/>
+                <af:commandButton text="Cargar Leads" id="cbCargarLeads" actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.processFileUploadLead}"/>
+                <af:commandButton text="Sincronizar contactos" id="cbSincronizar"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.cbSincronizar_click}"/>
+              </af:panelBox>
+              <af:panelBox id="pb2" text="Mantenimiento" styleClass="AFStretchWidth">
+                <af:panelFormLayout id="pflMan">
+                  <af:inputDate id="idIni" label="Fecha Inicio" binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.idIni}">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputDate>
+                  <af:inputDate id="idFin" label="Fecha Fin" binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.idFin}">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputDate>
+                  <af:inputText id="itIdL" label="Lote : " binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.itIdL}">
+                    <af:convertNumber type="number" pattern="#########" />
+                  </af:inputText>
+                  <af:commandButton id="cbBuscar" text="Buscar" actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.cbBuscar_click}"/>
+                </af:panelFormLayout>
+                <af:table value="#{bindings.SbpSlsCmView1.collectionModel}"
+                          var="row" 
+                          rows="#{bindings.SbpSlsCmView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsCmView1.viewable ? 'No hay informacion a mostrar.' : 'Acceso denegado.'}"
+                          fetchSize="#{bindings.SbpSlsCmView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectionListener="#{bindings.SbpSlsCmView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="tCM"
+                          binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.tcM}"
+                          styleClass="AFStretchWidth" columnStretching="last">
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.IdLote.name}"
+                             headerText="LOTE"
+                             id="cLot">
+                    <af:outputText value="#{row.IdLote}" id="itLot" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.IdGrupo.name}"
+                             headerText="GRUPO"
+                             id="cGru">
+                    <af:outputText value="#{row.IdGrupo}" id="itGru" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.FechaCargaS.name}"
+                             headerText="FECHA CARGA"
+                             id="cFec">
+                    <af:outputText value="#{row.FechaCargaS}" id="idFec" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.TipoCarga.name}"
+                             headerText="TIPO"
+                             id="cTip" 
+                             visible="false">
+                    <af:outputText value="#{row.TipoCarga}" id="itTip" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.DescripcionCarga.name}"
+                             headerText="CARGA"
+                             id="cDCa">
+                    <af:outputText value="#{row.DescripcionCarga}" id="itDCa" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.IdCargaSbp.name}"
+                             headerText="ID JOB SBP"
+                             id="cSBP">
+                    <af:outputText value="#{row.IdCargaSbp}" id="itSBP" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.UsuarioCarga.name}"
+                             filterable="true" sortable="true"
+                             headerText="USUARIO"
+                             id="cUsr">
+                    <af:outputText value="#{row.UsuarioCarga}" id="itUsr" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.Cantidad.name}"
+                             headerText="CANTIDAD"
+                             id="cCan">
+                    <af:outputText value="#{row.Cantidad}" id="itCan" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.Estado.name}"
+                             headerText="ESTADO"
+                             id="cEst">
+                    <af:outputText value="#{row.Estado}" id="itEst" />
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.Observaciones.name}"
+                             headerText="OBSERVACIONES"
+                             id="cObs">
+                    <af:outputText value="#{row.Observaciones}" id="itObs" />
+                  </af:column>
+                  <af:column id="cRee">
+                    <af:commandButton id="cbReenviar" 
+                                      text="Reenviar"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.cbReenviar_click}" 
+                                      visible="#{row.Estado eq 'Completed' ? false : (row.Estado eq 'Rechazado' ? false : true)}">
+                    </af:commandButton>
+                  </af:column>
+                  <af:column id="cEli">
+                    <af:commandButton id="cbEliminar" text="Eliminar"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.cbEliminar_click}" >
+                    </af:commandButton>
+                  </af:column>
+                </af:table>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+        <af:popup id="pMensaje" autoCancel="disabled" binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.pmensaje}">
+          <af:panelWindow id="pwMensaje" modal="true" resize="on" styleClass="AFStretchWidth">
+            <af:panelGroupLayout id="pglMensaje" layout="horizontal" styleClass="AFStretchWidth">
+              <af:outputLabel id="olMensaje" value="-Mensaje-" binding="#{backingBeanScope.backing_SBP_SLS_CARGA_MASIVA.olMensaje}"/>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

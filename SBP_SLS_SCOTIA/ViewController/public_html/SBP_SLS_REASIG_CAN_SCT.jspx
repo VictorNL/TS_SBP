@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:group id="g1">
+              <af:panelBox text="Reasignación de Leads" id="pb1">
+                <af:commandButton text="Volver" id="cb1"
+                                  action="SBP_SLS_LIST_CANALES"/>
+                <af:panelCollection id="pc1" styleClass="AFStretchWidth" featuresOff="viewMenu detach formatMenu">
+                  <f:facet name="toolbar">
+                    <af:toolbar id="t2">
+                      <af:commandButton text="Asignar"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.cb2}"
+                                        id="cb2"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.confimAsig}"/>
+                    </af:toolbar>
+                  </f:facet>
+                  <af:table value="#{bindings.SbpSlsCanalView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsCanalView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsCanalView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsCanalView1.rangeSize}"
+                            rowBandingInterval="0"
+                            queryListener="#{bindings.SbpSlsCanalView1Query.processQuery}"
+                            varStatus="vs"
+                            selectedRowKeys="#{bindings.SbpSlsCanalView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsCanalView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1"
+                            columnStretching="last" styleClass="AFStretchWidth"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.tblCan}"
+                            filterModel="#{bindings.SbpSlsCanalView1Query.queryDescriptor}">
+                    <af:column sortProperty="#{bindings.SbpSlsCanalView1.hints.IdCanal.name}"
+                               filterable="true" sortable="true"
+                               headerText="idCanal" id="c3" width="124"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdCanal.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.IdCanal.label}"
+                                    required="#{bindings.SbpSlsCanalView1.hints.IdCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.IdCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.IdCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.IdCanal.tooltip}"
+                                    id="it2" autoSubmit="true">
+                        <f:validator binding="#{row.bindings.IdCanal.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsCanalView1.hints.IdCanal.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsCanalView1.hints.NomCanal.name}"
+                               filterable="true" sortable="true"
+                               headerText="Canal" id="c5" width="122">
+                      <af:inputText value="#{row.bindings.NomCanal.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.NomCanal.label}"
+                                    required="#{bindings.SbpSlsCanalView1.hints.NomCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.NomCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.NomCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.NomCanal.tooltip}"
+                                    id="it5" readOnly="true">
+                        <f:validator binding="#{row.bindings.NomCanal.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsCanalView1.hints.IdTbl.name}"
+                               sortable="true" headerText="idTbl" id="c1"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdTbl.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.IdTbl.label}"
+                                    required="#{bindings.SbpSlsCanalView1.hints.IdTbl.mandatory}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.IdTbl.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.IdTbl.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.IdTbl.tooltip}"
+                                    id="it4">
+                        <f:validator binding="#{row.bindings.IdTbl.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsCanalView1.hints.IdTbl.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column headerText="Party Number" id="c6"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.PartyNumber.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.PartyNumber.label}"
+                                    required="#{bindings.SbpSlsCanalView1.hints.PartyNumber.mandatory}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.PartyNumber.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.PartyNumber.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.PartyNumber.tooltip}"
+                                    id="it6">
+                        <f:validator binding="#{row.bindings.PartyNumber.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsCanalView1.hints.Cantidad.name}"
+                               sortable="false"
+                               headerText="Cantidad"
+                               id="c2">
+                      <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.Cantidad.label}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.Cantidad.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.Cantidad.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.Cantidad.tooltip}"
+                                    id="it1" partialTriggers="it3"
+                                    autoSubmit="true"
+                                    converter="org.apache.myfaces.trinidad.Number"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.txtCantidad}"
+                                    required="true">
+                        <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsCanalView1.hints.PorcAsig.name}"
+                               sortable="false"
+                               headerText="% Asignado"
+                               id="c4">
+                      <af:inputText value="#{row.bindings.PorcAsig.inputValue}"
+                                    label="#{bindings.SbpSlsCanalView1.hints.PorcAsig.label}"
+                                    columns="#{bindings.SbpSlsCanalView1.hints.PorcAsig.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsCanalView1.hints.PorcAsig.precision}"
+                                    shortDesc="#{bindings.SbpSlsCanalView1.hints.PorcAsig.tooltip}"
+                                    id="it3"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.txtPorc}"
+                                    partialTriggers="it1" autoSubmit="true"
+                                    required="true"/>
+                    </af:column>
+                  </af:table>
+                </af:panelCollection>
+                <af:popup id="p1"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.popConfirm}"
+                          autoCancel="disabled">
+                  <af:panelWindow id="pw1" modal="true">
+                    <af:panelGroupLayout id="pgl7">
+                      <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                           inlineStyle="width:322px;">
+                        <af:outputLabel value="cantAsig" id="ol6"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.txtCantAsig}"/>
+                      </af:panelGroupLayout>
+                      <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                           inlineStyle="width:314px;">
+                        <af:commandButton text="Si" id="cb5"
+                                          actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.aceptarAsig}"/>
+                        <af:commandButton text="No" id="cb6"
+                                          actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.cancelarAsig}"/>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                  </af:panelWindow>
+                </af:popup>
+              </af:panelBox>
+              <af:panelBox text="Totales:" id="pb2" styleClass="AFStretchWidth"
+                           inlineStyle="width:1611px;">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.pgl5}"
+                                     id="pgl5" styleClass="AFStretchWidth"
+                                     layout="horizontal">
+                  <af:panelGroupLayout id="pgl1"
+                                       layout="horizontal">
+                    <af:outputLabel value="Total:" id="ol4"/>
+                    <af:outputLabel value="Total:" id="ol2"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_REASIG_CAN_SCT.txtTotalLead}"/>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </af:panelBox>
+            </af:group>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

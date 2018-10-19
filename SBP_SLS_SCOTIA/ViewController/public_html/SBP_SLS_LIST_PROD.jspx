@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:panelBox text="PanelBox1"
+                         binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.pb1}"
+                         id="pb1">
+              <f:facet name="toolbar"/>
+              <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.pgl1}"
+                                   id="pgl1" styleClass="AFStretchWidth">
+                <af:panelFormLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.pfl1}"
+                                    id="pfl1" styleClass="AFStretchWidth">
+                  <af:outputLabel value="Productos"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.ol1}"
+                                  id="ol1"/>
+                  <af:panelGroupLayout id="pgl2" styleClass="AFStretchWidth">
+                    <af:commandButton text="Buscar" id="cb1"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.buscarProductos}"/>
+                  </af:panelGroupLayout>
+                </af:panelFormLayout>
+                <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+                  <f:facet name="menus"/>
+                  <f:facet name="toolbar"/>
+                  <f:facet name="statusbar"/>
+                  <af:table value="#{bindings.SbpSlsProdView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsProdView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsProdView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsProdView1.rangeSize}"
+                            rowBandingInterval="0"
+                            filterModel="#{bindings.SbpSlsProdView1Query.queryDescriptor}"
+                            queryListener="#{bindings.SbpSlsProdView1Query.processQuery}"
+                            filterVisible="true" varStatus="vs"
+                            selectedRowKeys="#{bindings.SbpSlsProdView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsProdView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1"
+                            columnStretching="last" styleClass="AFStretchWidth"
+                            binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.tblProd}">
+                    <af:column sortProperty="#{bindings.SbpSlsProdView1.hints.IdProd.name}"
+                               filterable="true" sortable="true"
+                               headerText="Id Prod" id="c3">
+                      <af:outputText value="#{row.IdProd}" id="ot3">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsProdView1.hints.IdProd.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsProdView1.hints.NomProd.name}"
+                               filterable="true" sortable="true"
+                               headerText="Nombre Producto" id="c2">
+                      <af:outputText value="#{row.NomProd}" id="ot2"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsProdView1.hints.IdSecProd.name}"
+                               filterable="true" sortable="true" headerText="id"
+                               id="c1">
+                      <af:outputText value="#{row.IdSecProd}" id="ot1">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsProdView1.hints.IdSecProd.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:panelCollection>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

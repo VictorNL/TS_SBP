@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_prueba.onBeforePhase}">
+    <af:document id="d1" binding="#{backingBeanScope.backing_prueba.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_prueba.f1}">
+        <af:panelBox text="Asignación de Leads - Filtros" id="pb1">
+          <af:outputLabel value="*Si no se selecciona ningún filtro, se traeán todos los leads disponibles" id="ol1"/>
+          <af:panelFormLayout id="pfl1" rows="2">
+            <af:selectOneChoice label="Estado Civil :" id="socEstCiv"
+                                binding="#{backingBeanScope.backing_prueba.cboEstCivil}">
+              <af:selectItem label="" value="" id="si22"/>
+              <af:selectItem label="Soltero" value="S" id="si2"/>
+              <af:selectItem label="Casado" value="C" id="si3"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice label="Genero :" id="socGenero" 
+                                binding="#{backingBeanScope.backing_prueba.cboGenero}">
+              <af:selectItem label="" value="" id="si26"/>
+              <af:selectItem label="Masculino" value="M" id="si6"/>
+              <af:selectItem label="Femenino" value="F" id="si5"/>
+            </af:selectOneChoice>
+            
+                        <af:selectOneChoice label="Condición laboral:" id="socDep" 
+                                binding="#{backingBeanScope.backing_prueba.cboCondLab}">
+              <af:selectItem label="" value="" id="si622"/>                  
+              <af:selectItem label="Dependiente" value="DEP" id="si62"/>
+              <af:selectItem label="Independiente" value="IND" id="si35"/>
+            </af:selectOneChoice>
+            
+            <af:selectOneChoice label="Residencia:" id="socLim" 
+                                binding="#{backingBeanScope.backing_prueba.cboRes}">
+              <af:selectItem label="" value="" id="si64232"/>                  
+              <af:selectItem label="Lima" value="L" id="si6232"/>
+              <af:selectItem label="Provincia" value="P" id="si335"/>
+            </af:selectOneChoice>
+            
+            <af:selectOneChoice label="Contactabilidad :" value="0" id="soc3"
+                                binding="#{backingBeanScope.backing_prueba.cboCont}">
+                                <af:selectItem label="" value="" id="con2t1"/>
+              <af:selectItem label="G1" value="G1" id="cont1"/>
+              <af:selectItem label="G2" value="G2" id="cont2"/>
+              <af:selectItem label="G3" value="G3" id="cont3"/>
+            </af:selectOneChoice>
+                    <af:selectOneChoice label="Club Sueldo :" id="clSueldo" 
+                                binding="#{backingBeanScope.backing_prueba.ckCluSueldo}">
+              <af:selectItem label="" value="" id="s2i26"/>
+              <af:selectItem label="Si" value="Y" id="s3i6"/>
+              <af:selectItem label="No" value="N" id="s4i5"/>
+            </af:selectOneChoice>
+            <af:inputText label="Edad desde:" id="it1"
+                          binding="#{backingBeanScope.backing_prueba.txtEdadDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Edad hasta:" id="it2"
+                          binding="#{backingBeanScope.backing_prueba.txtEdadHasta}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Propensión desde:" id="it3"
+                          binding="#{backingBeanScope.backing_prueba.txtPropDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Propensión hasta:" id="it4"
+                          binding="#{backingBeanScope.backing_prueba.txtPropHasta}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Décil desde:" id="it5"
+                          binding="#{backingBeanScope.backing_prueba.txtDecilDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Décil hasta:" id="it6"
+                          binding="#{backingBeanScope.backing_prueba.txtDecilHasta}"
+                          contentStyle="width:80px;"/>
+            <af:selectOneChoice value="#{bindings.descBin.inputValue}"
+                                id="soc1" label="Bin 01:"
+                                binding="#{backingBeanScope.backing_prueba.cboBin01}">
+              <f:selectItems value="#{bindings.descBin.items}" id="si1"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.descBin1.inputValue}"
+                                id="soc2" label="Bin 02:"
+                                binding="#{backingBeanScope.backing_prueba.cboBin02}">
+              <f:selectItems value="#{bindings.descBin1.items}" id="si4"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.descBin2.inputValue}"
+                                id="soc4" label="Bin 03:"
+                                binding="#{backingBeanScope.backing_prueba.cboBin03}">
+              <f:selectItems value="#{bindings.descBin2.items}" id="si7"/>
+            </af:selectOneChoice>
+          </af:panelFormLayout>
+          <af:panelGroupLayout id="pgl4" layout="vertical">
+            <af:spacer width="10" height="20" id="s1"/>
+            <af:commandButton text="Consultar" id="cb21"
+                              actionListener="#{backingBeanScope.backing_prueba.consultarLeads}"/>
+            <af:spacer width="10" height="20" id="s3"/>
+            <af:inputText label="Cantidad de Leads:" id="it7" readOnly="true"
+                          binding="#{backingBeanScope.backing_prueba.txtCantLeads}"/>
+          </af:panelGroupLayout>
+        </af:panelBox>
+        <af:panelGroupLayout id="pgl2" layout="horizontal">
+          <af:inputText label="Cantidad a asignar:" id="it9"
+                        binding="#{backingBeanScope.backing_prueba.txtCantAsignar}"/>
+          <af:commandButton text="Aplicar" id="cb7"
+                            actionListener="#{backingBeanScope.backing_prueba.aplicarCant}"/>
+        </af:panelGroupLayout>
+        <af:panelGroupLayout id="pgl3" layout="horizontal">
+          <af:commandButton text="Asignar Leads" id="cb5"
+                            actionListener="#{backingBeanScope.backing_prueba.asignarLeads}"
+                            binding="#{backingBeanScope.backing_prueba.btnAsignar}"/>
+          <af:commandButton text="limpiar memoria" id="cb1"
+                            actionListener="#{backingBeanScope.backing_prueba.limpiar}"
+                            visible="false"/>
+        </af:panelGroupLayout>
+        <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+          <af:spacer width="10" height="20" id="s2"/>
+          <af:commandButton
+                            text="CreateInsert1"
+                            disabled="#{!bindings.CreateInsert1.enabled}"
+                            id="cb2"
+                            action="#{backingBeanScope.backing_prueba.createInsert1}"
+                            visible="false"/>
+          <af:commandButton
+                            text="CreateInsert2"
+                            disabled="#{!bindings.CreateInsert2.enabled}"
+                            id="cb3"
+                            action="#{backingBeanScope.backing_prueba.createInsert2}"
+                            visible="false"/>
+          <af:commandButton
+                            text="CreateInsert3"
+                            disabled="#{!bindings.CreateInsert3.enabled}"
+                            id="cb4"
+                            action="#{backingBeanScope.backing_prueba.createInsert3}"
+                            visible="false"/>
+          <af:table value="#{bindings.SbpSlsAsigEvXSupFilView1.collectionModel}"
+                    var="row"
+                    rows="#{bindings.SbpSlsAsigEvXSupFilView1.rangeSize}"
+                    emptyText="#{bindings.SbpSlsAsigEvXSupFilView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    fetchSize="#{bindings.SbpSlsAsigEvXSupFilView1.rangeSize}"
+                    rowBandingInterval="0"
+                    selectedRowKeys="#{bindings.SbpSlsAsigEvXSupFilView1.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.SbpSlsAsigEvXSupFilView1.collectionModel.makeCurrent}"
+                    rowSelection="single" id="t1" styleClass="AFStretchWidth"
+                    columnStretching="last"
+                    binding="#{backingBeanScope.backing_prueba.tblEjVenta}">
+            <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupFilView1.hints.IdSup.name}"
+                       sortable="false" headerText="idSup" id="c2"
+                       visible="false">
+              <af:outputText value="#{row.IdSup}" id="ot2">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsAsigEvXSupFilView1.hints.IdSup.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupFilView1.hints.NomSup.name}"
+                       sortable="false" headerText="Supervisor" id="c3">
+              <af:outputText value="#{row.NomSup}" id="ot5"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupFilView1.hints.IdEjVenta.name}"
+                       sortable="false" headerText="idEjVenta" id="c4"
+                       visible="false">
+              <af:outputText value="#{row.IdEjVenta}" id="ot4">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsAsigEvXSupFilView1.hints.IdEjVenta.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupFilView1.hints.NomEjVenta.name}"
+                       sortable="false" headerText="Ejecutivo Venta" id="c1">
+              <af:outputText value="#{row.NomEjVenta}" id="ot3"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupFilView1.hints.Cantidad.name}"
+                       headerText="Cantidad"
+                       id="c5">
+              <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                            label="#{bindings.SbpSlsAsigEvXSupFilView1.hints.Cantidad.label}"
+                            columns="#{bindings.SbpSlsAsigEvXSupFilView1.hints.Cantidad.displayWidth}"
+                            maximumLength="#{bindings.SbpSlsAsigEvXSupFilView1.hints.Cantidad.precision}"
+                            id="it8">
+                <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsAsigEvXSupFilView1.hints.Cantidad.format}"/>
+              </af:inputText>
+            </af:column>
+          </af:table>
+        </af:panelGroupLayout>
+      </af:form>
+      <af:resource type="javascript" source="/timer.js"/>
+    </af:document>
+  </f:view>
+</jsp:root>

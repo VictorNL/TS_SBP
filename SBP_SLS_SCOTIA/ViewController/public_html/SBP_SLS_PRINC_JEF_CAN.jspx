@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelStretchLayout id="psl1" startWidth="10px" endWidth="10px"
+                                   topHeight="10px" bottomHeight="10px"
+                                   styleClass="AFStretchWidth"
+                                   dimensionsFrom="parent">
+              <f:facet name="center">
+                <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl2">
+                    <af:commandButton text="Procesar" id="cb1"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.procesar}"
+                                      visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl3" styleClass="AFStretchWidth">
+                    <af:panelFormLayout id="pfl1" rows="2" maxColumns="2">
+                      <af:inputText value="#{bindings.CodCampania.inputValue}"
+                                    label="cpgId"
+                                    required="#{bindings.CodCampania.hints.mandatory}"
+                                    columns="#{bindings.CodCampania.hints.displayWidth}"
+                                    maximumLength="#{bindings.CodCampania.hints.precision}"
+                                    shortDesc="#{bindings.CodCampania.hints.tooltip}"
+                                    id="it3"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtCodCpg}"
+                                    visible="false">
+                        <f:validator binding="#{bindings.CodCampania.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.NomCampania.inputValue}"
+                                    label="Campaña"
+                                    required="#{bindings.NomCampania.hints.mandatory}"
+                                    columns="#{bindings.NomCampania.hints.displayWidth}"
+                                    maximumLength="#{bindings.NomCampania.hints.precision}"
+                                    shortDesc="#{bindings.NomCampania.hints.tooltip}"
+                                    id="it10"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtNomCpg}">
+                        <f:validator binding="#{bindings.NomCampania.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.PeriodoCpg.inputValue}"
+                                    label="Periodo"
+                                    required="#{bindings.PeriodoCpg.hints.mandatory}"
+                                    columns="#{bindings.PeriodoCpg.hints.displayWidth}"
+                                    maximumLength="#{bindings.PeriodoCpg.hints.precision}"
+                                    shortDesc="#{bindings.PeriodoCpg.hints.tooltip}"
+                                    id="it8"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtPeriodo}">
+                        <f:validator binding="#{bindings.PeriodoCpg.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.FecIni.inputValue}"
+                                    label="Fecha inicio"
+                                    required="#{bindings.FecIni.hints.mandatory}"
+                                    columns="#{bindings.FecIni.hints.displayWidth}"
+                                    maximumLength="#{bindings.FecIni.hints.precision}"
+                                    shortDesc="#{bindings.FecIni.hints.tooltip}"
+                                    id="it9"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtFecIni}">
+                        <f:validator binding="#{bindings.FecIni.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.FecFin.inputValue}"
+                                    label="Fecha fin"
+                                    required="#{bindings.FecFin.hints.mandatory}"
+                                    columns="#{bindings.FecFin.hints.displayWidth}"
+                                    maximumLength="#{bindings.FecFin.hints.precision}"
+                                    shortDesc="#{bindings.FecFin.hints.tooltip}"
+                                    id="it7"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtFecFin}">
+                        <f:validator binding="#{bindings.FecFin.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.Asignado.inputValue}"
+                                    label="% Asignado"
+                                    required="#{bindings.Asignado.hints.mandatory}"
+                                    columns="#{bindings.Asignado.hints.displayWidth}"
+                                    maximumLength="#{bindings.Asignado.hints.precision}"
+                                    shortDesc="#{bindings.Asignado.hints.tooltip}"
+                                    id="it1"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtAsig}">
+                        <f:validator binding="#{bindings.Asignado.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.NomProd.inputValue}"
+                                    label="Producto"
+                                    required="#{bindings.NomProd.hints.mandatory}"
+                                    columns="#{bindings.NomProd.hints.displayWidth}"
+                                    maximumLength="#{bindings.NomProd.hints.precision}"
+                                    shortDesc="#{bindings.NomProd.hints.tooltip}"
+                                    id="it2"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtProd}">
+                        <f:validator binding="#{bindings.NomProd.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.CantOfertas.inputValue}"
+                                    label="Cantidad Ofertas Total"
+                                    required="#{bindings.CantOfertas.hints.mandatory}"
+                                    columns="#{bindings.CantOfertas.hints.displayWidth}"
+                                    maximumLength="#{bindings.CantOfertas.hints.precision}"
+                                    shortDesc="#{bindings.CantOfertas.hints.tooltip}"
+                                    id="it6"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtCantOfTot}">
+                        <f:validator binding="#{bindings.CantOfertas.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.Estado.inputValue}"
+                                    label="Activa"
+                                    required="#{bindings.Estado.hints.mandatory}"
+                                    columns="#{bindings.Estado.hints.displayWidth}"
+                                    maximumLength="#{bindings.Estado.hints.precision}"
+                                    shortDesc="#{bindings.Estado.hints.tooltip}"
+                                    id="it11"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtEstado}">
+                        <f:validator binding="#{bindings.Estado.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.CantOpp.inputValue}"
+                                    label="Cantidad Leads Asignados"
+                                    required="#{bindings.CantOpp.hints.mandatory}"
+                                    columns="#{bindings.CantOpp.hints.displayWidth}"
+                                    maximumLength="#{bindings.CantOpp.hints.precision}"
+                                    shortDesc="#{bindings.CantOpp.hints.tooltip}"
+                                    id="it5"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtCantLead}">
+                        <f:validator binding="#{bindings.CantOpp.validator}"/>
+                      </af:inputText>
+                    </af:panelFormLayout>
+                    <af:inputText label="usuario" id="it12"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtUserName}"
+                                  visible="false"/>
+                    <af:inputText label="campaña" id="it13"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.txtCpgId}"
+                                  visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl4" styleClass="AFStretchWidth">
+                    <af:table value="#{bindings.SbpSlsListSupXJcView1.collectionModel}"
+                              var="row"
+                              rows="#{bindings.SbpSlsListSupXJcView1.rangeSize}"
+                              emptyText="#{bindings.SbpSlsListSupXJcView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.SbpSlsListSupXJcView1.rangeSize}"
+                              rowBandingInterval="0" id="t1"
+                              columnStretching="last"
+                              styleClass="AFStretchWidth"
+                              binding="#{backingBeanScope.backing_SBP_SLS_PRINC_JEF_CAN.tblJefxSup}">
+                      <af:column sortProperty="#{bindings.SbpSlsListSupXJcView1.hints.IdJefCanal.name}"
+                                 sortable="false" headerText="idJefCan" id="c2"
+                                 visible="false">
+                        <af:outputText value="#{row.IdJefCanal}" id="ot3">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListSupXJcView1.hints.IdJefCanal.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListSupXJcView1.hints.JefCanal.name}"
+                                 sortable="false" headerText="Jefe Canal"
+                                 id="c4">
+                        <af:outputText value="#{row.JefCanal}" id="ot4"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListSupXJcView1.hints.IdSup.name}"
+                                 sortable="false" headerText="idSup" id="c1"
+                                 visible="false">
+                        <af:outputText value="#{row.IdSup}" id="ot2">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListSupXJcView1.hints.IdSup.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListSupXJcView1.hints.NomSup.name}"
+                                 sortable="false" headerText="Supervisor"
+                                 id="c5">
+                        <af:outputText value="#{row.NomSup}" id="ot1"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListSupXJcView1.hints.Cantidad.name}"
+                                 sortable="false" headerText="Cantidad" id="c3">
+                        <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                      label="#{bindings.SbpSlsListSupXJcView1.hints.Cantidad.label}"
+                                      columns="#{bindings.SbpSlsListSupXJcView1.hints.Cantidad.displayWidth}"
+                                      shortDesc="#{bindings.SbpSlsListSupXJcView1.hints.Cantidad.tooltip}"
+                                      id="it4" readOnly="true"
+                                      converter="org.apache.myfaces.trinidad.Number"
+                                      immediate="true"/>
+                      </af:column>
+                    </af:table>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

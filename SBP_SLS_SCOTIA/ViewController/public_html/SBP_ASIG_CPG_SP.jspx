@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.m1}"
+                   id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:group id="g1">
+              <af:panelBox text="Asignación de Leads" id="pb1">
+                <af:panelCollection id="pc1" styleClass="AFStretchWidth"
+                featuresOff="viewMenu detach">
+                  <f:facet name="toolbar">
+                    <af:toolbar id="t3">
+                      <af:commandButton text="Asignar" id="cb5"
+                                        actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.confAsig}"/>
+                                        
+                    <af:commandButton text="Grabar Archivo" id="cb51"
+                                      actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.confGrabArch}"/>
+                    </af:toolbar>
+                  </f:facet>
+                  <af:table value="#{bindings.SbpSlsAsigJcSupView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsAsigJcSupView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsAsigJcSupView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsAsigJcSupView1.rangeSize}"
+                            rowBandingInterval="0"
+                            selectedRowKeys="#{bindings.SbpSlsAsigJcSupView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsAsigJcSupView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t4"
+                            columnStretching="last"
+                            inlineStyle="height: 400px;"
+                            styleClass="AFStretchWidth"
+                            binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.tblSup}">
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.name}"
+                               sortable="false" headerText="idCanal" id="c22"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdCanal.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.tooltip}"
+                                    id="it12">
+                        <f:validator binding="#{row.bindings.IdCanal.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigJcSupView1.hints.IdCanal.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.name}"
+                               sortable="false" headerText="Vendor" id="c19"
+                               width="150">
+                      <af:inputText value="#{row.bindings.NomCanal.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.NomCanal.tooltip}"
+                                    id="it18" readOnly="true">
+                        <f:validator binding="#{row.bindings.NomCanal.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.name}"
+                               sortable="false" headerText="idSup" id="c18"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdSup.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.tooltip}"
+                                    id="it15">
+                        <f:validator binding="#{row.bindings.IdSup.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigJcSupView1.hints.IdSup.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.name}"
+                               sortable="false" headerText="Supervisor"
+                               id="c15" width="150">
+                      <af:inputText value="#{row.bindings.NomSup.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.NomSup.tooltip}"
+                                    id="it16" readOnly="true">
+                        <f:validator binding="#{row.bindings.NomSup.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.Cantidad.name}"
+                               sortable="false" headerText="Cantidad" id="c21"
+                               width="150">
+                      <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.Cantidad.label}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.Cantidad.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.Cantidad.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.Cantidad.tooltip}"
+                                    id="it13" partialTriggers="it19"
+                                    autoSubmit="true"
+                                    binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtCantidad}"
+                                    required="true"
+                                    converter="org.apache.myfaces.trinidad.Number">
+                        <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.PorcAsig.name}"
+                               sortable="false" headerText="% Asignado"
+                               id="c20">
+                      <af:inputText value="#{row.bindings.PorcAsig.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.PorcAsig.label}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.PorcAsig.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.PorcAsig.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.PorcAsig.tooltip}"
+                                    id="it19" partialTriggers="it13"
+                                    autoSubmit="true"
+                                    binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtPorc}"
+                                    required="true">
+                        <f:validator binding="#{row.bindings.PorcAsig.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.name}"
+                               sortable="false" headerText="idTbl" id="c17"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdTbl.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.tooltip}"
+                                    id="it14">
+                        <f:validator binding="#{row.bindings.IdTbl.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigJcSupView1.hints.IdTbl.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.name}"
+                               sortable="false" headerText="partyNumber"
+                               id="c16" visible="false">
+                      <af:inputText value="#{row.bindings.PartyNumber.inputValue}"
+                                    label="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.label}"
+                                    required="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigJcSupView1.hints.PartyNumber.tooltip}"
+                                    id="it17">
+                        <f:validator binding="#{row.bindings.PartyNumber.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                  </af:table>
+                </af:panelCollection>
+                <af:popup id="p1"
+                          binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.popupConfirmar}"
+                          autoCancel="disabled">
+                  <af:panelWindow id="pw1" modal="true" title="Confirmación para Enviar Asignación">
+                    <af:panelGroupLayout id="pgl3">
+                      <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                           inlineStyle="width:309px;">
+                        <af:outputLabel value="cantAsig" id="ol7"
+                                        binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtCantAsig}"/>
+                      </af:panelGroupLayout>
+                      <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                           inlineStyle="width:228px;">
+                        <af:commandButton text="Si" id="cb3"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.aceptarAsign}"/>
+                        <af:commandButton text="No" id="cb4"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.cancelarAsig}"/>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                  </af:panelWindow>
+                </af:popup>
+		        <af:popup id="p11"
+                          autoCancel="disabled">
+                          
+                  <af:panelWindow id="pw11" modal="true" title="Confirmación para Grabar Asignación">
+                    <af:panelGroupLayout id="pgl13">
+                      <af:panelGroupLayout id="pgl17" layout="horizontal"
+                                           inlineStyle="width:309px;">
+                        <af:outputLabel value="cantAsig" id="ol17"/>
+                      </af:panelGroupLayout>
+                      
+                      
+                  
+                      
+                      
+                      <af:panelGroupLayout id="pgl81" layout="horizontal"
+                                           inlineStyle="width:228px;">
+                        <af:commandButton text="Si" id="cb31"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.aceptarGrabArch}"/>
+                        <af:commandButton text="No" id="cb41"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.cancelarGrabArch}"/>
+                      </af:panelGroupLayout>
+                      
+                      
+                    </af:panelGroupLayout>
+                  </af:panelWindow>
+                  
+                  
+                  
+                  
+                </af:popup>
+                
+              </af:panelBox>
+              <af:panelStretchLayout binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.psl1}"
+                                     id="psl1" startWidth="10px" endWidth="10px"
+                                     topHeight="10px" bottomHeight="10px"
+                                     visible="false">
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                  <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.pgl1}"
+                                       id="pgl1" styleClass="AFStretchWidth">
+                    <af:panelSplitter binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.ps1}"
+                                      id="ps1" orientation="vertical"
+                                      splitterPosition="83"
+                                      styleClass="AFStretchWidth">
+                      <f:facet name="first">
+                        <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.pgl2}"
+                                             id="pgl2"
+                                             styleClass="AFStretchWidth">
+                          <af:outputLabel value="Asignación de Oportunidades:"
+                                          binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.ol1}"
+                                          id="ol1"/>
+                          <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.pgl4}"
+                                               id="pgl4" layout="horizontal"
+                                               styleClass="AFStretchWidth">
+                            <af:commandButton text="+"
+                                              disabled="#{!bindings.CreateInsert1.enabled}"
+                                              id="cb2"
+                                              action="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.agregar}"/>
+                            <af:commandButton text="Guardar"
+                                              binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.cb1}"
+                                              id="cb1"
+                                              action="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.guardar}"/>
+                            <af:commandButton text="eliminar" id="cb7"
+                                              actionListener="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.eliminar}"/>
+                          </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                      </f:facet>
+                      <f:facet name="second">
+                        <af:panelGroupLayout layout="scroll"
+                                             xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                             id="pgl5">
+                          <af:table value="#{bindings.SbpSlsAsigCpgSpView1.collectionModel}"
+                                    var="row"
+                                    rows="#{bindings.SbpSlsAsigCpgSpView1.rangeSize}"
+                                    emptyText="#{bindings.SbpSlsAsigCpgSpView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    fetchSize="#{bindings.SbpSlsAsigCpgSpView1.rangeSize}"
+                                    rowBandingInterval="0"
+                                    filterModel="#{bindings.SbpSlsAsigCpgSpView1Query.queryDescriptor}"
+                                    queryListener="#{bindings.SbpSlsAsigCpgSpView1Query.processQuery}" varStatus="vs"
+                                    selectedRowKeys="#{bindings.SbpSlsAsigCpgSpView1.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.SbpSlsAsigCpgSpView1.collectionModel.makeCurrent}"
+                                    rowSelection="single" id="t1"
+                                    partialTriggers="::cb2"
+                                    columnStretching="last"
+                                    styleClass="AFStretchWidth"
+                                    disableColumnReordering="true"
+                                    inlineStyle="height: 400px;">
+                            <af:column headerText="Id" id="c2">
+                              <af:outputText value="#{row.bindings.IdUsuarioPrm.inputValue}"
+                                             id="ot1" partialTriggers="soc1">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.SbpSlsAsigCpgSpView1.hints.IdUsuarioPrm.format}"/>
+                              </af:outputText>
+                            </af:column>
+                            <af:column headerText="Nombre" id="c4">
+                              <af:selectOneChoice value="#{row.bindings.NomUsuarioPrm.inputValue}"
+                                                  label="#{row.bindings.NomUsuarioPrm.label}"
+                                                  required="#{bindings.SbpSlsAsigCpgSpView1.hints.NomUsuarioPrm.mandatory}"
+                                                  shortDesc="#{bindings.SbpSlsAsigCpgSpView1.hints.NomUsuarioPrm.tooltip}"
+                                                  id="soc1">
+                                <f:selectItems value="#{row.bindings.NomUsuarioPrm.items}"
+                                               id="si1"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.name}"
+                                       sortable="true" headerText="% Asignado"
+                                       id="c3" filterable="true">
+                              <af:inputText value="#{row.bindings.PorcAsignado.inputValue}"
+                                            label="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.label}"
+                                            required="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.mandatory}"
+                                            columns="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.displayWidth}"
+                                            maximumLength="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.precision}"
+                                            shortDesc="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.tooltip}"
+                                            id="it2" autoSubmit="true"
+                                            partialTriggers="it3">
+                                <f:validator binding="#{row.bindings.PorcAsignado.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.SbpSlsAsigCpgSpView1.hints.PorcAsignado.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column sortProperty="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.name}"
+                                       sortable="true" headerText="Cantidad"
+                                       id="c1">
+                              <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                            label="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.label}"
+                                            required="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.mandatory}"
+                                            columns="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.displayWidth}"
+                                            maximumLength="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.precision}"
+                                            shortDesc="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.tooltip}"
+                                            id="it3" autoSubmit="true"
+                                            partialTriggers="it2">
+                                <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.SbpSlsAsigCpgSpView1.hints.Cantidad.format}"/>
+                              </af:inputText>
+                            </af:column>
+                            <af:column id="c5">
+                              <af:selectBooleanCheckbox value="#{row.bindings.eliminarFila.inputValue}"
+                                                        label="#{row.bindings.eliminarFila.label}"
+                                                        shortDesc="#{bindings.SbpSlsAsigCpgSpView1.hints.eliminarFila.tooltip}"
+                                                        id="sbc1"/>
+                            </af:column>
+                          </af:table>
+                        </af:panelGroupLayout>
+                      </f:facet>
+                    </af:panelSplitter>
+                  </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top"/>
+              </af:panelStretchLayout>
+              <af:panelBox text="Totales:" id="pb2" styleClass="AFStretchWidth"
+                           inlineStyle="width:1602px;">
+                <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                     styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl9" layout="horizontal">
+                    <af:outputLabel value="Total:" id="ol5"/>
+                    <af:outputLabel value="Total:" id="ol2"
+                                    binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtTotalLead}"/>
+                  </af:panelGroupLayout>
+                  <af:inputText label="Usuario:" id="it11"
+                                binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtUserName}"
+                                visible="false"/>
+                  <af:inputText label="Label 2" id="it10"
+                                binding="#{backingBeanScope.backing_SBP_ASIG_CPG_SP.txtCpgId}"
+                                visible="false"/>
+                </af:panelGroupLayout>
+              </af:panelBox>
+            </af:group>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

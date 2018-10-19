@@ -1,0 +1,51 @@
+.mycss1{
+    color: rgb(0,82,255);
+    font-size: 16px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.mycss2{
+    color: Red;
+    font-size: 22px;
+    font-family: 'Times New Roman', 'Arial Black', times, Serif;
+    font-weight: bold;
+}
+
+.mycss3{
+    color: rgb(0,181,0);
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background: transparent ;
+}
+
+.fancyArrowNext
+{
+        background :  rgb(115,115,115) !important;
+ height: 20px;
+ position: relative;
+ width: 100px;
+        text-align: left;
+         font: 10pt bold;
+         color:white;
+         border: thin solid rgb(99,99,99) ;
+        
+
+}
+
+.fancyArrowPrev
+{
+        background :  rgb(115,115,115) !important;
+ height: 20px;
+ position: relative;
+ width: 100px;
+        text-align: right;
+         font: 10pt bold;
+         color:white;
+         border: thin solid rgb(99,99,99) ;
+}
+
+
+
+

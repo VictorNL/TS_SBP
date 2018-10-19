@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_CREATE_CPG.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_CREATE_CPG.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:panelBox id="pb1">
+              <f:facet name="toolbar"/>
+              <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                <af:panelFormLayout id="pfl1" rows="1"
+                                    styleClass="AFStretchWidth">
+                  <af:outputLabel value="Creación de Campañas" id="ol1"
+                                  inlineStyle="font-size:x-large;"/>
+                </af:panelFormLayout>
+                <af:panelFormLayout id="pfl2" styleClass="AFStretchWidth"
+                                    inlineStyle="height: 400px;">
+                  <af:inputText label="id" id="it4"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtId}"
+                                visible="false"/>
+                  <af:inputText value="#{bindings.NomCampania.inputValue}"
+                                label="Nombre Campaña"
+                                required="#{bindings.NomCampania.hints.mandatory}"
+                                columns="#{bindings.NomCampania.hints.displayWidth}"
+                                maximumLength="#{bindings.NomCampania.hints.precision}"
+                                shortDesc="#{bindings.NomCampania.hints.tooltip}"
+                                id="it1"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtNomCpg}">
+                    <f:validator binding="#{bindings.NomCampania.validator}"/>
+                  </af:inputText>
+                  <af:inputComboboxListOfValues id="productoBaseId"
+                                                popupTitle="Search and Select: #{bindings.ProductoBase.hints.label}"
+                                                value="#{bindings.ProductoBase.inputValue}"
+                                                label="Producto Base"
+                                                model="#{bindings.ProductoBase.listOfValuesModel}"
+                                                required="#{bindings.ProductoBase.hints.mandatory}"
+                                                columns="#{bindings.ProductoBase.hints.displayWidth}"
+                                                shortDesc="#{bindings.ProductoBase.hints.tooltip}"
+                                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.cboProdBas}">
+                    <f:validator binding="#{bindings.ProductoBase.validator}"/>
+                  </af:inputComboboxListOfValues>
+                  <af:inputText value="#{bindings.Asignado.inputValue}"
+                                label="Porcentaje Asignado"
+                                required="#{bindings.Asignado.hints.mandatory}"
+                                columns="#{bindings.Asignado.hints.displayWidth}"
+                                maximumLength="#{bindings.Asignado.hints.precision}"
+                                shortDesc="#{bindings.Asignado.hints.tooltip}"
+                                id="it2"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtPorcAsig}">
+                    <f:validator binding="#{bindings.Asignado.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.Asignado.format}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.FecIni.inputValue}"
+                                label="Fecha inicio"
+                                required="#{bindings.FecIni.hints.mandatory}"
+                                shortDesc="#{bindings.FecIni.hints.tooltip}"
+                                id="id2"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtFechaIni}">
+                    <f:validator binding="#{bindings.FecIni.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.FecIni.format}"/>
+                  </af:inputDate>
+                  <af:inputDate value="#{bindings.FecFin.inputValue}"
+                                label="Fecha fin"
+                                required="#{bindings.FecFin.hints.mandatory}"
+                                shortDesc="#{bindings.FecFin.hints.tooltip}"
+                                id="id1"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtFechaFin}">
+                    <f:validator binding="#{bindings.FecFin.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.FecFin.format}"/>
+                  </af:inputDate>
+                  <af:inputText value="#{bindings.CantOfertas.inputValue}"
+                                label="Cantidad de Ofertas"
+                                required="#{bindings.CantOfertas.hints.mandatory}"
+                                columns="#{bindings.CantOfertas.hints.displayWidth}"
+                                maximumLength="#{bindings.CantOfertas.hints.precision}"
+                                shortDesc="#{bindings.CantOfertas.hints.tooltip}"
+                                id="it3"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtCantOf}">
+                    <f:validator binding="#{bindings.CantOfertas.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.CantOfertas.format}"/>
+                  </af:inputText>
+                  <af:inputText label="Object Name" id="it5"
+                                value="CampanaSBP_c" visible="false"
+                                binding="#{backingBeanScope.backing_SBP_CREATE_CPG.txtObjectName}"/>
+                  <af:panelGroupLayout id="pgl2" layout="horizontal">
+                    <af:commandButton text="Guardar y Continuar" id="cb1"
+                                      actionListener="#{backingBeanScope.backing_SBP_CREATE_CPG.crearCampania}"
+                                      action="SBP_SLS_PRINC"/>
+                    <af:commandButton text="Guardar y Cerrar" id="cb3"
+                                      actionListener="#{backingBeanScope.backing_SBP_CREATE_CPG.crearCpg}"
+                                      action="SBP_LIST_CAMP"/>
+                    <af:commandButton text="Cancelar" id="cb2"
+                                      actionListener="#{bindings.Delete.execute}"
+                                      disabled="#{!bindings.Delete.enabled}"
+                                      action="SBP_LIST_CAMP"/>
+                  </af:panelGroupLayout>
+                </af:panelFormLayout>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

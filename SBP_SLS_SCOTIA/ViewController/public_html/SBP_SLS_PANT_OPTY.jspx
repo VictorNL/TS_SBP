@@ -1,0 +1,1220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:group id="g1">
+              <af:panelStretchLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.psl1}"
+                                     id="psl1" startWidth="10px" endWidth="10px"
+                                     topHeight="10px" bottomHeight="10px"
+                                     dimensionsFrom="children">
+                <f:facet name="center">
+                  <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pgl1}"
+                                       id="pgl1" styleClass="AFStretchWidth"
+                                       layout="scroll">
+                    <af:outputLabel value="Pantalla de Oportunidades" id="ol7"
+                                    inlineStyle="font-size:x-large;"/>
+                    <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pgl2}"
+                                         id="pgl2">
+                      <af:commandButton text="Buscar"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.cb1}"
+                                        id="cb1"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.buscarDatos}"/>
+                      <af:commandButton text="Crear Feedback" id="cb4"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.crearFb}"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pgl3}"
+                                         id="pgl3" styleClass="AFStretchWidth">
+                      <af:outputLabel value="Contacto"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.ol1}"
+                                      id="ol1"/>
+                      <af:panelCollection binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pc1}"
+                                          id="pc1"
+                                          styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb1.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb1.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb1.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb1Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb1Query.processQuery}" varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb1.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t1"
+                                  columnStretching="last"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl}"
+                                  styleClass="AFStretchWidth"
+                                  autoHeightRows="1"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.CodTipDoc.name}"
+                                     sortable="true"
+                                     headerText="Codigo Tipo Documento"
+                                     id="c1" width="103">
+                            <af:outputText value="#{row.CodTipDoc}" id="ot1"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.TipoDocumento.name}"
+                                     sortable="false"
+                                     headerText="Tipo de Documento"
+                                     id="c2" width="107">
+                            <af:outputText value="#{row.TipoDocumento}"
+                                           id="ot2"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.NumeroDni.name}"
+                                     sortable="false" headerText="DNI" id="c3"
+                                     width="105">
+                            <af:outputText value="#{row.NumeroDni}" id="ot3"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.Nombre.name}"
+                                     sortable="false" headerText="Nombre"
+                                     id="c4" width="105">
+                            <af:outputText value="#{row.Nombre}" id="ot4"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.SegundoNombre.name}"
+                                     sortable="false"
+                                     headerText="Segundo Nombre" id="c5"
+                                     width="105">
+                            <af:outputText value="#{row.SegundoNombre}"
+                                           id="ot5"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.ApellidoPaterno.name}"
+                                     sortable="false"
+                                     headerText="Apellido Paterno"
+                                     id="c6" width="105">
+                            <af:outputText value="#{row.ApellidoPaterno}"
+                                           id="ot6"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.ApellidoMaterno.name}"
+                                     sortable="false"
+                                     headerText="Apellido Materno"
+                                     id="c7" width="105">
+                            <af:outputText value="#{row.ApellidoMaterno}"
+                                           id="ot7"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.Edad.name}"
+                                     sortable="false" headerText="Edad" id="c8"
+                                     width="105">
+                            <af:outputText value="#{row.Edad}" id="ot8"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.Genero.name}"
+                                     sortable="false" headerText="Sexo" id="c9"
+                                     width="105">
+                            <af:outputText value="#{row.Genero}" id="ot9"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb1.hints.EstadoCivil.name}"
+                                     sortable="false" headerText="Estado Civil"
+                                     id="c10" width="564">
+                            <af:outputText value="#{row.EstadoCivil}"
+                                           id="ot10"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pgl5}"
+                                         id="pgl5" styleClass="AFStretchWidth">
+                      <af:outputLabel value="Teléfonos"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.ol3}"
+                                      id="ol3"/>
+                      <af:panelCollection binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pc3}"
+                                          id="pc3" styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb2.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb2.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb2.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb2Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb2Query.processQuery}"
+                                  varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb2.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb2.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t3"
+                                  columnStretching="last"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl2}"
+                                  styleClass="AFStretchWidth" autoHeightRows="1"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Telefono01.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Teléfono 01" id="c35"
+                                     width="137">
+                            <af:panelGroupLayout id="pgl11">
+                              <af:outputText value="#{row.Telefono01}"
+                                             id="ot32"/>
+                              <af:commandButton text="+" id="cb2"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar}"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarTelf01}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Telefono02.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Teléfono 02" id="c33"
+                                     width="167">
+                            <af:panelGroupLayout id="pgl12">
+                              <af:outputText value="#{row.Telefono02}"
+                                             id="ot38"/>
+                              <af:commandButton text="+" id="cb3"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarTelefono2}"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar2}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Telefono03.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Teléfono 03" id="c38"
+                                     width="127">
+                            <af:panelGroupLayout id="pgl14">
+                              <af:outputText value="#{row.Telefono03}"
+                                             id="ot36"/>
+                              <af:commandButton text="+" id="cb5"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarTelefono3}"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar3}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Celular01.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Celular 01" id="c34"
+                                     width="140">
+                            <af:panelGroupLayout id="pgl13">
+                              <af:outputText value="#{row.Celular01}"
+                                             id="ot33"/>
+                              <af:commandButton text="+" id="cb6"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarCelular1}"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar4}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Celular02.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Celular 02" id="c31"
+                                     width="109">
+                            <af:panelGroupLayout id="pgl15">
+                              <af:outputText value="#{row.Celular02}"
+                                             id="ot34"/>
+                              <af:commandButton text="+" id="cb7"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarCelular2}"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar5}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Celular03.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Celular 03" id="c28"
+                                     width="113">
+                            <af:panelGroupLayout id="pgl16">
+                              <af:outputText value="#{row.Celular03}"
+                                             id="ot30"/>
+                              <af:commandButton text="+" id="cb8"
+                                                actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.agregarCelular3}"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.btnAgregar6}"/>
+                            </af:panelGroupLayout>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.ProvContacto.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Provincia del Contacto"
+                                     id="c30" width="112">
+                            <af:outputText value="#{row.ProvContacto}"
+                                           id="ot29"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.DistContacto.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Distrito del Contacto" id="c37"
+                                     width="46">
+                            <af:outputText value="#{row.DistContacto}"
+                                           id="ot28"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.Direccion.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Dirección del Contacto"
+                                     id="c29" width="115">
+                            <af:outputText value="#{row.Direccion}" id="ot37"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.PaisContacto.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="País del Contacto" id="c32"
+                                     width="115">
+                            <af:outputText value="#{row.PaisContacto}"
+                                           id="ot35"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb2.hints.DeptCont.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Departamento del Contacto"
+                                     id="c36" width="424">
+                            <af:outputText value="#{row.DeptCont}" id="ot31"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl8" styleClass="AFStretchWidth">
+                      <af:panelCollection id="pc6" styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb5.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb5.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb5.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb5Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb5Query.processQuery}"
+                                  varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb5.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb5.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t6"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl5}"
+                                  styleClass="AFStretchWidth"
+                                  columnStretching="last" autoHeightRows="1"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.MonOpty.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Moneda opty" id="c61"
+                                     width="105">
+                            <af:outputText value="#{row.MonOpty}" id="ot61"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.NomOpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Nombre opty" id="c59"
+                                     width="104">
+                            <af:outputText value="#{row.NomOpp}" id="ot59"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.IdOpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Id_opty" id="c60" width="106">
+                            <af:outputText value="#{row.IdOpp}" id="ot60">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.CpgOptyProdContAccFb5.hints.IdOpp.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.NomProd.name}"
+                                     sortable="false"
+                                     headerText="Nombre Producto" id="c62"
+                                     width="105">
+                            <af:outputText value="#{row.NomProd}" id="ot62"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.MontoMinimo.name}"
+                                     sortable="false" headerText="Monto Mínimo"
+                                     id="c63" width="105">
+                            <af:outputText value="#{row.MontoMinimo}"
+                                           id="ot63"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.PlazoMaximo.name}"
+                                     sortable="false" headerText="Plazo Máximo"
+                                     id="c64" width="105">
+                            <af:outputText value="#{row.PlazoMaximo}"
+                                           id="ot64"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.MontoMaximo.name}"
+                                     sortable="false" headerText="Monto Máximo"
+                                     id="c65" width="105">
+                            <af:outputText value="#{row.MontoMaximo}"
+                                           id="ot65"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.PlazoMinimo.name}"
+                                     sortable="false" headerText="Plazo Mínimo"
+                                     id="c66" width="105">
+                            <af:outputText value="#{row.PlazoMinimo}"
+                                           id="ot66"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.Teamax.name}"
+                                     sortable="false" headerText="TEA Max"
+                                     id="c68" width="105">
+                            <af:outputText value="#{row.Teamax}" id="ot69"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.Tceamax.name}"
+                                     sortable="false" headerText="TCEA Max"
+                                     id="c69" width="105">
+                            <af:outputText value="#{row.Tceamax}" id="ot68"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.Tceamin.name}"
+                                     sortable="false" headerText="TCEA Min"
+                                     id="c70" width="105">
+                            <af:outputText value="#{row.Tceamin}" id="ot70"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.Cuota.name}"
+                                     sortable="false" headerText="Cuota"
+                                     id="c71" width="105">
+                            <af:outputText value="#{row.Cuota}" id="ot71"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.OrganizationName.name}"
+                                     sortable="false"
+                                     headerText="Nombre Empresa" id="c88"
+                                     width="105">
+                            <af:outputText value="#{row.OrganizationName}"
+                                           id="ot93"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.Ruc.name}"
+                                     sortable="false" headerText="RUC" id="c89"
+                                     width="105">
+                            <af:outputText value="#{row.Ruc}" id="ot94"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.PaisEmp.name}"
+                                     sortable="false" headerText="País Empresa"
+                                     id="c90" width="48">
+                            <af:outputText value="#{row.PaisEmp}" id="ot92"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.DeptEmp.name}"
+                                     sortable="false"
+                                     headerText="Departamento Empresa" id="c91">
+                            <af:outputText value="#{row.DeptEmp}" id="ot91"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.ProvEmp.name}"
+                                     sortable="false"
+                                     headerText="Provincia Empresa" id="c92">
+                            <af:outputText value="#{row.ProvEmp}" id="ot90"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.DirEmp.name}"
+                                     sortable="false"
+                                     headerText="Dirección Empresa" id="c93">
+                            <af:outputText value="#{row.DirEmp}" id="ot89"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb5.hints.DistEmp.name}"
+                                     sortable="false"
+                                     headerText="Distrito Emprsa" id="c94">
+                            <af:outputText value="#{row.DistEmp}" id="ot88"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl9" styleClass="AFStretchWidth">
+                      <af:panelCollection id="pc8" styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb7.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb7.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb7.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb7.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb7Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb7Query.processQuery}"
+                                  varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb7.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb7.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t8"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl7}"
+                                  styleClass="AFStretchWidth"
+                                  columnStretching="last" autoHeightRows="1"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.Propension.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Propensión" id="c84">
+                            <af:outputText value="#{row.Propension}" id="ot84"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.Decil.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Décil" id="c86">
+                            <af:outputText value="#{row.Decil}" id="ot86"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.Flujo.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Flujo" id="c85">
+                            <af:outputText value="#{row.Flujo}" id="ot87"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.CodigoProducto.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Codigo Producto" id="c87">
+                            <af:outputText value="#{row.CodigoProducto}"
+                                           id="ot85"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.codCpg.name}"
+                                     sortable="false"
+                                     headerText="Codigo Campaña" id="c96">
+                            <af:outputText value="#{row.codCpg}" id="ot20">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.CpgOptyProdContAccFb7.hints.codCpg.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.cantOfertasCpg.name}"
+                                     sortable="false"
+                                     headerText="Cantidad Ofertas" id="c97">
+                            <af:outputText value="#{row.cantOfertasCpg}"
+                                           id="ot19"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.periodCpg.name}"
+                                     sortable="false"
+                                     headerText="Periodo Campaña" id="c98">
+                            <af:outputText value="#{row.periodCpg}" id="ot18"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.segCpg.name}"
+                                     sortable="false"
+                                     headerText="Segmento Campaña" id="c99">
+                            <af:outputText value="#{row.segCpg}" id="ot17"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.activoCpg.name}"
+                                     sortable="false" headerText="Activa"
+                                     id="c100">
+                            <af:outputText value="#{row.activoCpg}" id="ot16"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.codProdCpg.name}"
+                                     sortable="false"
+                                     headerText="Codigo Producto de Campaña"
+                                     id="c101">
+                            <af:outputText value="#{row.codProdCpg}" id="ot15">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.CpgOptyProdContAccFb7.hints.codProdCpg.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.porcAsigCpg.name}"
+                                     sortable="false" headerText="% Asignado"
+                                     id="c102">
+                            <af:outputText value="#{row.porcAsigCpg}"
+                                           id="ot14"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.fecIniCpg.name}"
+                                     sortable="false"
+                                     headerText="Fecha Inicio Campaña"
+                                     id="c103">
+                            <af:outputText value="#{row.fecIniCpg}" id="ot13"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.fecFinCpg.name}"
+                                     sortable="false"
+                                     headerText="Fecha Fin Campaña" id="c104">
+                            <af:outputText value="#{row.fecFinCpg}" id="ot12"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb7.hints.nomCpg.name}"
+                                     sortable="false"
+                                     headerText="Nombre Campaña" id="c105">
+                            <af:outputText value="#{row.nomCpg}" id="ot11"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl6" styleClass="AFStretchWidth">
+                      <af:panelCollection id="pc4"
+                                          styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb3.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb3.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb3.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb3Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb3Query.processQuery}" varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb3.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb3.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t4"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl3}"
+                                  styleClass="AFStretchWidth"
+                                  columnStretching="last" autoHeightRows="1"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.Sl01nom.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Sl01nom" id="c43">
+                            <af:outputText value="#{row.Sl01nom}" id="ot42"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.Cliente.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Cliente" id="c40">
+                            <af:outputText value="#{row.Cliente}" id="ot44"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.Email.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Email" id="c39">
+                            <af:outputText value="#{row.Email}" id="ot41"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.FecNacimiento.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Fecha Nacimiento" id="c41">
+                            <af:outputText value="#{row.FecNacimiento}"
+                                           id="ot43"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.FlagClubSueldo.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Club Sueldo" id="c45">
+                            <af:outputText value="#{row.FlagClubSueldo}"
+                                           id="ot45"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.FlagAutorizacion.name}" sortable="true"
+                                     headerText="Autorización" id="c46">
+                            <af:outputText value="#{row.FlagAutorizacion}"
+                                           id="ot40"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.SbsBaficaedpRccpp.name}"
+                                     sortable="true" headerText="SBS" id="c42">
+                            <af:outputText value="#{row.SbsBaficaedpRccpp}"
+                                           id="ot39"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb3.hints.TipoZonaCourier.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Zona Courier" id="c44">
+                            <af:outputText value="#{row.TipoZonaCourier}"
+                                           id="ot46"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl7" styleClass="AFStretchWidth">
+                      <af:panelCollection id="pc5"
+                                          styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb4.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb4.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb4.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb4Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb4Query.processQuery}" varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb4.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb4.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t5"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl4}"
+                                  styleClass="AFStretchWidth"
+                                  columnStretching="last" autoHeightRows="1"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco1DeuRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 1 deu rcctc" id="c52">
+                            <af:outputText value="#{row.Banco1DeuRcctc}"
+                                           id="ot58"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco1LinRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 1 lin rcctc" id="c51">
+                            <af:outputText value="#{row.Banco1LinRcctc}"
+                                           id="ot53"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco1DeudaRccpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 1 deuda rcctp" id="c53">
+                            <af:outputText value="#{row.Banco1DeudaRccpp}"
+                                           id="ot48"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco1NombreRccpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 1 nombre rcctp" id="c50">
+                            <af:outputText value="#{row.Banco1NombreRccpp}"
+                                           id="ot55"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco2DeuRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 2 deu rcctc" id="c49">
+                            <af:outputText value="#{row.Banco2DeuRcctc}"
+                                           id="ot50"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco2DeudaRccpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 2 deuda rcctp" id="c56">
+                            <af:outputText value="#{row.Banco2DeudaRccpp}"
+                                           id="ot54"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco2LinRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 2 lin rcctc" id="c57">
+                            <af:outputText value="#{row.Banco2LinRcctc}"
+                                           id="ot56"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco2NombreRccpp.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 2 nombre rcctp" id="c55">
+                            <af:outputText value="#{row.Banco2NombreRccpp}"
+                                           id="ot52"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco1NombreRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 1 nombre rcctc" id="c54">
+                            <af:outputText value="#{row.Banco1NombreRcctc}"
+                                           id="ot49"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.Banco2NombreRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Banco 2 nombre rcctc" id="c48">
+                            <af:outputText value="#{row.Banco2NombreRcctc}"
+                                           id="ot47"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.BaficaedpdeuRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="baficaedpdeu" id="c47">
+                            <af:outputText value="#{row.BaficaedpdeuRcctc}"
+                                           id="ot57"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb4.hints.BaficaedpLinRcctc.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="baficaedplin" id="c58">
+                            <af:outputText value="#{row.BaficaedpLinRcctc}"
+                                           id="ot51"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl10" styleClass="AFStretchWidth">
+                      <af:panelCollection id="pc7"
+                                          styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <f:facet name="statusbar"/>
+                        <af:table value="#{bindings.CpgOptyProdContAccFb6.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.CpgOptyProdContAccFb6.rangeSize}"
+                                  emptyText="#{bindings.CpgOptyProdContAccFb6.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.CpgOptyProdContAccFb6.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.CpgOptyProdContAccFb6Query.queryDescriptor}"
+                                  queryListener="#{bindings.CpgOptyProdContAccFb6Query.processQuery}" varStatus="vs"
+                                  selectedRowKeys="#{bindings.CpgOptyProdContAccFb6.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.CpgOptyProdContAccFb6.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t7"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl6}"
+                                  styleClass="AFStretchWidth"
+                                  columnStretching="last" autoHeightRows="1"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcNombrebin1.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc nombre bin1" id="c79">
+                            <af:outputText value="#{row.TcNombrebin1}"
+                                           id="ot72"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcNombrebin2.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc nombre bin2" id="c74">
+                            <af:outputText value="#{row.TcNombrebin2}"
+                                           id="ot78"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcNombrebin3.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc nombre bin3" id="c78">
+                            <af:outputText value="#{row.TcNombrebin3}"
+                                           id="ot73"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcNombrebin4.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc nombre bin4" id="c77">
+                            <af:outputText value="#{row.TcNombrebin4}"
+                                           id="ot74"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcPct1.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Pct1" id="c82">
+                            <af:outputText value="#{row.TcPct1}" id="ot77"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcPct2.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Pct2" id="c76">
+                            <af:outputText value="#{row.TcPct2}" id="ot81"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcPct3.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Pct3" id="c72">
+                            <af:outputText value="#{row.TcPct3}" id="ot79"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcPct4.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Pct4" id="c73">
+                            <af:outputText value="#{row.TcPct4}" id="ot75"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcTea1.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Tea1" id="c83">
+                            <af:outputText value="#{row.TcTea1}" id="ot80"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcTea2.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Tea 2" id="c81">
+                            <af:outputText value="#{row.TcTea2}" id="ot83"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcTea3.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Tea 3" id="c75">
+                            <af:outputText value="#{row.TcTea3}" id="ot82"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.CpgOptyProdContAccFb6.hints.TcTea4.name}"
+                                     filterable="true" sortable="true"
+                                     headerText="Tc Tea 4" id="c80">
+                            <af:outputText value="#{row.TcTea4}" id="ot76"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pgl4}"
+                                         id="pgl4" styleClass="AFStretchWidth">
+                      <af:outputLabel value="Feedback"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.ol2}"
+                                      id="ol2"/>
+                      <af:panelCollection binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.pc2}"
+                                          id="pc2"
+                                          styleClass="AFStretchWidth"
+                                          inlineStyle="height:150px;">
+                        <f:facet name="menus"/>
+                        <f:facet name="toolbar"/>
+                        <af:table value="#{bindings.FeedBackVo1.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.FeedBackVo1.rangeSize}"
+                                  emptyText="#{bindings.FeedBackVo1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.FeedBackVo1.rangeSize}"
+                                  rowBandingInterval="0"
+                                  filterModel="#{bindings.FeedBackVo1Query.queryDescriptor}"
+                                  queryListener="#{bindings.FeedBackVo1Query.processQuery}" varStatus="vs"
+                                  selectedRowKeys="#{bindings.FeedBackVo1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.FeedBackVo1.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t2"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.tblGnrl8}"
+                                  columnStretching="last"
+                                  styleClass="AFStretchWidth"
+                                  partialTriggers=":::pc3:t3:cb2"
+                                  autoHeightRows="4"
+                                  inlineStyle="height : 300px;"
+                                  contentDelivery="immediate">
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.CanalFb.name}" sortable="true"
+                                     headerText="Canal" id="c12">
+                            <af:inputText value="#{row.bindings.CanalFb.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.CanalFb.label}"
+                                          required="#{bindings.FeedBackVo1.hints.CanalFb.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.CanalFb.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.CanalFb.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.CanalFb.tooltip}"
+                                          id="it2">
+                              <f:validator binding="#{row.bindings.CanalFb.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCanalFb.name}" sortable="true"
+                                     headerText="cod canal fb" id="c16"
+                                     visible="false">
+                            <af:inputText value="#{row.bindings.CodCanalFb.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.CodCanalFb.label}"
+                                          required="#{bindings.FeedBackVo1.hints.CodCanalFb.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.CodCanalFb.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.CodCanalFb.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.CodCanalFb.tooltip}"
+                                          id="it3">
+                              <f:validator binding="#{row.bindings.CodCanalFb.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.DescAdGestion.name}" sortable="true"
+                                     headerText="desc ad" id="c14"
+                                     visible="false">
+                            <af:inputText value="#{row.bindings.DescAdGestion.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.DescAdGestion.label}"
+                                          required="#{bindings.FeedBackVo1.hints.DescAdGestion.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.DescAdGestion.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.DescAdGestion.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.DescAdGestion.tooltip}"
+                                          id="it4">
+                              <f:validator binding="#{row.bindings.DescAdGestion.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomCpg.name}" sortable="true"
+                                     headerText="Campaña" id="c17">
+                            <af:inputText value="#{row.bindings.NomCpg.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.NomCpg.label}"
+                                          required="#{bindings.FeedBackVo1.hints.NomCpg.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.NomCpg.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.NomCpg.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.NomCpg.tooltip}"
+                                          id="it5">
+                              <f:validator binding="#{row.bindings.NomCpg.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCpg.name}" sortable="true"
+                                     headerText="codigo cpg" id="c19"
+                                     visible="false">
+                            <af:inputText value="#{row.bindings.CodCpg.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.CodCpg.label}"
+                                          required="#{bindings.FeedBackVo1.hints.CodCpg.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.CodCpg.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.CodCpg.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.CodCpg.tooltip}"
+                                          id="it6">
+                              <f:validator binding="#{row.bindings.CodCpg.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.Sup.name}" sortable="true"
+                                     headerText="Supervisor" id="c26">
+                            <af:inputText value="#{row.bindings.Sup.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.Sup.label}"
+                                          required="#{bindings.FeedBackVo1.hints.Sup.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.Sup.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.Sup.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.Sup.tooltip}"
+                                          id="it7">
+                              <f:validator binding="#{row.bindings.Sup.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.JefCanal.name}" sortable="true"
+                                     headerText="Jefe de Canal" id="c21">
+                            <af:inputText value="#{row.bindings.JefCanal.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.JefCanal.label}"
+                                          required="#{bindings.FeedBackVo1.hints.JefCanal.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.JefCanal.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.JefCanal.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.JefCanal.tooltip}"
+                                          id="it8">
+                              <f:validator binding="#{row.bindings.JefCanal.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.EjVenta.name}" sortable="true"
+                                     headerText="Ejecutivo de Venta" id="c20">
+                            <af:inputText value="#{row.bindings.EjVenta.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.EjVenta.label}"
+                                          required="#{bindings.FeedBackVo1.hints.EjVenta.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.EjVenta.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.EjVenta.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.EjVenta.tooltip}"
+                                          id="it9">
+                              <f:validator binding="#{row.bindings.EjVenta.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.FecGestion.name}" sortable="true"
+                                     headerText="Fecha de Gestión" id="c23">
+                            <af:inputText value="#{row.bindings.FecGestion.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.FecGestion.label}"
+                                          required="#{bindings.FeedBackVo1.hints.FecGestion.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.FecGestion.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.FecGestion.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.FecGestion.tooltip}"
+                                          id="it10">
+                              <f:validator binding="#{row.bindings.FecGestion.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomFb.name}" sortable="true"
+                                     headerText="Feedback" id="c25">
+                            <af:inputText value="#{row.bindings.NomFb.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.NomFb.label}"
+                                          required="#{bindings.FeedBackVo1.hints.NomFb.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.NomFb.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.NomFb.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.NomFb.tooltip}"
+                                          id="it11">
+                              <f:validator binding="#{row.bindings.NomFb.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdFb.name}" sortable="true"
+                                     headerText="Id Fb" id="c18"
+                                     visible="false">
+                            <af:inputText value="#{row.bindings.IdFb.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.IdFb.label}"
+                                          required="#{bindings.FeedBackVo1.hints.IdFb.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.IdFb.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.IdFb.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.IdFb.tooltip}"
+                                          id="it12">
+                              <f:validator binding="#{row.bindings.IdFb.validator}"/>
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.IdFb.format}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem.name}" sortable="true"
+                                     headerText="Monto" id="c24">
+                            <af:inputText value="#{row.bindings.MontoDesem.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.MontoDesem.label}"
+                                          required="#{bindings.FeedBackVo1.hints.MontoDesem.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.MontoDesem.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.MontoDesem.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.MontoDesem.tooltip}"
+                                          id="it13">
+                              <f:validator binding="#{row.bindings.MontoDesem.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem2of.name}" sortable="true"
+                                     headerText="Monto 2da Oferta" id="c13">
+                            <af:inputText value="#{row.bindings.MontoDesem2of.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.MontoDesem2of.label}"
+                                          required="#{bindings.FeedBackVo1.hints.MontoDesem2of.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.MontoDesem2of.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.MontoDesem2of.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.MontoDesem2of.tooltip}"
+                                          id="it14">
+                              <f:validator binding="#{row.bindings.MontoDesem2of.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdOpp.name}" sortable="true"
+                                     headerText="id opty" id="c11"
+                                     visible="false">
+                            <af:inputText value="#{row.bindings.IdOpp.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.IdOpp.label}"
+                                          required="#{bindings.FeedBackVo1.hints.IdOpp.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.IdOpp.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.IdOpp.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.IdOpp.tooltip}"
+                                          id="it18">
+                              <f:validator binding="#{row.bindings.IdOpp.validator}"/>
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.IdOpp.format}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="Telefono"
+                                     id="c95"
+                                     sortProperty="#{bindings.FeedBackVo1.hints.telefono.name}"
+                                     sortable="false">
+                            <af:inputText value="#{row.bindings.telefono.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.telefono.label}"
+                                          required="#{bindings.FeedBackVo1.hints.telefono.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.telefono.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.telefono.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.telefono.tooltip}"
+                                          id="it19">
+                              <f:validator binding="#{row.bindings.telefono.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="Id Ejecutivo Venta"
+                                     id="c106"
+                                     sortProperty="#{bindings.FeedBackVo1.hints.idEjVenta.name}"
+                                     sortable="false">
+                            <af:inputText value="#{row.bindings.idEjVenta.inputValue}"
+                                          label="#{bindings.FeedBackVo1.hints.idEjVenta.label}"
+                                          required="#{bindings.FeedBackVo1.hints.idEjVenta.mandatory}"
+                                          columns="#{bindings.FeedBackVo1.hints.idEjVenta.displayWidth}"
+                                          maximumLength="#{bindings.FeedBackVo1.hints.idEjVenta.precision}"
+                                          shortDesc="#{bindings.FeedBackVo1.hints.idEjVenta.tooltip}"
+                                          id="it20">
+                              <f:validator binding="#{row.bindings.idEjVenta.validator}"/>
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.idEjVenta.format}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="idJefCanal"
+                                     id="c107" visible="false">
+                            <af:outputText value="#{row.idJefCanal}" id="ot22">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.idJefCanal.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column headerText="idSup"
+                                     id="c108" visible="false">
+                            <af:outputText value="#{row.idSup}" id="ot23">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.idSup.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column headerText="Cod Tip Gest"
+                                     id="c22" visible="false">
+                            <af:outputText value="#{row.codTipGest}" id="ot21"
+                                           partialTriggers="tipoGestionId">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.codTipGest.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column headerText="Cod Grup Gest"
+                                     id="c109" visible="false">
+                            <af:outputText value="#{row.codGrupGest}" id="ot24"
+                                           partialTriggers="grupoGestionId">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.codGrupGest.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column headerText="Cod Det Gest"
+                                     id="c111" visible="false">
+                            <af:outputText value="#{row.codDetGest}" id="ot25"
+                                           partialTriggers="detGestionId">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.codDetGest.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.tipoGestion.name}"
+                                     sortable="false" headerText="Tipo Gestion"
+                                     id="c15">
+                            <af:inputComboboxListOfValues id="tipoGestionId"
+                                                          popupTitle="Search and Select: #{bindings.FeedBackVo1.hints.tipoGestion.label}"
+                                                          value="#{row.bindings.tipoGestion.inputValue}"
+                                                          model="#{row.bindings.tipoGestion.listOfValuesModel}"
+                                                          required="#{bindings.FeedBackVo1.hints.tipoGestion.mandatory}"
+                                                          columns="#{bindings.FeedBackVo1.hints.tipoGestion.displayWidth}"
+                                                          shortDesc="#{bindings.FeedBackVo1.hints.tipoGestion.tooltip}"
+                                                          autoSubmit="true">
+                              <f:validator binding="#{row.bindings.tipoGestion.validator}"/>
+                            </af:inputComboboxListOfValues>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.grupoGestion.name}"
+                                     sortable="false"
+                                     headerText="Grupo Gestion"
+                                     id="c27">
+                            <af:inputComboboxListOfValues id="grupoGestionId"
+                                                          popupTitle="Search and Select: #{bindings.FeedBackVo1.hints.grupoGestion.label}"
+                                                          value="#{row.bindings.grupoGestion.inputValue}"
+                                                          model="#{row.bindings.grupoGestion.listOfValuesModel}"
+                                                          required="#{bindings.FeedBackVo1.hints.grupoGestion.mandatory}"
+                                                          columns="#{bindings.FeedBackVo1.hints.grupoGestion.displayWidth}"
+                                                          shortDesc="#{bindings.FeedBackVo1.hints.grupoGestion.tooltip}"
+                                                          autoTab="true"
+                                                          partialTriggers="tipoGestionId"
+                                                          autoSubmit="true">
+                              <f:validator binding="#{row.bindings.grupoGestion.validator}"/>
+                            </af:inputComboboxListOfValues>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.FeedBackVo1.hints.detGestion.name}"
+                                     sortable="false"
+                                     headerText="Detalle Gestion"
+                                     id="c110">
+                            <af:inputComboboxListOfValues id="detGestionId"
+                                                          popupTitle="Search and Select: #{bindings.FeedBackVo1.hints.detGestion.label}"
+                                                          value="#{row.bindings.detGestion.inputValue}"
+                                                          model="#{row.bindings.detGestion.listOfValuesModel}"
+                                                          required="#{bindings.FeedBackVo1.hints.detGestion.mandatory}"
+                                                          columns="#{bindings.FeedBackVo1.hints.detGestion.displayWidth}"
+                                                          shortDesc="#{bindings.FeedBackVo1.hints.detGestion.tooltip}"
+                                                          partialTriggers="grupoGestionId">
+                              <f:validator binding="#{row.bindings.detGestion.validator}"/>
+                            </af:inputComboboxListOfValues>
+                          </af:column>
+                          <af:column headerText="Monto"
+                                     id="c112">
+                            <af:outputText value="#{row.monto}" id="ot26">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.FeedBackVo1.hints.monto.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column headerText="Nom det Gest"
+                                     id="c113" visible="false">
+                            <af:outputText value="#{row.nomDetGest}" id="ot27"/>
+                          </af:column>
+                          <af:column headerText="Nom Grup Gest"
+                                     id="c114" visible="false">
+                            <af:outputText value="#{row.nomGrupGest}"
+                                           id="ot95"/>
+                          </af:column>
+                          <af:column headerText="Nom Tip Gest"
+                                     id="c115" visible="false">
+                            <af:outputText value="#{row.nomTipGest}" id="ot96"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelCollection>
+                    </af:panelGroupLayout>
+                    <af:inputText label="idOpty" id="it1"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.txtIdOpty}"
+                                  visible="false"/>
+                    <af:inputText label="monto" id="it15"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.txtMonto}"
+                                  visible="false"/>
+                    <af:inputText label="idEjVenta" id="it16"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.txtIdEjVenta}"/>
+                  </af:panelGroupLayout>
+                </f:facet>
+              </af:panelStretchLayout>
+            </af:group>
+          </f:facet>
+        </af:pageTemplate>
+        <af:popup id="p1"
+                  binding="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.popupFeedback}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw1" modal="true">
+            <af:panelBox text="Creación de Feedback" id="pb1"
+                         styleClass="AFStretchWidth"
+                         inlineStyle="width:1051px;">
+              <af:panelFormLayout id="pfl1">
+                <af:panelLabelAndMessage label="Telefono" id="plam2">
+                  <af:outputText value="#{bindings.telf.inputValue}" id="ot98"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="codTipGest"
+                                         id="plam6" visible="false">
+                  <af:outputText value="#{bindings.codTipGest.inputValue}"
+                                 id="ot99" partialTriggers="soc1">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.codTipGest.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="codGrupGest"
+                                         id="plam4" visible="false">
+                  <af:outputText value="#{bindings.codGrupGest.inputValue}"
+                                 id="ot67" partialTriggers="soc2">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.codGrupGest.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="codDetGest"
+                                         id="plam1" visible="false">
+                  <af:outputText value="#{bindings.codDetGest.inputValue}"
+                                 id="ot101" partialTriggers="soc3">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.codDetGest.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="idFb"
+                                         id="plam3" visible="false">
+                  <af:outputText value="#{bindings.idFb.inputValue}" id="ot100">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.idFb.format}"/>
+                  </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                    label="Tipo Gestión"
+                                    required="#{bindings.tipoGest.hints.mandatory}"
+                                    shortDesc="#{bindings.tipoGest.hints.tooltip}"
+                                    id="soc1" autoSubmit="true">
+                  <f:selectItems value="#{bindings.tipoGest.items}" id="si1"/>
+                </af:selectOneChoice>
+                <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                    label="Grupo Gestión"
+                                    required="#{bindings.grupGest.hints.mandatory}"
+                                    shortDesc="#{bindings.grupGest.hints.tooltip}"
+                                    id="soc2" autoSubmit="true">
+                  <f:selectItems value="#{bindings.grupGest.items}" id="si2"/>
+                </af:selectOneChoice>
+                <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                    label="Detalle Gestión"
+                                    required="#{bindings.detGest.hints.mandatory}"
+                                    shortDesc="#{bindings.detGest.hints.tooltip}"
+                                    id="soc3" autoSubmit="true">
+                  <f:selectItems value="#{bindings.detGest.items}" id="si3"/>
+                </af:selectOneChoice>
+                <af:inputText value="#{bindings.idEjVenta.inputValue}"
+                              label="idEjVenta"
+                              required="#{bindings.idEjVenta.hints.mandatory}"
+                              columns="#{bindings.idEjVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.idEjVenta.hints.precision}"
+                              shortDesc="#{bindings.idEjVenta.hints.tooltip}"
+                              id="it17" visible="false">
+                  <f:validator binding="#{bindings.idEjVenta.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idEjVenta.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ejVenta.inputValue}"
+                              label="EjVenta"
+                              required="#{bindings.ejVenta.hints.mandatory}"
+                              columns="#{bindings.ejVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.ejVenta.hints.precision}"
+                              shortDesc="#{bindings.ejVenta.hints.tooltip}"
+                              id="it21">
+                  <f:validator binding="#{bindings.ejVenta.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.nomFb.inputValue}"
+                              label="Feedback"
+                              required="#{bindings.nomFb.hints.mandatory}"
+                              columns="#{bindings.nomFb.hints.displayWidth}"
+                              maximumLength="#{bindings.nomFb.hints.precision}"
+                              shortDesc="#{bindings.nomFb.hints.tooltip}"
+                              id="it22">
+                  <f:validator binding="#{bindings.nomFb.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl17">
+                  <af:commandButton
+                                    text="Crear"
+                                    disabled="#{!bindings.CreateInsert.enabled}"
+                                    id="cb9"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_PANT_OPTY.crearFb}"/>
+                </af:panelGroupLayout>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

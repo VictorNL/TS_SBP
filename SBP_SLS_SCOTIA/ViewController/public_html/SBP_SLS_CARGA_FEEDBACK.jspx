@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.f1}"
+               usesUpload="true">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox id="pb0" text="Configuración Carga Feedback"
+                         styleClass="AFStretchWidth">
+              <af:inputText label="Usuario :" id="itUsrCar"
+                            binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.itUsrCar}"/>
+              <af:panelBox id="pb1" text="Carga">
+                <af:panelGroupLayout id="pfl1" layout="horizontal">
+                  <af:inputText id="itIntEje"
+                                label="Intervalo ejecución [minutos] : "
+                                binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.itIntEje}"/>
+                  <af:commandButton id="cbCargaFeedback" text="Iniciar carga"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.cbCargaFeedback_click}"/>
+                  <af:commandButton id="cbDetenerFeedback" text="Detener carga"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.cbDetenerFeedback_click}"/>
+                </af:panelGroupLayout>
+              </af:panelBox>
+              <af:panelBox id="pb2" text="Consulta">
+                <af:panelFormLayout id="pflMan">
+                  <af:inputDate id="itFecIni" label="Fecha Inicio : "
+                                binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.itFecIni}">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputDate>
+                  <af:inputDate id="itFecFin" label="Fecha Fin :"
+                                binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.itFecFin}">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputDate>
+                  <af:inputText id="itJobSbp" label="ID Job SBP : "
+                                binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.itJobSbp}">
+                    <af:convertNumber type="number" pattern="#########"/>
+                  </af:inputText>
+                  <af:commandButton id="cbBuscar" text="Buscar"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.cbBuscarCargas_click}"/>
+                </af:panelFormLayout>
+                <af:table value="#{bindings.SbpSlsCmView1.collectionModel}"
+                          var="row" rows="#{bindings.SbpSlsCmView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsCmView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsCmView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsCmView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsCmView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1"
+                          styleClass="AFStretchWidth" columnStretching="last"
+                          binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.tconsul}">
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.FechaCargaS.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.FechaCargaS.label}"
+                             id="c9">
+                    <af:outputText value="#{row.FechaCargaS}" id="ot12"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.DescripcionCarga.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.DescripcionCarga.label}"
+                             id="c5">
+                    <af:outputText value="#{row.DescripcionCarga}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.IdCargaSbp.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.IdCargaSbp.label}"
+                             id="c1">
+                    <af:outputText value="#{row.IdCargaSbp}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.Estado.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.Estado.label}"
+                             id="c6">
+                    <af:outputText value="#{row.Estado}" id="ot11"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.UsuarioCarga.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.UsuarioCarga.label}"
+                             id="c12">
+                    <af:outputText value="#{row.UsuarioCarga}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsCmView1.hints.Observaciones.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsCmView1.hints.Observaciones.label}"
+                             id="c8">
+                    <af:outputText value="#{row.Observaciones}" id="ot9"/>
+                  </af:column>
+                </af:table>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+        <af:popup id="pConfir" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.pconfir}">
+          <af:panelWindow id="pw1" modal="true" title="Confirmacion" styleClass="AFStretchWidth">
+            <af:panelGroupLayout id="pgl3" layout="vertical" halign="center">
+              <af:panelGroupLayout id="pgl7">
+                <af:outputLabel id="olPopMsj" value="======================================"
+                                binding="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.olPopMsj}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pglPopupButtons"
+                                   halign="center" styleClass="AFStretchWidth"
+                                   valign="middle">
+                <af:commandButton id="cbAceptar" text="Si"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.cbAceptar_click}"/>
+                <af:commandButton id="cbCancelar" text="No"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_CARGA_FEEDBACK.cbCancelar_click}"/>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
+<!-- Popup de confirmacion -->

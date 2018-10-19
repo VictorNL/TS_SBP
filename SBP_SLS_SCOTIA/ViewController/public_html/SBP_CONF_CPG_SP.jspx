@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_CONF_CPG_SP.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox id="pb0" styleClass="AFStretchWidth">
+              <af:panelBox id="pbTitulo" styleClass="AFStretchWidth">
+                <af:outputLabel value="Dosificación de Campaña  - Supervisor"
+                                id="ol1" inlineStyle="font-size:x-large;"
+                                styleClass="AFStretchWidth"/>
+              </af:panelBox>
+              <af:panelBox id="pbDosificacion" text="Configuracion">
+                <af:panelFormLayout id="pflDosificacion">
+                  <af:inputText id="itUsuCfg" label="Usuario :"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itUsuCfg}"/>
+                  <af:inputText id="itIDCamp" label="ID Campaña :"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itIDCamp}"/>
+                  <af:inputText label="Nombre Campaña :" id="itNomCpg"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itNomCpg}"/>
+                  <af:inputText label="ID Canal :" id="itIdCana"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itIdCana}"/>
+                  <af:inputText label="ID Supervisor :" id="itIDSupe"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itIDSupe}"/>
+                  <af:inputText id="itLeaDia" label="Lead's por dia :"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                maximumLength="5"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itLeaDia}"/>
+                  <af:inputText id="itPorRep" label="% Repetidos :"
+                                maximumLength="3"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itPorRep}"/>
+                  <af:selectBooleanCheckbox id="sbPauCpg" label="Pausar :"
+                                            binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.sbPauCpg}"/>
+                    <af:commandButton text="Aplicar" id="cbGuardar"
+                                      actionListener="#{backingBeanScope.backing_SBP_CONF_CPG_SP.cbGuardar_click}"/>
+                </af:panelFormLayout>
+              </af:panelBox>
+              <af:panelBox id="pbFiltros" text="Filtros">
+                <af:panelFormLayout id="pfl3" rows="2"
+                                    fieldWidth="200px">
+                  <af:selectOneChoice label="Estado Civil :" id="socEstCiv"
+                                      value="0"
+                                      binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.socEstCiv}">
+                    <af:selectItem label="Seleccione" value="0" id="si1"/>
+                    <af:selectItem label="Soltero" value="S" id="si2"/>
+                    <af:selectItem label="Casado" value="C" id="si3"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice label="Genero :" id="socGenero" value="0"
+                                      binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.socGenero}">
+                    <af:selectItem label="Seleccione" value="0" id="si4"/>
+                    <af:selectItem label="Masculino" value="M" id="si6"/>
+                    <af:selectItem label="Femenino" value="F" id="si5"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice label="Propensión :" value="0" id="soc1">
+                    <af:selectItem label="Menor a 5" value="Menor a 5" id="si11"/>
+                    <af:selectItem label="Mayor o igual a 5" value="Mayor o igual a 5" id="sill11"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice label="Decil :" value="0" id="soc2">
+                    <af:selectItem label="Menor a 0.5" value="Menor a 0.5" id="si12"/>
+                    <af:selectItem label="Mayor o igual a 0.5" value="Mayor o igual a 0.5" id="si1222"/>
+                  </af:selectOneChoice>
+                  <af:commandButton text="CreateInsert1"
+                                    disabled="#{!bindings.CreateInsert1.enabled}"
+                                    id="cb2"
+                                    action="#{backingBeanScope.backing_SBP_CONF_CPG_SP.createInsertProd2}"
+                                    visible="false"/>
+                  <af:selectOneChoice label="Contactabilidad :" value="0"
+                                      id="soc3">
+                    <af:selectItem label="1" value="1" id="cont1"/>
+                    <af:selectItem label="2" value="2" id="cont2"/>
+                    <af:selectItem label="3" value="3" id="cont3"/>
+                  </af:selectOneChoice>
+                  <af:selectBooleanCheckbox label="Flag Cuenta Sueldo :"
+                                            id="sbcCtaSue"
+                                            binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.sbcCtaSue}"/>
+                  <af:inputNumberSpinbox label="Edad [desde] :" id="inEdaDes"
+                                         binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.inEdaDes}"
+                                         minimum="0" maximum="100"
+                                         styleClass="AFStretchWidth"/>
+                  <af:inputNumberSpinbox label="[hasta] :" id="inEdaHas"
+                                         binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.inEdaHas}"
+                                         styleClass="AFStretchWidth" minimum="0"
+                                         maximum="100"/>
+                  <af:commandButton
+                                    text="CreateInsert2"
+                                    disabled="#{!bindings.CreateInsert2.enabled}"
+                                    id="cb3"
+                                    action="#{backingBeanScope.backing_SBP_CONF_CPG_SP.createInsertProd3}"
+                                    visible="false"/>
+                  <af:commandButton
+                                    text="CreateInsert"
+                                    disabled="#{!bindings.CreateInsert.enabled}"
+                                    id="cb1"
+                                    action="#{backingBeanScope.backing_SBP_CONF_CPG_SP.createInsertProd}"
+                                    visible="false"/>
+                  <af:selectOneChoice value="#{bindings.binDesc.inputValue}"
+                                      label="BIN 1 :"
+                                      id="soc4">
+                    <f:selectItems value="#{bindings.binDesc.items}" id="si7"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.binDesc1.inputValue}"
+                                      label="BIN 2: "
+                                      id="soc5">
+                    <f:selectItems value="#{bindings.binDesc1.items}" id="si8"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.binDesc2.inputValue}"
+                                      label="BIN 3 :"
+                                      id="soc6">
+                    <f:selectItems value="#{bindings.binDesc2.items}" id="si9"/>
+                  </af:selectOneChoice>
+                </af:panelFormLayout>
+                <af:panelFormLayout id="pfl4">
+                  <af:commandButton text="Consultar" id="cbConsultar"
+                                    actionListener="#{backingBeanScope.backing_SBP_CONF_CPG_SP.cbConsultar_click}"/>
+                  <af:inputText label="Lead's displonibles [OSC] :"
+                                id="itCanLea"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                disabled="true"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.itCanLea}"/>
+                </af:panelFormLayout>
+                <af:panelCollection id="pcDatos"
+                                    featuresOff="viewMenu detach"
+                                    styleClass="AFStretchWidth">
+                  <f:facet name="toolbar">
+                    <af:toolbar id="toConfiguracion">
+                      <af:commandButton text="Asignar" id="cbDosificar"
+                                        actionListener="#{backingBeanScope.backing_SBP_CONF_CPG_SP.cbDosificar_click}"/>
+                    </af:toolbar>
+                  </f:facet>
+                  <af:table value="#{bindings.SbpSlsLeadDosifVView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsLeadDosifVView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsLeadDosifVView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsLeadDosifVView1.rangeSize}"
+                            rowBandingInterval="0" id="tDatos"
+                            columnStretching="last" styleClass="AFStretchWidth"
+                            binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.tdatos}">
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.IdCampania.name}"
+                               sortable="false"
+                               headerText="idCpg"
+                               id="c2" visible="false">
+                      <af:outputText value="#{row.IdCampania}" id="ot5">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.IdCampania.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.NombreCampania.name}"
+                               sortable="false"
+                               headerText="Campaña"
+                               id="c7" visible="false">
+                      <af:outputText value="#{row.NombreCampania}" id="ot15"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.IdCanal.name}"
+                               sortable="false"
+                               headerText="idCanal"
+                               id="c9" visible="false">
+                      <af:outputText value="#{row.IdCanal}" id="ot7">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.IdCanal.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column headerText="Jefe Canal"
+                               id="c16" visible="false">
+                      <af:outputText value="#{row.NombreSupervisor}" id="ot2"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.NombreCanal.name}"
+                               sortable="false"
+                               headerText="Vendor"
+                               id="c8" visible="false">
+                      <af:outputText value="#{row.NombreCanal}" id="ot12"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.IdSupervisor.name}"
+                               sortable="false"
+                               headerText="idSup"
+                               id="c1" visible="false">
+                      <af:outputText value="#{row.IdSupervisor}" id="ot9">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.IdSupervisor.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.NombreSupervisor.name}"
+                               sortable="false"
+                               headerText="Supervisor"
+                               id="c14" visible="false">
+                      <af:outputText value="#{row.NombreSupervisor}" id="ot10"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.IdEjecutivo.name}"
+                               sortable="false"
+                               headerText="idEjecutivo"
+                               id="c15" visible="false">
+                      <af:outputText value="#{row.IdEjecutivo}" id="ot3">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.IdEjecutivo.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.NombreEjecutivo.name}"
+                               sortable="false"
+                               headerText="Ejecutivo Venta"
+                               id="c3">
+                      <af:outputText value="#{row.NombreEjecutivo}" id="ot6"/>
+                    </af:column>
+                   <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.CantLeadBolsa.name}"
+                               sortable="false" headerText="Lead Recorridos"
+                               id="c5" inlineStyle="text-align:right;">
+                      <af:outputText value="#{row.CantLeadBolsa}" id="ot13">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.CantLeadBolsa.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.PorcAsignado.name}"
+                               sortable="false"
+                               headerText="Porcentaje Asignado"
+                               id="c10">
+                      <af:outputText value="#{row.PorcAsignado}" id="ot4"
+                      partialTriggers="it1">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.PorcAsignado.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.Cantidad.name}"
+                               sortable="false"
+                               headerText="Cantidad"
+                               id="c13">
+                      <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                    columns="#{bindings.SbpSlsLeadDosifVView1.hints.Cantidad.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsLeadDosifVView1.hints.Cantidad.precision}"
+                                    id="it1" autoSubmit="true"
+                                    inlineStyle="text-align:right;">
+                        <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.Cantidad.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.PorcRep.name}"
+                               sortable="false"
+                               headerText="Repetidos"
+                               id="c12">
+                      <af:inputText value="#{row.bindings.PorcRep.inputValue}"
+                                    columns="#{bindings.SbpSlsLeadDosifVView1.hints.PorcRep.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsLeadDosifVView1.hints.PorcRep.precision}"
+                                    id="it2" autoSubmit="true">
+                        <f:validator binding="#{row.bindings.PorcRep.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.PorcRep.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.CalcRepetidos.name}"
+                               sortable="false"
+                               headerText="Repetidos Calculados"
+                               id="c11">
+                      <af:outputText value="#{row.CalcRepetidos}" id="ot1"
+                                     partialTriggers="it1 it2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.CalcRepetidos.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.CalcNuevos.name}"
+                               sortable="false"
+                               headerText="Nuevos"
+                               id="c6">
+                      <af:outputText value="#{row.CalcNuevos}" id="ot14"
+                                     partialTriggers="it1 it2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.CalcNuevos.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsLeadDosifVView1.hints.Total.name}"
+                               sortable="false"
+                               headerText="Total"
+                               id="c4">
+                      <af:outputText value="#{row.Total}" id="ot8"
+                                     partialTriggers="it1 it2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsLeadDosifVView1.hints.Total.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:panelCollection>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+        
+        <!-- Popup de confirmacion -->
+        <af:popup id="pConfirmacion"
+                  autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.pconfirmacion}">
+          <af:panelWindow id="pw1" modal="true"
+                          title="Confirmación">
+            <af:panelGroupLayout id="pgl3">
+              <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                   inlineStyle="width:309px;">
+                <af:outputLabel value="olPopupMensaje" id="olPopupMensaje"
+                                binding="#{backingBeanScope.backing_SBP_CONF_CPG_SP.olPopupMensaje}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pglPopupButtons"
+                                   layout="horizontal" halign="center">
+                <af:commandButton id="cbAceptar" text="Si"
+                                  actionListener="#{backingBeanScope.backing_SBP_CONF_CPG_SP.cbAceptar_click}"/>
+                <af:commandButton id="cbCancelar" text="No"
+                                  actionListener="#{backingBeanScope.backing_SBP_CONF_CPG_SP.cbCancelar_click}"/>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

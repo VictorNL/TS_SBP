@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Reporte de Ventas: " id="pb1">
+              <af:panelGroupLayout id="pgl2">
+                <af:outputLabel value="Cantidad de Ventas realizadas a la fecha:" id="ol1"/>
+                <af:outputLabel id="ol2"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.txtCantVentas}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                <af:table value="#{bindings.SbpSlsRepEjventaView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsRepEjventaView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsRepEjventaView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsRepEjventaView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsRepEjventaView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsRepEjventaView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1" columnStretching="last"
+                          styleClass="AFStretchWidth"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.tblRep}">
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.IdEjVenta.name}"
+                             sortable="false" headerText="idEjVenta" id="c1"
+                             visible="false">
+                    <af:outputText value="#{row.IdEjVenta}" id="ot2">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsRepEjventaView1.hints.IdEjVenta.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.EjVenta.name}"
+                             sortable="false" headerText="Ejecutivo Venta"
+                             id="c2">
+                    <af:outputText value="#{row.EjVenta}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.Telf.name}"
+                             sortable="false" headerText="Teléfono" id="c5">
+                    <af:outputText value="#{row.Telf}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.Prod.name}"
+                             sortable="false" headerText="Producto" id="c4">
+                    <af:outputText value="#{row.Prod}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.Dni.name}"
+                             sortable="false" headerText="DNI" id="c6">
+                    <af:outputText value="#{row.Dni}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsRepEjventaView1.hints.Monto.name}"
+                             sortable="false" headerText="Monto" id="c3">
+                    <af:outputText value="#{row.Monto}" id="ot3"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+              <af:inputText label="usuario" id="it1"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REP_VENTA_EV.txtUsuario}"
+                            visible="false"/>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

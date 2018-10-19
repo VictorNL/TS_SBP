@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:group id="g1">
+              <af:panelBox text="Reasignación de Leads" id="pb1">
+                <af:inputText label="Cantidad de Leads:" id="it10"
+                              readOnly="true"
+                              binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.txtCantLeadFiltro}"/>
+                <af:commandButton text="Volver" id="cb4"
+                                  action="SBP_SLS_LIST_EJV_X_SUP"/>
+                                 
+                <af:panelCollection id="pc1" styleClass="AFStretchWidth" featuresOff="viewMenu detach formatMenu">
+                  <f:facet name="toolbar">
+                    <af:toolbar id="t2">
+                      <af:commandButton text="Asignar" id="cb3"
+                                        actionListener="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.asignar}"/>
+                    </af:toolbar>
+                  </f:facet>
+                  <af:table value="#{bindings.SbpSlsAsigEvXSupView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsAsigEvXSupView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsAsigEvXSupView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsAsigEvXSupView1.rangeSize}"
+                            rowBandingInterval="0"
+                            queryListener="#{bindings.SbpSlsAsigEvXSupView1Query.processQuery}"
+                            filterVisible="true" varStatus="vs"
+                            selectedRowKeys="#{bindings.SbpSlsAsigEvXSupView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsAsigEvXSupView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1"
+                            columnStretching="last" styleClass="AFStretchWidth"
+                            binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.tblEjec}"
+                            filterModel="#{bindings.SbpSlsAsigEvXSupView1Query.queryDescriptor}"
+                            inlineStyle="height: 400px;">
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.name}" headerText="idCanal" id="c7"
+                               width="110" visible="false">
+                      <af:inputText value="#{row.bindings.IdCanal.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.tooltip}"
+                                    id="it4" autoSubmit="true" readOnly="true">
+                        <f:validator binding="#{row.bindings.IdCanal.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigEvXSupView1.hints.IdCanal.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.name}"
+                               headerText="Vendor" id="c6"
+                               width="150">
+                      <af:inputText value="#{row.bindings.NomCanal.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.NomCanal.tooltip}"
+                                    id="it5" readOnly="true">
+                        <f:validator binding="#{row.bindings.NomCanal.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.name}" headerText="idSup" id="c5"
+                               width="111" visible="false">
+                      <af:inputText value="#{row.bindings.IdSup.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.tooltip}"
+                                    id="it6" readOnly="true" autoSubmit="true">
+                        <f:validator binding="#{row.bindings.IdSup.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigEvXSupView1.hints.IdSup.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.name}" headerText="Supervisor" id="c9"
+                               width="150">
+                      <af:inputText value="#{row.bindings.NomSup.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.NomSup.tooltip}"
+                                    id="it7" readOnly="true" autoSubmit="true">
+                        <f:validator binding="#{row.bindings.NomSup.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.name}" headerText="idEjVenta" id="c2"
+                               width="110" visible="false">
+                      <af:inputText value="#{row.bindings.IdEjVenta.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.tooltip}"
+                                    id="it8" readOnly="true" autoSubmit="true">
+                        <f:validator binding="#{row.bindings.IdEjVenta.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigEvXSupView1.hints.IdEjVenta.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.name}"
+                               headerText="Ejecutivo Venta" id="c1" width="150">
+                      <af:inputText value="#{row.bindings.NomEjVenta.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.NomEjVenta.tooltip}"
+                                    id="it9" readOnly="true">
+                        <f:validator binding="#{row.bindings.NomEjVenta.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.Cantidad.name}"
+                               sortable="false"
+                               headerText="Cantidad"
+                               id="c3">
+                      <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.Cantidad.label}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.Cantidad.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.Cantidad.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.Cantidad.tooltip}"
+                                    id="it1" partialTriggers="it3"
+                                    autoSubmit="true" required="true"
+                                    binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.txtCantidad}">
+                        <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column headerText="% Asignado"
+                               id="c8" width="150">
+                      <af:inputText value="#{row.bindings.PorcAsig.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.PorcAsig.label}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.PorcAsig.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.PorcAsig.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.PorcAsig.tooltip}"
+                                    id="it3" autoSubmit="true"
+                                    partialTriggers="it1"
+                                    binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.txtPorc}"
+                                    required="true"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.name}" headerText="idTbl" id="c4"
+                               visible="false">
+                      <af:inputText value="#{row.bindings.IdTbl.inputValue}"
+                                    label="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.label}"
+                                    required="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.mandatory}"
+                                    columns="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.precision}"
+                                    shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.tooltip}"
+                                    id="it2">
+                        <f:validator binding="#{row.bindings.IdTbl.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsAsigEvXSupView1.hints.IdTbl.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column id="c10" width="660" visible="false">
+                      <af:selectBooleanCheckbox value="#{row.bindings.eliminar.inputValue}"
+                                                label="#{row.bindings.eliminar.label}"
+                                                shortDesc="#{bindings.SbpSlsAsigEvXSupView1.hints.eliminar.tooltip}"
+                                                id="sbc1" visible="false"/>
+                    </af:column>
+                  </af:table>
+                </af:panelCollection>
+                <af:popup id="p1" autoCancel="disabled"
+                          binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.popupConfirmar}">
+                  <af:panelWindow id="pw1" modal="true">
+                    <af:panelGroupLayout id="pgl3">
+                      <af:panelGroupLayout id="pgl4" inlineStyle="width:314px;">
+                        <af:outputLabel value="cantAsig" id="ol1"
+                                        binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.txtCantAsig}"/>
+                      </af:panelGroupLayout>
+                      <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                           inlineStyle="width:314px;">
+                        <af:commandButton text="Si" id="cb1"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.aceptarAsign}"/>
+                        <af:commandButton text="No" id="cb2"
+                                          actionListener="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.cancelarAsig}"/>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                  </af:panelWindow>
+                </af:popup>
+              </af:panelBox>
+              <af:panelBox text="Totales:" id="pb2" styleClass="AFStretchWidth"
+                           inlineStyle="width:1611px;">
+                <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                     styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl1" layout="horizontal">
+                    <af:outputLabel value="Total:" id="ol4"/>
+                    <af:outputLabel value="Total:" id="ol2"
+                                    binding="#{backingBeanScope.backing_SBP_ASOG_EJ_VENT.txtTotalLead}"/>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </af:panelBox>
+            </af:group>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

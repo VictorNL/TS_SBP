@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:panelStretchLayout id="psl1" startWidth="10px" endWidth="9px"
+                                   topHeight="10px" bottomHeight="10px">
+              <f:facet name="bottom"/>
+              <f:facet name="center">
+                <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                  <af:panelSplitter id="ps1" orientation="vertical"
+                                    styleClass="AFStretchWidth"
+                                    splitterPosition="73">
+                    <f:facet name="first">
+                      <af:panelGroupLayout id="pgl2"
+                                           styleClass="AFStretchWidth">
+                        <af:outputLabel value="Asignación de:" id="ol1"/>
+                        <af:panelGroupLayout id="pgl3"
+                                             styleClass="AFStretchWidth">
+                          <af:inputText label="resourceId" id="it1"
+                                        binding="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.txtResourceId}"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl4"
+                                             styleClass="AFStretchWidth"
+                                             layout="horizontal">
+                          <af:commandButton
+                                            text="+"
+                                            disabled="#{!bindings.CreateInsert.enabled}"
+                                            id="cb1"
+                                            action="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.agregar}"/>
+                          <af:commandButton text="Guardar"
+                                            disabled="#{!bindings.Commit.enabled}"
+                                            id="cb2"
+                                            action="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.guardar}"/>
+                          <af:commandButton text="Asignar" id="cb3"
+                                            actionListener="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.asignarEjV}"/>
+                          <af:commandButton text="Eliminar" id="cb5"
+                                            actionListener="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.eliminarFila}"/>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="second">
+                      <af:panelGroupLayout id="pgl5"
+                                           styleClass="AFStretchWidth">
+                        <af:panelGroupLayout id="pgl6"
+                                             styleClass="AFStretchWidth">
+                          <af:panelGroupLayout id="panelGroupLayout1"
+                                               layout="horizontal">
+                            <af:outputLabel value="Total:" id="ol2"/>
+                            <af:outputLabel value="Total Porcentaje:" id="ol3"
+                                            binding="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.txtPorcTot}"/>
+                            <af:outputLabel value="Total Cantidad:" id="ol4"
+                                            binding="#{backingBeanScope.backing_SBP_ASIGNACION_EJ_VENTA.txtCantTotal}"/>
+                          </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                  </af:panelSplitter>
+                </af:panelGroupLayout>
+              </f:facet>
+              <f:facet name="start"/>
+              <f:facet name="end"/>
+              <f:facet name="top"/>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:backing_SBP_ASIGNACION_EJ_VENTA-->
+</jsp:root>

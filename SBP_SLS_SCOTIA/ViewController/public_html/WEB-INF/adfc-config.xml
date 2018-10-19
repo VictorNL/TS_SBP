@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="SBP_CREATE_CPG">
+    <page>/SBP_CREATE_CPG.jspx</page>
+  </view>
+  <view id="SBP_LIST_CAMP">
+    <page>/SBP_LIST_CAMP.jspx</page>
+  </view>
+  <view id="SBP_ASIG_CPG_SP">
+    <page>/SBP_ASIG_CPG_SP.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_PRINC">
+    <page>/SBP_SLS_PRINC.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.UserID}</from-value>
+      <to-value>#{viewScope.UserID2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="prueba">
+    <page>/prueba.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_ASOG_EJ_VENT">
+    <page>/SBP_ASOG_EJ_VENT.jspx</page>
+  </view>
+  <view id="SBP_ASIGNACION_EJ_VENTA">
+    <page>/SBP_ASIGNACION_EJ_VENTA.jspx</page>
+  </view>
+  <view id="SBP_CONF_CPG_SP">
+    <page>/SBP_CONF_CPG_SP.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_LIST_PROD">
+    <page>/SBP_SLS_LIST_PROD.jspx</page>
+  </view>
+  <view id="SBP_SLS_CONT_FEED">
+    <page>/SBP_SLS_CONT_FEED.jspx</page>
+  </view>
+  <view id="SBP_SLS_PANT_OPTY">
+    <page>/SBP_SLS_PANT_OPTY.jspx</page>
+  </view>
+  <view id="test">
+    <page>/test.jspx</page>
+  </view>
+  <view id="SBP_SLS_OPP_PAGE">
+    <page>/SBP_SLS_OPP_PAGE.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+     <input-page-parameter>
+      <from-value>#{param.nomBin}</from-value>
+      <to-value>#{viewScope.nomBin2}</to-value>
+    </input-page-parameter>
+    
+    
+    <input-page-parameter>
+      <from-value>#{param.idLead}</from-value>
+      <to-value>#{viewScope.idLead2}</to-value>
+    </input-page-parameter>
+    
+    <input-page-parameter>
+      <from-value>#{param.telf}</from-value>
+      <to-value>#{viewScope.telf2}</to-value>
+    </input-page-parameter>
+    
+    
+  </view>
+  <view id="SBP_SLS_DOSIFICADOR">
+    <page>/SBP_SLS_DOSIFICADOR.jspx</page>
+  </view>
+  <view id="SBP_SLS_LIST_SUP_X_JC">
+    <page>/SBP_SLS_LIST_SUP_X_JC.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_REASIG_JC_SUP">
+    <page>/SBP_SLS_REASIG_JC_SUP.jspx</page>
+  </view>
+  <view id="SBP_SLS_REASIG_SUP_EV">
+    <page>/SBP_SLS_REASIG_SUP_EV.jspx</page>
+  </view>
+  <view id="SBP_SLS_LIST_EJV_X_SUP">
+    <page>/SBP_SLS_LIST_EJV_X_SUP.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_LIST_CANALES">
+    <page>/SBP_SLS_LIST_CANALES.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_REASIG_CAN_SCT">
+    <page>/SBP_SLS_REASIG_CAN_SCT.jspx</page>
+  </view>
+  <view id="SBP_SLS_PRINC_SCT">
+    <page>/SBP_SLS_PRINC_SCT.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_OPTY_PAGE_STD">
+    <page>/SBP_SLS_OPTY_PAGE_STD.jspx</page>
+  </view>
+  <view id="SBP_SLS_CPG_PAUSA">
+    <page>/SBP_SLS_CPG_PAUSA.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_PRINC_JEF_CAN">
+    <page>/SBP_SLS_PRINC_JEF_CAN.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_BUSQUEDA_DNI_OPP">
+    <page>/SBP_SLS_BUSQUEDA_DNI_OPP.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_CARGA_MASIVA">
+    <page>/SBP_SLS_CARGA_MASIVA.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.UserID}</from-value>
+      <to-value>#{viewScope.UserID2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_PAUSA_CPG_2">
+    <page>/SBP_SLS_PAUSA_CPG_2.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_INF_JEF_CAN">
+    <page>/SBP_SLS_INF_JEF_CAN.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userName}</from-value>
+      <to-value>#{viewScope.userName2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_AS_REASIG">
+    <page>/SBP_SLS_AS_REASIG.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.usuario}</from-value>
+      <to-value>#{viewScope.usuario2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_FUNNEL">
+    <page>/SBP_SLS_FUNNEL.jspx</page>
+  </view>
+  <view id="SBP_SLS_DELETE_LEADS">
+    <page>/SBP_SLS_DELETE_LEADS.jspx</page>
+  </view>
+  <view id="SBP_SLS_REP_VENTA_EV">
+    <page>/SBP_SLS_REP_VENTA_EV.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userName}</from-value>
+      <to-value>#{viewScope.userName2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_KARDEX_JEF_CAN">
+    <page>/SBP_SLS_KARDEX_JEF_CAN.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.idUser}</from-value>
+      <to-value>#{viewScope.idUser2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_KARDEX_SUP">
+    <page>/SBP_SLS_KARDEX_SUP.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.idUser}</from-value>
+      <to-value>#{viewScope.idUser2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_REP_AGENDAS_EJ_V">
+    <page>/SBP_SLS_REP_AGENDAS_EJ_V.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userName}</from-value>
+      <to-value>#{viewScope.userName2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_REP_EJ_VENTA_X_SUP">
+    <page>/SBP_SLS_REP_EJ_VENTA_X_SUP.jspx</page>
+  </view>
+  <view id="SBP_SLS_VENTA_OBS_BO">
+    <page>/SBP_SLS_VENTA_OBS_BO.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userName}</from-value>
+      <to-value>#{viewScope.userName2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_SPEECH_BACK_OFFICE">
+    <page>/SBP_SLS_SPEECH_BACK_OFFICE.jspx</page>
+  </view>
+  <view id="SBP_SLS_CARGA_FEEDBACK">
+    <page>/SBP_SLS_CARGA_FEEDBACK.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.UserID}</from-value>
+      <to-value>#{viewScope.UserID2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_VENTA_SPEECH">
+    <page>/SBP_SLS_VENTA_SPEECH.jspx</page>
+  </view>
+  <view id="SBP_SLS_NUEVO_SPEECH">
+    <page>/SBP_SLS_NUEVO_SPEECH.jspx</page>
+  </view>
+  <view id="SBP_SLS_SPEECH_VENTA_NEW">
+    <page>/SBP_SLS_SPEECH_VENTA_NEW.jspx</page>
+<input-page-parameter>
+      <from-value>#{param.telfActual}</from-value>
+      <to-value>#{viewScope.telfActual2}</to-value>
+</input-page-parameter>
+<input-page-parameter>                                    
+      <from-value>#{param.idLead}</from-value>        
+      <to-value>#{viewScope.idLead2}</to-value>       
+</input-page-parameter>                                   
+                                                          
+<input-page-parameter>                                    
+      <from-value>#{param.nombreFb}</from-value>        
+      <to-value>#{viewScope.nombreFb2}</to-value>       
+</input-page-parameter>                                    
+                                                          
+<input-page-parameter>                                   
+      <from-value>#{param.idCanal}</from-value>         
+      <to-value>#{viewScope.idCanal2}</to-value>       
+</input-page-parameter>                                    
+                                                           
+<input-page-parameter>                                    
+      <from-value>#{param.canal}</from-value>         
+      <to-value>#{viewScope.canal2}</to-value>        
+</input-page-parameter>                                    
+                                                          
+<input-page-parameter>                                    
+      <from-value>#{param.idJefCanal}</from-value>       
+      <to-value>#{viewScope.idJefCanal2}</to-value>        
+</input-page-parameter>                                   
+                                                        
+<input-page-parameter>                                    
+      <from-value>#{param.jefCanal}</from-value>         
+      <to-value>#{viewScope.jefCanal2}</to-value>       
+</input-page-parameter>                                   
+                                                         
+<input-page-parameter>                                    
+      <from-value>#{param.idSup}</from-value>        
+      <to-value>#{viewScope.idSup2}</to-value>       
+</input-page-parameter>                                 
+                                                         
+<input-page-parameter>                             
+      <from-value>#{param.sup}</from-value>        
+      <to-value>#{viewScope.sup2}</to-value>       
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.idEjVenta}</from-value>
+      <to-value>#{viewScope.idEjVenta2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.ejVenta}</from-value>
+      <to-value>#{viewScope.ejVenta2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.tipoGestion}</from-value>
+      <to-value>#{viewScope.tipoGestion2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.grupoGestion}</from-value>
+      <to-value>#{viewScope.grupoGestion2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.detalleGestion}</from-value>
+      <to-value>#{viewScope.detalleGestion2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.auxFeedbackContactado}</from-value>
+      <to-value>#{viewScope.auxFeedbackContactado2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.auxFeedbackContactadoEfec}</from-value>
+      <to-value>#{viewScope.auxFeedbackContactadoEfec2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.auxFeedbackVenta}</from-value>
+      <to-value>#{viewScope.auxFeedbackVenta2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.auxFeedbackRevenueVenta}</from-value>
+      <to-value>#{viewScope.auxFeedbackRevenueVenta2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.nomDetGest}</from-value>
+      <to-value>#{viewScope.nomDetGest2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.nomGrupGest}</from-value>
+      <to-value>#{viewScope.nomGrupGest2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.nomTipGest}</from-value>
+      <to-value>#{viewScope.nomTipGest2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.fecGestion}</from-value>
+      <to-value>#{viewScope.fecGestion2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.obs}</from-value>
+      <to-value>#{viewScope.obs2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.telfAd}</from-value>
+      <to-value>#{viewScope.telfAd2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.dirAd}</from-value>
+      <to-value>#{viewScope.dirAd2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.emailAd}</from-value>
+      <to-value>#{viewScope.emailAd2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.idCpg}</from-value>
+      <to-value>#{viewScope.idCpg2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.cpgNom}</from-value>
+      <to-value>#{viewScope.cpgNom2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.montoDesem}</from-value>
+      <to-value>#{viewScope.montoDesem2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.fecha2daLlam}</from-value>
+      <to-value>#{viewScope.fecha2daLlam2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.contacto}</from-value>
+      <to-value>#{viewScope.contacto2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.numDoc}</from-value>
+      <to-value>#{viewScope.numDoc2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.tipDoc}</from-value>
+      <to-value>#{viewScope.tipDoc2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.prod}</from-value>
+      <to-value>#{viewScope.prod2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.flagInbound}</from-value>
+      <to-value>#{viewScope.flagInbound2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.flagOutbound}</from-value>
+      <to-value>#{viewScope.flagOutbound2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.horaFeedback}</from-value>
+      <to-value>#{viewScope.horaFeedback2}</to-value>
+</input-page-parameter>
+
+<input-page-parameter>
+      <from-value>#{param.auxFeedbackAgendado}</from-value>
+      <to-value>#{viewScope.auxFeedbackAgendado2}</to-value>
+</input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.prodFb}</from-value>
+      <to-value>#{viewScope.prodFb2}</to-value>
+    </input-page-parameter>
+
+ <input-page-parameter>
+      <from-value>#{param.codClie}</from-value>
+      <to-value>#{viewScope.codClie2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.nomClie}</from-value>
+      <to-value>#{viewScope.nomClie2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.codProd}</from-value>
+      <to-value>#{viewScope.codProd2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.nomProd}</from-value>
+      <to-value>#{viewScope.nomProd2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.montoProd}</from-value>
+      <to-value>#{viewScope.montoProd2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.genero}</from-value>
+      <to-value>#{viewScope.genero2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.tea}</from-value>
+      <to-value>#{viewScope.tea2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.tcea}</from-value>
+      <to-value>#{viewScope.tcea2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.primerNom}</from-value>
+      <to-value>#{viewScope.primerNom2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.segNom}</from-value>
+      <to-value>#{viewScope.segNom2}</to-value>
+    </input-page-parameter>
+	
+	    <input-page-parameter>
+      <from-value>#{param.apePat}</from-value>
+      <to-value>#{viewScope.apePat2}</to-value>
+    </input-page-parameter>
+	
+	<input-page-parameter>
+      <from-value>#{param.apeMat}</from-value>
+      <to-value>#{viewScope.apeMat2}</to-value>
+    </input-page-parameter>
+	
+ <input-page-parameter>
+      <from-value>#{param.fecNac}</from-value>
+      <to-value>#{viewScope.fecNac2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_VENTAS_X_EV_OBS">
+    <page>/SBP_SLS_VENTAS_X_EV_OBS.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userName}</from-value>
+      <to-value>#{viewScope.userName2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_VENTA_OBS_EJ_VENTA">
+    <page>/SBP_SLS_VENTA_OBS_EJ_VENTA.jspx</page>
+  </view>
+  <view id="SBP_SLS_REASIG_X_FILT">
+    <page>/SBP_SLS_REASIG_X_FILT.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+    <input-page-parameter>
+      <from-value>#{param.cpgId}</from-value>
+      <to-value>#{viewScope.cpgId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_REASIG_EVENTA_NEW">
+    <page>/SBP_SLS_REASIG_EVENTA_NEW.jspx</page>
+  </view>
+  <view id="PRUEBA_SFTP">
+    <page>/PRUEBA_SFTP.jspx</page>
+  </view>
+  <view id="SBP_SLS_LIST_EV_MANT">
+    <page>/SBP_SLS_LIST_EV_MANT.jspx</page>
+    <input-page-parameter>
+      <from-value>#{param.userId}</from-value>
+      <to-value>#{viewScope.userId2}</to-value>
+    </input-page-parameter>
+  </view>
+  <view id="SBP_SLS_ARC_FB">
+    <page>/SBP_SLS_ARC_FB.jspx</page>
+  </view>
+  <control-flow-rule id="__2">
+    <from-activity-id id="__1">*</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__11">SBP_LIST_CAMP</from-outcome>
+      <to-activity-id id="__3">SBP_LIST_CAMP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome id="__9">SBP_CREATE_CPG</from-outcome>
+      <to-activity-id id="__5">SBP_CREATE_CPG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome id="__10">SBP_ASIG_CPG_SP</from-outcome>
+      <to-activity-id id="__8">SBP_ASIG_CPG_SP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__24">
+      <from-outcome id="__26">SBP_SLS_PRINC</from-outcome>
+      <to-activity-id id="__25">SBP_SLS_PRINC</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__40">
+      <from-outcome id="__41">SBP_ASOG_EJ_VENT</from-outcome>
+      <to-activity-id id="__39">SBP_ASOG_EJ_VENT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__46">
+      <from-outcome id="__48">SBP_ASIGNACION_EJ_VENTA</from-outcome>
+      <to-activity-id id="__47">SBP_ASIGNACION_EJ_VENTA</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__54">
+      <from-outcome id="__55">SBP_CONF_CPG_SP</from-outcome>
+      <to-activity-id id="__53">SBP_CONF_CPG_SP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__61">
+      <from-outcome id="__62">SBP_SLS_LIST_PROD</from-outcome>
+      <to-activity-id id="__60">SBP_SLS_LIST_PROD</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__63">
+      <from-outcome id="__69">SBP_SLS_CONT_FEED</from-outcome>
+      <to-activity-id id="__64">SBP_SLS_CONT_FEED</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__77">
+      <from-outcome id="__79">SBP_SLS_PANT_OPTY</from-outcome>
+      <to-activity-id id="__78">SBP_SLS_PANT_OPTY</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__85">
+      <from-outcome id="__87">SBP_SLS_OPP_PAGE</from-outcome>
+      <to-activity-id id="__86">SBP_SLS_OPP_PAGE</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__92">
+      <from-outcome id="__94">SBP_SLS_DOSIFICADOR</from-outcome>
+      <to-activity-id id="__93">SBP_SLS_DOSIFICADOR</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__99">
+      <from-outcome id="__101">SBP_SLS_LIST_SUP_X_JC</from-outcome>
+      <to-activity-id id="__100">SBP_SLS_LIST_SUP_X_JC</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__106">
+      <from-outcome id="__108">SBP_SLS_REASIG_JC_SUP</from-outcome>
+      <to-activity-id id="__107">SBP_SLS_REASIG_JC_SUP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__113">
+      <from-outcome id="__115">SBP_SLS_REASIG_SUP_EV</from-outcome>
+      <to-activity-id id="__114">SBP_SLS_REASIG_SUP_EV</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__120">
+      <from-outcome id="__122">SBP_SLS_LIST_EJV_X_SUP</from-outcome>
+      <to-activity-id id="__121">SBP_SLS_LIST_EJV_X_SUP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__127">
+      <from-outcome id="__129">SBP_SLS_LIST_CANALES</from-outcome>
+      <to-activity-id id="__128">SBP_SLS_LIST_CANALES</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__135">
+      <from-outcome id="__136">SBP_SLS_REASIG_CAN_SCT</from-outcome>
+      <to-activity-id id="__134">SBP_SLS_REASIG_CAN_SCT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__141">
+      <from-outcome id="__143">SBP_SLS_PRINC_SCT</from-outcome>
+      <to-activity-id id="__142">SBP_SLS_PRINC_SCT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__148">
+      <from-outcome id="__150">SBP_SLS_OPTY_PAGE_STD</from-outcome>
+      <to-activity-id id="__149">SBP_SLS_OPTY_PAGE_STD</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__155">
+      <from-outcome id="__157">SBP_SLS_CPG_PAUSA</from-outcome>
+      <to-activity-id id="__156">SBP_SLS_CPG_PAUSA</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__163">
+      <from-outcome id="__164">SBP_SLS_PRINC_JEF_CAN</from-outcome>
+      <to-activity-id id="__162">SBP_SLS_PRINC_JEF_CAN</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__169">
+      <from-outcome id="__171">SBP_SLS_BUSQUEDA_DNI_OPP</from-outcome>
+      <to-activity-id id="__170">SBP_SLS_BUSQUEDA_DNI_OPP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__177">
+      <from-outcome id="__178">SBP_SLS_OPP_PAGE_STD</from-outcome>
+      <to-activity-id id="__176">SBP_SLS_OPP_PAGE_STD</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__184">
+      <from-outcome id="__185">SBP_SLS_CARGA_MASIVA</from-outcome>
+      <to-activity-id id="__183">SBP_SLS_CARGA_MASIVA</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__190">
+      <from-outcome id="__192">SBP_SLS_PAUSA_CPG_2</from-outcome>
+      <to-activity-id id="__191">SBP_SLS_PAUSA_CPG_2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__197">
+      <from-outcome id="__199">SBP_SLS_INF_JEF_CAN</from-outcome>
+      <to-activity-id id="__198">SBP_SLS_INF_JEF_CAN</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__204">
+      <from-outcome id="__206">SBP_SLS_AS_REASIG</from-outcome>
+      <to-activity-id id="__205">SBP_SLS_AS_REASIG</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__211">
+      <from-outcome id="__213">SBP_SLS_FUNNEL</from-outcome>
+      <to-activity-id id="__212">SBP_SLS_FUNNEL</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__218">
+      <from-outcome id="__220">SBP_SLS_DELETE_LEADS</from-outcome>
+      <to-activity-id id="__219">SBP_SLS_DELETE_LEADS</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__225">
+      <from-outcome id="__227">SBP_SLS_LEAD_DEL_LOT</from-outcome>
+      <to-activity-id id="__226">SBP_SLS_LEAD_DEL_LOT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__232">
+      <from-outcome id="__234">SBP_SLS_REP_VENTA_EV</from-outcome>
+      <to-activity-id id="__233">SBP_SLS_REP_VENTA_EV</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__228">
+      <from-outcome id="__230">SBP_SLS_KARDEX_JEF_CAN</from-outcome>
+      <to-activity-id id="__229">SBP_SLS_KARDEX_JEF_CAN</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__242">
+      <from-outcome id="__244">SBP_SLS_KARDEX_SUP</from-outcome>
+      <to-activity-id id="__243">SBP_SLS_KARDEX_SUP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__250">
+      <from-outcome id="__251">SBP_SLS_REP_AGENDAS_EJ_V</from-outcome>
+      <to-activity-id id="__249">SBP_SLS_REP_AGENDAS_EJ_V</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__257">
+      <from-outcome id="__258">SBP_SLS_REP_EJ_VENTA_X_SUP</from-outcome>
+      <to-activity-id id="__256">SBP_SLS_REP_EJ_VENTA_X_SUP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__264">
+      <from-outcome id="__265">SBP_SLS_VENTA_OBS_BO</from-outcome>
+      <to-activity-id id="__263">SBP_SLS_VENTA_OBS_BO</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__270">
+      <from-outcome id="__272">SBP_SLS_SPEECH_BACK_OFFICE</from-outcome>
+      <to-activity-id id="__271">SBP_SLS_SPEECH_BACK_OFFICE</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__278">
+      <from-outcome id="__279">SBP_SLS_CARGA_FEEDBACK</from-outcome>
+      <to-activity-id id="__277">SBP_SLS_CARGA_FEEDBACK</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__285">
+      <from-outcome id="__286">SBP_SLS_VENTA_SPEECH</from-outcome>
+      <to-activity-id id="__284">SBP_SLS_VENTA_SPEECH</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__291">
+      <from-outcome id="__293">SBP_SLS_NUEVO_SPEECH</from-outcome>
+      <to-activity-id id="__292">SBP_SLS_NUEVO_SPEECH</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__298">
+      <from-outcome id="__300">SBP_SLS_SPEECH_VENTA_NEW</from-outcome>
+      <to-activity-id id="__299">SBP_SLS_SPEECH_VENTA_NEW</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__306">
+      <from-outcome id="__307">SBP_SLS_VENTAS_X_EV_OBS</from-outcome>
+      <to-activity-id id="__305">SBP_SLS_VENTAS_X_EV_OBS</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__312">
+      <from-outcome id="__314">SBP_SLS_VENTA_OBS_EJ_VENTA</from-outcome>
+      <to-activity-id id="__313">SBP_SLS_VENTA_OBS_EJ_VENTA</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__320">
+      <from-outcome id="__321">SBP_SLS_REASIG_X_FILT</from-outcome>
+      <to-activity-id id="__319">SBP_SLS_REASIG_X_FILT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__327">
+      <from-outcome id="__328">SBP_SLS_REASIG_EVENTA_NEW</from-outcome>
+      <to-activity-id id="__326">SBP_SLS_REASIG_EVENTA_NEW</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__333">
+      <from-outcome id="__335">PRUEBA_SFTP</from-outcome>
+      <to-activity-id id="__334">PRUEBA_SFTP</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__341">
+      <from-outcome id="__342">SBP_SLS_LIST_EV_MANT</from-outcome>
+      <to-activity-id id="__340">SBP_SLS_LIST_EV_MANT</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__348">
+      <from-outcome id="__349">SBP_SLS_ARC_FB</from-outcome>
+      <to-activity-id id="__347">SBP_SLS_ARC_FB</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__13">
+    <managed-bean-name id="__12">backing_SBP_LIST_CAMP</managed-bean-name>
+    <managed-bean-class id="__14">view.backing.SBP_LIST_CAMP</managed-bean-class>
+    <managed-bean-scope id="__15">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_LIST_CAMP.jspx-->
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name id="__16">backing_SBP_ASIG_CPG_SP</managed-bean-name>
+    <managed-bean-class id="__17">view.backing.SBP_ASIG_CPG_SP</managed-bean-class>
+    <managed-bean-scope id="__18">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_ASIG_CPG_SP.jspx-->
+  </managed-bean>
+  <managed-bean id="__23">
+    <managed-bean-name id="__22">backing_SBP_CREATE_CPG</managed-bean-name>
+    <managed-bean-class id="__20">view.backing.SBP_CREATE_CPG</managed-bean-class>
+    <managed-bean-scope id="__21">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_CREATE_CPG.jspx-->
+  </managed-bean>
+  <managed-bean id="__29">
+    <managed-bean-name id="__28">backing_SBP_SLS_PRINC</managed-bean-name>
+    <managed-bean-class id="__30">view.backing.SBP_SLS_PRINC</managed-bean-class>
+    <managed-bean-scope id="__27">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_PRINC.jspx-->
+  </managed-bean>
+  <managed-bean id="__31">
+    <managed-bean-name id="__33">backing_prueba</managed-bean-name>
+    <managed-bean-class id="__32">view.backing.Prueba</managed-bean-class>
+    <managed-bean-scope id="__34">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1prueba.jspx-->
+  </managed-bean>
+  <managed-bean id="__37">
+    <managed-bean-name id="__38">backing_untitled1</managed-bean-name>
+    <managed-bean-class id="__35">view.backing.Untitled1</managed-bean-class>
+    <managed-bean-scope id="__36">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1untitled1.jspx-->
+  </managed-bean>
+  <managed-bean id="__44">
+    <managed-bean-name id="__43">backing_SBP_ASOG_EJ_VENT</managed-bean-name>
+    <managed-bean-class id="__45">view.backing.SBP_ASOG_EJ_VENT</managed-bean-class>
+    <managed-bean-scope id="__42">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_ASOG_EJ_VENT.jspx-->
+  </managed-bean>
+  <managed-bean id="__51">
+    <managed-bean-name id="__49">backing_SBP_ASIGNACION_EJ_VENTA</managed-bean-name>
+    <managed-bean-class id="__50">view.backing.SBP_ASIGNACION_EJ_VENTA</managed-bean-class>
+    <managed-bean-scope id="__52">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_ASIGNACION_EJ_VENTA.jspx-->
+  </managed-bean>
+  <managed-bean id="__58">
+    <managed-bean-name id="__57">backing_SBP_CONF_CPG_SP</managed-bean-name>
+    <managed-bean-class id="__56">view.backing.SBP_CONF_CPG_SP</managed-bean-class>
+    <managed-bean-scope id="__59">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_CONF_CPG_SP.jspx-->
+  </managed-bean>
+  <managed-bean id="__65">
+    <managed-bean-name id="__67">backing_SBP_SLS_LIST_PROD</managed-bean-name>
+    <managed-bean-class id="__66">view.backing.SBP_SLS_LIST_PROD</managed-bean-class>
+    <managed-bean-scope id="__68">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_LIST_PROD.jspx-->
+  </managed-bean>
+  <managed-bean id="__73">
+    <managed-bean-name id="__71">backing_SBP_SLS_CONT_FEED</managed-bean-name>
+    <managed-bean-class id="__70">view.backing.SBP_SLS_CONT_FEED</managed-bean-class>
+    <managed-bean-scope id="__72">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_CONT_FEED.jspx-->
+  </managed-bean>
+  <managed-bean id="__83">
+    <managed-bean-name id="__80">backing_SBP_SLS_PANT_OPTY</managed-bean-name>
+    <managed-bean-class id="__82">view.backing.SBP_SLS_PANT_OPTY</managed-bean-class>
+    <managed-bean-scope id="__81">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_PANT_OPTY.jspx-->
+  </managed-bean>
+  <managed-bean id="__74">
+    <managed-bean-name id="__84">backing_test</managed-bean-name>
+    <managed-bean-class id="__75">view.backing.Test</managed-bean-class>
+    <managed-bean-scope id="__76">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1test.jspx-->
+  </managed-bean>
+  <managed-bean id="__91">
+    <managed-bean-name id="__90">backing_SBP_SLS_OPP_PAGE</managed-bean-name>
+    <managed-bean-class id="__88">view.backing.SBP_SLS_OPP_PAGE</managed-bean-class>
+    <managed-bean-scope id="__89">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_OPP_PAGE.jspx-->
+  </managed-bean>
+  <managed-bean id="__96">
+    <managed-bean-name id="__97">backing_SBP_SLS_DOSIFICADOR</managed-bean-name>
+    <managed-bean-class id="__98">view.backing.SBP_SLS_DOSIFICADOR</managed-bean-class>
+    <managed-bean-scope id="__95">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_DOSIFICADOR.jspx-->
+  </managed-bean>
+  <managed-bean id="__104">
+    <managed-bean-name id="__105">backing_SBP_SLS_LIST_SUP_X_JC</managed-bean-name>
+    <managed-bean-class id="__102">view.backing.SBP_SLS_LIST_SUP_X_JC</managed-bean-class>
+    <managed-bean-scope id="__103">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_LIST_SUP_X_JC.jspx-->
+  </managed-bean>
+  <managed-bean id="__109">
+    <managed-bean-name id="__112">backing_SBP_SLS_REASIG_JC_SUP</managed-bean-name>
+    <managed-bean-class id="__110">view.backing.SBP_SLS_REASIG_JC_SUP</managed-bean-class>
+    <managed-bean-scope id="__111">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REASIG_JC_SUP.jspx-->
+  </managed-bean>
+  <managed-bean id="__116">
+    <managed-bean-name id="__117">backing_SBP_SLS_REASIG_SUP_EV</managed-bean-name>
+    <managed-bean-class id="__119">view.backing.SBP_SLS_REASIG_SUP_EV</managed-bean-class>
+    <managed-bean-scope id="__118">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REASIG_SUP_EV.jspx-->
+  </managed-bean>
+  <managed-bean id="__126">
+    <managed-bean-name id="__123">backing_SBP_SLS_LIST_EJV_X_SUP</managed-bean-name>
+    <managed-bean-class id="__125">view.backing.SBP_SLS_LIST_EJV_X_SUP</managed-bean-class>
+    <managed-bean-scope id="__124">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_LIST_EJV_X_SUP.jspx-->
+  </managed-bean>
+  <managed-bean id="__133">
+    <managed-bean-name id="__130">backing_SBP_SLS_LIST_CANALES</managed-bean-name>
+    <managed-bean-class id="__132">view.backing.SBP_SLS_LIST_CANALES</managed-bean-class>
+    <managed-bean-scope id="__131">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_LIST_CANALES.jspx-->
+  </managed-bean>
+  <managed-bean id="__138">
+    <managed-bean-name id="__139">backing_SBP_SLS_REASIG_CAN_SCT</managed-bean-name>
+    <managed-bean-class id="__140">view.backing.SBP_SLS_REASIG_CAN_SCT</managed-bean-class>
+    <managed-bean-scope id="__137">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REASIG_CAN_SCT.jspx-->
+  </managed-bean>
+  <managed-bean id="__146">
+    <managed-bean-name id="__147">backing_SBP_SLS_PRINC_SCT</managed-bean-name>
+    <managed-bean-class id="__144">view.backing.SBP_SLS_PRINC_SCT</managed-bean-class>
+    <managed-bean-scope id="__145">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_PRINC_SCT.jspx-->
+  </managed-bean>
+  <managed-bean id="__153">
+    <managed-bean-name id="__152">backing_SBP_SLS_OPTY_PAGE_STD</managed-bean-name>
+    <managed-bean-class id="__151">view.backing.SBP_SLS_OPTY_PAGE_STD</managed-bean-class>
+    <managed-bean-scope id="__154">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_OPTY_PAGE_STD.jspx-->
+  </managed-bean>
+  <managed-bean id="__159">
+    <managed-bean-name id="__158">backing_SBP_SLS_CPG_PAUSA</managed-bean-name>
+    <managed-bean-class id="__160">view.backing.SBP_SLS_CPG_PAUSA</managed-bean-class>
+    <managed-bean-scope id="__161">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_CPG_PAUSA.jspx-->
+  </managed-bean>
+  <managed-bean id="__165">
+    <managed-bean-name id="__166">backing_SBP_SLS_PRINC_JEF_CAN</managed-bean-name>
+    <managed-bean-class id="__168">view.backing.SBP_SLS_PRINC_JEF_CAN</managed-bean-class>
+    <managed-bean-scope id="__167">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_PRINC_JEF_CAN.jspx-->
+  </managed-bean>
+  <managed-bean id="__172">
+    <managed-bean-name id="__174">backing_SBP_SLS_BUSQUEDA_DNI_OPP</managed-bean-name>
+    <managed-bean-class id="__175">view.backing.SBP_SLS_BUSQUEDA_DNI_OPP</managed-bean-class>
+    <managed-bean-scope id="__173">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_BUSQUEDA_DNI_OPP.jspx-->
+  </managed-bean>
+  <managed-bean id="__180">
+    <managed-bean-name id="__182">backing_SBP_SLS_OPP_PAGE_STD</managed-bean-name>
+    <managed-bean-class id="__181">view.backing.SBP_SLS_OPP_PAGE_STD</managed-bean-class>
+    <managed-bean-scope id="__179">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_OPP_PAGE_STD.jspx-->
+  </managed-bean>
+  <managed-bean id="__188">
+    <managed-bean-name id="__189">backing_SBP_SLS_CARGA_MASIVA</managed-bean-name>
+    <managed-bean-class id="__186">view.backing.SBP_SLS_CARGA_MASIVA</managed-bean-class>
+    <managed-bean-scope id="__187">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_CARGA_MASIVA.jspx-->
+  </managed-bean>
+  <managed-bean id="__196">
+    <managed-bean-name id="__193">backing_SBP_SLS_PAUSA_CPG_2</managed-bean-name>
+    <managed-bean-class id="__194">view.backing.SBP_SLS_PAUSA_CPG_2</managed-bean-class>
+    <managed-bean-scope id="__195">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_PAUSA_CPG_2.jspx-->
+  </managed-bean>
+  <managed-bean id="__203">
+    <managed-bean-name id="__200">backing_SBP_SLS_INF_JEF_CAN</managed-bean-name>
+    <managed-bean-class id="__202">view.backing.SBP_SLS_INF_JEF_CAN</managed-bean-class>
+    <managed-bean-scope id="__201">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_INF_JEF_CAN.jspx-->
+  </managed-bean>
+  <managed-bean id="__207">
+    <managed-bean-name id="__209">backing_SBP_SLS_AS_REASIG</managed-bean-name>
+    <managed-bean-class id="__208">view.backing.SBP_SLS_AS_REASIG</managed-bean-class>
+    <managed-bean-scope id="__210">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_AS_REASIG.jspx-->
+  </managed-bean>
+  <managed-bean id="__216">
+    <managed-bean-name id="__214">backing_SBP_SLS_FUNNEL</managed-bean-name>
+    <managed-bean-class id="__217">view.backing.SBP_SLS_FUNNEL</managed-bean-class>
+    <managed-bean-scope id="__215">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_FUNNEL.jspx-->
+  </managed-bean>
+  <managed-bean id="__222">
+    <managed-bean-name id="__221">backing_SBP_SLS_DELETE_LEADS</managed-bean-name>
+    <managed-bean-class id="__224">view.backing.SBP_SLS_DELETE_LEADS</managed-bean-class>
+    <managed-bean-scope id="__223">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_DELETE_LEADS.jspx-->
+  </managed-bean>
+  <managed-bean id="__238">
+    <managed-bean-name id="__235">backing_SBP_SLS_REP_VENTA_EV</managed-bean-name>
+    <managed-bean-class id="__237">view.backing.SBP_SLS_REP_VENTA_EV</managed-bean-class>
+    <managed-bean-scope id="__236">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REP_VENTA_EV.jspx-->
+  </managed-bean>
+  <managed-bean id="__240">
+    <managed-bean-name id="__239">backing_SBP_SLS_KARDEX_JEF_CAN</managed-bean-name>
+    <managed-bean-class id="__241">view.backing.SBP_SLS_KARDEX_JEF_CAN</managed-bean-class>
+    <managed-bean-scope id="__231">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_KARDEX_JEF_CAN.jspx-->
+  </managed-bean>
+  <managed-bean id="__248">
+    <managed-bean-name id="__246">backing_SBP_SLS_KARDEX_SUP</managed-bean-name>
+    <managed-bean-class id="__245">view.backing.SBP_SLS_KARDEX_SUP</managed-bean-class>
+    <managed-bean-scope id="__247">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_KARDEX_SUP.jspx-->
+  </managed-bean>
+  <managed-bean id="__253">
+    <managed-bean-name id="__254">backing_SBP_SLS_REP_AGENDAS_EJ_V</managed-bean-name>
+    <managed-bean-class id="__252">view.backing.SBP_SLS_REP_AGENDAS_EJ_V</managed-bean-class>
+    <managed-bean-scope id="__255">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REP_AGENDAS_EJ_V.jspx-->
+  </managed-bean>
+  <managed-bean id="__260">
+    <managed-bean-name id="__262">backing_SBP_SLS_REP_EJ_VENTA_X_SUP</managed-bean-name>
+    <managed-bean-class id="__261">view.backing.SBP_SLS_REP_EJ_VENTA_X_SUP</managed-bean-class>
+    <managed-bean-scope id="__259">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REP_EJ_VENTA_X_SUP.jspx-->
+  </managed-bean>
+  <managed-bean id="__269">
+    <managed-bean-name id="__266">backing_SBP_SLS_VENTA_OBS_BO</managed-bean-name>
+    <managed-bean-class id="__268">view.backing.SBP_SLS_VENTA_OBS_BO</managed-bean-class>
+    <managed-bean-scope id="__267">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_VENTA_OBS_BO.jspx-->
+  </managed-bean>
+  <managed-bean id="__273">
+    <managed-bean-name id="__276">backing_SBP_SLS_SPEECH_BACK_OFFICE</managed-bean-name>
+    <managed-bean-class id="__275">view.backing.SBP_SLS_SPEECH_BACK_OFFICE</managed-bean-class>
+    <managed-bean-scope id="__274">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_SPEECH_BACK_OFFICE.jspx-->
+  </managed-bean>
+  <managed-bean id="__281">
+    <managed-bean-name id="__283">backing_SBP_SLS_CARGA_FEEDBACK</managed-bean-name>
+    <managed-bean-class id="__280">view.backing.SBP_SLS_CARGA_FEEDBACK</managed-bean-class>
+    <managed-bean-scope id="__282">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_CARGA_FEEDBACK.jspx-->
+  </managed-bean>
+  <managed-bean id="__290">
+    <managed-bean-name id="__288">backing_SBP_SLS_VENTA_SPEECH</managed-bean-name>
+    <managed-bean-class id="__289">view.backing.SBP_SLS_VENTA_SPEECH</managed-bean-class>
+    <managed-bean-scope id="__287">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_VENTA_SPEECH.jspx-->
+  </managed-bean>
+  <managed-bean id="__296">
+    <managed-bean-name id="__295">backing_SBP_SLS_NUEVO_SPEECH</managed-bean-name>
+    <managed-bean-class id="__297">view.backing.SBP_SLS_NUEVO_SPEECH</managed-bean-class>
+    <managed-bean-scope id="__294">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_NUEVO_SPEECH.jspx-->
+  </managed-bean>
+  <managed-bean id="__303">
+    <managed-bean-name id="__302">backing_SBP_SLS_SPEECH_VENTA_NEW</managed-bean-name>
+    <managed-bean-class id="__304">view.backing.SBP_SLS_SPEECH_VENTA_NEW</managed-bean-class>
+    <managed-bean-scope id="__301">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_SPEECH_VENTA_NEW.jspx-->
+  </managed-bean>
+  <managed-bean id="__308">
+    <managed-bean-name id="__311">backing_SBP_SLS_VENTAS_X_EV_OBS</managed-bean-name>
+    <managed-bean-class id="__309">view.backing.SBP_SLS_VENTAS_X_EV_OBS</managed-bean-class>
+    <managed-bean-scope id="__310">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_VENTAS_X_EV_OBS.jspx-->
+  </managed-bean>
+  <managed-bean id="__317">
+    <managed-bean-name id="__316">backing_SBP_SLS_VENTA_OBS_EJ_VENTA</managed-bean-name>
+    <managed-bean-class id="__315">view.backing.SBP_SLS_VENTA_OBS_EJ_VENTA</managed-bean-class>
+    <managed-bean-scope id="__318">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_VENTA_OBS_EJ_VENTA.jspx-->
+  </managed-bean>
+  <managed-bean id="__323">
+    <managed-bean-name id="__325">backing_SBP_SLS_REASIG_X_FILT</managed-bean-name>
+    <managed-bean-class id="__324">view.backing.SBP_SLS_REASIG_X_FILT</managed-bean-class>
+    <managed-bean-scope id="__322">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REASIG_X_FILT.jspx-->
+  </managed-bean>
+  <managed-bean id="__331">
+    <managed-bean-name id="__329">backing_SBP_SLS_REASIG_EVENTA_NEW</managed-bean-name>
+    <managed-bean-class id="__332">view.backing.SBP_SLS_REASIG_EVENTA_NEW</managed-bean-class>
+    <managed-bean-scope id="__330">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_REASIG_EVENTA_NEW.jspx-->
+  </managed-bean>
+  <managed-bean id="__336">
+    <managed-bean-name id="__339">backing_PRUEBA_SFTP</managed-bean-name>
+    <managed-bean-class id="__338">view.backing.PRUEBA_SFTP</managed-bean-class>
+    <managed-bean-scope id="__337">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PRUEBA_SFTP.jspx-->
+  </managed-bean>
+  <managed-bean id="__346">
+    <managed-bean-name id="__343">backing_SBP_SLS_LIST_EV_MANT</managed-bean-name>
+    <managed-bean-class id="__345">view.backing.SBP_SLS_LIST_EV_MANT</managed-bean-class>
+    <managed-bean-scope id="__344">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_LIST_EV_MANT.jspx-->
+  </managed-bean>
+  <managed-bean id="__350">
+    <managed-bean-name id="__351">backing_SBP_SLS_ARC_FB</managed-bean-name>
+    <managed-bean-class id="__352">view.backing.SBP_SLS_ARC_FB</managed-bean-class>
+    <managed-bean-scope id="__353">backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1SBP_SLS_ARC_FB.jspx-->
+  </managed-bean>
+</adfc-config>

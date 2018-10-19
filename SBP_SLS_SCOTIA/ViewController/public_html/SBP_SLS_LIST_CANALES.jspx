@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelStretchLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.psl1}"
+                                   id="psl1" styleClass="AFStretchWidth"
+                                   startWidth="10px" endWidth="10px"
+                                   topHeight="10px" bottomHeight="10px">
+              <f:facet name="center">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.pgl1}"
+                                     id="pgl1" styleClass="AFStretchWidth">
+                  <af:panelSplitter binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.ps1}"
+                                    id="ps1" splitterPosition="83"
+                                    orientation="vertical"
+                                    styleClass="AFStretchWidth">
+                    <f:facet name="first">
+                      <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.pgl3}"
+                                           id="pgl3"
+                                           styleClass="AFStretchWidth">
+                        <af:outputLabel value="Reasignación de Leads"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.ol1}"
+                                        id="ol1"/>
+                        <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.pgl4}"
+                                             id="pgl4" layout="horizontal"
+                                             styleClass="AFStretchWidth">
+                          <af:commandButton text="Buscar"
+                                            binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.cb1}"
+                                            id="cb1"
+                                            actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.buscarCanales}"/>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="second">
+                      <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.pgl2}"
+                                           id="pgl2">
+                        <af:table value="#{bindings.SbpSlsListCanal2View1.collectionModel}"
+                                  var="row"
+                                  rows="#{bindings.SbpSlsListCanal2View1.rangeSize}"
+                                  emptyText="#{bindings.SbpSlsListCanal2View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  fetchSize="#{bindings.SbpSlsListCanal2View1.rangeSize}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.SbpSlsListCanal2View1.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.SbpSlsListCanal2View1.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t2"
+                                  columnStretching="last"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.tblCanal}"
+                                  styleClass="AFStretchWidth" width="687">
+                          <af:column sortProperty="#{bindings.SbpSlsListCanal2View1.hints.IdCanal.name}"
+                                     sortable="false" headerText="idCanal"
+                                     id="c8" visible="false">
+                            <af:outputText value="#{row.IdCanal}" id="ot7">
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.SbpSlsListCanal2View1.hints.IdCanal.format}"/>
+                            </af:outputText>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.SbpSlsListCanal2View1.hints.NomCanal.name}"
+                                     sortable="false" headerText="Vendor"
+                                     id="c7" width="200">
+                            <af:commandLink text="#{row.NomCanal}" id="cl1"
+                                            action="SBP_SLS_REASIG_CAN_SCT"
+                                            actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.obtenerDatos}"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.SbpSlsListCanal2View1.hints.PartyNumber.name}"
+                                     sortable="false" headerText="partyNumber"
+                                     id="c9" visible="false">
+                            <af:outputText value="#{row.PartyNumber}" id="ot3"/>
+                          </af:column>
+                          <af:column sortProperty="#{bindings.SbpSlsListCanal2View1.hints.Cantidad.name}"
+                                     sortable="false"
+                                     headerText="Cantidad"
+                                     id="c1">
+                            <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                          label="#{bindings.SbpSlsListCanal2View1.hints.Cantidad.label}"
+                                          columns="#{bindings.SbpSlsListCanal2View1.hints.Cantidad.displayWidth}"
+                                          shortDesc="#{bindings.SbpSlsListCanal2View1.hints.Cantidad.tooltip}"
+                                          id="it2" readOnly="true"
+                                          converter="org.apache.myfaces.trinidad.Number"
+                                          immediate="true"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                  </af:panelSplitter>
+                  <af:inputText label="campaña" id="it1"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_CANALES.txtCpgId}"
+                                visible="false"/>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

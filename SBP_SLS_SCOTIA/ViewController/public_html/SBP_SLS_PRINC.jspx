@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_PRINC.onBeforePhase}">
+    <af:document id="d1" binding="#{backingBeanScope.backing_SBP_SLS_PRINC.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_PRINC.m1}"
+                   id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_SLS_PRINC.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet2">
+            <af:panelStretchLayout
+                                   id="psl1" styleClass="AFStretchWidth"
+                                   startWidth="10px" endWidth="10px"
+                                   topHeight="10px" bottomHeight="10px"
+                                   dimensionsFrom="parent">
+              <f:facet name="center">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PRINC.pgl1}"
+                                     id="pgl1" styleClass="AFStretchWidth">
+                  <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_PRINC.pgl2}"
+                                       id="pgl2">
+                    <af:commandButton text="Procesar" id="cb1"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_PRINC.procesarInf}"
+                                      visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout
+                                       id="pgl3" styleClass="AFStretchWidth">
+                    <af:panelFormLayout
+                                        id="pfl1"
+                                        maxColumns="2" rows="2">
+                      <af:inputText value="#{bindings.CodCampania.inputValue}"
+                                    label="Cod Cpg"
+                                    columns="#{bindings.CodCampania.hints.displayWidth}"
+                                    maximumLength="#{bindings.CodCampania.hints.precision}"
+                                    shortDesc="#{bindings.CodCampania.hints.tooltip}"
+                                    id="it1"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtCodCpg}"
+                                    editable="always" visible="false">
+                        <f:validator binding="#{bindings.CodCampania.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.NomCampania.inputValue}"
+                                    label="Nombre Campaña"
+                                    columns="#{bindings.NomCampania.hints.displayWidth}"
+                                    maximumLength="#{bindings.NomCampania.hints.precision}"
+                                    id="it2"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtNomCpg}">
+                        <f:validator binding="#{bindings.NomCampania.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.ProductoBase.inputValue}"
+                                    label="Producto"
+                                    columns="#{bindings.ProductoBase.hints.displayWidth}"
+                                    maximumLength="#{bindings.ProductoBase.hints.precision}"
+                                    id="it11"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtProd}">
+                        <f:validator binding="#{bindings.ProductoBase.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.FecIni.inputValue}"
+                                    label="Fecha inicio"
+                                    columns="#{bindings.FecIni.hints.displayWidth}"
+                                    maximumLength="#{bindings.FecIni.hints.precision}"
+                                    id="it9"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtFecIni}">
+                        <f:validator binding="#{bindings.FecIni.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.Asignado.inputValue}"
+                                    label="% Asignado"
+                                    columns="#{bindings.Asignado.hints.displayWidth}"
+                                    maximumLength="#{bindings.Asignado.hints.precision}"
+                                    id="it3"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtPorcAsig}">
+                        <f:validator binding="#{bindings.Asignado.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.FecFin.inputValue}"
+                                    label="Fecha Fin"
+                                    columns="#{bindings.FecFin.hints.displayWidth}"
+                                    maximumLength="#{bindings.FecFin.hints.precision}"
+                                    id="it10"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtFecFin}">
+                        <f:validator binding="#{bindings.FecFin.validator}"/>
+                      </af:inputText>
+                      <af:outputText value="#{viewScope.cpgId2}" id="ot1"
+                                     binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtCpgId2}"
+                                     visible="false"/>
+                      <af:inputText label="Object Name" id="it5"
+                                    value="CampanaSBP_c" visible="false"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtObjectName}"/>
+                      <af:inputText value="#{bindings.CantOpp.inputValue}"
+                                    label="Cantidad Ofertas Asignadas"
+                                    columns="#{bindings.CantOpp.hints.displayWidth}"
+                                    maximumLength="#{bindings.CantOpp.hints.precision}"
+                                    id="it4"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtCantLead}">
+                        <f:validator binding="#{bindings.CantOpp.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.PeriodoCpg.inputValue}"
+                                    label="Periodo Campaña"
+                                    columns="#{bindings.PeriodoCpg.hints.displayWidth}"
+                                    maximumLength="#{bindings.PeriodoCpg.hints.precision}"
+                                    id="it6"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtPerCpg}"
+                                    editable="always">
+                        <f:validator binding="#{bindings.PeriodoCpg.validator}"/>
+                      </af:inputText>
+                      <af:inputText value="#{bindings.CantOfertas.inputValue}"
+                                    label="Cantidad Ofertas Totales"
+                                    columns="#{bindings.CantOfertas.hints.displayWidth}"
+                                    maximumLength="#{bindings.CantOfertas.hints.precision}"
+                                    id="it7"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtCantOf}">
+                        <f:validator binding="#{bindings.CantOfertas.validator}"/>
+                      </af:inputText>
+                      <af:inputText label="usuario" id="it12"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtUsuarioId}"
+                                    visible="false"/>
+                      <af:commandButton text="url"
+                                        disabled="#{!bindings.url.enabled}"
+                                        id="cb6"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_PRINC.impri}"
+                                        visible="false"/>
+                      <af:selectBooleanCheckbox value="#{bindings.Estado.inputValue}"
+                                                label="Estado"
+                                                shortDesc="#{bindings.Estado.hints.tooltip}"
+                                                id="sbc1"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtCheckBox}"
+                                                visible="false"/>
+                      <af:inputText value="#{bindings.Estado1.inputValue}"
+                                    label="Activo"
+                                    columns="#{bindings.Estado1.hints.displayWidth}"
+                                    maximumLength="#{bindings.Estado1.hints.precision}"
+                                    id="it13"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtActivo}">
+                        <f:validator binding="#{bindings.Estado1.validator}"/>
+                      </af:inputText>
+                      <af:inputText label="Label 1" id="it8"
+                                    value="#{securityContext.userName}"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_PRINC.txtUser}"
+                                    visible="false"/>
+                    </af:panelFormLayout>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl4"
+                                       styleClass="AFStretchWidth">
+                    <af:table value="#{bindings.SbpSlsListEvXSupView1.collectionModel}"
+                              var="row"
+                              rows="#{bindings.SbpSlsListEvXSupView1.rangeSize}"
+                              emptyText="#{bindings.SbpSlsListEvXSupView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.SbpSlsListEvXSupView1.rangeSize}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.SbpSlsListEvXSupView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.SbpSlsListEvXSupView1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1"
+                              columnStretching="last"
+                              styleClass="AFStretchWidth"
+                              binding="#{backingBeanScope.backing_SBP_SLS_PRINC.tblEjxSup}">
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.IdSup.name}"
+                                 sortable="false" headerText="idSup" id="c5"
+                                 visible="false">
+                        <af:outputText value="#{row.IdSup}" id="ot2">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListEvXSupView1.hints.IdSup.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.NomSup.name}"
+                                 sortable="false" headerText="Supervisor"
+                                 id="c2" width="200">
+                        <af:outputText value="#{row.NomSup}" id="ot4"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.IdEjVenta.name}"
+                                 sortable="false" headerText="idEjVenta"
+                                 id="c1" visible="false">
+                        <af:outputText value="#{row.IdEjVenta}" id="ot6">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListEvXSupView1.hints.IdEjVenta.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.NomEjVenta.name}"
+                                 sortable="false" headerText="Ejecutivo Venta"
+                                 id="c3" width="200">
+                        <af:outputText value="#{row.NomEjVenta}" id="ot7"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.name}"
+                                 sortable="false" headerText="Cantidad" id="c6"
+                                 width="150">
+                        <af:outputText value="#{row.Cantidad}" id="ot3">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.CantLeadGest.name}"
+                                 sortable="false" headerText="CantLeadGest"
+                                 id="c4">
+                        <af:outputText value="#{row.CantLeadGest}" id="ot5">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsListEvXSupView1.hints.CantLeadGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                    </af:table>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

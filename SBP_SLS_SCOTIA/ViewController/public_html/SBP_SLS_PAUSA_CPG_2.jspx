@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.d1}">
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox id="pb1">
+              <af:outputLabel value="Dosificación de Campaña- Jefe de Canal" id="ol1"
+                              inlineStyle="font-size:x-large;"/>
+              <af:panelFormLayout id="pfl1">
+                <af:panelGroupLayout id="pgl1" halign="center" valign="bottom"
+                                     layout="vertical"
+                                     inlineStyle="width:817px;">
+                  <af:panelFormLayout id="pfl2">
+                    <af:panelFormLayout id="pfl3">
+                      <af:panelGroupLayout id="pgl2" inlineStyle="width:817px;"
+                                           halign="center" valign="bottom"
+                                           layout="vertical">
+                        <af:inputText label="Label 1" id="it1"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.txtUserName}"
+                                      visible="false"/>
+                        <af:inputText label="Label 2" id="it2"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.txtCpgId}"
+                                      visible="false"/>
+                        <af:selectBooleanCheckbox text="Pausar Campaña" id="sbc1"
+                                                  binding="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.txtPausa}"/>
+                        <af:panelFormLayout id="pfl4">
+                          <af:commandButton text="Guardar" id="cb1"
+                                            actionListener="#{backingBeanScope.backing_SBP_SLS_PAUSA_CPG_2.procesar}"/>
+                        </af:panelFormLayout>
+                      </af:panelGroupLayout>
+                    </af:panelFormLayout>
+                  </af:panelFormLayout>
+                </af:panelGroupLayout>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

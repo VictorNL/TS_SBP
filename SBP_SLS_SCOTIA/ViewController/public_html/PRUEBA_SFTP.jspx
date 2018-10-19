@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_PRUEBA_SFTP.onBeforePhase}">
+    <af:document id="d1" binding="#{backingBeanScope.backing_PRUEBA_SFTP.d1}"
+                 theme="medium">
+      <af:messages id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_PRUEBA_SFTP.f1}">
+        <af:resource type="css" source="/css/styles.css"/>
+        <af:panelGroupLayout id="pgl1" layout="vertical">
+          <af:commandButton text="probar sftp" id="cb1"
+                            actionListener="#{backingBeanScope.backing_PRUEBA_SFTP.mostrarInfoSftp}"/>
+          <af:inputText label="Label 1" id="it1"
+                        binding="#{backingBeanScope.backing_PRUEBA_SFTP.txtPrueba}"
+                        readOnly="true"/>
+          <af:commandButton text="prueba timer" id="cb2"
+                            actionListener="#{backingBeanScope.backing_PRUEBA_SFTP.timer}"/>
+          <af:inputText label="Label 2" id="it2"
+                        binding="#{backingBeanScope.backing_PRUEBA_SFTP.txtHora}"/>
+          <af:commandButton text="detener proceso" id="cb3"
+                            actionListener="#{backingBeanScope.backing_PRUEBA_SFTP.detenerProceso}"/>
+        </af:panelGroupLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

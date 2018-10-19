@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelStretchLayout binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.psl1}"
+                                   id="psl1">
+              <f:facet name="center">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.pgl1}"
+                                     id="pgl1">
+                  <af:panelSplitter binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.ps1}"
+                                    id="ps1" splitterPosition="83"
+                                    orientation="vertical">
+                    <f:facet name="first">
+                      <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.pgl2}"
+                                           id="pgl2">
+                        <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.pgl3}"
+                                             id="pgl3">
+                          <af:outputLabel value="Reasignación de Oportunidades"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_SUP_EV.ol1}"
+                                          id="ol1"/>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="second"/>
+                  </af:panelSplitter>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelStretchLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_SBP_SLS_REASIG_SUP_EV-->
+</jsp:root>

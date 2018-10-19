@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.f1}">
+        <af:panelBox text="Reporte de Agendas" id="pb1"
+                     styleClass="AFStretchWidth" inlineStyle="font-size:large;">
+          <af:panelGroupLayout id="pgl3" layout="vertical">
+            <af:panelGroupLayout id="pgl4">
+              <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                <af:outputLabel value="Cantidad de Agendas" id="ol1"/>
+                <af:outputLabel id="ol2"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.txtCantAgendas}"/>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:spacer width="10" height="10" id="s2"/>
+            <af:commandButton text="Buscar" id="cb2"
+                              actionListener="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.buscar}"/>
+            <af:spacer width="10" height="30" id="s1"/>
+            <af:panelGroupLayout id="pgl2" styleClass="AFStretchWidth">
+              <af:table value="#{bindings.SbpSlsRepAgendaEjVenta1.collectionModel}"
+                        var="row"
+                        rows="#{bindings.SbpSlsRepAgendaEjVenta1.rangeSize}"
+                        emptyText="#{bindings.SbpSlsRepAgendaEjVenta1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.SbpSlsRepAgendaEjVenta1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.SbpSlsRepAgendaEjVenta1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.SbpSlsRepAgendaEjVenta1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t1" columnStretching="last"
+                        styleClass="AFStretchWidth"
+                        binding="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.tblRep}">
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.idEjVenta.name}"
+                           sortable="false" headerText="idEjVenta" id="c4"
+                           visible="false">
+                  <af:outputText value="#{row.idEjVenta}" id="ot8"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.ejVenta.name}"
+                           sortable="false" headerText="Ejecutivo Venta"
+                           id="c7">
+                  <af:outputText value="#{row.ejVenta}" id="ot1"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.idLead.name}"
+                           sortable="false" headerText="idLead" id="c8"
+                           visible="false">
+                  <af:outputText value="#{row.idLead}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.dni.name}"
+                           sortable="false" headerText="Dni" id="c5">
+                  <af:outputText value="#{row.dni}" id="ot7"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.producto.name}"
+                           sortable="false" headerText="Producto" id="c2">
+                  <af:outputText value="#{row.producto}" id="ot5"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.monto.name}"
+                           sortable="false" headerText="Monto" id="c3">
+                  <af:outputText value="#{row.monto}" id="ot3"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.telf.name}"
+                           sortable="false" headerText="Teléfono" id="c1">
+                  <af:outputText value="#{row.telf}" id="ot4"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsRepAgendaEjVenta1.hints.fecha2daLlam.name}"
+                           sortable="false" headerText="Volver a llamar"
+                           id="c6">
+                  <af:outputText value="#{row.fecha2daLlam}" id="ot6"/>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </af:panelGroupLayout>
+        </af:panelBox>
+        <af:inputText label="usuario" id="it1"
+                      binding="#{backingBeanScope.backing_SBP_SLS_REP_AGENDAS_EJ_V.txtUsuario}"
+                      visible="false"/>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

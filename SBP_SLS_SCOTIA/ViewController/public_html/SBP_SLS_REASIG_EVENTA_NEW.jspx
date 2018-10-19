@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.f1}">
+        <af:panelBox text="Reasignación de Leads - Ejecutivos" id="pb1">
+          <af:spacer width="10" height="30" id="s1"/>
+          <af:panelGroupLayout id="pgl1" layout="horizontal">
+            <af:outputLabel id="ol1"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.txtEjventaActual}"
+                            inlineStyle="font-weight:bold; font-size:x-large;"/>
+          </af:panelGroupLayout>
+          <af:spacer width="10" height="30" id="s2"/>
+          <af:panelGroupLayout id="pgl2" styleClass="AFStretchWidth"
+                               layout="vertical">
+            <af:commandButton text="Reasignar" id="cb1"
+                              actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.reasignar}"/>
+            <af:spacer width="10" height="30" id="s4"/>
+            <af:panelGroupLayout id="pgl3" layout="horizontal">
+              <af:inputText label="Cantidad de Leads:" id="it2"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.txtCantLeadsTodos}"/>
+              <af:commandButton text="Aplicar" id="cb2"
+                                actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.aplicar}"/>
+            </af:panelGroupLayout>
+            <af:spacer width="10" height="30" id="s3"/>
+            <af:table value="#{bindings.SbpSlsReasigEvXSupView1.collectionModel}"
+                      var="row"
+                      rows="#{bindings.SbpSlsReasigEvXSupView1.rangeSize}"
+                      emptyText="#{bindings.SbpSlsReasigEvXSupView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      fetchSize="#{bindings.SbpSlsReasigEvXSupView1.rangeSize}"
+                      rowBandingInterval="0"
+                      selectedRowKeys="#{bindings.SbpSlsReasigEvXSupView1.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.SbpSlsReasigEvXSupView1.collectionModel.makeCurrent}"
+                      rowSelection="single" id="t1" columnStretching="last"
+                      styleClass="AFStretchWidth"
+                      binding="#{backingBeanScope.backing_SBP_SLS_REASIG_EVENTA_NEW.tblEjec}">
+              <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupView1.hints.IdEjVenta.name}"
+                         sortable="false"
+                         headerText="IdEjecutivo Venta"
+                         id="c1">
+                <af:outputText value="#{row.IdEjVenta}" id="ot3">
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.SbpSlsReasigEvXSupView1.hints.IdEjVenta.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupView1.hints.NomEjVenta.name}"
+                         sortable="false"
+                         headerText="Ejecutivo Venta"
+                         id="c3">
+                <af:outputText value="#{row.NomEjVenta}" id="ot1"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.name}"
+                         sortable="false"
+                         headerText="Cantidad"
+                         id="c2">
+                <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                              label="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.label}"
+                              required="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.mandatory}"
+                              columns="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.displayWidth}"
+                              maximumLength="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.precision}"
+                              shortDesc="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.tooltip}"
+                              id="it1">
+                  <f:validator binding="#{row.bindings.Cantidad.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.SbpSlsReasigEvXSupView1.hints.Cantidad.format}"/>
+                </af:inputText>
+              </af:column>
+            </af:table>
+          </af:panelGroupLayout>
+        </af:panelBox>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

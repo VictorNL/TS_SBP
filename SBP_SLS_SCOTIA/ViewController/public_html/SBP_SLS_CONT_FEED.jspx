@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.f1}">
+        <af:pageTemplate viewId="/template1.jspx" id="pt1">
+          <f:facet name="facet1"/>
+          <f:facet name="facet2">
+            <af:panelBox text="PanelBox1" id="pb1">
+              <f:facet name="toolbar"/>
+              <af:panelGroupLayout id="pgl1">
+                <af:panelFormLayout id="pfl1" styleClass="AFStretchWidth">
+                  <af:commandButton text="buscar" id="cb1"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.buscar}"/>
+                  <af:commandButton
+                                    text="Guardar"
+                                    id="cb2"
+                                    action="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.guardar}"/>
+                </af:panelFormLayout>
+                <af:panelGroupLayout id="pgl2">
+                  <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.SbpSlsContactColView1.collectionModel}"
+                              var="row"
+                              rows="#{bindings.SbpSlsContactColView1.rangeSize}"
+                              emptyText="#{bindings.SbpSlsContactColView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.SbpSlsContactColView1.rangeSize}"
+                              rowBandingInterval="0"
+                              filterModel="#{bindings.SbpSlsContactColView1Query.queryDescriptor}"
+                              queryListener="#{bindings.SbpSlsContactColView1Query.processQuery}"
+                              filterVisible="true" varStatus="vs"
+                              selectedRowKeys="#{bindings.SbpSlsContactColView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.SbpSlsContactColView1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1"
+                              columnStretching="last"
+                              styleClass="AFStretchWidth"
+                              binding="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.tblContCuent}">
+                      <af:column sortProperty="#{bindings.SbpSlsContactColView1.hints.IdNomCol.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Id" id="c2" visible="false">
+                        <af:outputText value="#{row.IdNomCol}" id="ot2">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsContactColView1.hints.IdNomCol.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.SbpSlsContactColView1.hints.NomColumn.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Contactos" id="c1">
+                        <af:outputText value="#{row.NomColumn}" id="ot1"/>
+                      </af:column>
+                      <af:column headerText="Nro Orden" id="c8">
+                        <af:inputText value="#{row.NroOrden}" id="ot6"
+                                      label="Label 1" editable="always">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsContactColView1.hints.NroOrden.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column headerText="Cod Columna" id="c12"
+                                 visible="false">
+                        <af:outputText value="#{row.CodCol}" id="ot10"/>
+                      </af:column>
+                      <af:column id="c7" headerText="Visible">
+                        <af:selectBooleanCheckbox value="#{row.bindings.visible.inputValue}"
+                                                  label="#{row.bindings.visible.label}"
+                                                  shortDesc="#{bindings.SbpSlsContactColView1.hints.visible.tooltip}"
+                                                  id="sbc2"/>
+                      </af:column>
+                      <af:column headerText="Nombre(id)" id="c9"
+                                 visible="false">
+                        <af:outputText value="#{row.NomOrCol}" id="ot7">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.SbpSlsContactColView1.hints.NomOrCol.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column headerText="Nombre or" id="c10"
+                                 visible="false">
+                        <af:outputText value="#{row.NomOrCol}" id="ot8"/>
+                      </af:column>
+                      <af:column headerText="nombre tabla" id="c11"
+                                 visible="false">
+                        <af:outputText value="#{row.NomTab}" id="ot9"/>
+                      </af:column>
+                    </af:table>
+                  </af:panelCollection>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl3">
+                  <af:table value="#{bindings.SbpSlsOptyColView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsOptyColView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsOptyColView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsOptyColView1.rangeSize}"
+                            rowBandingInterval="0"
+                            filterModel="#{bindings.SbpSlsOptyColView1Query.queryDescriptor}"
+                            queryListener="#{bindings.SbpSlsOptyColView1Query.processQuery}"
+                            filterVisible="true" varStatus="vs"
+                            selectedRowKeys="#{bindings.SbpSlsOptyColView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsOptyColView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t2"
+                            styleClass="AFStretchWidth" columnStretching="last"
+                            binding="#{backingBeanScope.backing_SBP_SLS_CONT_FEED.tblProdOppCpg}">
+                    <af:column sortProperty="#{bindings.SbpSlsOptyColView1.hints.IdOptyCol.name}"
+                               filterable="true" sortable="true" headerText="Id"
+                               id="c3" visible="false">
+                      <af:outputText value="#{row.IdOptyCol}" id="ot4">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsOptyColView1.hints.IdOptyCol.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsOptyColView1.hints.OptyColumn.name}"
+                               filterable="true" sortable="true"
+                               headerText="Oportunidad" id="c4">
+                      <af:outputText value="#{row.OptyColumn}" id="ot3"/>
+                    </af:column>
+                    <af:column headerText="Nro Orden"
+                               id="c6">
+                      <af:inputText value="#{row.NroOrden}" id="ot5"
+                                    label="Label 2" editable="always">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsOptyColView1.hints.NroOrden.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column headerText="Cod Col"
+                               id="c5" visible="false">
+                      <af:outputText value="#{row.CodCol}" id="ot11"/>
+                    </af:column>
+                    <af:column headerText="Nom Or"
+                               id="c13" visible="false">
+                      <af:outputText value="#{row.NomOrCol}" id="ot12"/>
+                    </af:column>
+                    <af:column headerText="Nom Tab"
+                               id="c14">
+                      <af:outputText value="#{row.NomTab}" id="ot13"/>
+                    </af:column>
+                    <af:column
+                               id="c15" headerText="Visible">
+                      <af:selectBooleanCheckbox value="#{row.bindings.visibleOpty.inputValue}"
+                                                label="#{row.bindings.visibleOpty.label}"
+                                                shortDesc="#{bindings.SbpSlsOptyColView1.hints.visibleOpty.tooltip}"
+                                                id="sbc1"/>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

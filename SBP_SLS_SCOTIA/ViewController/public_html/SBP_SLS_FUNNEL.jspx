@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_FUNNEL.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.d1}">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.m1}"
+                   id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Reporte Funnel"
+                         binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.pb1}"
+                         id="pb1">
+              <af:panelGroupLayout id="pgl4" layout="horizontal">
+                <af:inputText value="#{bindings.IdCpg.inputValue}"
+                              label="idCpg"
+                              required="#{bindings.IdCpg.hints.mandatory}"
+                              columns="#{bindings.IdCpg.hints.displayWidth}"
+                              maximumLength="#{bindings.IdCpg.hints.precision}"
+                              shortDesc="#{bindings.IdCpg.hints.tooltip}"
+                              id="it1" partialTriggers="soc1" autoSubmit="true"
+                              readOnly="true"
+                              binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.txtCpgId}"
+                              visible="false">
+                  <f:validator binding="#{bindings.IdCpg.validator}"/>
+                </af:inputText>
+                <af:selectOneChoice value="#{bindings.NomCpg.inputValue}"
+                                    label="Campaña"
+                                    required="#{bindings.NomCpg.hints.mandatory}"
+                                    shortDesc="#{bindings.NomCpg.hints.tooltip}"
+                                    id="soc1" autoSubmit="true">
+                  <f:selectItems value="#{bindings.NomCpg.items}" id="si1"/>
+                </af:selectOneChoice>
+                <af:selectOneChoice value="#{bindings.NomCanal.inputValue}"
+                                    label="Vendor"
+                                    required="#{bindings.NomCanal.hints.mandatory}"
+                                    shortDesc="#{bindings.NomCanal.hints.tooltip}"
+                                    id="soc2" autoSubmit="true">
+                  <f:selectItems value="#{bindings.NomCanal.items}" id="si2"/>
+                </af:selectOneChoice>
+                <af:inputText value="#{bindings.IdCanal.inputValue}"
+                              label="vendor"
+                              required="#{bindings.IdCanal.hints.mandatory}"
+                              columns="#{bindings.IdCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.IdCanal.hints.precision}"
+                              shortDesc="#{bindings.IdCanal.hints.tooltip}"
+                              id="it2" partialTriggers="soc2" autoSubmit="true"
+                              readOnly="true" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.txtCanalId}">
+                  <f:validator binding="#{bindings.IdCanal.validator}"/>
+                </af:inputText>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl2">
+                <af:commandButton text="Procesar" id="cb1"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_FUNNEL.buscar}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.pgl1}"
+                                   id="pgl1">
+                <af:table value="#{bindings.SbpSlsFunnelView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsFunnelView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsFunnelView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsFunnelView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsFunnelView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsFunnelView1.collectionModel.makeCurrent}"
+                          rowSelection="single"
+                          id="t1" columnStretching="last"
+                          styleClass="AFStretchWidth"
+                          binding="#{backingBeanScope.backing_SBP_SLS_FUNNEL.tblFunnel}">
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.IdJefCan.name}"
+                             sortable="false" headerText="idJefCan" id="c12"
+                             visible="false">
+                    <af:outputText value="#{row.IdJefCan}" id="ot9"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.JefCan.name}"
+                             sortable="false" headerText="Jefe Canal" id="c13">
+                    <af:outputText value="#{row.JefCan}" id="ot7"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.IdSup.name}"
+                             sortable="false" headerText="idSup" id="c5"
+                             visible="false">
+                    <af:outputText value="#{row.IdSup}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.Sup.name}"
+                             sortable="false" headerText="Supervisor" id="c2">
+                    <af:outputText value="#{row.Sup}" id="ot10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.IdEjVenta.name}"
+                             sortable="false" headerText="idEjVenta" id="c10"
+                             visible="false">
+                    <af:outputText value="#{row.IdEjVenta}" id="ot14"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.EjVenta.name}"
+                             sortable="false" headerText="Ejecutivo Venta"
+                             id="c3">
+                    <af:outputText value="#{row.EjVenta}" id="ot13"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.CantLeads.name}"
+                             sortable="false" headerText="Cantidad Leads"
+                             id="c11">
+                    <af:outputText value="#{row.CantLeads}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.CantFb.name}"
+                             sortable="false" headerText="Cantidad Feedbacks"
+                             id="c14">
+                    <af:outputText value="#{row.CantFb}" id="ot11"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.FbLeads.name}"
+                             sortable="false" headerText="Feedbacks/Leads"
+                             id="c15">
+                    <af:outputText value="#{row.FbLeads}" id="ot15"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.CantCont.name}"
+                             sortable="false" headerText="Cantidad Contactados"
+                             id="c8">
+                    <af:outputText value="#{row.CantCont}" id="ot12"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.ContLeads.name}"
+                             sortable="false" headerText="Leads/Contactados"
+                             id="c9">
+                    <af:outputText value="#{row.ContLeads}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.CantContEf.name}"
+                             sortable="false"
+                             headerText="Cantidad Contactados Efectivos"
+                             id="c6">
+                    <af:outputText value="#{row.CantContEf}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.ContEfLeads.name}"
+                             sortable="false"
+                             headerText="Leads/Contactados Efectivos" id="c1">
+                    <af:outputText value="#{row.ContEfLeads}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.CantVentas.name}"
+                             sortable="false" headerText="Cantidad Ventas"
+                             id="c4">
+                    <af:outputText value="#{row.CantVentas}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsFunnelView1.hints.EfectBase.name}"
+                             sortable="false" headerText="Efectividad Base"
+                             id="c7">
+                    <af:outputText value="#{row.EfectBase}" id="ot4"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl3">
+                <dvt:pivotTable id="pivotTable1"
+                summary="Summary order by JefCan and Sup and CantLeads and CantFb and FbLeads and CantCont and ContLeads and CantContEf and ContEfLeads and CantVentas and EfectBase"
+                                value="#{bindings.SbpSlsFunnelView11.pivotTableModel}"
+                                styleClass="AFStretchWidth"
+                                inlineStyle="height:510px;"/>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

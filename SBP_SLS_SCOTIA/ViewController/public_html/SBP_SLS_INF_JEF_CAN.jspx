@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_INF_JEF_CAN.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_INF_JEF_CAN.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_INF_JEF_CAN.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Información consolidada de Leads correspondientes a Campañas, Supervisores y Ejecutivos de Venta" id="pb1">
+              <af:panelGroupLayout id="pgl3" styleClass="AFStretchWidth"
+                                   visible="false">
+                <af:table value="#{bindings.SbpSlsInfJefCanView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsInfJefCanView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsInfJefCanView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsInfJefCanView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsInfJefCanView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsInfJefCanView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1"
+                          binding="#{backingBeanScope.backing_SBP_SLS_INF_JEF_CAN.tblInf}"
+                          styleClass="AFStretchWidth" columnStretching="last"
+                          >
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Nomcpg.name}"
+                             sortable="false" headerText="Campaña" id="c4">
+                    <af:outputText value="#{row.Nomcpg}" id="ot9"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Cantleadcpg.name}"
+                             sortable="false" headerText="Cantidad/Leads"
+                             id="c2">
+                    <af:outputText value="#{row.Cantleadcpg}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Idsup.name}"
+                             sortable="false" headerText="idSup" id="c5">
+                    <af:outputText value="#{row.Idsup}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Nomsup.name}"
+                             sortable="false" headerText="Supervisor" id="c11">
+                    <af:outputText value="#{row.Nomsup}" id="ot11"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Cantleadsup.name}"
+                             sortable="false" headerText="Cantidad/Leads"
+                             id="c6">
+                    <af:outputText value="#{row.Cantleadsup}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Idejventa.name}"
+                             sortable="false" headerText="idEjVenta" id="c10">
+                    <af:outputText value="#{row.Idejventa}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Nomejventa.name}"
+                             sortable="false" headerText="Ejecutivo Venta"
+                             id="c3">
+                    <af:outputText value="#{row.Nomejventa}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.Cantleadejventa.name}"
+                             sortable="false" headerText="Cantidad/Leads"
+                             id="c1">
+                    <af:outputText value="#{row.Cantleadejventa}" id="ot10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.IdCpg.name}"
+                             sortable="false"
+                             headerText="idCpg"
+                             id="c7">
+                    <af:outputText value="#{row.IdCpg}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsInfJefCanView1.hints.CantVentEjVenta.name}"
+                             sortable="false"
+                             headerText="Cantidad Ventas"
+                             id="c9">
+                    <af:outputText value="#{row.CantVentEjVenta}" id="ot6"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+              <af:inputText id="it1"
+                            binding="#{backingBeanScope.backing_SBP_SLS_INF_JEF_CAN.txtUserName}" label="Jefe Canal"
+                            readOnly="true"/>
+              <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+                <dvt:pivotTable id="pivotTable1"
+                summary="Summary order by nomCpg and cantLeadCpg and nomSup and cantLeadSup and nomEjVenta and cantLeadEjVenta"
+                                value="#{bindings.SbpSlsInfJefCanView11.pivotTableModel}"
+                                styleClass="AFStretchWidth"
+                                contentDelivery="immediate"
+                                columnFetchSize="100" rowFetchSize="100"
+                                drillingEnabled="false"
+                                inlineStyle="height:510px;"/>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

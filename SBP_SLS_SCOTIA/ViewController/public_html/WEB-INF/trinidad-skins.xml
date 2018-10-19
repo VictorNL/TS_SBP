@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<skins xmlns="http://myfaces.apache.org/trinidad/skin">; 
+<skin> 
+<id>myskin.desktop</id> 
+<family>alta</family> 
+<extends>blafplus-rich.desktop</extends> 
+<style-sheet-name>css/styles.css</style-sheet-name> 
+</skin> 
+</skins>

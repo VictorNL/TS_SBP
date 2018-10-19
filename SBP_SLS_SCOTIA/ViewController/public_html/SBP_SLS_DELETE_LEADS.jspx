@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Borrado de Leads" id="pb1">
+              <af:panelGroupLayout id="pgl2" layout="horizontal">
+                <af:inputText label="Lote a borrar" id="it1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.txtLeadBorrar}"/>
+                <af:commandButton text="Borrar Leads" id="cb1"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.borrarLeads}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl1">
+                <af:table value="#{bindings.SbpSlsDeleteLoteView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsDeleteLoteView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsDeleteLoteView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsDeleteLoteView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsDeleteLoteView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsDeleteLoteView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1" columnStretching="last"
+                          styleClass="AFStretchWidth"
+                          binding="#{backingBeanScope.backing_SBP_SLS_DELETE_LEADS.tblLote}">
+                  <af:column headerText="Lote"
+                             id="c3">
+                    <af:outputText value="#{row.IdCarga}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsDeleteLoteView1.hints.FecCarga.name}"
+                             sortable="false" headerText="Fecha Carga" id="c5"
+                             width="150">
+                    <af:outputText value="#{row.FecCarga}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsDeleteLoteView1.hints.Usuario.name}"
+                             sortable="false" headerText="Usuario" id="c1"
+                             width="200">
+                    <af:outputText value="#{row.Usuario}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsDeleteLoteView1.hints.CantLead.name}"
+                             sortable="false" headerText="Cantidad Leads"
+                             id="c4">
+                    <af:outputText value="#{row.CantLead}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsDeleteLoteView1.hints.Estado.name}"
+                             sortable="false" headerText="Estado" id="c2">
+                    <af:outputText value="#{row.Estado}" id="ot3"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

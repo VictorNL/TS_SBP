@@ -1,0 +1,1287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.pb1}"
+                         id="pb1" styleClass="AFStretchWidth">
+              <af:commandButton text="Volver" id="cb1"
+                                action="SBP_SLS_BUSQUEDA_DNI_OPP"/>
+              <af:panelGroupLayout id="pgl2" layout="scroll"
+                                   styleClass="AFStretchWidth">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.pgl1}"
+                                     id="pgl1" halign="center"
+                                     layout="horizontal" visible="false">
+                  <af:commandButton text="Crear Feedback"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.cb2}"
+                                    id="cb2" visible="false"/>
+                  <af:commandButton text="Opty1" id="cb10"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.btnOpty1}"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.poblarTabla}"
+                                    visible="false"/>
+                  <af:inputText label="Campaña" id="it44"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCpgId}"
+                                visible="false"/>
+                  <af:inputText label="Lead Old" id="it45"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtLeadOld}"
+                                visible="false"/>
+                  <af:inputText label="Lead New" id="it46"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtLeadNew}"
+                                visible="false"/>
+                  <af:inputText label="Id Ejecutivo" id="it47"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdEj}"
+                                visible="false"/>
+                  <af:inputText label="Canal Id" id="it48"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCanalId}"
+                                visible="false"/>
+                  <af:inputText label="Usuario" id="it50"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtEjecutivoVenta}"
+                                visible="false"/>
+                </af:panelGroupLayout>
+                <af:panelBox text="Contacto"
+                             id="pb2" styleClass="AFStretchWidth">
+                  <af:outputLabel id="ol11" inlineStyle="font-size:x-large;"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtNombre}"/>
+                                  
+                <af:panelGridLayout id="pgl8" inlineStyle="margin:1px; border-color:Black;">
+          <af:gridRow marginTop="5px" height="auto" id="gr1">
+            
+            <af:gridCell id="gc0" marginStart="5px" width="17%" halign="end">
+                <af:outputLabel id="itld" value="Documento"/>
+            </af:gridCell>
+            
+            <af:gridCell id="gc1" marginStart="5px" width="17%">
+                    <af:panelLabelAndMessage id="plam4">
+                          <af:outputLabel id="ol12"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTipDoc}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                      <af:gridCell id="gridCell1" marginStart="5px"
+                                   width="17%" halign="end">
+                        <af:outputLabel value="Número" id="ol3"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc2" marginStart="5px" width="17%">
+                                  <af:panelLabelAndMessage id="plam5">
+                          <af:outputLabel
+                                          id="outputLabel11"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtNumDoc}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                      <af:gridCell id="gridCell2" marginStart="5px" width="17%"
+                                   halign="end">
+                        <af:outputLabel value="Email" id="outputLabel1"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc3" marginStart="5px" marginEnd="5px"
+                                   width="17%">
+                                  <af:panelLabelAndMessage id="plam1">
+                          <af:outputLabel
+                                          id="outputLabel13"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtEmail}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                    </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" id="gr2">
+            
+            <af:gridCell id="gc9" marginStart="5px" width="17%" halign="end">
+                <af:outputLabel id="it66" value="Edad"/>
+            </af:gridCell>
+            <af:gridCell id="gc4" marginStart="5px" width="17%">
+                                            <af:panelLabelAndMessage 
+                                             id="plam2">
+                          <af:outputLabel
+                                          id="outputLabel10"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtEdad}"/>
+                        </af:panelLabelAndMessage>
+                   
+            </af:gridCell>
+                      <af:gridCell id="gridCell3" marginStart="5px" width="17%"
+                                   halign="end">
+                        <af:outputLabel id="outputLabel2"
+                                        value="Fecha Nacimiento"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc5" marginStart="5px" width="17%">
+ <af:panelLabelAndMessage
+                                             id="plam3">
+                          <af:outputLabel
+                                          id="outputLabel12"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtFecNac}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                    </af:gridRow>
+        </af:panelGridLayout>
+                  <af:inputText value="#{bindings.Nombre.inputValue}"
+                                label="Nombre"
+                                required="#{bindings.Nombre.hints.mandatory}"
+                                shortDesc="#{bindings.Nombre.hints.tooltip}"
+                                id="it7" readOnly="true" maximumLength="160"
+                                columns="#{bindings.Nombre.hints.displayWidth}"
+                                visible="false">
+                    <f:validator binding="#{bindings.Nombre.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.SegundoNombre.inputValue}"
+                                label="Segundo Nombre"
+                                required="#{bindings.SegundoNombre.hints.mandatory}"
+                                columns="#{bindings.SegundoNombre.hints.displayWidth}"
+                                maximumLength="#{bindings.SegundoNombre.hints.precision}"
+                                shortDesc="#{bindings.SegundoNombre.hints.tooltip}"
+                                id="it5" readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.SegundoNombre.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.ApellidoPaterno.inputValue}"
+                                label="Apellido Paterno"
+                                required="#{bindings.ApellidoPaterno.hints.mandatory}"
+                                columns="#{bindings.ApellidoPaterno.hints.displayWidth}"
+                                maximumLength="#{bindings.ApellidoPaterno.hints.precision}"
+                                shortDesc="#{bindings.ApellidoPaterno.hints.tooltip}"
+                                id="it3" readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.ApellidoPaterno.validator}"/>
+                  </af:inputText>
+                </af:panelBox>
+                <af:panelBox text="Producto" id="pb4"
+                             styleClass="AFStretchWidth">
+                  <af:panelGridLayout id="pgl4">
+                    <af:gridRow marginTop="5px" height="auto" id="gr5">
+                      <af:gridCell marginStart="5px" width="17%" id="gc22"
+                                   halign="end">
+                        <af:outputLabel value="Producto" id="ol10"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc28">
+                        <af:outputLabel id="ol2"
+                                        inlineStyle="font-weight:bold; font-size:medium;"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtProd}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc21"
+                                   halign="end">
+                        <af:outputLabel value="Monto Máximo" id="outputLabel5"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc26">
+                        <af:panelLabelAndMessage id="plam8">
+                          <af:outputLabel
+                                          id="outputLabel15"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontoMaximo}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc25"
+                                   halign="end">
+                        <af:outputLabel value="Monto Mínimo" id="outputLabel6"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" marginEnd="5px" width="16%"
+                                   id="gc23">
+                        <af:panelLabelAndMessage id="plam9">
+                          <af:outputLabel
+                                          id="outputLabel17"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontoMinimo}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px" height="auto"
+                                id="gr6">
+                      <af:gridCell marginStart="5px" width="16%" id="gc19"
+                                   halign="end">
+                        <af:outputLabel value="Cuota" id="outputLabel9"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" marginEnd="5px" width="16%"
+                                   id="gc30">
+                        <af:panelLabelAndMessage id="plam10">
+                          <af:outputLabel
+                                          id="outputLabel14"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCuota}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc24"
+                                   halign="end">
+                        <af:outputLabel value="Plazo Máximo" id="outputLabel7"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc27">
+                        <af:panelLabelAndMessage id="plam7">
+                          <af:outputLabel
+                                          id="outputLabel16"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtPlazoMaximo}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc29"
+                                   halign="end">
+                        <af:outputLabel value="Plazo Mínimo" id="outputLabel8"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc20">
+                        <af:panelLabelAndMessage id="plam6">
+                          <af:outputLabel
+                                          id="outputLabel18"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtPlazoMinimo}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:panelBox text="Teléfonos"
+                             id="pb3" styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl15" layout="horizontal"
+                                       halign="center">
+                    <af:commandButton text="Agregar Teléfono" id="cb3"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.btnTelfExtra}"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarTelfExtra}"
+                                      visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGridLayout id="pgl3" visible="false">
+                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                      <af:gridCell marginStart="5px" width="17%" id="gc11"
+                                   halign="end">
+                        <af:outputLabel value="Teléfono 01" id="ol4"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc18">
+                        <af:commandLink
+                                        id="cl1"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarTelf1}"
+                                        accessKey="1"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTelf01}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc13"
+                                   halign="end">
+                        <af:outputLabel value="Teléfono 02" id="outputLabel3"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc15">
+                        <af:commandLink
+                                        id="cl4"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarTelf02}"
+                                        accessKey="2"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTelf02}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc7"
+                                   halign="end">
+                        <af:outputLabel value="Teléfono 03" id="outputLabel4"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" marginEnd="5px"
+                                   width="16%" id="gc16">
+                        <af:commandLink
+                                        id="cl6"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarTelf03}"
+                                        accessKey="3"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTelf03}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px"
+                                height="auto" id="gr3">
+                      <af:gridCell marginStart="5px" width="17%" id="gc12"
+                                   halign="end">
+                        <af:outputLabel value="Celular 01" id="ol5"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc17">
+                        <af:commandLink
+                                        id="cl5"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarCel01}"
+                                        accessKey="4"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCel01}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc6"
+                                   halign="end">
+                        <af:outputLabel value="Celular 02" id="ol6"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc10">
+                        <af:commandLink
+                                        id="cl2"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarCel02}"
+                                        accessKey="5"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCel02}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc8"
+                                   halign="end">
+                        <af:outputLabel value="Celular 03" id="ol7"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" marginEnd="5px"
+                                   width="16%" id="gc14">
+                        <af:commandLink
+                                        id="cl3"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.agregarCel03}"
+                                        accessKey="6"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCel03}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:panelBox text="Feedback" id="pb6"
+                             binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.pnlFeedback}"
+                             disclosed="false">
+                  <af:panelCollection id="pc1" styleClass="AFStretchWidth" featuresOff="viewMenu detach">
+                    <af:table value="#{bindings.FeedBackVo1.collectionModel}"
+                              var="row" rows="#{bindings.FeedBackVo1.rangeSize}"
+                              emptyText="#{bindings.FeedBackVo1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.FeedBackVo1.rangeSize}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.FeedBackVo1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.FeedBackVo1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.tblFbContacto}"
+                              columnStretching="last">
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.TipoGestion.name}"
+                                 sortable="false" headerText="Tipo Gestión"
+                                 id="c12">
+                        <af:outputText value="#{row.TipoGestion}" id="ot16"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.GrupoGestion.name}"
+                                 sortable="false" headerText="Grupo Gestión"
+                                 id="c15">
+                        <af:outputText value="#{row.GrupoGestion}" id="ot17"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.DetGestion.name}"
+                                 sortable="false" headerText="Detalle Gestión"
+                                 id="c16">
+                        <af:outputText value="#{row.DetGestion}" id="ot18"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdFb.name}"
+                                 sortable="false"
+                                 headerText="idFb"
+                                 id="c1" visible="false">
+                        <af:outputText value="#{row.IdFb}" id="ot2"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CanalFb.name}"
+                                 sortable="false"
+                                 headerText="Vendor"
+                                 id="c2">
+                        <af:outputText value="#{row.CanalFb}" id="ot3"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCanalFb.name}"
+                                 sortable="false"
+                                 headerText="codCanal"
+                                 id="c3" visible="false">
+                        <af:outputText value="#{row.CodCanalFb}" id="ot4"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.DescAdGestion.name}"
+                                 sortable="false"
+                                 headerText="descAd"
+                                 id="c4" visible="false">
+                        <af:outputText value="#{row.DescAdGestion}" id="ot5"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomCpg.name}"
+                                 sortable="false"
+                                 headerText="Campaña"
+                                 id="c5">
+                        <af:outputText value="#{row.NomCpg}" id="ot6"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCpg.name}"
+                                 sortable="false"
+                                 headerText="codCpg"
+                                 id="c6" visible="false">
+                        <af:outputText value="#{row.CodCpg}" id="ot7"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.JefCanal.name}"
+                                 sortable="false" headerText="Jefe de Canal"
+                                 id="c8">
+                        <af:outputText value="#{row.JefCanal}" id="ot9"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.Sup.name}"
+                                 sortable="false"
+                                 headerText="Supervisor"
+                                 id="c7">
+                        <af:outputText value="#{row.Sup}" id="ot8"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.EjVenta.name}"
+                                 sortable="false"
+                                 headerText="Ejecutivo de Venta"
+                                 id="c9">
+                        <af:outputText value="#{row.EjVenta}" id="ot10"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.FecGestion.name}"
+                                 sortable="false"
+                                 headerText="Fecha de Gestión"
+                                 id="c10">
+                        <af:outputText value="#{row.FecGestion}" id="ot11"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomFb.name}"
+                                 sortable="false"
+                                 headerText="nomFb"
+                                 id="c11" visible="false">
+                        <af:outputText value="#{row.NomFb}" id="ot12"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem.name}"
+                                 sortable="false"
+                                 headerText="Monto Desembolsado"
+                                 id="c13">
+                        <af:outputText value="#{row.MontoDesem}" id="ot14"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem2of.name}"
+                                 sortable="false"
+                                 headerText="Monto 2da Oferta"
+                                 id="c14" visible="false">
+                        <af:outputText value="#{row.MontoDesem2of}" id="ot15"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idSup.name}"
+                                 sortable="false"
+                                 headerText="idSup"
+                                 id="c20" visible="false">
+                        <af:outputText value="#{row.idSup}" id="ot21">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idSup.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idEjVenta.name}"
+                                 sortable="false"
+                                 headerText="idEjVenta"
+                                 id="c21" visible="false">
+                        <af:outputText value="#{row.idEjVenta}" id="ot22">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idEjVenta.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idJefCanal.name}"
+                                 sortable="false"
+                                 headerText="idJefCanal"
+                                 id="c22" visible="false">
+                        <af:outputText value="#{row.idJefCanal}" id="ot23">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idJefCanal.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codTipGest.name}"
+                                 sortable="false"
+                                 headerText="codTipGest"
+                                 id="c26" visible="false">
+                        <af:outputText value="#{row.codTipGest}" id="ot27">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codTipGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codGrupGest.name}"
+                                 sortable="false"
+                                 headerText="codGrupGest"
+                                 id="c27" visible="false">
+                        <af:outputText value="#{row.codGrupGest}" id="ot28">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codGrupGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codDetGest.name}"
+                                 sortable="false"
+                                 headerText="codDetGest"
+                                 id="c28" visible="false">
+                        <af:outputText value="#{row.codDetGest}" id="ot29">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codDetGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.monto.name}"
+                                 sortable="false"
+                                 headerText="Monto"
+                                 id="c29" visible="false">
+                        <af:outputText value="#{row.monto}" id="ot30">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.monto.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomTipGest.name}"
+                                 sortable="false"
+                                 headerText="nomTipGest"
+                                 id="c30" visible="false">
+                        <af:outputText value="#{row.nomTipGest}" id="ot31"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomGrupGest.name}"
+                                 sortable="false"
+                                 headerText="nomGrupGest"
+                                 id="c31" visible="false">
+                        <af:outputText value="#{row.nomGrupGest}" id="ot32"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomDetGest.name}"
+                                 sortable="false"
+                                 headerText="nomDetGest"
+                                 id="c32" visible="false">
+                        <af:outputText value="#{row.nomDetGest}" id="ot33"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.obs.name}"
+                                 sortable="false"
+                                 headerText="Observaciones"
+                                 id="c33">
+                        <af:outputText value="#{row.obs}" id="ot34"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.telefono.name}"
+                                 sortable="false" headerText="Teléfono"
+                                 id="c19">
+                        <af:outputText value="#{row.telefono}" id="ot20"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.telfAd.name}"
+                                 sortable="false"
+                                 headerText="Teléfono adicional"
+                                 id="c34">
+                        <af:outputText value="#{row.telfAd}" id="ot45"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.dirAd.name}"
+                                 sortable="false"
+                                 headerText="Dirección adicional"
+                                 id="c35">
+                        <af:outputText value="#{row.dirAd}" id="ot46"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.emailAd.name}"
+                                 sortable="false"
+                                 headerText="Email adicional"
+                                 id="c36">
+                        <af:outputText value="#{row.emailAd}" id="ot47"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.fec2daLlam.name}"
+                                 sortable="false"
+                                 headerText="Volver a llamar"
+                                 id="c37">
+                        <af:outputText value="#{row.fec2daLlam}" id="ot48"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdLead.name}"
+                                 sortable="false"
+                                 headerText="idLead"
+                                 id="c17" visible="false">
+                        <af:outputText value="#{row.IdLead}" id="ot19">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.IdLead.format}"/>
+                        </af:outputText>
+                      </af:column>
+                    </af:table>
+                  </af:panelCollection>
+                </af:panelBox>
+                  <af:panelBox text="RCC" id="pb9" disclosed="false">
+                  <af:panelGridLayout id="pgl18">
+                    <af:gridRow marginTop="5px" height="auto" id="gr7">
+                      <af:gridCell marginStart="5px" width="17%" id="gc39"
+                                   halign="end">
+                        <af:outputLabel value="Deuda TC" id="ol13"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc36">
+                        <af:outputLabel
+                                        id="outputLabel20"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDeudaTc}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc37"
+                                   halign="end">
+                        <af:outputLabel value="Banco TC"
+                                        id="outputLabel21"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc35">
+                        <af:outputLabel
+                                        id="outputLabel22"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtBancoTc}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell4"
+                                   halign="end">
+                        <af:outputLabel value="LIN TC" id="outputLabel23"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell5">
+                        <af:outputLabel id="outputLabel24"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtLinTc}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px"
+                                height="auto" id="gr8">
+                      <af:gridCell marginStart="5px" width="17%" id="gc42"
+                                   halign="end">
+                        <af:outputLabel value="Deuda Préstamo"
+                                        id="outputLabel25"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc34">
+                        <af:outputLabel
+                                        id="outputLabel26"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDeudaPp}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc38"
+                                   halign="end">
+                        <af:outputLabel value="Banco Préstamo"
+                                        id="outputLabel27"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc33">
+                        <af:outputLabel
+                                        id="outputLabel28"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtBancoPp}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell6"
+                                   halign="end">
+                        <af:outputLabel value="SBS Bancos financieros" id="outputLabel29"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell7">
+                        <af:outputLabel id="outputLabel30"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtSbs}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:inputText label="idOpty" id="it67"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdOpty}"
+                              visible="false"/>
+                <af:inputText label="idEjVenta" id="it8"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdEjVenta}"
+                              visible="false"/>
+                <af:inputText label="Monto" id="it11"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMonto}"
+                              visible="false"/>
+                <af:panelBox text="Dirección de Contacto" id="pb10">
+                  <af:panelGridLayout id="panelGridLayout1">
+                    <af:gridRow marginTop="5px" height="auto" id="gridRow1">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell8"
+                                   halign="end">
+                        <af:outputLabel value="Provincia"
+                                        id="outputLabel35"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell9">
+                        <af:outputLabel
+                                        id="outputLabel36"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtProv}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell10"
+                                   halign="end">
+                        <af:outputLabel value="Departamento"
+                                        id="outputLabel37"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell11">
+                        <af:outputLabel
+                                        id="outputLabel38"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDpto}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell12"
+                                   halign="end">
+                        <af:outputLabel value="Distrito"
+                                        id="outputLabel39"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell13">
+                        <af:outputLabel
+                                        id="outputLabel40"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDistrito}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px" height="auto"
+                                id="gridRow2">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell14"
+                                   halign="end">
+                        <af:outputLabel value="Dirección" id="ol16"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell15">
+                        <af:outputLabel
+                                        id="outputLabel19"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDir}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell16"
+                                   halign="end"/>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell17"/>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell18"
+                                   halign="end"/>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell19"/>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+              </af:panelGroupLayout>
+              <af:inputText label="Label 1" id="it2"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtContFb}"
+                            visible="false"/>
+              <af:inputText label="monto Min" id="it4"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontMin}"
+                            visible="false"/>
+              <af:inputText label="monto maximo" id="it6"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontMax}"
+                            visible="false"/>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+        <af:popup id="p1"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupFeedback}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw1" modal="true" title="Creación Feedback"
+                          styleClass="AFStretchWidth">
+            <af:panelBox id="pb5" styleClass="AFStretchWidth">
+              <af:panelFormLayout id="pfl4" rows="2" maxColumns="1"
+                                  styleClass="AFStretchWidth">
+                <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                     halign="center">
+                  <af:inputText value="#{bindings.telf.inputValue}"
+                                label="Teléfono"
+                                required="#{bindings.telf.hints.mandatory}"
+                                columns="#{bindings.telf.hints.displayWidth}"
+                                maximumLength="#{bindings.telf.hints.precision}"
+                                shortDesc="#{bindings.telf.hints.tooltip}"
+                                id="it22"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.txtTelf}"
+                                readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.telf.validator}"/>
+                  </af:inputText>
+                  <af:panelLabelAndMessage label="Teléfono"
+                                           id="plam11">
+                    <af:outputText value="#{bindings.telf.inputValue}"
+                                   id="ot13" inlineStyle="font-size:medium;"/>
+                  </af:panelLabelAndMessage>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.codDetGest.inputValue}"
+                              label="codDetGest"
+                              required="#{bindings.codDetGest.hints.mandatory}"
+                              columns="#{bindings.codDetGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codDetGest.hints.precision}"
+                              shortDesc="#{bindings.codDetGest.hints.tooltip}"
+                              id="it26" readOnly="true" partialTriggers="soc2"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCodDetGest}"
+                              autoSubmit="true" visible="false">
+                  <f:validator binding="#{bindings.codDetGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codDetGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codTipGest.inputValue}"
+                              label="codTipGest"
+                              required="#{bindings.codTipGest.hints.mandatory}"
+                              columns="#{bindings.codTipGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codTipGest.hints.precision}"
+                              shortDesc="#{bindings.codTipGest.hints.tooltip}"
+                              id="it14" readOnly="true" partialTriggers="soc1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCodTipGest}"
+                              autoSubmit="true" visible="false">
+                  <f:validator binding="#{bindings.codTipGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codTipGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.nomFb.inputValue}"
+                              label="Feedback"
+                              required="#{bindings.nomFb.hints.mandatory}"
+                              columns="#{bindings.nomFb.hints.displayWidth}"
+                              maximumLength="#{bindings.nomFb.hints.precision}"
+                              shortDesc="#{bindings.nomFb.hints.tooltip}"
+                              id="it20"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtFeedback}"
+                              visible="false">
+                  <f:validator binding="#{bindings.nomFb.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codGrupGest.inputValue}"
+                              label="codGrupGest"
+                              required="#{bindings.codGrupGest.hints.mandatory}"
+                              columns="#{bindings.codGrupGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codGrupGest.hints.precision}"
+                              shortDesc="#{bindings.codGrupGest.hints.tooltip}"
+                              id="it21" readOnly="true" partialTriggers="soc7"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCodGrupGest}"
+                              autoSubmit="true" visible="false">
+                  <f:validator binding="#{bindings.codGrupGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codGrupGest.format}"/>
+                </af:inputText>
+                <af:outputText value="Fecha gestión"
+                               id="ot1"
+                               binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtFecGestion}"
+                               visible="false"/>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe Canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it39" visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idEjVenta.inputValue}"
+                              label="idEjVenta"
+                              required="#{bindings.idEjVenta.hints.mandatory}"
+                              columns="#{bindings.idEjVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.idEjVenta.hints.precision}"
+                              shortDesc="#{bindings.idEjVenta.hints.tooltip}"
+                              id="it23" readOnly="true" visible="false">
+                  <f:validator binding="#{bindings.idEjVenta.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idEjVenta.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe Canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it43"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtJefCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idSup.inputValue}" label="idSup"
+                              required="#{bindings.idSup.hints.mandatory}"
+                              columns="#{bindings.idSup.hints.displayWidth}"
+                              maximumLength="#{bindings.idSup.hints.precision}"
+                              shortDesc="#{bindings.idSup.hints.tooltip}"
+                              id="it38"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdSup}"
+                              visible="false">
+                  <f:validator binding="#{bindings.idSup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.sup.inputValue}"
+                              label="Supervisor"
+                              required="#{bindings.sup.hints.mandatory}"
+                              columns="#{bindings.sup.hints.displayWidth}"
+                              maximumLength="#{bindings.sup.hints.precision}"
+                              shortDesc="#{bindings.sup.hints.tooltip}"
+                              id="it42"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtSup}"
+                              visible="false">
+                  <f:validator binding="#{bindings.sup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idJefCanal.inputValue}"
+                              label="idJefCanal"
+                              required="#{bindings.idJefCanal.hints.mandatory}"
+                              columns="#{bindings.idJefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idJefCanal.hints.precision}"
+                              shortDesc="#{bindings.idJefCanal.hints.tooltip}"
+                              id="it37"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdJefCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.idJefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.canal.inputValue}" label="Canal"
+                              required="#{bindings.canal.hints.mandatory}"
+                              columns="#{bindings.canal.hints.displayWidth}"
+                              maximumLength="#{bindings.canal.hints.precision}"
+                              shortDesc="#{bindings.canal.hints.tooltip}"
+                              id="it35"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.canal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idCanal.inputValue}"
+                              label="idCanal"
+                              required="#{bindings.idCanal.hints.mandatory}"
+                              columns="#{bindings.idCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idCanal.hints.precision}"
+                              shortDesc="#{bindings.idCanal.hints.tooltip}"
+                              id="it36" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtIdCanal}">
+                  <f:validator binding="#{bindings.idCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idFb.inputValue}"
+                              label="idFb"
+                              required="#{bindings.idFb.hints.mandatory}"
+                              columns="#{bindings.idFb.hints.displayWidth}"
+                              maximumLength="#{bindings.idFb.hints.precision}"
+                              shortDesc="#{bindings.idFb.hints.tooltip}"
+                              id="it1" visible="false">
+                  <f:validator binding="#{bindings.idFb.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idFb.format}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl10" layout="horizontal">
+                  <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                      label="Tipo Gestion"
+                                      shortDesc="#{bindings.tipoGest.hints.tooltip}"
+                                      id="soc1" autoSubmit="true"
+                                      required="true">
+                    <f:selectItems value="#{bindings.tipoGest.items}" id="si1"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                      label="Grupo Gestión"
+                                      shortDesc="#{bindings.grupGest.hints.tooltip}"
+                                      id="soc7"
+                                      disabled="#{bindings.tipoGest.inputValue eq null}"
+                                      showRequired="true"
+                                      autoSubmit="true" partialTriggers="soc1"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtGrupoGestion}">
+                    <f:selectItems value="#{bindings.grupGest.items}" id="si7"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                      label="Detalle Gestión"
+                                      shortDesc="#{bindings.detGest.hints.tooltip}"
+                                      id="soc2" showRequired="true"
+                                      disabled="#{bindings.grupGest.inputValue eq null}"
+                                      partialTriggers="soc7 soc1" autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDetGest}">
+                    <f:selectItems value="#{bindings.detGest.items}" id="si2"/>
+                  </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl16" layout="horizontal">
+                  <af:inputText value="#{bindings.emailAd.inputValue}"
+                                required="#{bindings.emailAd.hints.mandatory}"
+                                columns="#{bindings.emailAd.hints.displayWidth}"
+                                maximumLength="#{bindings.emailAd.hints.precision}"
+                                shortDesc="#{bindings.emailAd.hints.tooltip}"
+                                id="it30"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtEmailAd}"
+                                label="Email adicional">
+                    <f:validator binding="#{bindings.emailAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.direccionAd.inputValue}"
+                                required="#{bindings.direccionAd.hints.mandatory}"
+                                columns="#{bindings.direccionAd.hints.displayWidth}"
+                                maximumLength="#{bindings.direccionAd.hints.precision}"
+                                shortDesc="#{bindings.direccionAd.hints.tooltip}"
+                                id="it32"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDirAd}"
+                                label="Dirección adicional">
+                    <f:validator binding="#{bindings.direccionAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.telfAd.inputValue}"
+                                required="#{bindings.telfAd.hints.mandatory}"
+                                columns="#{bindings.telfAd.hints.displayWidth}"
+                                maximumLength="#{bindings.telfAd.hints.precision}"
+                                shortDesc="#{bindings.telfAd.hints.tooltip}"
+                                id="it33"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTelfAd}"
+                                label="Teléfono adicional"
+                                converter="javax.faces.Integer"
+                                immediate="true" visible="false">
+                    <f:validator binding="#{bindings.telfAd.validator}"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl17" layout="horizontal">
+                  <af:inputText value="#{bindings.montoDesem.inputValue}"
+                                columns="#{bindings.montoDesem.hints.displayWidth}"
+                                maximumLength="#{bindings.montoDesem.hints.precision}"
+                                shortDesc="#{bindings.montoDesem.hints.tooltip}"
+                                id="it49"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                disabled='#{bindings.grupGest.inputValue ne "VENTA"}'
+                                immediate="true" autoSubmit="true"
+                                partialTriggers="soc7"
+                                label="Monto desembolsado"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontoFb}">
+                    <f:validator binding="#{bindings.montoDesem.validator}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.fec2daLlam.inputValue}"
+                                required="#{bindings.fec2daLlam.hints.mandatory}"
+                                shortDesc="#{bindings.fec2daLlam.hints.tooltip}"
+                                id="id1"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txt2daLlam}"
+                                disabled='#{bindings.grupGest.inputValue ne "VOLVER A LLAMAR"}'
+                                autoSubmit="true" partialTriggers="soc7"
+                                label="Volver a llamar">
+                    <f:validator binding="#{bindings.fec2daLlam.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.fec2daLlam.format}"/>
+                  </af:inputDate>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.observaciones.inputValue}"
+                              label="Observaciones"
+                              required="#{bindings.observaciones.hints.mandatory}"
+                              columns="#{bindings.observaciones.hints.displayWidth}"
+                              maximumLength="#{bindings.observaciones.hints.precision}"
+                              shortDesc="#{bindings.observaciones.hints.tooltip}"
+                              id="it34"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtObs}"
+                              rows="3" inlineStyle="text-align:right;"
+                              styleClass="AFStretchWidth">
+                  <f:validator binding="#{bindings.observaciones.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl6" halign="center" valign="bottom"
+                                     layout="horizontal">
+                  <af:commandButton text="Grabar" id="cb9"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.crearFb}"
+                                    accessKey="g"/>
+                </af:panelGroupLayout>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p2"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupConfirm}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw2" modal="true">
+            <af:panelBox text="Aviso:" id="pb7"
+                         inlineStyle="width:259px; height:124px;">
+              <af:panelGroupLayout id="pgl14" layout="vertical">
+                <af:panelGroupLayout id="pgl12">
+                  <af:outputLabel value="No hay leads nuevos disponibles, desea continuar con leads ya trabajados?"
+                                  id="ol1"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl13">
+                  <af:commandButton text="Si" id="cb13"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.aceptarLead}"/>
+                  <af:commandButton text="No" id="cb14"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.rechazarLead}"/>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p3"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupTelfExtra}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw3" title="Creación de Feedback" modal="true"
+                          styleClass="AFStretchWidth">
+            <af:panelBox id="pb8" styleClass="AFStretchWidth">
+              <af:panelFormLayout id="pfl5" maxColumns="1" rows="2"
+                                  styleClass="AFStretchWidth">
+                <af:panelGroupLayout id="pgl22" layout="horizontal"
+                                     halign="center">
+                  <af:outputLabel id="ol8" value="Teléfono"/>
+                  <af:inputText value="#{bindings.telfAd.inputValue}"
+                                required="#{bindings.telfAd.hints.mandatory}"
+                                columns="#{bindings.telfAd.hints.displayWidth}"
+                                maximumLength="#{bindings.telfAd.hints.precision}"
+                                shortDesc="#{bindings.telfAd.hints.tooltip}"
+                                id="it60" converter="javax.faces.Integer"
+                                immediate="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtTelfExtra}"
+                                showRequired="true">
+                    <f:validator binding="#{bindings.telfAd.validator}"/>
+                    <af:validateLength minimum="6"
+                                       hintMinimum="Debe ingresar un número mayor a 6 dígitos"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.nomFb.inputValue}"
+                              label="Feefback"
+                              required="#{bindings.nomFb.hints.mandatory}"
+                              columns="#{bindings.nomFb.hints.displayWidth}"
+                              maximumLength="#{bindings.nomFb.hints.precision}"
+                              shortDesc="#{bindings.nomFb.hints.tooltip}"
+                              id="it59"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtFeedbackTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.nomFb.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idFb.inputValue}" label="idFb"
+                              required="#{bindings.idFb.hints.mandatory}"
+                              columns="#{bindings.idFb.hints.displayWidth}"
+                              maximumLength="#{bindings.idFb.hints.precision}"
+                              shortDesc="#{bindings.idFb.hints.tooltip}"
+                              id="it52" visible="false">
+                  <f:validator binding="#{bindings.idFb.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idFb.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idEjVenta.inputValue}"
+                              label="idEjVenta"
+                              required="#{bindings.idEjVenta.hints.mandatory}"
+                              columns="#{bindings.idEjVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.idEjVenta.hints.precision}"
+                              shortDesc="#{bindings.idEjVenta.hints.tooltip}"
+                              id="it64" visible="false">
+                  <f:validator binding="#{bindings.idEjVenta.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idEjVenta.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ejVenta.inputValue}"
+                              label="ejVenta"
+                              required="#{bindings.ejVenta.hints.mandatory}"
+                              columns="#{bindings.ejVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.ejVenta.hints.precision}"
+                              shortDesc="#{bindings.ejVenta.hints.tooltip}"
+                              id="it19" visible="false">
+                  <f:validator binding="#{bindings.ejVenta.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.fecGestion.inputValue}"
+                              label="Fecha gestión"
+                              required="#{bindings.fecGestion.hints.mandatory}"
+                              columns="#{bindings.fecGestion.hints.displayWidth}"
+                              maximumLength="#{bindings.fecGestion.hints.precision}"
+                              shortDesc="#{bindings.fecGestion.hints.tooltip}"
+                              id="it15"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtFecGestTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.fecGestion.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idCanal.inputValue}"
+                              label="idCanal"
+                              required="#{bindings.idCanal.hints.mandatory}"
+                              columns="#{bindings.idCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idCanal.hints.precision}"
+                              shortDesc="#{bindings.idCanal.hints.tooltip}"
+                              id="it13" visible="false">
+                  <f:validator binding="#{bindings.idCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.canal.inputValue}" label="canal"
+                              required="#{bindings.canal.hints.mandatory}"
+                              columns="#{bindings.canal.hints.displayWidth}"
+                              maximumLength="#{bindings.canal.hints.precision}"
+                              shortDesc="#{bindings.canal.hints.tooltip}"
+                              id="it18" visible="false">
+                  <f:validator binding="#{bindings.canal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idSup.inputValue}" label="idSup"
+                              required="#{bindings.idSup.hints.mandatory}"
+                              columns="#{bindings.idSup.hints.displayWidth}"
+                              maximumLength="#{bindings.idSup.hints.precision}"
+                              shortDesc="#{bindings.idSup.hints.tooltip}"
+                              id="it55" visible="false">
+                  <f:validator binding="#{bindings.idSup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.sup.inputValue}" label="sup"
+                              required="#{bindings.sup.hints.mandatory}"
+                              columns="#{bindings.sup.hints.displayWidth}"
+                              maximumLength="#{bindings.sup.hints.precision}"
+                              shortDesc="#{bindings.sup.hints.tooltip}"
+                              id="it56" visible="false">
+                  <f:validator binding="#{bindings.sup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idJefCanal.inputValue}"
+                              label="idJefCanal"
+                              required="#{bindings.idJefCanal.hints.mandatory}"
+                              columns="#{bindings.idJefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idJefCanal.hints.precision}"
+                              shortDesc="#{bindings.idJefCanal.hints.tooltip}"
+                              id="it62" visible="false">
+                  <f:validator binding="#{bindings.idJefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it51" visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pg418" layout="horizontal">
+                  <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                      label="Tipo Gestion"
+                                      shortDesc="#{bindings.tipoGest.hints.tooltip}"
+                                      id="soc3" autoSubmit="true"
+                                      required="true">
+                    <f:selectItems value="#{bindings.tipoGest.items}" id="si3"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                      label="Grupo Gestión"
+                                      shortDesc="#{bindings.grupGest.hints.tooltip}"
+                                      id="soc4" autoSubmit="true"
+                                      partialTriggers="soc3"
+                                      disabled="#{bindings.tipoGest.inputValue eq null}"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtGrupGestTlfExt}">
+                    <f:selectItems value="#{bindings.grupGest.items}" id="si4"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                      label="Detalle Gestión"
+                                      shortDesc="#{bindings.detGest.hints.tooltip}"
+                                      id="soc5" partialTriggers="soc4 soc3"
+                                      autoSubmit="true"
+                                      disabled="#{bindings.grupGest.inputValue eq null}"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtDetGestTlfExt}">
+                    <f:selectItems value="#{bindings.detGest.items}" id="si5"/>
+                  </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="panelGroupLayout1" layout="horizontal">
+                  <af:inputText value="#{bindings.direccionAd.inputValue}"
+                                required="#{bindings.direccionAd.hints.mandatory}"
+                                columns="#{bindings.direccionAd.hints.displayWidth}"
+                                maximumLength="#{bindings.direccionAd.hints.precision}"
+                                shortDesc="#{bindings.direccionAd.hints.tooltip}"
+                                id="it58" label="Dirección adicional">
+                    <f:validator binding="#{bindings.direccionAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.emailAd.inputValue}"
+                                required="#{bindings.emailAd.hints.mandatory}"
+                                columns="#{bindings.emailAd.hints.displayWidth}"
+                                maximumLength="#{bindings.emailAd.hints.precision}"
+                                shortDesc="#{bindings.emailAd.hints.tooltip}"
+                                id="it63" label="Email adicional">
+                    <f:validator binding="#{bindings.emailAd.validator}"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="panelGroupLayout2" layout="horizontal">
+                  <af:inputText value="#{bindings.montoDesem.inputValue}"
+                                columns="#{bindings.montoDesem.hints.displayWidth}"
+                                maximumLength="#{bindings.montoDesem.hints.precision}"
+                                shortDesc="#{bindings.montoDesem.hints.tooltip}"
+                                id="it61"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                disabled='#{bindings.grupGest.inputValue ne "VENTA"}'
+                                immediate="true" rows="1" autoSubmit="true"
+                                partialTriggers="soc4"
+                                label="Monto desembolsado"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMontoFbExtra}">
+                    <f:validator binding="#{bindings.montoDesem.validator}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.fec2daLlam.inputValue}"
+                                required="#{bindings.fec2daLlam.hints.mandatory}"
+                                shortDesc="#{bindings.fec2daLlam.hints.tooltip}"
+                                id="id2"
+                                disabled='#{bindings.grupGest.inputValue ne "VOLVER A LLAMAR"}'
+                                autoSubmit="true" partialTriggers="soc4"
+                                label="Volver a llamar">
+                    <f:validator binding="#{bindings.fec2daLlam.validator}"/>
+                   <af:convertDateTime pattern="dd-MMM-yyy HH:mm:ss a"/>
+                  </af:inputDate>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.observaciones.inputValue}"
+                              label="Observaciones"
+                              columns="#{bindings.observaciones.hints.displayWidth}"
+                              maximumLength="#{bindings.observaciones.hints.precision}"
+                              shortDesc="#{bindings.observaciones.hints.tooltip}"
+                              id="it17" styleClass="AFStretchWidth"
+                              inlineStyle="text-align:right;" rows="3">
+                  <f:validator binding="#{bindings.observaciones.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl5" halign="center" valign="bottom"
+                                     layout="horizontal">
+                  <af:commandButton text="Grabar" id="cb4"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.crearFbTlfExtra}"
+                                    accessKey="g"/>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.codDetGest.inputValue}"
+                              label="coddetgest"
+                              required="#{bindings.codDetGest.hints.mandatory}"
+                              columns="#{bindings.codDetGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codDetGest.hints.precision}"
+                              shortDesc="#{bindings.codDetGest.hints.tooltip}"
+                              id="it9" autoSubmit="true" partialTriggers="soc5"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCodDetGestTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codDetGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codDetGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codGrupGest.inputValue}"
+                              label="codgrupgest"
+                              required="#{bindings.codGrupGest.hints.mandatory}"
+                              columns="#{bindings.codGrupGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codGrupGest.hints.precision}"
+                              shortDesc="#{bindings.codGrupGest.hints.tooltip}"
+                              id="it10" partialTriggers="soc4"
+                              autoSubmit="true"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtGrupGestTlfExtra}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codGrupGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codGrupGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codTipGest.inputValue}"
+                              label="codtipgest"
+                              required="#{bindings.codTipGest.hints.mandatory}"
+                              columns="#{bindings.codTipGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codTipGest.hints.precision}"
+                              shortDesc="#{bindings.codTipGest.hints.tooltip}"
+                              id="it12" autoSubmit="true"
+                              partialTriggers="soc3"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtCodTipGestTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codTipGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codTipGest.format}"/>
+                </af:inputText>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p4" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupMensajeError}">
+          <af:panelWindow id="pw4" modal="true" resize="on"
+                          styleClass="AFStretchWidth">
+            <af:panelGroupLayout id="pgl11" layout="horizontal"
+                                 styleClass="AFStretchWidth">
+              <af:outputLabel value="Se creó el Feedback correctamente" id="ol9"/>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p5" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupValidarCampos}">
+          <af:panelWindow id="pw5" resize="on" modal="true"
+                          styleClass="AFStretchWidth">
+            <af:panelGroupLayout id="pgl19">
+              <af:outputLabel value="Existen campos en blanco" id="ol14"/>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p6" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.popupMontMaximo}">
+          <af:panelWindow id="pw6" modal="true" resize="on"
+                          styleClass="AFStretchWidth">
+            <af:panelGroupLayout id="pgl9">
+              <af:outputLabel id="ol15"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPTY_PAGE_STD.txtMensajeValMonto}"/>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox id="pb0" text="Reporte Asignación y Reasignación ">
+              <af:panelBox id="pb1" text="Filtros" styleClass="AFStretchWidth">
+                <af:panelFormLayout id="pfl1">
+                <af:inputText label="usuario" id="it1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.txtUsuario}"
+                              visible="false"/>
+                <af:inputDate label="Fecha Inicio" id="id1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.txtFechaIni}"
+                              required="true">
+                  <af:convertDateTime pattern="dd/MM/yyyy"/>
+                </af:inputDate>
+                <af:inputDate label="Fecha Fin" id="id2"
+                              binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.txtFechaFin}"
+                              required="true">
+                  <af:convertDateTime pattern="dd/MM/yyyy"/>
+                </af:inputDate>
+                <af:commandButton text="Ejecutar" id="cb1"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.ejecutarSBP}"/>
+                </af:panelFormLayout>
+              </af:panelBox>
+              <af:panelBox id="pb2" text="SBP" styleClass="AFStretchWidth">
+                <af:table value="#{bindings.SbpSlsAsigReasReporteView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsAsigReasReporteView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsAsigReasReporteView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsAsigReasReporteView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsAsigReasReporteView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsAsigReasReporteView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1" columnStretching="last"
+                          styleClass="AFStretchWidth"
+                          binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.tblReasig}"
+                          inlineStyle="height:106px;" visible="false">
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.UsuarioEjecucion.name}"
+                             sortable="false" headerText="Usuario Ejecución"
+                             id="c15">
+                    <af:outputText value="#{row.UsuarioEjecucion}" id="ot5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.UsuarioEjecucionPerfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.UsuarioEjecucionPerfil.label}"
+                             id="c1">
+                    <af:outputText value="#{row.UsuarioEjecucionPerfil}"
+                                   id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.Perfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.Perfil.label}"
+                             id="c8">
+                    <af:outputText value="#{row.Perfil}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CampaniaId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CampaniaId.label}"
+                             id="c16">
+                    <af:outputText value="#{row.CampaniaId}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CampaniaNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CampaniaNombre.label}"
+                             id="c7">
+                    <af:outputText value="#{row.CampaniaNombre}" id="ot16"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CanalId.label}"
+                             id="c14">
+                    <af:outputText value="#{row.CanalId}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CanalNombre.label}"
+                             id="c13">
+                    <af:outputText value="#{row.CanalNombre}" id="ot11"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.JefeCanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.JefeCanalId.label}"
+                             id="c10">
+                    <af:outputText value="#{row.JefeCanalId}" id="ot12"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.JefeCanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.JefeCanalNombre.label}"
+                             id="c3">
+                    <af:outputText value="#{row.JefeCanalNombre}" id="ot10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.SupervisorId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.SupervisorId.label}"
+                             id="c6">
+                    <af:outputText value="#{row.SupervisorId}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.SupervisorNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.SupervisorNombre.label}"
+                             id="c4">
+                    <af:outputText value="#{row.SupervisorNombre}" id="ot14"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.EjecutivoId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.EjecutivoId.label}"
+                             id="c5">
+                    <af:outputText value="#{row.EjecutivoId}" id="ot13"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.EjecutivoNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.EjecutivoNombre.label}"
+                             id="c2">
+                    <af:outputText value="#{row.EjecutivoNombre}" id="ot9"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.Fecha.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.Fecha.label}"
+                             id="c9">
+                    <af:outputText value="#{row.Fecha}" id="ot7"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.label}"
+                             id="c12">
+                    <af:outputText value="#{row.CantidadAsignada}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadReasignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadReasignada.label}"
+                             id="c11">
+                    <af:inputText value="#{row.bindings.CantidadAsignada.inputValue}"
+                                  label="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.label}"
+                                  required="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.mandatory}"
+                                  columns="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.displayWidth}"
+                                  maximumLength="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.precision}"
+                                  shortDesc="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.tooltip}"
+                                  id="it19">
+                      <f:validator binding="#{row.bindings.CantidadAsignada.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsAsigReasReporteView1.hints.CantidadAsignada.format}"/>
+                    </af:inputText>
+                    <!--<af:outputText value="#{row.CantidadReasignada}" id="ot15"
+                                   converter="oracle.adf.rich.Number"/>-->
+                  </af:column>
+                </af:table>
+                <dvt:pivotTable id="pivotTable1"
+                                value="#{bindings.SbpSlsAsigReasReporteView11.pivotTableModel}"
+                                contentDelivery="immediate"
+                                styleClass="AFStretchWidth"
+                                inlineStyle="height:210px;"
+                                summary="Summary order by JefeCanalNombre and CantidadAsignada and CantidadReasignada"
+                                var="cellData" varStatus="cellStatus"
+                                binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.pivotTable1}">
+                  <dvt:headerCell>
+                    <af:switcher id="swh1" facetName="#{cellData.layerName}" defaultFacet="default">
+                      <f:facet name="JefeCanalNombre">
+                        <af:commandButton id="cbJC" text="#{cellData.dataValue}"
+                                          actionListener="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.obtenerDatosJC}"/>
+                      </f:facet>
+                      <f:facet name="default" >
+                        <af:outputText id="otpvhd1" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                    </af:switcher>
+                  </dvt:headerCell>
+                  <!--<dvt:dataCell>
+                    <af:switcher id="sw1" defaultFacet="default"
+                                 facetName="#{cellStatus.cellIndex.column}">
+                      <f:facet name="0">
+                        <af:outputText id="otpv11" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                      <f:facet name="default">
+                        <af:outputText id="otpv12" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                    </af:switcher>
+                  </dvt:dataCell>-->
+                </dvt:pivotTable>
+              </af:panelBox>
+              <af:panelBox id="pb3" text="Vendor" styleClass="AFStretchWidth">
+                <af:table value="#{bindings.SbpSlsAsigReasReporte2View1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsAsigReasReporte2View1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsAsigReasReporte2View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsAsigReasReporte2View1.rangeSize}"
+                          rowBandingInterval="0" id="t2"
+                          binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.tblReasigJEFCAN}"
+                          visible="false">
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.IdTbl.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.IdTbl.label}"
+                             id="c30">
+                    <af:outputText value="#{row.bindings.IdTbl.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.IdTbl.tooltip}"
+                                   id="it4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucion.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucion.label}"
+                             id="c33">
+                    <af:outputText value="#{row.bindings.UsuarioEjecucion.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucion.tooltip}"
+                                   id="it14"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucionPerfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucionPerfil.label}"
+                             id="c31">
+                    <af:outputText value="#{row.bindings.UsuarioEjecucionPerfil.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.UsuarioEjecucionPerfil.tooltip}"
+                                   id="it8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.Perfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.Perfil.label}"
+                             id="c20">
+                    <af:outputText value="#{row.bindings.Perfil.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.Perfil.tooltip}"
+                                   id="it5"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaId.label}"
+                             id="c17">
+                    <af:outputText value="#{row.bindings.CampaniaId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaId.tooltip}"
+                                   id="it13"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaNombre.label}"
+                             id="c23">
+                    <af:outputText value="#{row.bindings.CampaniaNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CampaniaNombre.tooltip}"
+                                   id="it11"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalId.label}"
+                             id="c21">
+                    <af:outputText value="#{row.bindings.CanalId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalId.tooltip}"
+                                   id="it12"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalNombre.label}"
+                             id="c27">
+                    <af:outputText value="#{row.bindings.CanalNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CanalNombre.tooltip}"
+                                   id="it18"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalId.label}"
+                             id="c29">
+                    <af:outputText value="#{row.bindings.JefeCanalId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalId.tooltip}"
+                                   id="it2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalNombre.label}"
+                             id="c22">
+                    <af:outputText value="#{row.bindings.JefeCanalNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.JefeCanalNombre.tooltip}"
+                                   id="it6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorId.label}"
+                             id="c19">
+                    <af:outputText value="#{row.bindings.SupervisorId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorId.tooltip}"
+                                   id="it3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorNombre.label}"
+                             id="c34">
+                    <af:outputText value="#{row.bindings.SupervisorNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.SupervisorNombre.tooltip}"
+                                   id="it9"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoId.label}"
+                             id="c26">
+                    <af:outputText value="#{row.bindings.EjecutivoId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoId.tooltip}"
+                                   id="it17"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoNombre.label}"
+                             id="c25">
+                    <af:outputText value="#{row.bindings.EjecutivoNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.EjecutivoNombre.tooltip}"
+                                   id="it10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.Fecha.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.Fecha.label}"
+                             id="c24">
+                    <af:outputText value="#{row.bindings.Fecha.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.Fecha.tooltip}"
+                                   id="it16"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadAsignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadAsignada.label}"
+                             id="c28">
+                    <af:outputText value="#{row.bindings.CantidadAsignada.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadAsignada.tooltip}"
+                                   id="ot15"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadReasignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadReasignada.label}"
+                             id="c18">
+                    <af:outputText value="#{row.bindings.CantidadReasignada.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.CantidadReasignada.tooltip}"
+                                   id="it15"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte2View1.hints.RowID.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte2View1.hints.RowID.label}"
+                             id="c32">
+                    <af:outputText value="#{row.bindings.RowID.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte2View1.hints.RowID.tooltip}"
+                                   id="it7"/>
+                  </af:column>
+                </af:table>
+                <dvt:pivotTable id="pivotTable2"
+                                value="#{bindings.SbpSlsAsigReasReporte2View11.pivotTableModel}"
+                                contentDelivery="immediate"
+                                styleClass="AFStretchWidth"
+                                inlineStyle="height:210px;"
+                                summary="Summary order by JefeCanalNombre and SupervisorNombre and CantidadAsignada and CantidadReasignada"
+                                var="cellData" varStatus="cellStatus"
+                                binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.pivotTable2}">
+                  <dvt:headerCell>
+                    <af:switcher id="swh2" facetName="#{cellData.layerName}" defaultFacet="default">
+                      <f:facet name="SupervisorNombre">
+                        <af:commandButton id="cbSUP" text="#{cellData.dataValue}"
+                                          actionListener="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.obtenerDatosSUP}"/>
+                      </f:facet>
+                      <f:facet name="default" >
+                        <af:outputText id="otpvhd2" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                    </af:switcher>
+                  </dvt:headerCell>
+                  <!--<dvt:dataCell>
+                    <af:switcher id="sw2" defaultFacet="default" facetName="#{cellStatus.cellIndex.column}">
+                      <f:facet name="0">
+                        <af:outputText id="otpv1" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                      <f:facet name="default">
+                        <af:outputText id="otpv2" value="#{cellData.dataValue}"/>
+                      </f:facet>
+                    </af:switcher>
+                  </dvt:dataCell>-->
+                </dvt:pivotTable>
+              </af:panelBox>
+              <af:panelBox id="pb4" text="Supervisor"
+                           styleClass="AFStretchWidth">
+                <af:table value="#{bindings.SbpSlsAsigReasReporte3View1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsAsigReasReporte3View1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsAsigReasReporte3View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsAsigReasReporte3View1.rangeSize}"
+                          rowBandingInterval="0" id="t3"
+                          binding="#{backingBeanScope.backing_SBP_SLS_AS_REASIG.tlbReasigSUPERV}"
+                          visible="false">
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.label}"
+                             id="c43">
+                    <af:outputText value="#{row.bindings.IdTbl.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.tooltip}"
+                                   id="it21">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucion.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucion.label}"
+                             id="c48">
+                    <af:outputText value="#{row.bindings.UsuarioEjecucion.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucion.tooltip}"
+                                   id="it36">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucionPerfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucionPerfil.label}"
+                             id="c39">
+                    <af:outputText value="#{row.bindings.UsuarioEjecucionPerfil.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucionPerfil.tooltip}"
+                                   id="it31">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.Perfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.Perfil.label}"
+                             id="c45">
+                    <af:outputText value="#{row.bindings.Perfil.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.Perfil.tooltip}"
+                                   id="it28">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaId.label}"
+                             id="c44">
+                    <af:outputText value="#{row.bindings.CampaniaId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaId.tooltip}"
+                                   id="it35">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaNombre.label}"
+                             id="c47">
+                    <af:outputText value="#{row.bindings.CampaniaNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaNombre.tooltip}"
+                                   id="it32">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalId.label}"
+                             id="c42">
+                    <af:outputText value="#{row.bindings.CanalId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalId.tooltip}"
+                                   id="it27">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalNombre.label}"
+                             id="c49">
+                    <af:outputText value="#{row.bindings.CanalNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalNombre.tooltip}"
+                                   id="it26">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalId.label}"
+                             id="c37">
+                    <af:outputText value="#{row.bindings.JefeCanalId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalId.tooltip}"
+                                   id="it29">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalNombre.label}"
+                             id="c41">
+                    <af:outputText value="#{row.bindings.JefeCanalNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalNombre.tooltip}"
+                                   id="it20">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorId.label}"
+                             id="c50">
+                    <af:outputText value="#{row.bindings.SupervisorId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorId.tooltip}"
+                                   id="it33">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorNombre.label}"
+                             id="c52">
+                    <af:outputText value="#{row.bindings.SupervisorNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorNombre.tooltip}"
+                                   id="it30">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoId.label}"
+                             id="c36">
+                    <af:outputText value="#{row.bindings.EjecutivoId.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoId.tooltip}"
+                                   id="it37">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoNombre.label}"
+                             id="c35">
+                    <af:outputText value="#{row.bindings.EjecutivoNombre.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoNombre.tooltip}"
+                                   id="it22">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.Fecha.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.Fecha.label}"
+                             id="c46">
+                    <af:outputText value="#{row.bindings.Fecha.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.Fecha.tooltip}"
+                                   id="it24">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.label}"
+                             id="c51">
+                    <af:outputText value="#{row.bindings.CantidadAsignada.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.tooltip}"
+                                   id="it34">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.label}"
+                             id="c38">
+                    <af:outputText value="#{row.bindings.CantidadReasignada.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.tooltip}"
+                                   id="it25">
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.RowID.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.RowID.label}"
+                             id="c40">
+                    <af:outputText value="#{row.bindings.RowID.inputValue}"
+                                   shortDesc="#{bindings.SbpSlsAsigReasReporte3View1.hints.RowID.tooltip}"
+                                   id="it23">
+                    </af:outputText>
+                  </af:column>
+                </af:table>
+                <dvt:pivotTable id="pivotTable3"
+                                value="#{bindings.SbpSlsAsigReasReporte3View11.pivotTableModel}"
+                                contentDelivery="immediate"
+                                styleClass="AFStretchWidth"
+                                inlineStyle="height:210px;"
+                                summary="Summary order by JefeCanalNombre and SupervisorNombre and EjecutivoNombre and CantidadAsignada and CantidadReasignada"
+                                var="cellData" varStatus="cellStatus"/>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

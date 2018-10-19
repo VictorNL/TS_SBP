@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Reporte de Asignación y Reasignación" id="pb1">
+              <af:panelBox text="Filtros" id="pb2">
+                <af:panelFormLayout id="pfl1">
+                  <af:inputText label="usuario" id="it1"
+                                binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.txtUsuario}"/>
+                  <af:inputText label="cpg" id="it2"
+                                binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.txtxCpg}"/>
+                  <af:inputDate label="Fecha Inicio" id="id1"
+                                binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.txtFechaIni}"/>
+                  <af:inputDate label="Fecha Fin" id="id2"
+                                binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.txtFechaFin}"/>
+                  <af:commandButton text="Ejecutar" id="cb1"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.ejecutarSup}"/>
+                </af:panelFormLayout>
+              </af:panelBox>
+              <af:panelBox text="Supervisor" id="pb3">
+                <af:table value="#{bindings.SbpSlsAsigReasReporte3View1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsAsigReasReporte3View1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsAsigReasReporte3View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsAsigReasReporte3View1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsAsigReasReporte3View1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsAsigReasReporte3View1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1"
+                          binding="#{backingBeanScope.backing_SBP_SLS_KARDEX_SUP.tlbReasigSUPERV}"
+                          visible="false">
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.label}"
+                             id="c3">
+                    <af:outputText value="#{row.IdTbl}" id="ot11">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsAsigReasReporte3View1.hints.IdTbl.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucion.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucion.label}"
+                             id="c11">
+                    <af:outputText value="#{row.UsuarioEjecucion}" id="ot17"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucionPerfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.UsuarioEjecucionPerfil.label}"
+                             id="c9">
+                    <af:outputText value="#{row.UsuarioEjecucionPerfil}"
+                                   id="ot15"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.Perfil.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.Perfil.label}"
+                             id="c8">
+                    <af:outputText value="#{row.Perfil}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaId.label}"
+                             id="c2">
+                    <af:outputText value="#{row.CampaniaId}" id="ot12"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CampaniaNombre.label}"
+                             id="c12">
+                    <af:outputText value="#{row.CampaniaNombre}" id="ot13"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalId.label}"
+                             id="c10">
+                    <af:outputText value="#{row.CanalId}" id="ot9"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CanalNombre.label}"
+                             id="c7">
+                    <af:outputText value="#{row.CanalNombre}" id="ot18"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalId.label}"
+                             id="c13">
+                    <af:outputText value="#{row.JefeCanalId}" id="ot16"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.JefeCanalNombre.label}"
+                             id="c5">
+                    <af:outputText value="#{row.JefeCanalNombre}" id="ot10"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorId.label}"
+                             id="c4">
+                    <af:outputText value="#{row.SupervisorId}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.SupervisorNombre.label}"
+                             id="c14">
+                    <af:outputText value="#{row.SupervisorNombre}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoId.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoId.label}"
+                             id="c18">
+                    <af:outputText value="#{row.EjecutivoId}" id="ot14"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoNombre.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.EjecutivoNombre.label}"
+                             id="c15">
+                    <af:outputText value="#{row.EjecutivoNombre}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.Fecha.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.Fecha.label}"
+                             id="c16">
+                    <af:outputText value="#{row.Fecha}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.label}"
+                             id="c6">
+                    <af:outputText value="#{row.CantidadAsignada}" id="ot7">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadAsignada.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.label}"
+                             id="c1">
+                    <af:outputText value="#{row.CantidadReasignada}" id="ot1">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsAsigReasReporte3View1.hints.CantidadReasignada.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsAsigReasReporte3View1.hints.RowID.name}"
+                             sortable="false"
+                             headerText="#{bindings.SbpSlsAsigReasReporte3View1.hints.RowID.label}"
+                             id="c17">
+                    <af:outputText value="#{row.RowID}" id="ot5"/>
+                  </af:column>
+                </af:table>
+                <dvt:pivotTable id="pivotTable1"
+                                value="#{bindings.SbpSlsAsigReasReporte3View11.pivotTableModel}"
+                                contentDelivery="immediate"
+                                styleClass="AFStretchWidth"
+                                inlineStyle="height:210px;"
+                                summary="Summary order by JefeCanalNombre and SupervisorNombre and EjecutivoNombre and CantidadAsignada and CantidadReasignada"
+                                var="cellData" varStatus="cellStatus"/>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

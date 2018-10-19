@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.f1}"
+               defaultCommand="pt1:cb1">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox text="Búsqueda por DNI"
+                         id="pb1" styleClass="AFStretchWidth">
+              <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                   halign="center">
+                <af:inputText label="Usuario" id="it2"
+                              binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.txtUsuario}"
+                              visible="false"/>
+                <af:inputText id="it1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.txtDni}"
+                              showRequired="true">
+                <af:validateRegExp pattern="[0-9]{1,10}" messageDetailNoMatch="Enter Only Numbers"/> 
+                </af:inputText>
+              </af:panelGroupLayout>
+              <af:spacer width="10" height="20" id="s1"/>
+              <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.pgl1}"
+                                   id="pgl1" styleClass="AFStretchWidth"
+                                   halign="center" layout="vertical">
+                <af:commandButton text="Buscar" id="cb1"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.buscarDatos}"/>
+              </af:panelGroupLayout>
+              <af:spacer width="10" height="20" id="spacer1"/>
+              <af:panelGroupLayout id="pgl3" styleClass="AFStretchWidth">
+                <af:table value="#{bindings.CpgOptyProdContAccFb8.collectionModel}"
+                          var="row"
+                          rows="#{bindings.CpgOptyProdContAccFb8.rangeSize}"
+                          emptyText="#{bindings.CpgOptyProdContAccFb8.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.CpgOptyProdContAccFb8.rangeSize}"
+                          rowBandingInterval="0" id="t1"
+                          columnStretching="last" styleClass="AFStretchWidth"
+                          selectedRowKeys="#{bindings.CpgOptyProdContAccFb8.collectionModel.selectedRow}"
+                          visible="false">
+                  <af:column sortProperty="#{bindings.CpgOptyProdContAccFb8.hints.Nombre.name}"
+                             sortable="false" headerText="Nombre" id="c3"
+                             width="200">
+                    <af:outputText value="#{row.Nombre}" id="ot1"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CpgOptyProdContAccFb8.hints.NomLead.name}"
+                             sortable="false" headerText="Lead" id="c1"
+                             width="200">
+                    <af:commandLink text="#{row.NomLead}" id="cl1"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.obtenerDatos}"
+                                    action="SBP_SLS_OPTY_PAGE_STD"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CpgOptyProdContAccFb8.hints.NomProd.name}"
+                             sortable="false"
+                             headerText="Producto"
+                             id="c4" width="200">
+                    <af:outputText value="#{row.NomProd}" id="ot3"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CpgOptyProdContAccFb8.hints.montoLead.name}"
+                             sortable="false"
+                             headerText="Monto"
+                             id="c2" width="200">
+                    <af:outputText value="#{row.montoLead}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.CpgOptyProdContAccFb8.hints.IdLead.name}"
+                             sortable="false"
+                             headerText="idLead"
+                             id="c5">
+                    <af:outputText value="#{row.IdLead}" id="ot5">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CpgOptyProdContAccFb8.hints.IdLead.format}"/>
+                    </af:outputText>
+                  </af:column>
+                </af:table>
+                <af:table value="#{bindings.SbpSlsLeadXDniView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.SbpSlsLeadXDniView1.rangeSize}"
+                          emptyText="#{bindings.SbpSlsLeadXDniView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.SbpSlsLeadXDniView1.rangeSize}"
+                          rowBandingInterval="0"
+                          selectedRowKeys="#{bindings.SbpSlsLeadXDniView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.SbpSlsLeadXDniView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t2"
+                          styleClass="AFStretchWidth" columnStretching="last"
+                          binding="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.tblDni}">
+                  <af:column sortProperty="#{bindings.SbpSlsLeadXDniView1.hints.NomCont.name}"
+                             sortable="false" headerText="Nombre" id="c6"
+                             width="200">
+                    <af:outputText value="#{row.NomCont}" id="ot10"/>
+                  </af:column>
+                  <af:column headerText="DNI" id="c8">
+                    <af:outputText value="#{row.Dni}" id="ot7"/>
+                  </af:column>
+                  <af:column headerText="Nombre Oferta"
+                             id="c15">
+                    <af:outputText value="#{row.LeadName}" id="ot13"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsLeadXDniView1.hints.Producto.name}"
+                             sortable="false" headerText="Producto" id="c7"
+                             width="200">
+                    <af:outputText value="#{row.Producto}" id="ot8"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsLeadXDniView1.hints.Monto.name}"
+                             sortable="false" headerText="Monto" id="c9"
+                             width="200">
+                    <af:outputText value="#{row.Monto}" id="ot2"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsLeadXDniView1.hints.IdLead.name}"
+                             sortable="false" headerText="idLead" id="c10"
+                             width="200" visible="false">
+                    <af:outputText value="#{row.IdLead}" id="ot9">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsLeadXDniView1.hints.IdLead.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.SbpSlsLeadXDniView1.hints.IdTbl.name}"
+                             sortable="false" headerText="idTbl" id="c11"
+                             visible="false">
+                    <af:outputText value="#{row.IdTbl}" id="ot6">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.SbpSlsLeadXDniView1.hints.IdTbl.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column headerText="Nombre Bin 01"
+                             id="c12">
+                    <af:commandLink text="#{row.TcNomBin1}" id="cl2"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.obtenerDatos}"/>
+                  </af:column>
+                  <af:column headerText="Nombre Bin 02"
+                             id="c13">
+                    <af:commandLink text="#{row.TcNomBin2}" id="cl3"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.obtenerDatos2}"/>
+                  </af:column>
+                  <af:column headerText="Nombre Bin 03"
+                             id="c14">
+                    <af:commandLink text="#{row.TcNomBin3}" id="cl4"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_BUSQUEDA_DNI_OPP.obtenerDatos3}"/>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

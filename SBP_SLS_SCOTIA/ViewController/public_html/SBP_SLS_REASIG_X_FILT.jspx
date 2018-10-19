@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1" binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.f1}">
+        <af:panelBox text="Reasignación de Leads - Filtros" id="pb1">
+          <af:outputLabel value="*Si no se selecciona ningún filtro, se traeán todos los leads disponibles" id="ol1"/>
+          <af:panelFormLayout id="pfl1" rows="4" maxColumns="4"
+                              styleClass="AFStretchWidth">
+            <af:selectOneChoice label="Estado Civil :" id="socEstCiv"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboEstCivil}">
+              <af:selectItem label="" value="" id="si22"/>
+              <af:selectItem label="Soltero" value="S" id="si2"/>
+              <af:selectItem label="Casado" value="C" id="si3"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice label="Genero :" id="socGenero" 
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboGenero}">
+              <af:selectItem label="" value="" id="si26"/>
+              <af:selectItem label="Masculino" value="M" id="si6"/>
+              <af:selectItem label="Femenino" value="F" id="si5"/>
+            </af:selectOneChoice>
+            
+                        <af:selectOneChoice label="Condición laboral:" id="socDep" 
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboCondLab}">
+              <af:selectItem label="" value="" id="si622"/>                  
+              <af:selectItem label="Dependiente" value="DEP" id="si62"/>
+              <af:selectItem label="Independiente" value="IND" id="si35"/>
+            </af:selectOneChoice>
+            
+            <af:selectOneChoice label="Residencia:" id="socLim" 
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboRes}">
+              <af:selectItem label="" value="" id="si64232"/>                  
+              <af:selectItem label="Lima" value="L" id="si6232"/>
+              <af:selectItem label="Provincia" value="P" id="si335"/>
+            </af:selectOneChoice>
+            
+            <af:selectOneChoice label="Contactabilidad :" value="0" id="soc3"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboCont}">
+                                <af:selectItem label="" value="" id="con2t1"/>
+              <af:selectItem label="G1" value="G1" id="cont1"/>
+              <af:selectItem label="G2" value="G2" id="cont2"/>
+              <af:selectItem label="G3" value="G3" id="cont3"/>
+            </af:selectOneChoice>
+            
+             <af:selectOneChoice label="Club Saldo :" value="0" id="soc23"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.ckCluSueldo}">
+              <af:selectItem label="" value="G1" id="cont21"/>
+              <af:selectItem label="Si" value="Y" id="con3t2"/>
+              <af:selectItem label="No" value="N" id="cont43"/>
+            </af:selectOneChoice>
+           
+            <af:inputText label="Edad desde:" id="it1"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtEdadDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Edad hasta:" id="it2"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtEdadHasta}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Propensión desde:" id="it3"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtPropDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Propensión hasta:" id="it4"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtPropHasta}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Décil desde:" id="it5"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtDecilDesde}"
+                          contentStyle="width:80px;"/>
+            <af:inputText label="Décil hasta:" id="it6"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtDecilHasta}"
+                          contentStyle="width:80px;"/>
+            <af:selectOneChoice value="#{bindings.descBin.inputValue}"
+                                label="Bin 01:"
+                                id="soc1" autoSubmit="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboBin01}">
+              <f:selectItems value="#{bindings.descBin.items}" id="si1"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.descBin1.inputValue}"
+                                label="Bin 02:"
+                                id="soc2" autoSubmit="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboBin02}">
+              <f:selectItems value="#{bindings.descBin1.items}" id="si4"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.descBin2.inputValue}"
+                                label="Bin 03:"
+                                id="soc4" autoSubmit="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.cboBin03}">
+              <f:selectItems value="#{bindings.descBin2.items}" id="si7"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                label="Tipo Gestión:"
+                                id="soc5" autoSubmit="true">
+              <f:selectItems value="#{bindings.tipoGest.items}" id="si8"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                label="Grupo Gestión:"
+                                id="soc6" autoSubmit="true"
+                                partialTriggers="soc5">
+              <f:selectItems value="#{bindings.grupGest.items}" id="si9"/>
+            </af:selectOneChoice>
+            <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                label="Detalle Gestión:"
+                                id="soc7" autoSubmit="true"
+                                partialTriggers="soc6">
+              <f:selectItems value="#{bindings.detGest.items}" id="si10"/>
+            </af:selectOneChoice>
+            <af:inputDate label="Fecha Gestión:" id="id1"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.dtFecGest}"
+                          contentStyle="width:140px;"/>
+            <af:inputText label="Hora desde:" id="it15"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtHoraDesde}"
+                          contentStyle="width:50px;"/>
+            <af:inputText label="Hora hasta:" id="it9"
+                          binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtHoraHasta}"
+                          contentStyle="width:50px;"/>
+          </af:panelFormLayout>
+          <af:panelGroupLayout id="pgl5" styleClass="AFStretchWidth"
+                               layout="vertical">
+            <af:panelGroupLayout id="pgl6" layout="horizontal" visible="false">
+              <af:commandButton
+                                text="CreateInsert"
+                                disabled="#{!bindings.CreateInsert.enabled}"
+                                id="cb1"
+                                action="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.createInsert1}"
+                                visible="false"/>
+              <af:commandButton
+                                text="CreateInsert1"
+                                disabled="#{!bindings.CreateInsert1.enabled}"
+                                id="cb2"
+                                action="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.createInsert2}"
+                                visible="false"/>
+              <af:commandButton
+                                text="CreateInsert2"
+                                disabled="#{!bindings.CreateInsert2.enabled}"
+                                id="cb3"
+                                action="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.createInsert3}"
+                                visible="false"/>
+              <af:inputText value="#{bindings.codBin.inputValue}"
+                            label="codBin01"
+                            columns="#{bindings.codBin.hints.displayWidth}"
+                            maximumLength="#{bindings.codBin.hints.precision}"
+                            id="it11" partialTriggers="soc1" autoSubmit="true"
+                            readOnly="true">
+                <f:validator binding="#{bindings.codBin.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.codBin1.inputValue}"
+                            label="codBin02"
+                            columns="#{bindings.codBin1.hints.displayWidth}"
+                            maximumLength="#{bindings.codBin1.hints.precision}"
+                            id="it16" autoSubmit="true" partialTriggers="soc2"
+                            readOnly="true">
+                <f:validator binding="#{bindings.codBin1.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.codBin2.inputValue}"
+                            label="codBin03"
+                            columns="#{bindings.codBin2.hints.displayWidth}"
+                            maximumLength="#{bindings.codBin2.hints.precision}"
+                            id="it17" autoSubmit="true" partialTriggers="soc3"
+                            readOnly="true">
+                <f:validator binding="#{bindings.codBin2.validator}"/>
+              </af:inputText>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl7" layout="horizontal" visible="false">
+              <af:inputText value="#{bindings.codTipGest.inputValue}"
+                            label="codTipGest"
+                            columns="#{bindings.codTipGest.hints.displayWidth}"
+                            maximumLength="#{bindings.codTipGest.hints.precision}"
+                            id="it7" partialTriggers="soc5" autoSubmit="true"
+                            readOnly="true"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtCodTipGest}">
+                <f:validator binding="#{bindings.codTipGest.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.codTipGest.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.codGrupGest.inputValue}"
+                            label="codGrupGest"
+                            columns="#{bindings.codGrupGest.hints.displayWidth}"
+                            maximumLength="#{bindings.codGrupGest.hints.precision}"
+                            id="it8" autoSubmit="true" partialTriggers="soc6"
+                            readOnly="true"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtCodGrupGest}">
+                <f:validator binding="#{bindings.codGrupGest.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.codGrupGest.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.codDetGest.inputValue}"
+                            label="codDetGEst"
+                            columns="#{bindings.codDetGest.hints.displayWidth}"
+                            maximumLength="#{bindings.codDetGest.hints.precision}"
+                            id="it10" autoSubmit="true" partialTriggers="soc7"
+                            readOnly="true"
+                            binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtCodDetGest}">
+                <f:validator binding="#{bindings.codDetGest.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.codDetGest.format}"/>
+              </af:inputText>
+              <af:commandButton
+                                text="CreateInsert3"
+                                disabled="#{!bindings.CreateInsert3.enabled}"
+                                id="cb4"
+                                action="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.createInsertGest}"
+                                visible="false"/>
+            </af:panelGroupLayout>
+          </af:panelGroupLayout>
+          <af:panelGroupLayout id="pgl4" layout="vertical"
+                               styleClass="AFStretchWidth">
+            <af:spacer width="10" height="20" id="s1"/>
+            <af:commandButton text="Consultar" id="cb21"
+                              actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.consultarLeads}"/>
+            <af:spacer width="10" height="20" id="s3"/>
+          </af:panelGroupLayout>
+        </af:panelBox>
+        <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth">
+          <af:table value="#{bindings.SbpSlsReasigEvXSupFilView1.collectionModel}"
+                    var="row"
+                    rows="#{bindings.SbpSlsReasigEvXSupFilView1.rangeSize}"
+                    emptyText="#{bindings.SbpSlsReasigEvXSupFilView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    fetchSize="#{bindings.SbpSlsReasigEvXSupFilView1.rangeSize}"
+                    rowBandingInterval="0"
+                    selectedRowKeys="#{bindings.SbpSlsReasigEvXSupFilView1.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.SbpSlsReasigEvXSupFilView1.collectionModel.makeCurrent}"
+                    rowSelection="single" id="t1" columnStretching="last"
+                    styleClass="AFStretchWidth"
+                    binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.tblEjVenta}">
+            <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupFilView1.hints.IdSup.name}"
+                       sortable="false" headerText="idSup" id="c4"
+                       visible="false">
+              <af:outputText value="#{row.IdSup}" id="ot2">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsReasigEvXSupFilView1.hints.IdSup.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupFilView1.hints.NomSup.name}"
+                       sortable="false"
+                       headerText="Supervisor"
+                       id="c2">
+              <af:outputText value="#{row.NomSup}" id="ot4"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupFilView1.hints.IdEjVenta.name}"
+                       sortable="false" headerText="idEjVenta" id="c1"
+                       visible="false">
+              <af:outputText value="#{row.IdEjVenta}" id="ot1">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsReasigEvXSupFilView1.hints.IdEjVenta.format}"/>
+              </af:outputText>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupFilView1.hints.NomEjVenta.name}"
+                       sortable="false" headerText="Ejecutivo Venta" id="c5">
+              <af:commandLink text="#{row.NomEjVenta}" id="cl1"
+                              actionListener="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.obtenerDatos}"
+                              action="SBP_SLS_REASIG_EVENTA_NEW"
+                              binding="#{backingBeanScope.backing_SBP_SLS_REASIG_X_FILT.txtNomEjVenta}"
+                              disabled="true"/>
+            </af:column>
+            <af:column sortProperty="#{bindings.SbpSlsReasigEvXSupFilView1.hints.Cantidad.name}"
+                       sortable="false" headerText="Cantidad" id="c3">
+              <af:outputText value="#{row.Cantidad}" id="ot5">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.SbpSlsReasigEvXSupFilView1.hints.Cantidad.format}"/>
+              </af:outputText>
+            </af:column>
+          </af:table>
+        </af:panelGroupLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

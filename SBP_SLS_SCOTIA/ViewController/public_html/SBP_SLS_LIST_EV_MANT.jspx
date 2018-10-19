@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_LIST_EV_MANT.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_LIST_EV_MANT.d1}">
+      <af:messages id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_LIST_EV_MANT.f1}">
+        <af:panelBox text="Maestro de Ejecutivos de Venta" id="pb1">
+          <af:panelGroupLayout id="pgl1" layout="scroll">
+            <af:spacer width="10" height="30" id="s1"/>
+            <af:commandButton text="Procesar" id="cb1"
+                              actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_EV_MANT.Procesar}"/>
+            <af:spacer width="10" height="30" id="s2"/>
+            <af:panelGroupLayout id="pgl2">
+              <af:table value="#{bindings.SbpSlsMantEVVO1.collectionModel}"
+                        var="row" rows="#{bindings.SbpSlsMantEVVO1.rangeSize}"
+                        emptyText="#{bindings.SbpSlsMantEVVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.SbpSlsMantEVVO1.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.SbpSlsMantEVVO1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.SbpSlsMantEVVO1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t1"
+                        styleClass="AFStretchWidth" columnStretching="last"
+                        binding="#{backingBeanScope.backing_SBP_SLS_LIST_EV_MANT.tblEVenta}">
+                <af:column sortProperty="#{bindings.SbpSlsMantEVVO1.hints.idEjVenta.name}"
+                           sortable="false" headerText="idEjVenta" id="c2"
+                           visible="false">
+                  <af:outputText value="#{row.idEjVenta}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsMantEVVO1.hints.ejVenta.name}"
+                           sortable="false" headerText="Ejecutivo" id="c3">
+                  <af:outputText value="#{row.ejVenta}" id="ot1"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsMantEVVO1.hints.tipoUsuario.name}"
+                           sortable="false" headerText="Tipo Usuario" id="c4">
+                  
+                  <af:selectOneChoice
+                                      id="cboCliPar"
+                                      label=""
+                                      autoSubmit="true"
+                                      value="#{row.bindings.tipoUsuario.inputValue}">
+                    <af:selectItem id="siCP1" label="Predictivo" value="Predictivo"/>
+                    <af:selectItem id="siCP2" label="Progresivo" value="Progresivo"/>
+                    <af:selectItem id="siCP3" label="Manual" value="Manual"/>
+                  </af:selectOneChoice>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsMantEVVO1.hints.anexo.name}"
+                           sortable="false" headerText="Anexo" id="c1">
+                  <af:inputText value="#{row.bindings.anexo.inputValue}"
+                                columns="#{bindings.SbpSlsMantEVVO1.hints.anexo.displayWidth}"
+                                id="it2">
+                    <f:validator binding="#{row.bindings.anexo.validator}"/>
+                  </af:inputText>
+                </af:column>
+                <af:column headerText="Tipo conexión"
+                           id="c5">
+                
+                <af:selectOneChoice
+                                      id="tipoCon"
+                                      label=""
+                                      autoSubmit="true"
+                                    value="#{row.bindings.tipoCon.inputValue}">
+                    <af:selectItem id="siCP11" label="tel" value="tel"/>
+                    <af:selectItem id="siCP22" label="sip" value="sip"/>
+                  </af:selectOneChoice>
+                
+                </af:column>
+                <af:column headerText="Encriptar"
+                           id="c6">
+                
+                <af:selectOneChoice
+                                      id="encriptar"
+                                      label=""
+                                      autoSubmit="true"
+                                    value="#{row.bindings.Encriptar.inputValue}">
+                    <af:selectItem id="siCP121" label="Si" value="Si"/>
+                    <af:selectItem id="siCP232" label="No" value="No"/>
+                  </af:selectOneChoice>
+                
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </af:panelGroupLayout>
+        </af:panelBox>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

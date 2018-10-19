@@ -1,0 +1,3082 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.onBeforePhase}">
+  
+    
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.f1}">
+               
+      <af:resource type="javascript">
+          function copiar1(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT01::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar1 :: " + err)
+            }
+          }
+         function copiar2(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT02::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar2 :: " + err)
+            }
+          }
+          
+          function copiar3(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT03::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar3 :: " + err)
+            }
+          }
+          
+          function copiar4(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT04::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar4 :: " + err)
+            }
+          }
+          
+          function copiar5(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT05::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar5 :: " + err)
+            }
+          }
+          
+          function copiar6(e) {
+            try {
+	     
+              var para = document.getElementById('pt1:itT06::content')
+              para.select()
+              document.execCommand('Copy')
+            }
+            catch (err) {
+              alert("copiar6 :: " + err)
+            }
+          }
+        </af:resource>
+               
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:panelBox binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.pb1}"
+                         id="pb1" styleClass="AFStretchWidth">
+              <af:inputText label="primer nombre" id="it77"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPrimNom}"
+                            visible="false"/>
+              <af:inputText label="segundo nombre" id="it74"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSegNom}"
+                            visible="false"/>
+              <af:inputText label="apellido paterno" id="it75"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtApePat}"
+                            visible="false"/>
+              <af:inputText label="apellido materno" id="it76"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtApeMat}"
+                            visible="false"/>
+              <af:panelGroupLayout id="pgl2" layout="scroll"
+                                   styleClass="AFStretchWidth">
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.pgl1}"
+                                     id="pgl1" halign="center" layout="vertical"
+                                     styleClass="AFStretchWidth">
+                  <af:commandButton text="Siguiente Contacto" id="cb1"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.buscarDatos}"
+                                    inlineStyle="font-size:x-large; font-family:Verdana, Arial, Helvetica, sans-serif;"
+                                    accessKey="S"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.btnSigVenta}"
+                                    disabled="true" immediate="true"/>
+                  <af:panelGroupLayout id="pgl17">
+                    <af:outputLabel value="0/0" id="outputLabel19" binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtAvance}"/>
+                  </af:panelGroupLayout>
+                  <af:commandButton text="Crear Feedback"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cb2}"
+                                    id="cb2" visible="false"/>
+                  <af:commandButton text="Opty1" id="cb10"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.btnOpty1}"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.poblarTabla}"
+                                    visible="false"/>
+                  <af:commandButton text="Opty2" id="cb11"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.btnOpty2}"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.preCerInt}"
+                                    visible="false"/>
+                  <af:commandButton text="Opty3" id="cb12"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.btnOpty3}"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.preLibDis}"
+                                    visible="false"/>
+                  <af:inputText label="Lead Old" id="it45"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtLeadOld}"
+                                visible="false"/>
+                  <af:inputText label="Campaña" id="it44"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCpgId}"
+                                visible="false"/>
+                  <af:inputText label="Lead New" id="it46"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtLeadNew}"
+                                visible="false"/>
+                  <af:inputText label="Id Ejecutivo" id="it47"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdEj}"
+                                visible="false"/>
+                  <af:inputText label="Canal Id" id="it48"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCanalId}"
+                                visible="false"/>
+                  <af:inputText label="Usuario" id="it50"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtEjecutivoVenta}"
+                                visible="false"/>
+                </af:panelGroupLayout>
+                <af:panelBox text="Contacto"
+                             id="pb2" styleClass="AFStretchWidth">
+                  <af:outputLabel id="ol11" inlineStyle="font-size:x-large;"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtNombre}"/>
+                  <af:outputLabel id="ol40"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtConsentimiento}"
+                                  inlineStyle="font-size:x-large;"/>
+                  <af:panelGridLayout id="pgl8" inlineStyle="margin:1px; border-color:Black;"
+                                    styleClass="AFStretchWidth">
+          <af:gridRow marginTop="5px" height="auto" id="gr1">
+            
+            <af:gridCell id="gc0" marginStart="5px" width="17%" halign="end"
+                         marginEnd="10px">
+                <af:outputLabel id="itld" value="Documento:"/>
+            </af:gridCell>
+            
+            <af:gridCell id="gc1" marginStart="20px" width="17%"
+                         marginEnd="25px">
+                    <af:panelLabelAndMessage id="plam4">
+                          <af:outputLabel id="ol12"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTipDoc}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                      <af:gridCell id="gridCell1" marginStart="5px"
+                                   width="17%" halign="end" marginEnd="10px">
+                        <af:outputLabel value="Número:" id="ol3"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc2" marginStart="20px" width="17%"
+                                   marginEnd="25px">
+                                  <af:panelLabelAndMessage id="plam5">
+                          <af:outputLabel
+                                          id="outputLabel10"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtNumDoc}"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                      <af:gridCell id="gridCell2" marginStart="5px" width="17%"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Producto:" id="outputLabel352"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc3" marginStart="20px" marginEnd="25px"
+                                   width="17%">
+                                  <af:panelLabelAndMessage id="plam1">
+                          <af:outputLabel id="ol2"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProd}"
+                                          inlineStyle="font-weight:bold; font-size:medium;"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                    </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" id="gr2">
+            
+            <af:gridCell id="gc9" marginStart="5px" width="17%" halign="end"
+                         marginEnd="10px">
+                <af:outputLabel id="it66" value="Edad:"/>
+            </af:gridCell>
+            <af:gridCell id="gc4" marginStart="20px" width="17%"
+                         marginEnd="25px">
+                                            <af:panelLabelAndMessage 
+                                             id="plam2">
+                          <af:outputLabel
+                                          id="outputLabel12"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtEdad}"/>
+                        </af:panelLabelAndMessage>
+                   
+            </af:gridCell>
+                      <af:gridCell id="gridCell3" marginStart="5px" width="17%"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel id="outputLabel2"
+                                        value="Fecha Nacimiento:"
+                                        visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell id="gc5" marginStart="5px" width="17%">
+ <af:panelLabelAndMessage
+                                             id="plam3">
+                          <af:outputLabel
+                                          id="outputLabel13"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtFecNac}"
+                                          visible="false"/>
+                        </af:panelLabelAndMessage>
+            </af:gridCell>
+                      <af:gridCell id="gridCell20" marginStart="5px" width="17%"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Email:" id="outputLabel1"
+                                        visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell id="gridCell21" marginStart="20px"
+                                   marginEnd="25px" width="17%">
+                        <af:outputLabel id="outputLabel11"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtEmail}"
+                                        visible="false"/>
+                      </af:gridCell>
+                    </af:gridRow>
+        </af:panelGridLayout>
+                  <af:inputText value="#{bindings.Nombre.inputValue}"
+                                label="Nombre"
+                                id="it7" readOnly="true" maximumLength="160"
+                                columns="#{bindings.Nombre.hints.displayWidth}"
+                                visible="false">
+                    <f:validator binding="#{bindings.Nombre.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.SegundoNombre.inputValue}"
+                                label="Segundo Nombre"
+                                columns="#{bindings.SegundoNombre.hints.displayWidth}"
+                                maximumLength="#{bindings.SegundoNombre.hints.precision}"
+                                id="it5" readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.SegundoNombre.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.ApellidoPaterno.inputValue}"
+                                label="Apellido Paterno"
+                                columns="#{bindings.ApellidoPaterno.hints.displayWidth}"
+                                maximumLength="#{bindings.ApellidoPaterno.hints.precision}"
+                                id="it3" readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.ApellidoPaterno.validator}"/>
+                  </af:inputText>
+                </af:panelBox>
+<af:panelBox text="Producto" id="pb4"
+                             styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl28">
+                    <af:inputText label="Producto seleccionado:" id="it70"
+                                  readOnly="true"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProdSel}"/>
+                  </af:panelGroupLayout>
+                  <af:panelGridLayout id="pgl4" styleClass="AFStretchWidth">
+                    <af:gridRow marginTop="5px" height="auto" id="gr5">
+                      <af:gridCell marginStart="5px" width="17%" id="gc22"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:outputLabel value="Tarjeta 01:" id="ol102"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc28"
+                                   valign="middle" marginEnd="25px">
+                        <af:commandLink text="commandLink 4" id="cl7"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtBanco1Link}"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.obtenerNomBanco1}"/>
+                        <af:outputLabel id="ol10"
+                                        visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc25"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="TEA tarjeta 01:" id="outputLabel6"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" marginEnd="25px" width="16%"
+                                   id="gc23">
+                        <af:panelLabelAndMessage id="plam9">
+                          <af:outputLabel id="outputLabel16"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTcTea1}"
+                                          inlineStyle="color:Red; font-weight:bold;"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc29"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Plazo Producto:" id="outputLabel8"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc20"
+                                   marginEnd="25px">
+                        <af:panelLabelAndMessage id="plam6">
+                          <af:outputLabel id="outputLabel17"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPlazoMinimo}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px" height="auto"
+                                id="gr6">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell22"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:outputLabel value="Tarjeta 02:" id="outputLabel36"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%"
+                                   id="gridCell23" valign="middle"
+                                   marginEnd="25px">
+                        <af:commandLink text="commandLink 5" id="cl8"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtBanco2Link}"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.obtenerNomBanco2}"/>
+                        <af:outputLabel id="ol19" visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc21"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="TEA tarjeta 02"
+                                        id="outputLabel5"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc26"
+                                   marginEnd="25px">
+                        <af:panelLabelAndMessage id="plam8">
+                          <af:outputLabel id="outputLabel15"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTcTea2}"
+                                          inlineStyle="color:Red; font-weight:bold;"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc24"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Monto Producto:" id="ol21"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc27"
+                                   marginEnd="25px">
+                        <af:panelLabelAndMessage id="plam7">
+                          <af:outputLabel id="ol22"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMontoProd}"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gridRow3">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell24"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:outputLabel value="Tarjeta 03:" id="outputLabel3723"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%"
+                                   id="gridCell25" valign="middle"
+                                   marginEnd="25px">
+                        <af:commandLink text="commandLink 6" id="cl9"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtBanco3Link}"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.obtenerNomBanco3}"/>
+                        <af:outputLabel id="ol20" visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc19"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="TEA tarjeta 3:"
+                                        id="outputLabel9"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" marginEnd="25px" width="16%"
+                                   id="gc30">
+                        <af:panelLabelAndMessage id="plam10">
+                          <af:outputLabel id="outputLabel14"
+                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTcTea3}"
+                                          inlineStyle="color:Red; font-weight:bold;"/>
+                        </af:panelLabelAndMessage>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gridCell26"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Plazo Máximo:"
+                                        id="outputLabel7" visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" marginEnd="25px" width="16%"
+                                   id="gridCell27">
+                        <af:outputLabel id="outputLabel18"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPlazoMaximo}"
+                                        visible="false"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:panelBox text="Promoción:" id="pb11"
+                             styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl42" styleClass="AFStretchWidth"
+                                       layout="vertical">
+                    <af:outputLabel id="ol41" styleClass="font-size:x-large;"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPromNueva}"/>
+                    <af:spacer width="10" height="20" id="s2"/>
+                    <af:inputText id="it71"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDescProm}"
+                                  readOnly="true" rows="3"
+                                  contentStyle="width:1150px; height: 100px"/>
+                  </af:panelGroupLayout>
+                </af:panelBox>
+                <af:panelBox text="Teléfonos"
+                             id="pb3" styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl15" layout="horizontal"
+                                       halign="center">
+                    <af:commandButton text="Agregar Teléfono" id="cb3"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelfExtra}"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.btnTelfExtra}"
+                                      partialTriggers="cb1" immediate="true"
+                                      partialSubmit="true" visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGridLayout id="pgl3" styleClass="AFStretchWidth">
+                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                      <af:gridCell marginStart="5px" width="17%" id="gc11"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Teléfono 01:" id="cl13"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf1}"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfNew01}"
+                                        disabled="true"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc18"
+                                   valign="middle" marginEnd="25px">
+                      <af:commandLink
+                                        id="cl1"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf1}"
+                                        accessKey="1"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelf01}"
+                                        text="#{bindings.Telefono01.inputValue}"
+                                        useWindow="true" clientComponent="true"
+                                      visible="false">
+                                        
+                                        <af:clientListener method="copiar1" type="click" />
+                                        </af:commandLink>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc13"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Teléfono 02:" id="cl14"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf02}"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfNew02}"
+                                        disabled="true"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc15"
+                                   valign="middle" marginEnd="25px">
+                        <af:commandLink
+                                        id="cl4"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf02}"
+                                        accessKey="2"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelf02}"
+                                        text="#{bindings.Telefono02.inputValue}"
+										useWindow="true" clientComponent="true" visible="false">
+                                        <af:clientListener method="copiar2" type="click"/>
+                                        </af:commandLink>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc7"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Teléfono 03:" id="cl15"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf03}"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfNew03}"
+                                        disabled="true"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" marginEnd="25px"
+                                   width="16%" id="gc16" valign="middle">
+                        <af:commandLink
+                                        id="cl6"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarTelf03}"
+                                        accessKey="3"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelf03}"
+                                        text="#{bindings.Telefono03.inputValue}"
+										useWindow="true" clientComponent="true" visible="false">
+                                        <af:clientListener method="copiar3" type="click" />
+                                        </af:commandLink>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px"
+                                height="auto" id="gr3">
+                      <af:gridCell marginStart="5px" width="17%" id="gc12"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Celular 01:" id="cl10"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel01}"
+                                        disabled="true"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel1TipUser}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc17"
+                                   valign="middle" marginEnd="25px">
+                        <af:commandLink
+                                        id="cl5"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel01}"
+                                        accessKey="4"
+                                         binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel01}"
+                                        text="#{bindings.Celular01.inputValue}"
+										useWindow="true" clientComponent="true" visible="false">
+                                        <af:clientListener method="copiar4" type="click" />
+                                        </af:commandLink>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc6"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Celular 02:" id="cl11"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel2TipUser}"
+                                        disabled="true"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel02}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc10"
+                                   valign="middle" marginEnd="25px">
+                        <af:commandLink
+                                        id="cl2"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel02}"
+                                        accessKey="5"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel02}"
+                                        text="#{bindings.Celular02.inputValue}"
+										useWindow="true" clientComponent="true" visible="false">
+                                        <af:clientListener method="copiar5" type="click" />
+                                        </af:commandLink>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="16%" id="gc8"
+                                   halign="end" valign="middle"
+                                   marginEnd="10px">
+                        <af:commandLink text="Celular 03:" id="cl12"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel3TipUser}"
+                                        disabled="true"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel03}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" marginEnd="25px"
+                                   width="16%" id="gc14" valign="middle">
+                        <af:commandLink
+                                        id="cl3"
+                                        actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.agregarCel03}"
+                                        accessKey="6"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCel03}"
+                                        text="#{bindings.Celular03.inputValue}"
+										useWindow="true" clientComponent="true" visible="false">
+                                        <af:clientListener method="copiar6" type="click" />
+                                        </af:commandLink>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:panelBox text="Feedback" id="pb6"
+                             binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.pnlFeedback}">
+                  <af:panelCollection id="pc1" styleClass="AFStretchWidth" featuresOff="viewMenu detach">
+                    <af:table value="#{bindings.FeedBackVo1.collectionModel}"
+                              var="row" rows="#{bindings.FeedBackVo1.rangeSize}"
+                              emptyText="#{bindings.FeedBackVo1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.FeedBackVo1.rangeSize}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.FeedBackVo1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.FeedBackVo1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1"
+                              columnStretching="last"
+                              styleClass="AFStretchWidth"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.tblFeedback}">
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.tipoGestion.name}"
+                                 sortable="false" headerText="Tipo Gestion"
+                                 id="c8">
+                        <af:outputText value="#{row.tipoGestion}" id="ot31"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.grupoGestion.name}"
+                                 sortable="false" headerText="Grupo Gestión"
+                                 id="c3"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ? 'red' : 'white'}">
+                        <af:outputText value="#{row.grupoGestion}" id="ot32"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.detGestion.name}"
+                                 sortable="false" headerText="Detalle Gestion"
+                                 id="c9" width="200"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ?'red' : 'white'}">
+                        <af:outputText value="#{row.detGestion}" id="ot33"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CanalFb.name}"
+                                 sortable="false" headerText="Vendor" id="c26"
+                                 visible="false">
+                        <af:outputText value="#{row.CanalFb}" id="ot6"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCanalFb.name}"
+                                 sortable="false" headerText="codCanal" id="c25"
+                                 visible="false">
+                        <af:outputText value="#{row.CodCanalFb}" id="ot7"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.DescAdGestion.name}"
+                                 sortable="false"
+                                 headerText="Descripcion Adicional" id="c16"
+                                 visible="false">
+                        <af:outputText value="#{row.DescAdGestion}" id="ot8"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomCpg.name}"
+                                 sortable="false" headerText="Campaña" id="c10"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ?'red' : 'white'}">
+                        <af:outputText value="#{row.NomCpg}" id="ot9"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.CodCpg.name}"
+                                 sortable="false" headerText="codCpg" id="c28"
+                                 visible="false">
+                        <af:outputText value="#{row.CodCpg}" id="ot10"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.JefCanal.name}"
+                                 sortable="false" headerText="Jefe Canal"
+                                 id="c19" visible="false">
+                        <af:outputText value="#{row.JefCanal}" id="ot12"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.Sup.name}"
+                                 sortable="false" headerText="Supervisor"
+                                 id="c7" visible="false">
+                        <af:outputText value="#{row.Sup}" id="ot11"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.EjVenta.name}"
+                                 sortable="false" headerText="Ejecutivo Venta"
+                                 id="c13" visible="false">
+                        <af:outputText value="#{row.EjVenta}" id="ot13"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.FecGestion.name}"
+                                 sortable="false" headerText="Fecha Gestion"
+                                 id="c6"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ?'red' : 'white'}">
+                        <af:outputText value="#{row.FecGestion}" id="ot14"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.NomFb.name}"
+                                 sortable="false" headerText="Feedback" id="c12"
+                                 visible="false">
+                        <af:outputText value="#{row.NomFb}" id="ot15"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdFb.name}"
+                                 sortable="false" headerText="idFb" id="c2"
+                                 visible="false">
+                        <af:outputText value="#{row.IdFb}" id="ot16">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.IdFb.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem.name}"
+                                 sortable="false"
+                                 headerText="Monto desembolsado" id="c24"
+                                 visible="false">
+                        <af:outputText value="#{row.MontoDesem}" id="ot17"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.monto.name}"
+                                 sortable="false" headerText="Monto" id="c20"
+                                 visible="false">
+                        <af:outputText value="#{row.monto}" id="ot27">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.monto.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.MontoDesem2of.name}"
+                                 sortable="false"
+                                 headerText="Monto desembolsado 2da oferta"
+                                 id="c21" visible="false">
+                        <af:outputText value="#{row.MontoDesem2of}" id="ot18"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.telefono.name}"
+                                 sortable="false" headerText="Teléfono"
+                                 id="c15"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ? 'red' : 'white'}">
+                        <af:outputText value="#{row.telefono}" id="ot20"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idSup.name}"
+                                 sortable="false" headerText="idSup" id="c27"
+                                 visible="false">
+                        <af:outputText value="#{row.idSup}" id="ot21">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idSup.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idEjVenta.name}"
+                                 sortable="false" headerText="idEjVenta"
+                                 id="c23" visible="false">
+                        <af:outputText value="#{row.idEjVenta}" id="ot22">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idEjVenta.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.idJefCanal.name}"
+                                 sortable="false" headerText="idJefCanal"
+                                 id="c4" visible="false">
+                        <af:outputText value="#{row.idJefCanal}" id="ot23">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.idJefCanal.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codTipGest.name}"
+                                 sortable="false" headerText="codTipGest"
+                                 id="c17" visible="false">
+                        <af:outputText value="#{row.codTipGest}" id="ot24">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codTipGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codGrupGest.name}"
+                                 sortable="false" headerText="codGrupGest"
+                                 id="c11" visible="false">
+                        <af:outputText value="#{row.codGrupGest}" id="ot25">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codGrupGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.codDetGest.name}"
+                                 sortable="false" headerText="codDetGest"
+                                 id="c14" visible="false">
+                        <af:outputText value="#{row.codDetGest}" id="ot26">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.codDetGest.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomTipGest.name}"
+                                 sortable="false" headerText="nomTipGest"
+                                 id="c22" visible="false">
+                        <af:outputText value="#{row.nomTipGest}" id="ot28"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomGrupGest.name}"
+                                 sortable="false" headerText="nomGrupGest"
+                                 id="c5" visible="false">
+                        <af:outputText value="#{row.nomGrupGest}" id="ot29"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.nomDetGest.name}"
+                                 sortable="false" headerText="nomDetGest"
+                                 id="c18" visible="false">
+                        <af:outputText value="#{row.nomDetGest}" id="ot30"/>
+                      </af:column>
+                      <af:column headerText="Teléfono Adicional" id="c29"
+                                 visible="false">
+                        <af:outputText value="#{row.telfAd}" id="ot2"/>
+                      </af:column>
+                      <af:column headerText="Dirección Adicional" id="c31"
+                                 visible="false">
+                        <af:outputText value="#{row.dirAd}" id="ot4"/>
+                      </af:column>
+                      <af:column headerText="Email Adicional" id="c32"
+                                 visible="false">
+                        <af:outputText value="#{row.emailAd}" id="ot5"/>
+                      </af:column>
+                      <af:column headerText="Volver a llamar" id="c33"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ? 'red' : 'white'}">
+                        <af:outputText value="#{row.fec2daLlam}" id="ot34"/>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.FeedBackVo1.hints.IdLead.name}"
+                                 sortable="false"
+                                 headerText="idLead"
+                                 id="c1" visible="false">
+                        <af:outputText value="#{row.IdLead}" id="ot19">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.FeedBackVo1.hints.IdLead.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column headerText="Observaciones" id="c30" width="350"
+                                 inlineStyle="background-color:#{row.detGestion eq 'VOLVER A LLAMAR' ?'red' : 'white'}">
+                        <af:outputText value="#{row.obs}" id="ot3"/>
+                      </af:column>
+                    </af:table>
+                  </af:panelCollection>
+                </af:panelBox>
+                <af:panelBox text="RCC" id="pb9">
+                  <af:panelGridLayout id="pgl18" styleClass="AFStretchWidth">
+                    <af:gridRow marginTop="5px" height="auto" id="gr7">
+                      <af:gridCell marginStart="5px" width="17%" id="gc39"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Deuda TC:" id="ol13"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc36"
+                                   marginEnd="25px">
+                        <af:outputLabel
+                                        id="outputLabel20"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDeudaTc}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc37"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Banco TC:"
+                                        id="outputLabel21"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc35"
+                                   marginEnd="25px">
+                        <af:outputLabel
+                                        id="outputLabel22"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtBancoTc}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell4"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="LIN TC:" id="outputLabel23"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gridCell5"
+                                   marginEnd="25px">
+                        <af:outputLabel id="outputLabel24"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtLinTc}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" marginBottom="5px"
+                                height="auto" id="gr8">
+                      <af:gridCell marginStart="5px" width="17%" id="gc42"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Banco Préstamo:"
+                                        id="outputLabel27"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc34"
+                                   marginEnd="25px">
+                        <af:outputLabel id="outputLabel28"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtBancoPp}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gc38"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="Deuda Préstamo:"
+                                        id="outputLabel25"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gc33"
+                                   marginEnd="25px">
+                        <af:outputLabel id="outputLabel26"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDeudaPp}"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell6"
+                                   halign="end" marginEnd="10px">
+                        <af:outputLabel value="SBS Bancos financieros:" id="outputLabel29"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="20px" width="17%" id="gridCell7"
+                                   marginEnd="25px">
+                        <af:outputLabel id="outputLabel30"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSbs}"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                </af:panelBox>
+                <af:panelBox text="Disponibilidad de Tarjetas" id="pb10">
+                  <af:panelGridLayout id="panelGridLayout1"
+                                      styleClass="AFStretchWidth">
+                    <af:gridRow marginTop="5px" marginBottom="5px" height="auto"
+                                id="gridRow2">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell14"
+                                   halign="end">
+                        <af:outputLabel value="Departamento"
+                                        id="outputLabel31"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell15">
+                        <af:selectOneChoice value="#{bindings.dept.inputValue}"
+                                            required="#{bindings.dept.hints.mandatory}"
+                                            shortDesc="#{bindings.dept.hints.tooltip}"
+                                            id="soc7" autoSubmit="true"
+                                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.deptPrueba}">
+                          <f:selectItems value="#{bindings.dept.items}"
+                                         id="si7"/>
+                        </af:selectOneChoice>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell16"
+                                   halign="end">
+                        <af:outputLabel value="Provincia" id="ol16"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell17">
+                        <af:selectOneChoice value="#{bindings.prov.inputValue}"
+                                            required="#{bindings.prov.hints.mandatory}"
+                                            shortDesc="#{bindings.prov.hints.tooltip}"
+                                            id="soc8" partialTriggers="soc7"
+                                            autoSubmit="true">
+                          <f:selectItems value="#{bindings.prov.items}"
+                                         id="si8"/>
+                        </af:selectOneChoice>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell18"
+                                   halign="end">
+                        <af:outputLabel value="Distrito" id="outputLabel33"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell19">
+                        <af:selectOneChoice value="#{bindings.dist.inputValue}"
+                                            required="#{bindings.dist.hints.mandatory}"
+                                            shortDesc="#{bindings.dist.hints.tooltip}"
+                                            id="soc9" autoSubmit="true"
+                                            partialTriggers="soc8">
+                          <f:selectItems value="#{bindings.dist.items}"
+                                         id="si9"/>
+                        </af:selectOneChoice>
+                      </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" id="gridRow1">
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell8"
+                                   halign="end"/>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell9">
+                        <af:outputLabel id="ol17"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProvincia}"
+                                        visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell10"
+                                   halign="end"/>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell11">
+                        <af:outputLabel id="outputLabel32"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDpto}"
+                                        visible="false"/>
+                      </af:gridCell>
+                      <af:gridCell marginStart="5px" width="17%" id="gridCell12"
+                                   halign="end"/>
+                      <af:gridCell marginStart="5px" width="17%"
+                                   id="gridCell13">
+                        <af:outputLabel id="outputLabel34"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDistrito}"
+                                        visible="false"/>
+                      </af:gridCell>
+                    </af:gridRow>
+                  </af:panelGridLayout>
+                  <af:panelGroupLayout id="pgl32">
+                    <af:commandButton text="Buscar Disponibilidad de courier"
+                                      id="cb6"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.buscarProductos}"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl25" layout="horizontal">
+                    <af:inputText value="#{bindings.codDept.inputValue}"
+                                  label="codDept"
+                                  required="#{bindings.codDept.hints.mandatory}"
+                                  columns="#{bindings.codDept.hints.displayWidth}"
+                                  maximumLength="#{bindings.codDept.hints.precision}"
+                                  shortDesc="#{bindings.codDept.hints.tooltip}"
+                                  id="it26" partialTriggers="soc7"
+                                  autoSubmit="true"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodDept}"
+                                  visible="false">
+                      <f:validator binding="#{bindings.codDept.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.codProv.inputValue}"
+                                  label="codProv"
+                                  required="#{bindings.codProv.hints.mandatory}"
+                                  columns="#{bindings.codProv.hints.displayWidth}"
+                                  maximumLength="#{bindings.codProv.hints.precision}"
+                                  shortDesc="#{bindings.codProv.hints.tooltip}"
+                                  id="it27" partialTriggers="soc8"
+                                  autoSubmit="true"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodProv}"
+                                  visible="false">
+                      <f:validator binding="#{bindings.codProv.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.codDist.inputValue}"
+                                  label="#{bindings.codDist.hints.label}"
+                                  required="#{bindings.codDist.hints.mandatory}"
+                                  columns="#{bindings.codDist.hints.displayWidth}"
+                                  maximumLength="#{bindings.codDist.hints.precision}"
+                                  shortDesc="#{bindings.codDist.hints.tooltip}"
+                                  id="it28" partialTriggers="soc9"
+                                  autoSubmit="true"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodDist}"
+                                  visible="false">
+                      <f:validator binding="#{bindings.codDist.validator}"/>
+                    </af:inputText>
+                  </af:panelGroupLayout>
+                </af:panelBox>
+                <af:inputText label="idOpty" id="it67"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdOpty}"
+                              visible="false"/>
+                <af:inputText label="valor telf" id="it31"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValorTelf}"
+                              visible="false"/>
+                <af:inputText label="idEjVenta" id="it8"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdEjVenta}"
+                              visible="false"/>
+                <af:inputText label="Monto" id="it11"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMonto}"
+                              immediate="true"
+                              converter="org.apache.myfaces.trinidad.Number"
+                              visible="false"/>
+              </af:panelGroupLayout>
+              <af:commandButton
+                                text="CreateInsert1"
+                                disabled="#{!bindings.CreateInsert1.enabled}"
+                                id="cb5"
+                                action="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.createInsert}"
+                                visible="false"/>
+              <af:outputText id="it2"
+                             binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtContFb}"
+                             visible="false"/>
+              <af:inputText label="Monto Minimo" id="it4"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMontMin}"
+                            visible="false"/>
+              <af:inputText label="Monto Maximo" id="it6"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMonMax}"
+                            visible="false"/>
+            <af:inputText label="telf 01" id="itT01"
+                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT01}"
+                          visible="false"/>
+              <af:inputText label="itT02" id="itT02"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT02}"
+                            visible="false"/>
+              <af:inputText label="itT03" id="itT03"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT03}"
+                            visible="false"/>
+              <af:inputText label="itT04" id="itT04"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT04}"
+                            visible="false"/>
+              <af:inputText label="itT05" id="itT05"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT05}"
+                            visible="false"/>
+              <af:inputText label="itT06" id="itT06"
+                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itT06}"
+                            visible="false"/>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <af:popup id="p1"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupFeedback}"
+                  autoCancel="disabled" contentDelivery="lazyUncached">
+          <af:panelWindow id="pw1" modal="true" title="Creación Feedback">
+            <af:panelBox id="pb5" styleClass="AFStretchWidth">
+              <af:panelFormLayout id="pfl4" rows="333333" maxColumns="33333"
+                                  styleClass="AFStretchWidth">
+                <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                     halign="center">
+                  <af:inputText value="#{bindings.telf.inputValue}"
+                                label="Teléfono"
+                                required="#{bindings.telf.hints.mandatory}"
+                                columns="#{bindings.telf.hints.displayWidth}"
+                                maximumLength="#{bindings.telf.hints.precision}"
+                                shortDesc="#{bindings.telf.hints.tooltip}"
+                                id="it22"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_PROD.txtTelf}"
+                                readOnly="true" visible="false">
+                    <f:validator binding="#{bindings.telf.validator}"/>
+                  </af:inputText>
+                  <af:goLink text="Realizar llamada" id="gl1"
+                             targetFrame="_self"
+                             binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.glTelf01}"
+                             destination="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.linkWithParamsTelf01}"
+                             disabled="true"/>
+
+                
+                  <af:panelLabelAndMessage label="Teléfono"
+                                           id="plam11"
+                                           binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtLabelTelfFb}"
+                                           visible="false">
+                    <af:outputText value="#{bindings.telf.inputValue}"
+                                   id="ot45" inlineStyle="font-size:medium;"
+                                   binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfFb}"
+                                   visible="false"/>
+                  </af:panelLabelAndMessage>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.codDetGest.inputValue}"
+                              label="codDetGest"
+                              required="#{bindings.codDetGest.hints.mandatory}"
+                              columns="#{bindings.codDetGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codDetGest.hints.precision}"
+                              shortDesc="#{bindings.codDetGest.hints.tooltip}"
+                              id="it10" partialTriggers="soc3"
+                              autoSubmit="true" readOnly="true"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodDetGest}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codDetGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codDetGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codGrupGest.inputValue}"
+                              label="codGrupGest"
+                              required="#{bindings.codGrupGest.hints.mandatory}"
+                              columns="#{bindings.codGrupGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codGrupGest.hints.precision}"
+                              shortDesc="#{bindings.codGrupGest.hints.tooltip}"
+                              id="it14" partialTriggers="soc2"
+                              autoSubmit="true" readOnly="true"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodGrupGest}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codGrupGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codGrupGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ejVenta.inputValue}"
+                              label="Ejecutivo Venta"
+                              required="#{bindings.ejVenta.hints.mandatory}"
+                              columns="#{bindings.ejVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.ejVenta.hints.precision}"
+                              shortDesc="#{bindings.ejVenta.hints.tooltip}"
+                              id="it24"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtEjVenta}"
+                              visible="false">
+                  <f:validator binding="#{bindings.ejVenta.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codTipGest.inputValue}"
+                              label="codTipGest"
+                              required="#{bindings.codTipGest.hints.mandatory}"
+                              columns="#{bindings.codTipGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codTipGest.hints.precision}"
+                              shortDesc="#{bindings.codTipGest.hints.tooltip}"
+                              id="it9" autoSubmit="true" partialTriggers="soc1"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodTipGest}"
+                              visible="false">
+                  <f:validator binding="#{bindings.codTipGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codTipGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.nomFb.inputValue}"
+                              label="Feedback"
+                              required="#{bindings.nomFb.hints.mandatory}"
+                              columns="#{bindings.nomFb.hints.displayWidth}"
+                              maximumLength="#{bindings.nomFb.hints.precision}"
+                              shortDesc="#{bindings.nomFb.hints.tooltip}"
+                              id="it20"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtFeedback}"
+                              visible="false">
+                  <f:validator binding="#{bindings.nomFb.validator}"/>
+                </af:inputText>
+                <af:outputText value="#{bindings.fecGestion.inputValue}"
+                               id="ot1"
+                               binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtFecGestion}"
+                               visible="false"/>
+                <af:inputText value="#{bindings.idFb.inputValue}" label="idFb"
+                              required="#{bindings.idFb.hints.mandatory}"
+                              columns="#{bindings.idFb.hints.displayWidth}"
+                              maximumLength="#{bindings.idFb.hints.precision}"
+                              shortDesc="#{bindings.idFb.hints.tooltip}"
+                              id="it16" visible="false" readOnly="true">
+                  <f:validator binding="#{bindings.idFb.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idFb.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe Canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it39" visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idEjVenta.inputValue}"
+                              label="idEjVenta"
+                              required="#{bindings.idEjVenta.hints.mandatory}"
+                              columns="#{bindings.idEjVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.idEjVenta.hints.precision}"
+                              shortDesc="#{bindings.idEjVenta.hints.tooltip}"
+                              id="it23" readOnly="true" visible="false">
+                  <f:validator binding="#{bindings.idEjVenta.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idEjVenta.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe Canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it43"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtJefCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idSup.inputValue}" label="idSup"
+                              required="#{bindings.idSup.hints.mandatory}"
+                              columns="#{bindings.idSup.hints.displayWidth}"
+                              maximumLength="#{bindings.idSup.hints.precision}"
+                              shortDesc="#{bindings.idSup.hints.tooltip}"
+                              id="it38"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdSup}"
+                              visible="false">
+                  <f:validator binding="#{bindings.idSup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.sup.inputValue}"
+                              label="Supervisor"
+                              required="#{bindings.sup.hints.mandatory}"
+                              columns="#{bindings.sup.hints.displayWidth}"
+                              maximumLength="#{bindings.sup.hints.precision}"
+                              shortDesc="#{bindings.sup.hints.tooltip}"
+                              id="it42"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSup}"
+                              visible="false">
+                  <f:validator binding="#{bindings.sup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idJefCanal.inputValue}"
+                              label="idJefCanal"
+                              required="#{bindings.idJefCanal.hints.mandatory}"
+                              columns="#{bindings.idJefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idJefCanal.hints.precision}"
+                              shortDesc="#{bindings.idJefCanal.hints.tooltip}"
+                              id="it37"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdJefCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.idJefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.canal.inputValue}" label="Canal"
+                              required="#{bindings.canal.hints.mandatory}"
+                              columns="#{bindings.canal.hints.displayWidth}"
+                              maximumLength="#{bindings.canal.hints.precision}"
+                              shortDesc="#{bindings.canal.hints.tooltip}"
+                              id="it35"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCanal}"
+                              visible="false">
+                  <f:validator binding="#{bindings.canal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idCanal.inputValue}"
+                              label="idCanal"
+                              required="#{bindings.idCanal.hints.mandatory}"
+                              columns="#{bindings.idCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idCanal.hints.precision}"
+                              shortDesc="#{bindings.idCanal.hints.tooltip}"
+                              id="it36" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtIdCanal}">
+                  <f:validator binding="#{bindings.idCanal.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl27" layout="horizontal">
+                  <af:selectOneChoice value="#{bindings.Descripcion.inputValue}"
+                                      label="Gestión"
+                                      shortDesc="#{bindings.Descripcion.hints.tooltip}"
+                                      id="soc10" autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.soc7}"
+                                      required="true">
+                    <f:selectItems value="#{bindings.Descripcion.items}"
+                                   id="si10"/>
+                  </af:selectOneChoice>
+                  <af:commandButton
+                                    text="CreateInsert3"
+                                    disabled="#{!bindings.CreateInsert3.enabled}"
+                                    id="cb7"
+                                    action="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.createInsertPopup}"
+                                    visible="false"/>
+                  <af:inputText value="#{bindings.Codigo.inputValue}"
+                                label="codGestion"
+                                required="#{bindings.Codigo.hints.mandatory}"
+                                columns="#{bindings.Codigo.hints.displayWidth}"
+                                maximumLength="#{bindings.Codigo.hints.precision}"
+                                shortDesc="#{bindings.Codigo.hints.tooltip}"
+                                id="it29" partialTriggers="soc10"
+                                autoSubmit="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.itGestion}"
+                                visible="false">
+                    <f:validator binding="#{bindings.Codigo.validator}"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                     visible="false">
+                  <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                      label="Tipo Gestion"
+                                      shortDesc="#{bindings.tipoGest.hints.tooltip}"
+                                      id="soc1"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTipGest}">
+                    <f:selectItems value="#{bindings.tipoGest.items}" id="si1"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                      label="Grupo Gestión"
+                                      shortDesc="#{bindings.grupGest.hints.tooltip}"
+                                      id="soc2"
+                                      autoSubmit="true" partialTriggers="soc1"
+                                      disabled="#{bindings.tipoGest.inputValue eq null}"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtGrupGest}">
+                    <f:selectItems value="#{bindings.grupGest.items}" id="si2"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                      label="Detalle Gestión"
+                                      shortDesc="#{bindings.detGest.hints.tooltip}"
+                                      id="soc3" partialTriggers="soc2 soc1"
+                                      disabled="#{bindings.grupGest.inputValue eq null}"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDetGest}"
+                                      showRequired="true">
+                    <f:selectItems value="#{bindings.detGest.items}" id="si3"/>
+                  </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl10" layout="horizontal"
+                                     visible="false">
+                  <af:inputText value="#{bindings.emailAd.inputValue}"
+                                required="#{bindings.emailAd.hints.mandatory}"
+                                columns="#{bindings.emailAd.hints.displayWidth}"
+                                maximumLength="#{bindings.emailAd.hints.precision}"
+                                shortDesc="#{bindings.emailAd.hints.tooltip}"
+                                id="it30"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtEmailAd}"
+                                label="Email adicional">
+                    <f:validator binding="#{bindings.emailAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.direccionAd.inputValue}"
+                                required="#{bindings.direccionAd.hints.mandatory}"
+                                columns="#{bindings.direccionAd.hints.displayWidth}"
+                                maximumLength="#{bindings.direccionAd.hints.precision}"
+                                shortDesc="#{bindings.direccionAd.hints.tooltip}"
+                                id="it32"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDirAd}"
+                                label="Dirección adicional">
+                    <f:validator binding="#{bindings.direccionAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.telfAd.inputValue}"
+                                required="#{bindings.telfAd.hints.mandatory}"
+                                columns="#{bindings.telfAd.hints.displayWidth}"
+                                maximumLength="#{bindings.telfAd.hints.precision}"
+                                shortDesc="#{bindings.telfAd.hints.tooltip}"
+                                id="it33"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfAd}"
+                                label="Teléfono adicional"
+                                converter="javax.faces.Integer"
+                                immediate="true" visible="false">
+                    <f:validator binding="#{bindings.telfAd.validator}"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl16" layout="horizontal">
+                  <af:inputText value="#{bindings.montoDesem.inputValue}"
+                                columns="#{bindings.montoDesem.hints.displayWidth}"
+                                maximumLength="#{bindings.montoDesem.hints.precision}"
+                                shortDesc="#{bindings.montoDesem.hints.tooltip}"
+                                id="it49"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                immediate="true"
+                                partialTriggers="soc10"
+                                autoSubmit="true" label="Monto Aprobado"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMontoFb}"
+                                disabled="true" visible="false">
+                    <f:validator binding="#{bindings.montoDesem.validator}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.fec2daLlam.inputValue}"
+                                id="id1"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txt2daLlam}"
+                                disabled='#{bindings.Descripcion.inputValue ne "[VOLVER A LLAMAR] :: VOLVER A LLAMAR"}'
+                                autoSubmit="true" partialTriggers="soc10"
+                                label="Volver a llamar">
+                    <f:validator binding="#{bindings.fec2daLlam.validator}"/>
+                    <af:convertDateTime pattern="dd-MMM-yyy HH:mm:ss a"/>
+                  </af:inputDate>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.observaciones.inputValue}"
+                              label="Observaciones"
+                              required="#{bindings.observaciones.hints.mandatory}"
+                              columns="#{bindings.observaciones.hints.displayWidth}"
+                              maximumLength="#{bindings.observaciones.hints.precision}"
+                              shortDesc="#{bindings.observaciones.hints.tooltip}"
+                              id="it34"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtObs}"
+                              rows="3" inlineStyle="text-align:right;"
+                              styleClass="AFStretchWidth">
+                  <f:validator binding="#{bindings.observaciones.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl6" halign="center" valign="bottom"
+                                     layout="horizontal">
+                  <af:commandButton text="Grabar" id="cb9"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.crearFb}"
+                                    accessKey="g"/>
+                </af:panelGroupLayout>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p2"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupConfirm}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw2" modal="true">
+            <af:panelBox text="Aviso:" id="pb7"
+                         inlineStyle="width:259px; height:124px;">
+              <af:panelGroupLayout id="pgl14" layout="vertical">
+                <af:panelGroupLayout id="pgl12">
+                  <af:outputLabel value="No hay leads nuevos disponibles, desea continuar con leads ya trabajados?"
+                                  id="ol1"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl13">
+                  <af:commandButton text="Si" id="cb13"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.aceptarLead}"/>
+                  <af:commandButton text="No" id="cb14"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.rechazarLead}"/>
+                </af:panelGroupLayout>
+              </af:panelGroupLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p3"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupTelfExtra}"
+                  autoCancel="disabled">
+          <af:panelWindow id="pw3" title="Creación de Feedback" modal="true">
+            <af:panelBox id="pb8">
+              <af:panelFormLayout id="pfl5" maxColumns="33333" rows="33333">
+                <af:panelGroupLayout id="pgl22" layout="horizontal"
+                                     halign="center">
+                  <af:outputLabel value="Teléfono adicional" id="ol8"/>
+                  <af:inputText value="#{bindings.telfAd.inputValue}"
+                                columns="#{bindings.telfAd.hints.displayWidth}"
+                                maximumLength="#{bindings.telfAd.hints.precision}"
+                                shortDesc="#{bindings.telfAd.hints.tooltip}"
+                                id="it1" showRequired="true"
+                                converter="javax.faces.Integer"
+                                immediate="true" required="true"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelfExtra}">
+                    <f:validator binding="#{bindings.telfAd.validator}"/>
+                    <af:validateLength minimum="6"
+                                       hintMinimum="Debe ingresar un número mayor a 6 dígitos"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl19" layout="horizontal">
+                  <af:selectOneChoice value="#{bindings.tipoGest.inputValue}"
+                                      label="Tipo Gestion"
+                                      shortDesc="#{bindings.tipoGest.hints.tooltip}"
+                                      id="soc4" required="true"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTipGestTlfExt}">
+                    <f:selectItems value="#{bindings.tipoGest.items}" id="si4"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.grupGest.inputValue}"
+                                      shortDesc="#{bindings.grupGest.hints.tooltip}"
+                                      id="soc6" partialTriggers="soc4"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtGrupGestTlfExt}"
+                                      disabled="#{bindings.tipoGest.inputValue eq null}"
+                                      showRequired="true"
+                                      label="Grupo Gestión">
+                    <f:selectItems value="#{bindings.grupGest.items}" id="si6"/>
+                  </af:selectOneChoice>
+                  <af:selectOneChoice value="#{bindings.detGest.inputValue}"
+                                      shortDesc="#{bindings.detGest.hints.tooltip}"
+                                      id="soc5" partialTriggers="soc6 soc4"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDetGestTlfExt}"
+                                      disabled="#{bindings.grupGest.inputValue eq null}"
+                                      showRequired="true"
+                                      label="Detalle Gestión">
+                    <f:selectItems value="#{bindings.detGest.items}" id="si5"/>
+                  </af:selectOneChoice>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl20" layout="horizontal">
+                  <af:inputText value="#{bindings.direccionAd.inputValue}"
+                                required="#{bindings.direccionAd.hints.mandatory}"
+                                columns="#{bindings.direccionAd.hints.displayWidth}"
+                                maximumLength="#{bindings.direccionAd.hints.precision}"
+                                shortDesc="#{bindings.direccionAd.hints.tooltip}"
+                                id="it58" label="Dirección adicional">
+                    <f:validator binding="#{bindings.direccionAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.telfAd.inputValue}"
+                                required="#{bindings.telfAd.hints.mandatory}"
+                                columns="#{bindings.telfAd.hints.displayWidth}"
+                                maximumLength="#{bindings.telfAd.hints.precision}"
+                                shortDesc="#{bindings.telfAd.hints.tooltip}"
+                                id="it60" label="Telefono adicional"
+                                converter="javax.faces.Integer"
+                                immediate="true" visible="false">
+                    <f:validator binding="#{bindings.telfAd.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.emailAd.inputValue}"
+                                required="#{bindings.emailAd.hints.mandatory}"
+                                columns="#{bindings.emailAd.hints.displayWidth}"
+                                maximumLength="#{bindings.emailAd.hints.precision}"
+                                shortDesc="#{bindings.emailAd.hints.tooltip}"
+                                id="it63" label="Email adicional">
+                    <f:validator binding="#{bindings.emailAd.validator}"/>
+                  </af:inputText>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl23" layout="horizontal">
+                  <af:inputText value="#{bindings.montoDesem.inputValue}"
+                                columns="#{bindings.montoDesem.hints.displayWidth}"
+                                maximumLength="#{bindings.montoDesem.hints.precision}"
+                                shortDesc="#{bindings.montoDesem.hints.tooltip}"
+                                id="it61"
+                                converter="org.apache.myfaces.trinidad.Number"
+                                disabled='#{bindings.grupGest.inputValue ne "VENTA"}'
+                                immediate="true" rows="1" partialTriggers="soc6"
+                                autoSubmit="true" label="Monto desembolsado"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMontoFbExtra}">
+                    <f:validator binding="#{bindings.montoDesem.validator}"/>
+                  </af:inputText>
+                  <af:inputDate value="#{bindings.fec2daLlam.inputValue}"
+                                required="#{bindings.fec2daLlam.hints.mandatory}"
+                                shortDesc="#{bindings.fec2daLlam.hints.tooltip}"
+                                id="id2"
+                                disabled='#{bindings.grupGest.inputValue ne "VOLVER A LLAMAR"}'
+                                autoSubmit="true" partialTriggers="soc6"
+                                label="Volver a llamar">
+                    <f:validator binding="#{bindings.fec2daLlam.validator}"/>
+                    <af:convertDateTime pattern="dd-MMM-yyy HH:mm:ss a"/>
+                    <!-- <af:convertDateTime pattern="#{bindings.fec2daLlam.format}"/> -->
+                  </af:inputDate>
+                </af:panelGroupLayout>
+                <af:inputText value="#{bindings.observaciones.inputValue}"
+                              label="Observaciones"
+                              columns="#{bindings.observaciones.hints.displayWidth}"
+                              maximumLength="#{bindings.observaciones.hints.precision}"
+                              shortDesc="#{bindings.observaciones.hints.tooltip}"
+                              id="it17" styleClass="AFStretchWidth"
+                              inlineStyle="text-align:right;" rows="3">
+                  <f:validator binding="#{bindings.observaciones.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codTipGest.inputValue}"
+                              label="codTipGest"
+                              required="#{bindings.codTipGest.hints.mandatory}"
+                              columns="#{bindings.codTipGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codTipGest.hints.precision}"
+                              shortDesc="#{bindings.codTipGest.hints.tooltip}"
+                              id="it12" partialTriggers="soc4"
+                              autoSubmit="true" readOnly="true" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodTipGestTlfExt}">
+                  <f:validator binding="#{bindings.codTipGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codTipGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codDetGest.inputValue}"
+                              label="codDetGest"
+                              required="#{bindings.codDetGest.hints.mandatory}"
+                              columns="#{bindings.codDetGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codDetGest.hints.precision}"
+                              shortDesc="#{bindings.codDetGest.hints.tooltip}"
+                              id="it25" partialTriggers="soc5"
+                              autoSubmit="true" readOnly="true" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodDetGestTlfExt}">
+                  <f:validator binding="#{bindings.codDetGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codDetGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.codGrupGest.inputValue}"
+                              label="codGrupGest"
+                              required="#{bindings.codGrupGest.hints.mandatory}"
+                              columns="#{bindings.codGrupGest.hints.displayWidth}"
+                              maximumLength="#{bindings.codGrupGest.hints.precision}"
+                              shortDesc="#{bindings.codGrupGest.hints.tooltip}"
+                              id="it21" partialTriggers="soc6"
+                              autoSubmit="true" readOnly="true" visible="false"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodGrupGestTlfExt}">
+                  <f:validator binding="#{bindings.codGrupGest.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.codGrupGest.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.nomFb.inputValue}"
+                              label="Feefback"
+                              required="#{bindings.nomFb.hints.mandatory}"
+                              columns="#{bindings.nomFb.hints.displayWidth}"
+                              maximumLength="#{bindings.nomFb.hints.precision}"
+                              shortDesc="#{bindings.nomFb.hints.tooltip}"
+                              id="it59"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtFeedbackTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.nomFb.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idFb.inputValue}" label="idFb"
+                              required="#{bindings.idFb.hints.mandatory}"
+                              columns="#{bindings.idFb.hints.displayWidth}"
+                              maximumLength="#{bindings.idFb.hints.precision}"
+                              shortDesc="#{bindings.idFb.hints.tooltip}"
+                              id="it52" visible="false">
+                  <f:validator binding="#{bindings.idFb.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idFb.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idEjVenta.inputValue}"
+                              label="idEjVenta"
+                              required="#{bindings.idEjVenta.hints.mandatory}"
+                              columns="#{bindings.idEjVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.idEjVenta.hints.precision}"
+                              shortDesc="#{bindings.idEjVenta.hints.tooltip}"
+                              id="it64" visible="false">
+                  <f:validator binding="#{bindings.idEjVenta.validator}"/>
+                  <af:convertNumber groupingUsed="false"
+                                    pattern="#{bindings.idEjVenta.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.ejVenta.inputValue}"
+                              label="ejVenta"
+                              required="#{bindings.ejVenta.hints.mandatory}"
+                              columns="#{bindings.ejVenta.hints.displayWidth}"
+                              maximumLength="#{bindings.ejVenta.hints.precision}"
+                              shortDesc="#{bindings.ejVenta.hints.tooltip}"
+                              id="it19" visible="false">
+                  <f:validator binding="#{bindings.ejVenta.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.fecGestion.inputValue}"
+                              label="Fecha gestión"
+                              required="#{bindings.fecGestion.hints.mandatory}"
+                              columns="#{bindings.fecGestion.hints.displayWidth}"
+                              maximumLength="#{bindings.fecGestion.hints.precision}"
+                              shortDesc="#{bindings.fecGestion.hints.tooltip}"
+                              id="it15"
+                              binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtFecGestTlfExt}"
+                              visible="false">
+                  <f:validator binding="#{bindings.fecGestion.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idCanal.inputValue}"
+                              label="idCanal"
+                              required="#{bindings.idCanal.hints.mandatory}"
+                              columns="#{bindings.idCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idCanal.hints.precision}"
+                              shortDesc="#{bindings.idCanal.hints.tooltip}"
+                              id="it13" visible="false">
+                  <f:validator binding="#{bindings.idCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.canal.inputValue}" label="canal"
+                              required="#{bindings.canal.hints.mandatory}"
+                              columns="#{bindings.canal.hints.displayWidth}"
+                              maximumLength="#{bindings.canal.hints.precision}"
+                              shortDesc="#{bindings.canal.hints.tooltip}"
+                              id="it18" visible="false">
+                  <f:validator binding="#{bindings.canal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idSup.inputValue}" label="idSup"
+                              required="#{bindings.idSup.hints.mandatory}"
+                              columns="#{bindings.idSup.hints.displayWidth}"
+                              maximumLength="#{bindings.idSup.hints.precision}"
+                              shortDesc="#{bindings.idSup.hints.tooltip}"
+                              id="it55" visible="false">
+                  <f:validator binding="#{bindings.idSup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.sup.inputValue}" label="sup"
+                              required="#{bindings.sup.hints.mandatory}"
+                              columns="#{bindings.sup.hints.displayWidth}"
+                              maximumLength="#{bindings.sup.hints.precision}"
+                              shortDesc="#{bindings.sup.hints.tooltip}"
+                              id="it56" visible="false">
+                  <f:validator binding="#{bindings.sup.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.idJefCanal.inputValue}"
+                              label="idJefCanal"
+                              required="#{bindings.idJefCanal.hints.mandatory}"
+                              columns="#{bindings.idJefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.idJefCanal.hints.precision}"
+                              shortDesc="#{bindings.idJefCanal.hints.tooltip}"
+                              id="it62" visible="false">
+                  <f:validator binding="#{bindings.idJefCanal.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.jefCanal.inputValue}"
+                              label="Jefe canal"
+                              required="#{bindings.jefCanal.hints.mandatory}"
+                              columns="#{bindings.jefCanal.hints.displayWidth}"
+                              maximumLength="#{bindings.jefCanal.hints.precision}"
+                              shortDesc="#{bindings.jefCanal.hints.tooltip}"
+                              id="it51" visible="false">
+                  <f:validator binding="#{bindings.jefCanal.validator}"/>
+                </af:inputText>
+                <af:panelGroupLayout id="pgl5" halign="center" valign="bottom"
+                                     layout="horizontal">
+                  <af:commandButton text="Grabar" id="cb4"
+                                    actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.crearFbTlfExtra}"
+                                    accessKey="g"/>
+                </af:panelGroupLayout>
+              </af:panelFormLayout>
+            </af:panelBox>
+          </af:panelWindow>
+        </af:popup>
+        
+        <af:popup id="p8"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupSpeech}"
+                  autoCancel="disabled">
+          
+            <af:panelWindow id="pw8" 
+            modal="true"
+            title="Formulario Venta" 
+          stretchChildren="none" 
+          contentWidth="1350">
+    
+            <af:panelGroupLayout id="pgl" layout="vertical"
+                                 styleClass="AFStretchWidth">
+              <af:panelBox id="pbForm" background="medium"
+                           styleClass="AFStretchWidth">
+                <af:panelBox text="Bienvenido" id="pbBienvenido"
+                             styleClass="AFStretchWidth">
+                  <af:panelGroupLayout id="pgl38" layout="vertical"
+                                       styleClass="AFStretchWidth">
+                    <af:panelGroupLayout id="pgl36" styleClass="AFStretchWidth">
+                      <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSpeeID}"
+                                     id="txtSpeeID"/>
+                      <af:outputLabel value="MUY BUENOS DIAS Sr./Srta "/>
+                      <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliCod}"
+                                     id="txtCliCod"/>
+                      <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNom}"
+                                     id="txtCliNom"
+                                     inlineStyle="color:Red; font-weight:bold;"
+                                     value="-Nombre cliente-"/>
+                      <af:outputLabel value=", mi nombre es "/>
+                      <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtUsuNom}"
+                                     id="txtUsuNom"
+                                     inlineStyle="color:Red; font-weight:bold;"
+                                     value="-Nombre Usuario-"/>
+                      <af:outputLabel value=", y estoy llamando de SCOTIABANK. ¿Me puede dar su consentimiento para poder brindarle los nuevos beneficios que Scotiabank tiene para usted?"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl37" styleClass="AFStretchWidth">
+                      <af:outputText id="ot46"
+                                     binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMsjBienv}"
+                                     value="mensaje bienvenida"
+                                     inlineStyle="font-weight:bold;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl40" layout="vertical">
+                      <af:panelSplitter id="ps1"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.pnlMsj}"
+                                        styleClass="AFStretchWidth"
+                                        inlineStyle="width:1068px; height:229px;"
+                                        visible="false">
+                        <f:facet name="first">
+                          <af:panelGroupLayout layout="vertical"
+                                               xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                               id="pgl39"
+                                               styleClass="AFStretchWidth">
+                            <af:outputLabel value="Menor a $ 450" id="ol33"
+                                            inlineStyle="font-weight:bolder; font-size:large;"/>
+                            <af:outputLabel value="SCOTIABANK le permite a Ud. disfrutar de múltiples beneficios como: PROGRAMA DE ACUMULACIÓN DE PUNTOS, Descuentos y Promociones a través de su Tarjeta de Crédito: VISA/MC CLASICA Pre-Aprobada y lista para emitir, únicamente con su aceptación."
+                                            id="ol34"/>
+                          </af:panelGroupLayout>
+                        </f:facet>
+                        <f:facet name="second">
+                          <af:panelGroupLayout layout="vertical"
+                                               xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                               id="pgl41"
+                                               styleClass="AFStretchWidth">
+                            <af:outputLabel value="Mayor a $ 450" id="ol35"
+                                            inlineStyle="font-size:large; font-weight:bolder;"/>
+                            <af:outputLabel value='SCOTIABANK le ha pre-aprobado una Tarjeta de Crédito VISA/MC CLÁSICA, con el beneficio de poder utilizarla para realizar “RETIROS DE EFECTIVO AL INSTANTE!” con "SÚPER TASAS PREFERENCIALES" disponibles en Agencias o Cajeros SCOTIABANK que le permiten retirar UNA VEZ AL MES hasta el 70% de la línea en efectivo a un Monto y Plazo pactado, como por ejemplo:'
+                                            id="ol36"/>
+                            <af:outputLabel value="[Nombrar al menos 1]"
+                                            id="ol37"
+                                            inlineStyle="color:Red; font-weight:bold;"/>
+                            <af:outputLabel value="• S/ 1,000 en 11 cuotas de S/ 110 (Aprox.), a una Tasa Preferencial de 47.98% anual  - (TCEA 67.77%)"
+                                            id="outputLabel35"/>
+                            <af:outputLabel value="• S/ 2,000 en 21 cuotas de S/ 145 (Aprox.), a una Tasa Preferencial de 59.92% anual  - (TCEA 70.06%)"
+                                            id="outputLabel37"/>
+                            <af:outputLabel value="• S/ 3,000 en 31 cuotas de S/ 175 (Aprox.), a una Tasa Preferencial de 59.92% anual  - (TCEA 66.79%)"
+                                            id="outputLabel38"/>
+                            <af:outputLabel value="• S/ 5,000 en 11 cuotas de S/ 564 (Aprox.), a una Tasa Preferencial de 47.98% anual - (TCEA 58.22%)"
+                                            id="outputLabel39"/>
+                            <af:outputLabel value="• S/ 10,000 en 11 cuotas de S/ 1,128 (Aprox.), a una Tasa Preferencial de 47.98% anual - (TCEA 57.08%)"
+                                            id="outputLabel40"/>
+                            <af:outputLabel value="Cualquier Disposición de Efectivo está sujeta a Comisión de uso de Cajero o Ventanilla de 3.5% hasta un máximo de S/50 según monto retirado. "
+                                            id="outputLabel41"/>
+                            <af:outputLabel value="Para cualquier otro monto o plazo la tasa de interés aplicable será de 89.99% anual "
+                                            id="outputLabel42"/>
+                          </af:panelGroupLayout>
+                        </f:facet>
+                      </af:panelSplitter>
+                      <af:panelSplitter id="ps2" secondBorder="none"
+                                        styleClass="AFStretchWidth"
+                                        inlineStyle="width:1085px; height:306px;"
+                                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.pnlMsjOro}"
+                                        visible="false">
+                        <f:facet name="first">
+                          <af:panelGroupLayout layout="vertical"
+                                               xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                               id="panelGroupLayout1"
+                                               styleClass="AFStretchWidth">
+                            <af:outputLabel value='SCOTIABANK le ha pre-aprobado una Tarjeta de Crédito VISA/MC ORO, con el beneficio de poder utilizarla para realizar “RETIROS DE EFECTIVO AL INSTANTE!” con "SÚPER TASAS PREFERENCIALES" disponibles en Agencias o Cajeros SCOTIABANK que le permiten retirar UNA VEZ AL MES hasta el 100% de la línea en efectivo a un Monto y Plazo pactado, como por ejemplo:'
+                                            id="outputLabel44"/>
+                            <af:outputLabel value="[Nombrar al menos 1]"
+                                            id="outputLabel45"
+                                            inlineStyle="color:Red; font-weight:bold;"/>
+                            <af:outputLabel value="• S/ 1,000 en 11 cuotas de S/ 110 (Aprox.), a una Tasa Preferencial de 47.98% anual  - (TCEA 67.77%)"
+                                            id="outputLabel46"/>
+                            <af:outputLabel value="• S/ 2,000 en 21 cuotas de S/ 145 (Aprox.), a una Tasa Preferencial de 59.92% anual  - (TCEA 70.06%)"
+                                            id="outputLabel47"/>
+                            <af:outputLabel value="• S/ 3,000 en 31 cuotas de S/ 175 (Aprox.), a una Tasa Preferencial de 59.92% anual  - (TCEA 66.79%)"
+                                            id="outputLabel48"/>
+                            <af:outputLabel value="• S/ 5,000 en 11 cuotas de S/ 564 (Aprox.), a una Tasa Preferencial de 47.98% anual - (TCEA 58.22%)"
+                                            id="outputLabel49"/>
+                            <af:outputLabel value="• S/ 10,000 en 11 cuotas de S/ 1,128 (Aprox.), a una Tasa Preferencial de 47.98% anual - (TCEA 57.08%)"
+                                            id="outputLabel50"/>
+                            <af:outputLabel value="Cualquier Disposición de Efectivo está sujeta a Comisión de uso de Cajero o Ventanilla de 3.5% hasta un máximo de S/50 según monto retirado. "
+                                            id="outputLabel51"/>
+                            <af:outputLabel value="Para cualquier otro monto o plazo la tasa de interés aplicable será de 89.99% anual "
+                                            id="outputLabel52"/>
+                          </af:panelGroupLayout>
+                        </f:facet>
+                      </af:panelSplitter>
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProCod}"
+                                 id="txtProCod" visible="false"/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProNom}"
+                                 id="txtProNom"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Producto-" visible="false"/>
+                </af:panelBox>
+                <af:panelBox text="Promociones" id="pbPromociones">
+                  <af:outputLabel value="Por ejemplo, entre los descuentos de esta tarjeta disfrutará de:"/>
+                  <af:panelGroupLayout id="pgl29" styleClass="AFStretchWidth"
+                                       layout="horizontal">
+                    <af:panelGroupLayout id="pgl31" layout="vertical">
+                      <af:outputLabel value="Nombre de Tarjeta" id="ol23"
+                                      inlineStyle="font-size:large;"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtNomProd}"/>
+                      <af:outputLabel
+                                      id="ol26"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPromocion}"/>
+                      <af:outputLabel id="ol38"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPromSpeech2}"/>
+                      <af:outputLabel id="ol39"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtPromSpeech3}"/>
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="25" id="s1"/>
+                  <af:panelGroupLayout id="pgl30" styleClass="AFStretchWidth">
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProTip}"
+                                   id="txtProTip"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Tipo Promocion-"/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProDes}"
+                                   id="txtProDes"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Promocion-"/>
+                    <af:outputLabel value="Adicionalmente, su nueva tarjeta contará la EXONERACION AUTOMÁTICA DE MEMBRESÍA, siempre y cuando realice un consumo mínimo de S/. 1, EN CADA CICLO DE FACTURACIÓN, por ejemplo, afiliando sus servicios de teléfono fijo o celular, entre otros, como cargos recurrente."/>
+                    <af:outputLabel value="Aproveche nuestros beneficios Sr./Srta."/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo2}"
+                                   id="txtCliNo2"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Nombre cliente-"/>
+                    <af:outputLabel value=" ¿Acepta entonces la emisión y envío de su nueva tarjeta de crédito?"/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProNo2}"
+                                   id="txtProNo2"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Producto-"/>
+                    <af:outputLabel value=" por "/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtProMon}"
+                                   id="txtProMon"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Monto Producto-"/>
+                    <af:outputLabel id="ol9"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtNomMon}"
+                                    inlineStyle="color:Red; font-weight:bold;"/>
+                    <af:outputLabel value="? SI/NO"/>
+                    <af:outputLabel value=" LE RECORDAMOS QUE POR SU SEGURIDAD ESTA LLAMADA ESTÁ SIENDO GRABADA. A continuación, le realizamos algunas preguntas de validación"/>
+                  </af:panelGroupLayout>
+                </af:panelBox>
+                <af:outputLabel value="LE RECORDAMOS QUE POR SU SEGURIDAD ESTA LLAMADA ESTÁ SIENDO GRABADA. A continuación, le realizaremos algunas pregunta de validación:" id="ol25"/>
+                <af:panelBox text="Datos del Cliente" id="pbDatosCliente">
+                  <af:outputLabel value="¿Cual es su número de DNI? : "/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliDoc}"
+                                 id="txtCliDoc"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-DNI-"/>
+                  <af:outputLabel value="  ¿Cuales son sus "/>
+                  <af:outputLabel value="Apellidos y Nombres completos?"
+                                  inlineStyle="font-weight:bold;"/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo3}"
+                                 id="txtCliNo3"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Nombre cliente-"/>
+                  <af:inputText
+                                id="txtFecNaS" autoSubmit="true"
+                                label="¿Cual es su fecha de nacimiento? (día/mes/año) : "
+                                inlineStyle="border-color:Blue;"
+                                visible="false">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputText>
+                  <af:inputDate label="¿Cual es su fecha de nacimiento? : " id="id3"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.dtFecNaS}">
+                    <af:convertDateTime pattern="dd/MM/yyyy"/>
+                  </af:inputDate>
+                  <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelLla}"
+                                id="txtTelLla"
+                                label="¿Cual es el número telefónico al cual estamos llamando? : "
+                                readOnly="true"/>
+                                
+                                
+                                
+                 
+                 
+                 
+                   <af:panelGridLayout  inlineStyle="width:800px" >
+                  
+                    <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Teléfono de casa : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                               <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelCas}"
+                                id="txtTelCas" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Celular : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                          <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelCel}"
+                                id="txtTelCel" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                           <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Correo electrónico : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                           <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCorEle}"
+                                id="txtCorEle" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                           <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Teléfono de referencia : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                          <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtTelRef}"
+                                id="txtTelRef"
+                                label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                          
+                          <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="de familiar (indicar parentesco) : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                      <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCliPar}"
+                                      id="cboCliPar"
+                                      label=""
+                                      autoSubmit="true">
+                    <af:selectItem id="siCP1" label="Conyuge" value="C"/>
+                    <af:selectItem id="siCP2" label="Padre" value="P"/>
+                    <af:selectItem id="siCP3" label="Hijo" value="H"/>
+                    <af:selectItem id="siCP4" label="Tio" value="T"/>
+                    <af:selectItem id="siCP5" label="Sobrino" value="S"/>
+                    <af:selectItem id="siCP6" label="Primo" value="P"/>
+                    <af:selectItem id="siCP7" label="Otro" value="O"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                             <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="¿Es Ud. casado, soltero o conviviente en la actualidad? : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                      <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboEstCiv}"
+                                      id="cboEstCiv"
+                                      label=""
+                                      autoSubmit="true">
+                    <af:selectItem id="siEC1" label="Casado/a" value="C"/>
+                    <af:selectItem id="siEC2" label="Soltero/a" value="S"/>
+                    <af:selectItem id="siEC3" label="Viudo/a" value="V"/>
+                    <af:selectItem id="siEC4" label="Divorciado/a" value="D"/>
+                    <af:selectItem id="siEC5" label="Otro" value="O"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                           <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Sexo : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                        <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCliGen}"
+                                      id="cboCliGen" autoSubmit="true"
+                                      label="">
+                  <af:selectItem id ="SFE" label="Femenino" value="Femenino"/>
+                    <af:selectItem id ="SMA" label="Masculino" value="Masculino"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                    </af:panelGridLayout>
+                    
+                    
+                </af:panelBox>
+               
+               
+               
+                <af:panelBox text="Datos del conyuge" id="pbConyuge">
+                
+                 <af:panelGridLayout id="pov_pgl3" inlineStyle="width:600px" >
+                 
+                 <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" id="gc23443"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Primer Nombre : " id="labe56668"  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" id="gc534" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                             <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtConNo1}"
+                                id="txtConNo1" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Segundo Nombre : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                           <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtConNo2}"
+                                id="txtConNo2" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Apellido paterno : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%"  
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                          <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCoApPa}"
+                                id="txtCoApPa" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Apellido materno : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                        <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCoApMa}"
+                                id="txtCoApMa" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Fecha de nacimiento : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                 <af:inputDate label="" id="id4"
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.dtCoFeNa}">
+                        <af:convertDateTime pattern="dd/MM/yyyy"/>                
+                </af:inputDate>
+                  <af:inputText
+                                id="txtCoFeNa" label=""
+                                visible="false"/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="DNI : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                              <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCoNuDo}"
+                                id="txtCoNuDo" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                           <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Sexo : "   inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                              <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCoGene}"
+                                      id="cboCoGene" autoSubmit="true"
+                                      label="">
+                    <af:selectItem id ="SF" label="Femenino" value="Femenino"/>
+                    <af:selectItem id ="SM" label="Masculino" value="Masculino"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                 </af:panelGridLayout>
+                 
+                
+                
+                
+                 
+                 
+                  
+                 
+               
+                 
+                
+                
+                
+                
+                </af:panelBox>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <af:panelBox text="Dirección Domicilio" id="pbDireccion">
+                  
+                   <af:panelGridLayout id="pov_pgl1"
+                                       inlineStyle="border-color:Fuchsia; border-width:medium;" >
+                 
+                     <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Departamento : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+                               <af:selectOneChoice value="#{bindings.dept1.inputValue}"
+                                                 
+                                                          shortDesc="#{bindings.dept1.hints.tooltip}"
+                                                          id="soc11"
+                                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCliDep}"
+                                                          autoSubmit="true">
+                        <f:selectItems value="#{bindings.dept1.items}" id="si11"/>
+                  </af:selectOneChoice>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Provincia : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+                                       <af:selectOneChoice value="#{bindings.prov1.inputValue}"
+                                                 
+                                                          required="#{bindings.prov1.hints.mandatory}"
+                                                          shortDesc="#{bindings.prov1.hints.tooltip}"
+                                                          id="soc12" autoSubmit="true"
+                                                          partialTriggers="soc11"
+                                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCliPro}">
+                        <f:selectItems value="#{bindings.prov1.items}" id="si12"/>
+                  </af:selectOneChoice>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Distrito : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+                                       
+                  <af:selectOneChoice value="#{bindings.dist1.inputValue}"
+                                                        
+                                                          id="soc13" partialTriggers="soc12"
+                                                          autoSubmit="true"
+                                                          binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCliDis}">
+                        <f:selectItems value="#{bindings.dist1.items}" id="si13"/>
+                  </af:selectOneChoice>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value=""  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="600" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:outputLabel value="Preguntar Urb. AAHH Av, Jr, Calle, Mz, Lt, Num, Piso, Puerta, Dep."/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Dirección : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+                                <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliDir}"
+                                                id="txtCliDir" rows="3"
+                                                styleClass="AFStretchWidth" contentStyle="width:1000px;"/>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                 
+                 
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px"  >
+                            
+                            <af:gridCell   width="auto"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start"
+                                         >
+                             <af:outputLabel value=""  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell   width="auto"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start"
+                                         valign="stretch">
+                                         
+                      
+                                
+                   <af:outputLabel value="Referencia exacta de su domicilio (Cruce avenidas, ENTIDADES PÚBLICAS, lugares conocidos)"
+                                   inlineStyle="width:auto;"/>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Referencia : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+               <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtDirRef}"
+                                id="txtDirRef" rows="3"
+                                styleClass="AFStretchWidth" contentStyle="width:1000px;"
+                            />
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                          <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value=""  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+              <af:outputLabel value="¿Cual es su condición laboral actual, trabaja de manera dependiente o independiente?"/>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Condicion : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                      
+                                
+           <af:selectOneChoice id="cboConLab" autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboConLab}">
+                    <af:selectItem label="Independiente" value="IND"/>
+                    <af:selectItem label="Dependiente" value="DEP"/>
+                  </af:selectOneChoice>
+                                
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                 </af:panelGridLayout>
+                 
+                  <af:inputText value="#{bindings.codDept1.inputValue}"
+                                                label="codDept"
+                                                required="#{bindings.codDept1.hints.mandatory}"
+                                                columns="#{bindings.codDept1.hints.displayWidth}"
+                                                maximumLength="#{bindings.codDept1.hints.precision}"
+                                                shortDesc="#{bindings.codDept1.hints.tooltip}"
+                                                id="it40" partialTriggers="soc11"
+                                                autoSubmit="true"
+                                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCodDeptSpeech}"
+                                                visible="false">
+                        <f:validator binding="#{bindings.codDept1.validator}"/>
+                  </af:inputText>
+                  <af:inputText value="#{bindings.codProv1.inputValue}"
+                                                label="codProv"
+                                                required="#{bindings.codProv1.hints.mandatory}"
+                                                columns="#{bindings.codProv1.hints.displayWidth}"
+                                                maximumLength="#{bindings.codProv1.hints.precision}"
+                                                shortDesc="#{bindings.codProv1.hints.tooltip}"
+                                                id="it41" autoSubmit="true"
+                                                partialTriggers="soc12" visible="false">
+                        <f:validator binding="#{bindings.codProv1.validator}"/>
+                  </af:inputText>
+                   <af:inputText value="#{bindings.codDist1.inputValue}"
+                                                label="cod dist"
+                                                required="#{bindings.codDist1.hints.mandatory}"
+                                                columns="#{bindings.codDist1.hints.displayWidth}"
+                                                maximumLength="#{bindings.codDist1.hints.precision}"
+                                                shortDesc="#{bindings.codDist1.hints.tooltip}"
+                                                id="it53" partialTriggers="soc13"
+                                                autoSubmit="true" visible="false">
+                        <f:validator binding="#{bindings.codDist1.validator}"/>
+                  </af:inputText>
+     
+                
+                
+                  <af:commandButton text="CreateInsert4"
+                                    disabled="#{!bindings.CreateInsert4.enabled}"
+                                    id="cb8"
+                                    action="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.createInsertSpeech}"
+                                    visible="false"/>
+                  
+                  
+                  
+                  <af:inputText
+                                id="txtCliDep" label="Departamento : "
+                                visible="false"/>
+                  <af:inputText
+                                id="txtCliPro" label="Provincia : "
+                                visible="false"/>
+                  <af:inputText
+                                id="txtCliDis" label="Distrito : "
+                                visible="false"/>
+                                
+                                
+                </af:panelBox>
+               
+               
+               
+                <af:panelBox text="Datos Laborales" id="pbDatosLaborales">
+                 
+                 <af:panelGridLayout id="pov_pgl51" inlineStyle="width:800px" >
+        
+                      
+                          <af:gridRow height="auto"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Nombre de la empresa : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="200%" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                                <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaNo}"
+                                id="txtCeLaNo" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                           <af:gridRow height="auto" id="gr143224"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" id="gc236565443"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Ruc empresa : " id="labe56656668"  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" id="gc5656534"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaRU}" id="txtC4eLaRU" label=""/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                        
+                          
+                          
+                          
+                           <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell marginStart="2px" marginEnd="2px" width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                                <af:outputLabel value="Fecha de ingreso : "  inlineStyle="text-align:left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell marginStart="2px" marginEnd="2px" width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                               <af:inputDate label="" 
+                                binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.dtCeLaFI}">
+                                <af:convertDateTime pattern="dd/MM/yyyy"/>     
+                              </af:inputDate>
+                 
+                                  <af:inputText
+                                                 label=""
+                                                visible="false"/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          <af:gridRow height="auto" id="gr1436224"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" id="gc2365665443"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Departamento : " id="labe566566668"  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" id="gc56566534"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                 <af:selectOneChoice value="#{bindings.dept2.inputValue}"
+                                     
+                                      id="soc14"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCeLaDe}"
+                                      autoSubmit="true">
+                    <f:selectItems value="#{bindings.dept2.items}" id="si14"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+   
+   
+                         <af:gridRow height="auto" id="gr14223224"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" id="gc22236565443"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Provincia : " id="labe5662256668"  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" id="gc565622534"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:selectOneChoice value="#{bindings.prov2.inputValue}"
+                                  
+                                      required="#{bindings.prov2.hints.mandatory}"
+                                      shortDesc="#{bindings.prov2.hints.tooltip}"
+                                      id="soc15" autoSubmit="true"
+                                      partialTriggers="soc14"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCeLaPr}">
+                    <f:selectItems value="#{bindings.prov2.items}" id="si15"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                            <af:gridRow height="auto" id="gr14322224"  marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" id="gc23656225443"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Distrito : " id="labe56642256668"  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" id="gc565226534"
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                 <af:selectOneChoice value="#{bindings.dist2.inputValue}"
+                                    
+                                      required="#{bindings.dist2.hints.mandatory}"
+                                      shortDesc="#{bindings.dist2.hints.tooltip}"
+                                      id="soc16" partialTriggers="soc15"
+                                      autoSubmit="true"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCeLaDs}">
+                    <f:selectItems value="#{bindings.dist2.items}" id="si16"/>
+                  </af:selectOneChoice>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value=""  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="600" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:outputLabel value="Dirección de su Trabajo, preguntar Urb, AAHH, Av, Jr, Calle, Mz, Lt, Num, Piso, Puerta, Dep."/>
+                             
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                          <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Dirección : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaDi}"
+                                id="txtCeLaDi" label="" rows="3" styleClass="AFStretchWidth" contentStyle="width:500px;"/>
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                       
+                          
+                             <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value=""  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                                <af:outputLabel value="Referencia exacta de su trabajo (Cruce avenidad, ENTIDADES PÚBLICAS, lugares conocidos)"
+                  
+                  
+                  />
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Referencia : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                             <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaRe}"
+                                id="txtCeLaRe" label=""
+                                styleClass="AFStretchWidth" rows="3" contentStyle="width:500px;"/>
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                          
+                            <af:gridRow height="auto"   marginTop="3px" marginBottom="3px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Teléfono : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                             <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaTe}"
+                                id="txtCeLaTe" label=""/>
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                            <af:gridRow height="auto"  marginTop="1px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Anexo/Área : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                              <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCeLaAn}"
+                                id="txtCeLaAn" label=""/>
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                             <af:gridRow height="auto"  marginTop="1px">
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;"
+                                         halign="start" >
+                             <af:outputLabel value="Cargo : "  inlineStyle="text-align: left;" />
+                            </af:gridCell>
+                            
+                            <af:gridCell  width="auto" 
+                                         inlineStyle="border:0px solid ActiveCaption; text-align:left;" halign="start" >
+                                         
+                              <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCeLaCa}"
+                                      id="cboCeLaCa" label=""
+                                      autoSubmit="true">
+                    <af:selectItem id="siCLC1" label="Asistente" value="A"/>
+                    <af:selectItem id="siCLC2" label="Operaciones" value="O"/>
+                    <af:selectItem id="siCLC3" label="Otro" value="OT"/>
+                  </af:selectOneChoice>
+                            </af:gridCell> 
+                                   
+                          </af:gridRow>
+                          
+                          
+                  </af:panelGridLayout>
+                  
+                     <af:panelFormLayout id="pfl2" visible="false">
+                    <af:inputText value="#{bindings.codDept2.inputValue}"
+                                  label="codDept"
+                                  required="#{bindings.codDept2.hints.mandatory}"
+                                  columns="#{bindings.codDept2.hints.displayWidth}"
+                                  maximumLength="#{bindings.codDept2.hints.precision}"
+                                  shortDesc="#{bindings.codDept2.hints.tooltip}"
+                                  id="it54" autoSubmit="true"
+                                  partialTriggers="soc14">
+                      <f:validator binding="#{bindings.codDept2.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.codProv2.inputValue}"
+                                  label="codProv"
+                                  required="#{bindings.codProv2.hints.mandatory}"
+                                  columns="#{bindings.codProv2.hints.displayWidth}"
+                                  maximumLength="#{bindings.codProv2.hints.precision}"
+                                  shortDesc="#{bindings.codProv2.hints.tooltip}"
+                                  id="it57" autoSubmit="true"
+                                  partialTriggers="soc15">
+                      <f:validator binding="#{bindings.codProv2.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.codDist2.inputValue}"
+                                  label="codDist"
+                                  required="#{bindings.codDist2.hints.mandatory}"
+                                  columns="#{bindings.codDist2.hints.displayWidth}"
+                                  maximumLength="#{bindings.codDist2.hints.precision}"
+                                  shortDesc="#{bindings.codDist2.hints.tooltip}"
+                                  id="it65" autoSubmit="true"
+                                  partialTriggers="soc16">
+                      <f:validator binding="#{bindings.codDist2.validator}"/>
+                    </af:inputText>
+                    <af:commandButton
+                                      text="CreateInsert5"
+                                      disabled="#{!bindings.CreateInsert5.enabled}"
+                                      id="cb15"
+                                      action="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.createInsertSpeech2}"
+                                      visible="false"/>
+                  </af:panelFormLayout>
+                  <af:inputText
+                                id="txtCeLaDe" label="Departamento : "
+                                visible="false"/>
+                  <af:inputText
+                                id="txtCeLaPr" label="Provincia : "
+                                visible="false"/>
+                  <af:inputText
+                                id="txtCeLaDs" label="Distrito : "
+                                visible="false"/>
+                                
+                </af:panelBox>
+                
+                
+                
+                <af:panelBox text="Consignacion Independiente"
+                             id="pbConsignacionIndependiente">
+                  <af:outputLabel value="Sr/a "/>
+                  <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo4}"
+                                id="txtCliNo4" simple="true" readOnly="true"
+                                inlineStyle="color:Red; font-weight:bold;"
+                                value="-Nombre Cliente"/>
+                  <af:outputLabel value=" de lunes a viernes en el horario de 09:00 a 06:00 p.m. le podremos entregar la tarjeta en su "/>
+                  <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboLuEnIn}"
+                                      id="cboLuEnIn" autoSubmit="true">
+                    <af:selectItem id="siLEI1" label="Domicilio" value="D"/>
+                    <af:selectItem id="siLEI2" label="Trabajo" value="T"/>
+                    <af:selectItem id="siLEI3" label="Otro" value="O"/>
+                  </af:selectOneChoice>
+                  <af:outputLabel value="Entonces le consignamos su dirección de domicilio con dirección laboral"/>
+                </af:panelBox>
+                <af:panelBox text="Consignacion Dependiente"
+                             id="pbConsignacionDependiente">
+                  <af:outputLabel value="Sr./Srta. : "/>
+                  <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo5}"
+                                id="txtCliNo5" simple="true" readOnly="true"
+                                inlineStyle="color:Red; font-weight:bold;"/>
+                  <af:outputLabel value=", le confirmamos que su nueva tarjeta de crédito le será entregada en un plazo promedio de 07 días útiles a la dirección que usted ha consignado como :"/>
+                  <af:outputLabel value="en el caso de no ser entregada, nos volveremos a comunicar con usted para coordinar la hora y día de entrega. Le recordamos que al momento que el courrier le entregue su tarjeta, deberá firmar (lo más parecido a su DNI) la Solicitud de Afiliación, Hoja de Resumen, y Acuse de Recibo, en señal de aceptación de las condiciones de su nueva Tarjeta"/>
+                  <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboLuEnDe}"
+                                      id="cboLuEnDe" autoSubmit="true">
+                    <af:selectItem id="siLED1" label="Domicilio" value="D"/>
+                    <af:selectItem id="siLED2" label="Trabajo" value="T"/>
+                    <af:selectItem id="siLED3" label="Otro" value="O"/>
+                  </af:selectOneChoice>
+                </af:panelBox>
+                <af:panelBox text="Cierre de Venta" id="pbCierreVenta">
+                  <af:panelGroupLayout id="pgl21">
+                    <af:outputLabel value="Sr./Srta. : "/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo6}"
+                                   id="txtCliNo6"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Nombre Cliente-"/>
+                    <af:outputLabel value=", procedemos a informarle las condiciones legales de su nueva tarjeta"/>
+                    <af:outputLabel value="Una TEA en revolving y cuotas : "/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValTEA}"
+                                   id="txtValTEA"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-TEA-"/>
+                    <af:outputLabel value="Una TCEA de : "/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValTEC}"
+                                   id="txtValTEC"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-TCEA-"/>
+                    <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValMen}"
+                                   id="txtValMen"
+                                   inlineStyle="color:Red; font-weight:bold;"
+                                   value="-Membresia-" visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl11" layout="horizontal">
+                    <af:inputText label="Membresía Anual" id="it68"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtMemAn}"
+                                  readOnly="true"/>
+                    <af:outputLabel value="Membresia anual : " visible="false"/>
+                    <af:selectOneChoice
+                                        id="cboValMen" autoSubmit="true"
+                                        visible="false">
+                      <af:selectItem id="siVM1" label="$30 - Tarjeta Convencional Clásica" value="$30 - Tarjeta Convencional Clásica"/>
+                      <af:selectItem id="siVM2" label="$60 - Tarjeta Convencional Oro" value="$60 - Tarjeta Convencional Oro"/>
+                      <af:selectItem id="siVM3" label="$110 - Tarjeta Convencional Platinum" value="$110 - Tarjeta Convencional Platinum"/>
+                      <af:selectItem id="siVM4" label="$130 - Tarjeta Convencional Black" value="$130 - Tarjeta Convencional Black"/>
+                       <af:selectItem id="siVM5" label="$130 - Tarjeta Convencional Infinite" value="$130 - Tarjeta Convencional Infinite"/>
+                        <af:selectItem id="siVM6" label="$130 - Tarjeta Convencional Signature" value="$130 - Tarjeta Convencional Signature"/>
+                    </af:selectOneChoice>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl24" layout="horizontal">
+                    <af:inputText label="Seguro de desgravamen es de : " id="it69"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSegDes}"
+                                  readOnly="true"/>
+                    <af:outputLabel value="Seguro de desgravamen es de : "
+                                    visible="false"/>
+                    <af:selectOneChoice
+                                        id="cboValDes" autoSubmit="true"
+                                        visible="false">
+                      <af:selectItem id="siVD1" label="S/4.90 - Tarjeta Convencional Clásica" value="S/4.90 - Tarjeta Convencional Clásica"/>
+                      <af:selectItem id="siVD2" label="S/5.50 - Tarjeta Convencional Oro" value="S/5.50 - Tarjeta Convencional Oro"/>
+                      <af:selectItem id="siVD3" label="S/5.90 - Tarjeta Convencional Platinum" value="S/5.90 - Tarjeta Convencional Platinum"/>
+                      <af:selectItem id="siVD4" label="S/6.00 - Tarjeta Convencional Black" value="S/6.00 - Tarjeta Convencional Black"/>
+                      <af:selectItem id="siVD5" label="S/6.00 - Tarjeta Convencional Infinite" value="S/6.00 - Tarjeta Convencional Infinite"/>
+                      <af:selectItem id="siVD6" label="S/6.00 - Tarjeta Convencional Signature" value="S/6.00 - Tarjeta Convencional Signature"/>
+                    </af:selectOneChoice>
+                  </af:panelGroupLayout>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValDes}"
+                                 id="txtValDes"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Desgravamen-"/>
+                  <af:outputLabel value="Envio de Estado de Cuenta"
+                                  inlineStyle="font-weight:bold;"/>
+                  <af:outputLabel value="Si Cliente No Cuenta con Email ==> El Envío de estado de Cuenta es de "/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValEnv}"
+                                 id="txtValEnv"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Envio Estado Cuenta-"/>
+                  <af:outputLabel value="Si el Cliente Si Cuenta con Email ==> ¿Desea el envío del Estado de Cuenta Físico por un costo de  "/>
+                  <af:outputText
+                                 id="txtValEn2"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Envio Estado Cuenta-"
+                                 binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtValEn2}"/>
+                  <af:outputLabel value="soles o Vitual a su correo electronico sin costo?"/>
+                  <af:panelGroupLayout id="pgl26" layout="horizontal">
+                    <af:outputLabel value="Ciclo de Facturacion : "
+                                    inlineStyle="font-weight:bold;"/>
+                    <af:selectOneChoice binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.cboCicFac}"
+                                        id="cboCicFac" autoSubmit="true">
+                      <af:selectItem id="siCF1" label="11" value="11"/>
+                      <af:selectItem id="siCF2" label="15" value="15"/>
+                      <af:selectItem id="siCF3" label="26" value="26"/>
+                    </af:selectOneChoice>
+                    <af:outputLabel value="Informar que contará con 25 días adicionales para pagar sus EE.CC" id="ol27"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl35" layout="horizontal">
+                    <af:outputLabel value="Le confirmamos que su nueva Tarjeta tendrá la Opción de Disposición de Efectivo habilitada. En caso Usted desee deshabilitar dicha opción, sólo tendrá que llamar a nuestra Banca Telefónica al 311-6000, o acercarse a cualquiera de nuestras Agencias a nivel Nacional." id="ol24"
+                                    inlineStyle="font-weight:bold;"/>
+                  </af:panelGroupLayout>
+                  <af:inputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCicFac}"
+                                id="txtCicFac" visible="false"/>
+                  <af:outputLabel value="¿Desea contar con disposición de efectivo? "
+                                  inlineStyle="font-weight:bold;"
+                                  visible="false"/>
+                  <af:selectBooleanCheckbox id="sbc1"
+                                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.checkFlaDis}"
+                                            visible="false"/>
+                  <af:outputLabel value="Sr./Srta. : "/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtCliNo7}"
+                                 id="txtCliNo7"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Nombre Cliente-"/>
+                  <af:outputLabel value=" , ha sido un place haberlo atendido. Quedamos a su disposición en el teléfono 391-4666"/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSopTel}"
+                                 id="txtSopTel"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Soporte Teléfono-"/>
+                  <af:outputLabel value=" Puede preguntar por mi o por mi Supervisor el Sr.  "/>
+                  <af:outputText binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.txtSopNom}"
+                                 id="txtSopNom"
+                                 inlineStyle="color:Red; font-weight:bold;"
+                                 value="-Supervisor-"/>
+                  <af:outputLabel value="¿Antes de despedirnos, quisiéramos que por favor nos confirme que Autoriza al grupo Scotiabank Perú a utilizar su informacion, para brindarle ofertas y promociones de nuestros productos y servicios, de acuerdo a la nueva Ley de Protección de Datos Personales? : "/>
+                  <af:selectBooleanCheckbox id="sbc2"
+                                            binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.checkFlaAut}"/>
+                  <af:panelGroupLayout id="pgl33" layout="vertical">
+                    <af:outputLabel value="Le informamos que Ud. puede acercarse a cualquier oficina de Scotiabank para indicar que ya no desea recibir ninguna oferta ni promoción del Banco. Así mismo, queremos indicarle algunas recomendaciones que deberá tener en cuenta al momento de recibir su nueva tarjeta de crédito:"
+                                    id="ol15"/>
+                    <af:outputLabel value="- Recuerde que una vez que el Banco le entregue su tarjeta y la clave secreta, nunca le solicitará la devolución de las mismas."
+                                    id="ol18"/>
+                    <af:outputLabel value="- Para mayor tranquilidad, le recordamos destruir el sobre de su clave secreta, luego memorizarlo." id="ol29"/>
+                    <af:outputLabel value="(Explicarle al Cliente, de ser necesario, que el objetivo de completar este formulario es salvaguardar tanto la seguridad de él como la del Banco)" id="ol28"/>
+                    <af:outputLabel value='Le informamos que al momento de recibir su Tarjeta de Crédito, el Courier le entregará un formulario con 02 preguntas obligatorias, que deberá completar y firmar para poder realizar la activación de su nueva tarjeta. Estas preguntas están acorde a los Programas Internacionales "Conoce a tu Cliente" y "Prevención de Lavado de Activos" de Scotiabank.'
+                                    id="ol14"/>
+                    <af:outputLabel value="Finalmente, le informamos que esta llamada podrá ser utilizada para fines de calidad y servicio, por Scotiabank o por una empresa contratada."
+                                    id="ol30"/>
+                  </af:panelGroupLayout>
+                  <af:outputLabel value="¡Esperemos que tenga un excelente día!"
+                                  id="ol31" inlineStyle="font-size:medium;"/>
+                </af:panelBox>
+                <af:commandButton text="Registrar Venta" id="cbRegistrarVenta"
+                                  actionListener="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.registraVenta}"/>
+              
+              
+              
+              
+              
+              </af:panelBox>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+        
+        <af:popup id="p4" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupTarjetas}">
+          <af:panelWindow id="pw4" modal="true" resize="on">
+            <af:outputLabel value="Tarjetas disponibles en la localidad seleccionada:"
+                            id="ol32" inlineStyle="font-size:large;"/>
+            <af:panelGroupLayout id="pgl34" styleClass="AFStretchWidth">
+              <af:table value="#{bindings.SbpSlsTarjetasView11.collectionModel}"
+                        var="row"
+                        rows="#{bindings.SbpSlsTarjetasView11.rangeSize}"
+                        emptyText="#{bindings.SbpSlsTarjetasView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.SbpSlsTarjetasView11.rangeSize}"
+                        rowBandingInterval="0"
+                        selectedRowKeys="#{bindings.SbpSlsTarjetasView11.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.SbpSlsTarjetasView11.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t2" columnStretching="last"
+                        styleClass="AFStretchWidth"
+                        binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.tblTarjetaUbigeo}">
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.CodDist.name}"
+                           sortable="false"
+                           headerText="#{bindings.SbpSlsTarjetasView11.hints.CodDist.label}"
+                           id="c39" visible="false">
+                  <af:outputText value="#{row.CodDist}" id="ot37"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.CodProv.name}"
+                           sortable="false"
+                           headerText="#{bindings.SbpSlsTarjetasView11.hints.CodProv.label}"
+                           id="c40" visible="false">
+                  <af:outputText value="#{row.CodProv}" id="ot42"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.CodDept.name}"
+                           sortable="false"
+                           headerText="#{bindings.SbpSlsTarjetasView11.hints.CodDept.label}"
+                           id="c41" visible="false">
+                  <af:outputText value="#{row.CodDept}" id="ot35"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.NomDept.name}"
+                           sortable="false" headerText="Departamento" id="c38">
+                  <af:outputText value="#{row.NomDept}" id="ot36"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.NomProv.name}"
+                           sortable="false" headerText="Provincia" id="c37">
+                  <af:outputText value="#{row.NomProv}" id="ot38"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.NomDist.name}"
+                           sortable="false" headerText="Distrito" id="c36">
+                  <af:outputText value="#{row.NomDist}" id="ot39"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.CodTarjeta.name}"
+                           sortable="false"
+                           headerText="#{bindings.SbpSlsTarjetasView11.hints.CodTarjeta.label}"
+                           id="c34" visible="false">
+                  <af:outputText value="#{row.CodTarjeta}" id="ot41"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.SbpSlsTarjetasView11.hints.DescTarj.name}"
+                           sortable="false" headerText="Tarjeta" id="c35">
+                  <af:outputText value="#{row.DescTarj}" id="ot40"/>
+                </af:column>
+              </af:table>
+            </af:panelGroupLayout>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p5" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popupCobertura}">
+          <af:panelWindow id="pw5" modal="true" resize="on">
+            <af:outputText value="No existen datos que concuerden con los valores seleccionados" id="ot43"/>
+          </af:panelWindow>
+        </af:popup>
+      
+              <af:popup id="p6" autoCancel="disabled"
+                  binding="#{backingBeanScope.backing_SBP_SLS_OPP_PAGE.popup2daLlamada}">
+          <af:panelWindow id="pw6" modal="true" resize="on">
+            <af:outputText value="Ingresar fecha de agendamiento" id="ot44"/>
+          </af:panelWindow>
+        </af:popup>
+      
+      
+      
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

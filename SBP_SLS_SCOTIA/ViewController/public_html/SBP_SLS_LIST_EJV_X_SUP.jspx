@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view beforePhase="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.onBeforePhase}">
+    <af:document id="d1"
+                 binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.d1}"
+                 inlineStyle="background-image:none;background-color:white; ">
+      <af:messages binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.m1}"
+                   id="m1"/>
+      <af:form id="f1"
+               binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.f1}">
+        <af:pageTemplate viewId="/templateDef222.jspx" id="pt1">
+          <f:facet name="facet1">
+            <af:group id="g1">
+              <af:panelBox text="Reasignación de Leads" id="pb1">
+                <af:selectOneChoice id="cboSexo" label="Sexo : "
+                                    autoSubmit="true"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.cboSexo}">
+                  <af:selectItem id="Masc" label="MALE" value="M"/>
+                  <af:selectItem id="Fem" label="FEMALE" value="F"/>
+                </af:selectOneChoice>
+                <af:selectOneChoice id="selectOneChoice1" label="Estado Civil:"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.cboEstadoCivil}"
+                                    autoSubmit="true">
+                  <af:selectItem id="selectItem1" label="D" value="D"/>
+                  <af:selectItem id="selectItem2" label="C" value="C"/>
+                  <af:selectItem id="selectItem3" label="E" value="E"/>
+                  <af:selectItem id="selectItem4" label="N" value="N"/>
+                  <af:selectItem id="selectItem5" label="O" value="O"/>
+                  <af:selectItem id="selectItem6" label="S" value="S"/>
+                  <af:selectItem id="selectItem7" label="V" value="V"/>
+                </af:selectOneChoice>
+                <af:selectOneChoice id="selectOneChoice2"
+                                    label="Flag Club Sueldo:"
+                                    binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.cboFlagClubSueldo}"
+                                    autoSubmit="true">
+                  <af:selectItem id="selectItem8" label="Y" value="Y"/>
+                  <af:selectItem id="selectItem9" label="N" value="N"/>
+                </af:selectOneChoice>
+                <af:panelGroupLayout id="pgl1" layout="horizontal">
+                  <af:inputText label="Edad de:" id="it4"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.txtEdadMin}"/>
+                  <af:inputText label="Edad hasta:" id="it5"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.txtEdadMax}"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.pgl3}"
+                                     id="pgl3" styleClass="AFStretchWidth"
+                                     visible="false">
+                  <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.pgl4}"
+                                       id="pgl4" styleClass="AFStretchWidth"
+                                       layout="horizontal" visible="false">
+                    <af:inputText label="Supervisor" id="it1"
+                                  binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.txtSup}"
+                                  visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.pgl5}"
+                                       id="pgl5" styleClass="AFStretchWidth"
+                                       layout="horizontal" visible="false">
+                    <af:commandButton text="Buscar"
+                                      binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.cb1}"
+                                      id="cb1"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.buscarEjVenta}"
+                                      visible="false"/>
+                  </af:panelGroupLayout>
+                  <af:inputText label="campaña" id="it2"
+                                binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.txtCpgId}"
+                                visible="false"/>
+                </af:panelGroupLayout>
+                <af:spacer width="10" height="10" id="s1"/>
+                <af:panelGroupLayout binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.pgl6}"
+                                     id="pgl6" styleClass="AFStretchWidth">
+                  <af:table value="#{bindings.SbpSlsListEvXSupView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.SbpSlsListEvXSupView1.rangeSize}"
+                            emptyText="#{bindings.SbpSlsListEvXSupView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.SbpSlsListEvXSupView1.rangeSize}"
+                            rowBandingInterval="0"
+                            filterModel="#{bindings.SbpSlsListEvXSupView1Query.queryDescriptor}"
+                            queryListener="#{bindings.SbpSlsListEvXSupView1Query.processQuery}"
+                            filterVisible="true" varStatus="vs"
+                            selectedRowKeys="#{bindings.SbpSlsListEvXSupView1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.SbpSlsListEvXSupView1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1"
+                            styleClass="AFStretchWidth" columnStretching="last"
+                            binding="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.tblEjVenta}">
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.IdSup.name}"
+                               headerText="idSup" id="c2" visible="false">
+                      <af:outputText value="#{row.IdSup}" id="ot2">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsListEvXSupView1.hints.IdSup.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.NomSup.name}"
+                               headerText="Supervisor" id="c7" width="150">
+                      <af:outputText value="#{row.NomSup}" id="ot5"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.IdEjVenta.name}"
+                               headerText="idEjVenta" id="c3" visible="false">
+                      <af:outputText value="#{row.IdEjVenta}" id="ot1">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsListEvXSupView1.hints.IdEjVenta.format}"/>
+                      </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.NomEjVenta.name}"
+                               headerText="Ejecutivo Venta" id="c1" width="150">
+                      <af:commandLink text="#{row.NomEjVenta}" id="cl1"
+                                      actionListener="#{backingBeanScope.backing_SBP_SLS_LIST_EJV_X_SUP.obtenerDatos}"
+                                      action="SBP_ASOG_EJ_VENT"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.name}"
+                               headerText="Cantidad" id="c5" sortable="false">
+                      <af:inputText value="#{row.bindings.Cantidad.inputValue}"
+                                    label="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.label}"
+                                    required="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.mandatory}"
+                                    columns="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.displayWidth}"
+                                    maximumLength="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.precision}"
+                                    shortDesc="#{bindings.SbpSlsListEvXSupView1.hints.Cantidad.tooltip}"
+                                    id="it3" readOnly="true"
+                                    converter="org.apache.myfaces.trinidad.Number"
+                                    immediate="true"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.SbpSlsListEvXSupView1.hints.IdTbl.name}"
+                               headerText="idTbl" id="c6" visible="false">
+                      <af:outputText value="#{row.IdTbl}" id="ot4">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.SbpSlsListEvXSupView1.hints.IdTbl.format}"/>
+                      </af:outputText>
+                    </af:column>
+                  </af:table>
+                </af:panelGroupLayout>
+              </af:panelBox>
+            </af:group>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
