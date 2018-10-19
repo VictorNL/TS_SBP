@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EvoLpSctView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="EvoLpSct.COD_CAMPANIA, 
+       EvoLpSct.NOM_CAMPANIA, 
+       EvoLpSct.FEC_INI, 
+       EvoLpSct.FEC_FIN, 
+       EvoLpSct.ASIGNADO, 
+       EvoLpSct.PRODUCTO_BASE, 
+       EvoLpSct.COD_PROD, 
+       EvoLpSct.NOM_PROD, 
+       EvoLpSct.CANT_OFERTAS, 
+       EvoLpSct.ESTADO, 
+       EvoLpSct.CANT_OPP, 
+       EvoLpSct.PERIODO_CPG"
+  FromList="EVO_LP_SCT EvoLpSct"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  ComponentClass="vo.EvoLpSctViewImpl"
+  ComponentInterface="vo.common.EvoLpSctView"
+  ClientProxyName="vo.client.EvoLpSctViewClient">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="SbpSlsItemTempView1"
+    ViewObjectName="vo.SbpSlsItemTempView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProductoBase"
+    ListVOName="SbpSlsItemTempView1"
+    ListRangeSize="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProductoBase"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CodProd"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NomItem"/>
+      <Item Value="IdItem"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NomItem"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="EvoLpSct"
+    Entity="eo.EvoLpSct"/>
+  <ViewAttribute
+    Name="CodCampania"
+    PrecisionRule="true"
+    EntityAttrName="CodCampania"
+    EntityUsage="EvoLpSct"
+    AliasName="COD_CAMPANIA"/>
+  <ViewAttribute
+    Name="NomCampania"
+    PrecisionRule="true"
+    EntityAttrName="NomCampania"
+    EntityUsage="EvoLpSct"
+    AliasName="NOM_CAMPANIA"/>
+  <ViewAttribute
+    Name="FecIni"
+    PrecisionRule="true"
+    EntityAttrName="FecIni"
+    EntityUsage="EvoLpSct"
+    AliasName="FEC_INI"/>
+  <ViewAttribute
+    Name="FecFin"
+    PrecisionRule="true"
+    EntityAttrName="FecFin"
+    EntityUsage="EvoLpSct"
+    AliasName="FEC_FIN"/>
+  <ViewAttribute
+    Name="Asignado"
+    PrecisionRule="true"
+    EntityAttrName="Asignado"
+    EntityUsage="EvoLpSct"
+    AliasName="ASIGNADO"/>
+  <ViewAttribute
+    Name="ProductoBase"
+    PrecisionRule="true"
+    EntityAttrName="ProductoBase"
+    EntityUsage="EvoLpSct"
+    AliasName="PRODUCTO_BASE"
+    LOVName="LOV_ProductoBase">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CodProd"
+    PrecisionRule="true"
+    EntityAttrName="CodProd"
+    EntityUsage="EvoLpSct"
+    AliasName="COD_PROD"/>
+  <ViewAttribute
+    Name="NomProd"
+    PrecisionRule="true"
+    EntityAttrName="NomProd"
+    EntityUsage="EvoLpSct"
+    AliasName="NOM_PROD"/>
+  <ViewAttribute
+    Name="CantOfertas"
+    PrecisionRule="true"
+    EntityAttrName="CantOfertas"
+    EntityUsage="EvoLpSct"
+    AliasName="CANT_OFERTAS"/>
+  <ViewAttribute
+    Name="Estado"
+    PrecisionRule="true"
+    EntityAttrName="Estado"
+    EntityUsage="EvoLpSct"
+    AliasName="ESTADO"/>
+  <ViewAttribute
+    Name="CantOpp"
+    PrecisionRule="true"
+    EntityAttrName="CantOpp"
+    EntityUsage="EvoLpSct"
+    AliasName="CANT_OPP"/>
+  <ViewAttribute
+    Name="PeriodoCpg"
+    PrecisionRule="true"
+    EntityAttrName="PeriodoCpg"
+    EntityUsage="EvoLpSct"
+    AliasName="PERIODO_CPG"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="CodCampania"/>
+  </AttrArray>
+  <ClientInterface>
+    <Method
+      Name="url">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="cpgId"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

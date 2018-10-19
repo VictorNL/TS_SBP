@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsCanalSupView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsCanalSup.ID_CANAL, 
+       SbpSlsCanalSup.NOM_CANAL, 
+       SbpSlsCanalSup.ID_SUP, 
+       SbpSlsCanalSup.NOM_SUP, 
+       SbpSlsCanalSup.CANTIDAD, 
+       SbpSlsCanalSup.PORC_ASIG, 
+       SbpSlsCanalSup.ID_TBL, 
+       SbpSlsCanalSup.PARTY_NUMBER"
+  FromList="SBP_SLS_CANAL_SUP SbpSlsCanalSup"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="SbpSlsCanalSupTempView1"
+    ViewObjectName="vo.SbpSlsCanalSupTempView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomSup"
+    ListVOName="SbpSlsCanalSupTempView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_NomSup_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomSup"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="IdSup"/>
+      <Item Value="IdCanal"/>
+      <Item Value="NomCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NomSup"/>
+      <Item Value="IdSup"/>
+      <Item Value="IdCanal"/>
+      <Item Value="NomCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NomSup"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="SbpSlsCanalSup"
+    Entity="eo.SbpSlsCanalSup"/>
+  <ViewAttribute
+    Name="IdCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdCanal"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="ID_CANAL"/>
+  <ViewAttribute
+    Name="NomCanal"
+    PrecisionRule="true"
+    EntityAttrName="NomCanal"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="NOM_CANAL"/>
+  <ViewAttribute
+    Name="IdSup"
+    PrecisionRule="true"
+    EntityAttrName="IdSup"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="ID_SUP"/>
+  <ViewAttribute
+    Name="NomSup"
+    PrecisionRule="true"
+    EntityAttrName="NomSup"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="NOM_SUP"
+    LOVName="LOV_NomSup">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Cantidad"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="CANTIDAD">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="vo.SbpSlsCanalSupView.Cantidad_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="vo.SbpSlsCanalSupView.Cantidad_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PorcAsig"
+    PrecisionRule="true"
+    EntityAttrName="PorcAsig"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="PORC_ASIG">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="vo.SbpSlsCanalSupView.PorcAsig_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="vo.SbpSlsCanalSupView.PorcAsig_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="eliminar"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="BIT">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IdTbl"
+    PrecisionRule="true"
+    EntityAttrName="IdTbl"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="ID_TBL"/>
+  <ViewAttribute
+    Name="PartyNumber"
+    PrecisionRule="true"
+    EntityAttrName="PartyNumber"
+    EntityUsage="SbpSlsCanalSup"
+    AliasName="PARTY_NUMBER"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

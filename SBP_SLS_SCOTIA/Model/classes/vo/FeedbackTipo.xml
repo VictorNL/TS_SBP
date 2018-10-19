@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FeedbackTipo"
+  Version="11.1.1.66.73"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  RowClass="vo.FeedbackTipoRowImpl">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="vo.FeedbackTipo_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAccessor
+    Name="SbpSlsGestFeedbackView1"
+    ViewObjectName="vo.SbpSlsGestFeedbackView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="FeedbackTipo1"
+    ViewObjectName="vo.FeedbackTipo"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Descripcion"
+    ListVOName="FeedbackTipo1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Descripcion"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Codigo"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Descripcion"/>
+      <Item Value="Codigo"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Descripcion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <SQLQuery>
+    <![CDATA[select '[' || NOM_GRUP_GEST || '] :: ' || NOM_DET_GEST as DESCRIPCION ,
+       COD_TIP_GEST  || '°' || 
+       COD_GRUP_GEST || '°' || 
+       COD_DET_GEST  || '¬' || 
+       NOM_TIP_GEST  || '°' ||
+       NOM_GRUP_GEST || '°' ||
+       NOM_DET_GEST  as CODIGO
+  from SBP_SLS_GEST_FEEDBACK
+ order by COD_TIP_GEST ,
+          COD_GRUP_GEST ,
+          COD_DET_GEST]]>
+  </SQLQuery>
+  <ViewAttribute
+    Name="Descripcion"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="206"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DESCRIPCION"
+    Expression="DESCRIPCION"
+    SQLType="VARCHAR"
+    LOVName="LOV_Descripcion">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="206"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Codigo"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="425"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CODIGO"
+    Expression="CODIGO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="425"/>
+    </DesignTime>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Codigo"/>
+  </AttrArray>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

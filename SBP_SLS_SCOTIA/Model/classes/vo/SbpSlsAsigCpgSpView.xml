@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsAsigCpgSpView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsAsigCpgSp.ID_USUARIO_PRM, 
+       SbpSlsAsigCpgSp.NOM_USUARIO_PRM, 
+       SbpSlsAsigCpgSp.PORC_ASIGNADO, 
+       SbpSlsAsigCpgSp.CANTIDAD, 
+       SbpSlsAsigCpgSp.TOTAL, 
+       SbpSlsAsigCpgSp.ASIGID"
+  FromList="SBP_SLS_ASIG_CPG_SP SbpSlsAsigCpgSp"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="SbpSlsUserPrmTempView1"
+    ViewObjectName="vo.SbpSlsUserPrmTempView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomUsuarioPrm"
+    ListVOName="SbpSlsUserPrmTempView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_NomUsuarioPrm_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomUsuarioPrm"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="IdUsuarioPrm"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NomUsuarioPrm"/>
+      <Item Value="IdUsuarioPrm"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NomUsuarioPrm"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="SbpSlsAsigCpgSp"
+    Entity="eo.SbpSlsAsigCpgSp"/>
+  <ViewAttribute
+    Name="IdUsuarioPrm"
+    PrecisionRule="true"
+    EntityAttrName="IdUsuarioPrm"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="ID_USUARIO_PRM"/>
+  <ViewAttribute
+    Name="NomUsuarioPrm"
+    PrecisionRule="true"
+    EntityAttrName="NomUsuarioPrm"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="NOM_USUARIO_PRM"
+    LOVName="LOV_NomUsuarioPrm">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="PorcAsignado"
+    PrecisionRule="true"
+    EntityAttrName="PorcAsignado"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="PORC_ASIGNADO"/>
+  <ViewAttribute
+    Name="Cantidad"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="CANTIDAD"/>
+  <ViewAttribute
+    Name="Total"
+    PrecisionRule="true"
+    EntityAttrName="Total"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="TOTAL"/>
+  <ViewAttribute
+    Name="eliminarFila"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="BIT"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Asigid"
+    PrecisionRule="true"
+    EntityAttrName="Asigid"
+    EntityUsage="SbpSlsAsigCpgSp"
+    AliasName="ASIGID"/>
+</ViewObject>
