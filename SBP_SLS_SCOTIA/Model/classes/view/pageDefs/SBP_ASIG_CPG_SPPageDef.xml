@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_ASIG_CPG_SPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsAsigCpgSpView1" RangeSize="-1"
+              DataControl="amSBPDataControl" id="SbpSlsAsigCpgSpView1Iterator"/>
+    <searchRegion Binds="SbpSlsAsigCpgSpView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SbpSlsAsigCpgSpView1Query"/>
+    <iterator Binds="SbpSlsCanalSupView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsCanalSupView1Iterator"/>
+    <searchRegion Binds="SbpSlsCanalSupView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SbpSlsCanalSupView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsAsigCpgSpView1Iterator" id="SbpSlsAsigCpgSpView1">
+      <nodeDefinition DefName="vo.SbpSlsAsigCpgSpView"
+                      Name="SbpSlsAsigCpgSpView10">
+        <AttrNames>
+          <Item Value="IdUsuarioPrm"/>
+          <Item Value="PorcAsignado"/>
+          <Item Value="Cantidad"/>
+          <Item Value="NomUsuarioPrm" Binds="NomUsuarioPrm"/>
+          <Item Value="eliminarFila" Binds="eliminarFila"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="SbpSlsAsigCpgSpView1Iterator" StaticList="false"
+          Uses="LOV_NomUsuarioPrm" id="NomUsuarioPrm" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsAsigCpgSpView1Iterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <button IterBinding="SbpSlsAsigCpgSpView1Iterator" id="eliminarFila"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="eliminarFila"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+    <action IterBinding="SbpSlsCanalSupView1Iterator" id="CreateInsert"
+            InstanceName="amSBPDataControl.SbpSlsCanalSupView1"
+            DataControl="amSBPDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" DataControl="amSBPDataControl"
+            RequiresUpdateModel="true" Action="commitTransaction"/>
+    <tree IterBinding="SbpSlsCanalSupView1Iterator" id="SbpSlsCanalSupView1">
+      <nodeDefinition DefName="vo.SbpSlsCanalSupView"
+                      Name="SbpSlsCanalSupView10">
+        <AttrNames>
+          <Item Value="IdCanal"/>
+          <Item Value="NomCanal"/>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup" Binds="NomSup"/>
+          <Item Value="Cantidad"/>
+          <Item Value="PorcAsig"/>
+          <Item Value="eliminar"/>
+          <Item Value="IdTbl"/>
+          <Item Value="PartyNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="SbpSlsCanalSupView1Iterator" StaticList="false"
+          Uses="LOV_NomSup" id="NomSup" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.65.57" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/SBP_LIST_CAMP.jspx" usageId="view_SBP_LIST_CAMPPageDef"/>
+    <page path="/SBP_ASIG_CPG_SP.jspx" usageId="view_SBP_ASIG_CPG_SPPageDef"/>
+    <page path="/SBP_SLS_PRINC.jspx" usageId="view_SBP_SLS_PRINCPageDef"/>
+    <page path="/SBP_CREATE_CPG.jspx" usageId="view_SBP_CREATE_CPGPageDef"/>
+    <page path="/SBP_ASOG_EJ_VENT.jspx" usageId="view_SBP_ASOG_EJ_VENTPageDef"/>
+    <page path="/SBP_ASIGNACION_EJ_VENTA.jspx"
+          usageId="view_SBP_ASIGNACION_EJ_VENTAPageDef"/>
+    <page path="/SBP_CONF_CPG_SP.jspx" usageId="view_SBP_CONF_CPG_SPPageDef"/>
+    <page path="/SBP_SLS_LIST_PROD.jspx"
+          usageId="view_SBP_SLS_LIST_PRODPageDef"/>
+    <page path="/SBP_SLS_CONT_FEED.jspx"
+          usageId="view_SBP_SLS_CONT_FEEDPageDef"/>
+    <page path="/SBP_SLS_PANT_OPTY.jspx"
+          usageId="view_SBP_SLS_PANT_OPTYPageDef"/>
+    <page path="/test.jspx" usageId="view_testPageDef"/>
+    <page path="/SBP_SLS_OPP_PAGE.jspx" usageId="view_SBP_SLS_OPP_PAGEPageDef"/>
+    <page path="/SBP_SLS_LIST_SUP_X_JC.jspx"
+          usageId="view_SBP_SLS_LIST_SUP_X_JCPageDef"/>
+    <page path="/SBP_SLS_REASIG_JC_SUP.jspx"
+          usageId="view_SBP_SLS_REASIG_JC_SUPPageDef"/>
+    <page path="/SBP_SLS_LIST_EJV_X_SUP.jspx"
+          usageId="view_SBP_SLS_LIST_EJV_X_SUPPageDef"/>
+    <page path="/SBP_SLS_LIST_CANALES.jspx"
+          usageId="view_SBP_SLS_LIST_CANALESPageDef"/>
+    <page path="/SBP_SLS_REASIG_CAN_SCT.jspx"
+          usageId="view_SBP_SLS_REASIG_CAN_SCTPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_SBP_LIST_CAMPPageDef"
+          path="view.pageDefs.SBP_LIST_CAMPPageDef"/>
+    <page id="view_SBP_ASIG_CPG_SPPageDef"
+          path="view.pageDefs.SBP_ASIG_CPG_SPPageDef"/>
+    <page id="view_SBP_SLS_PRINCPageDef"
+          path="view.pageDefs.SBP_SLS_PRINCPageDef"/>
+    <page id="view_SBP_CREATE_CPGPageDef"
+          path="view.pageDefs.SBP_CREATE_CPGPageDef"/>
+    <page id="view_SBP_ASOG_EJ_VENTPageDef"
+          path="view.pageDefs.SBP_ASOG_EJ_VENTPageDef"/>
+    <page id="view_SBP_ASIGNACION_EJ_VENTAPageDef"
+          path="view.pageDefs.SBP_ASIGNACION_EJ_VENTAPageDef"/>
+    <page id="view_SBP_CONF_CPG_SPPageDef"
+          path="view.pageDefs.SBP_CONF_CPG_SPPageDef"/>
+    <page id="view_SBP_SLS_LIST_PRODPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_PRODPageDef"/>
+    <page id="view_SBP_SLS_CONT_FEEDPageDef"
+          path="view.pageDefs.SBP_SLS_CONT_FEEDPageDef"/>
+    <page id="view_SBP_SLS_PANT_OPTYPageDef"
+          path="view.pageDefs.SBP_SLS_PANT_OPTYPageDef"/>
+    <page id="view_testPageDef" path="view.pageDefs.testPageDef"/>
+    <page id="view_SBP_SLS_OPP_PAGEPageDef"
+          path="view.pageDefs.SBP_SLS_OPP_PAGEPageDef"/>
+    <page id="view_SBP_SLS_LIST_SUP_X_JCPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_SUP_X_JCPageDef"/>
+    <page id="view_SBP_SLS_REASIG_JC_SUPPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_JC_SUPPageDef"/>
+    <page id="view_SBP_SLS_LIST_EJV_X_SUPPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_EJV_X_SUPPageDef"/>
+    <page id="view_SBP_SLS_LIST_CANALESPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_CANALESPageDef"/>
+    <page id="view_SBP_SLS_REASIG_CAN_SCTPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_CAN_SCTPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="amSBPDataControl" Package="am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="amSBPLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

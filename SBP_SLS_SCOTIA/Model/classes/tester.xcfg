@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="am.amSBP">
+      <AppModuleConfig name="15BFD9A1268" DBconnection="apex" ApplicationName="am.amSBP" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" JDBCName="EVOLTEST" BC4JConfigName="amSBPLocal" jbo.project="model.Model">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="Oracle" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="am.amSBP"/>
+         <Tester FullProxyInterfaceName="am.common.amSBP"/>
+         <Custom LastUsedConfiguration="amSBPLocal" JDBCDataSource="apex"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

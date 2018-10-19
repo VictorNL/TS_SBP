@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SBP_SLS_LIST_CPG_DET_VL"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="vl.SBP_SLS_LIST_CPG_DET_VL_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="EvoLpSctView"
+    Cardinality="1"
+    Owner="vo.EvoLpSctView"
+    Source="true">
+    <DesignTime>
+      <Attr Name="_finderName" Value="EvoLpSctView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="vo.EvoLpSctView.CodCampania"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="SbpSlsListCpgDetView"
+    Cardinality="-1"
+    Owner="vo.SbpSlsListCpgDetView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="SbpSlsListCpgDetView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="vo.SbpSlsListCpgDetView.CodCampania"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

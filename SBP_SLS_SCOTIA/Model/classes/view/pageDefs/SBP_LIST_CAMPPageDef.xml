@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_LIST_CAMPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EvoLpSctView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="EvoLpSctView1Iterator"/>
+    <searchRegion Binds="EvoLpSctView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="EvoLpSctView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EvoLpSctView1Iterator" id="EvoLpSctView1">
+      <nodeDefinition DefName="vo.EvoLpSctView" Name="EvoLpSctView10">
+        <AttrNames>
+          <Item Value="CodCampania"/>
+          <Item Value="NomCampania"/>
+          <Item Value="FecIni"/>
+          <Item Value="FecFin"/>
+          <Item Value="Asignado"/>
+          <Item Value="CodProd"/>
+          <Item Value="NomProd"/>
+          <Item Value="CantOfertas"/>
+          <Item Value="ProductoBase"/>
+          <Item Value="Estado" Binds="Estado"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="EvoLpSctView1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <button IterBinding="EvoLpSctView1Iterator" id="Estado"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Estado"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
+  </bindings>
+</pageDefinition>

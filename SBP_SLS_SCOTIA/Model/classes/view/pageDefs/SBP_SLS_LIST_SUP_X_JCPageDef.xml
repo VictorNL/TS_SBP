@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_LIST_SUP_X_JCPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsListSupXJcView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsListSupXJcView1Iterator"/>
+    <searchRegion Binds="SbpSlsListSupXJcView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SbpSlsListSupXJcView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsListSupXJcView1Iterator"
+          id="SbpSlsListSupXJcView1">
+      <nodeDefinition DefName="vo.SbpSlsListSupXJcView"
+                      Name="SbpSlsListSupXJcView10">
+        <AttrNames>
+          <Item Value="IdJefCanal"/>
+          <Item Value="JefCanal"/>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup"/>
+          <Item Value="Cantidad"/>
+          <Item Value="PorcQuitar"/>
+          <Item Value="IdTbl"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

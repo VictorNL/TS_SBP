@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_CONF_CPG_SPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsDosifXCpgView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsDosifXCpgView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SbpSlsDosifXCpgView1Iterator" id="Cantidad">
+      <AttrNames>
+        <Item Value="Cantidad"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SbpSlsDosifXCpgView1Iterator" id="PorcRep">
+      <AttrNames>
+        <Item Value="PorcRep"/>
+      </AttrNames>
+    </attributeValues>
+    <button IterBinding="SbpSlsDosifXCpgView1Iterator" id="Pausado"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Pausado"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
+    <action IterBinding="SbpSlsDosifXCpgView1Iterator" id="CreateInsert"
+            InstanceName="amSBPDataControl.SbpSlsDosifXCpgView1"
+            DataControl="amSBPDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

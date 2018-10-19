@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="testPageDef" Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CpgOptyProdContAccFb8" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb8Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco1DeuRcctc">
+      <AttrNames>
+        <Item Value="Banco1DeuRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco1DeudaRccpp">
+      <AttrNames>
+        <Item Value="Banco1DeudaRccpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco1LinRcctc">
+      <AttrNames>
+        <Item Value="Banco1LinRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco2LinRcctc">
+      <AttrNames>
+        <Item Value="Banco2LinRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco2DeuRcctc">
+      <AttrNames>
+        <Item Value="Banco2DeuRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco2DeudaRccpp">
+      <AttrNames>
+        <Item Value="Banco2DeudaRccpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="BaficaedpdeuRcctc">
+      <AttrNames>
+        <Item Value="BaficaedpdeuRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="BaficaedpLinRcctc">
+      <AttrNames>
+        <Item Value="BaficaedpLinRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="SbsBaficaedpRccpp">
+      <AttrNames>
+        <Item Value="SbsBaficaedpRccpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="CodTipDoc">
+      <AttrNames>
+        <Item Value="CodTipDoc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="SegundoNombre">
+      <AttrNames>
+        <Item Value="SegundoNombre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Sl01nom">
+      <AttrNames>
+        <Item Value="Sl01nom"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Cliente">
+      <AttrNames>
+        <Item Value="Cliente"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TipoZonaCourier">
+      <AttrNames>
+        <Item Value="TipoZonaCourier"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco1NombreRcctc">
+      <AttrNames>
+        <Item Value="Banco1NombreRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco2NombreRcctc">
+      <AttrNames>
+        <Item Value="Banco2NombreRcctc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco1NombreRccpp">
+      <AttrNames>
+        <Item Value="Banco1NombreRccpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Banco2NombreRccpp">
+      <AttrNames>
+        <Item Value="Banco2NombreRccpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="FlagClubSueldo">
+      <AttrNames>
+        <Item Value="FlagClubSueldo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="FlagAutorizacion">
+      <AttrNames>
+        <Item Value="FlagAutorizacion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="MonOpty">
+      <AttrNames>
+        <Item Value="MonOpty"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Telefono01">
+      <AttrNames>
+        <Item Value="Telefono01"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Telefono02">
+      <AttrNames>
+        <Item Value="Telefono02"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Telefono03">
+      <AttrNames>
+        <Item Value="Telefono03"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Celular01">
+      <AttrNames>
+        <Item Value="Celular01"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Celular02">
+      <AttrNames>
+        <Item Value="Celular02"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Celular03">
+      <AttrNames>
+        <Item Value="Celular03"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="ApellidoMaterno">
+      <AttrNames>
+        <Item Value="ApellidoMaterno"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TipoDocumento">
+      <AttrNames>
+        <Item Value="TipoDocumento"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="NumeroDni">
+      <AttrNames>
+        <Item Value="NumeroDni"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Edad">
+      <AttrNames>
+        <Item Value="Edad"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Nombre">
+      <AttrNames>
+        <Item Value="Nombre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="ApellidoPaterno">
+      <AttrNames>
+        <Item Value="ApellidoPaterno"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="EstadoCivil">
+      <AttrNames>
+        <Item Value="EstadoCivil"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="FecNacimiento">
+      <AttrNames>
+        <Item Value="FecNacimiento"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Genero">
+      <AttrNames>
+        <Item Value="Genero"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="SubjectId">
+      <AttrNames>
+        <Item Value="SubjectId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="ObjectId">
+      <AttrNames>
+        <Item Value="ObjectId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="OrganizationName">
+      <AttrNames>
+        <Item Value="OrganizationName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="PaisContacto">
+      <AttrNames>
+        <Item Value="PaisContacto"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="DeptCont">
+      <AttrNames>
+        <Item Value="DeptCont"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="ProvContacto">
+      <AttrNames>
+        <Item Value="ProvContacto"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="DistContacto">
+      <AttrNames>
+        <Item Value="DistContacto"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Direccion">
+      <AttrNames>
+        <Item Value="Direccion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="PaisEmp">
+      <AttrNames>
+        <Item Value="PaisEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="DeptEmp">
+      <AttrNames>
+        <Item Value="DeptEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="ProvEmp">
+      <AttrNames>
+        <Item Value="ProvEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="DistEmp">
+      <AttrNames>
+        <Item Value="DistEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="DirEmp">
+      <AttrNames>
+        <Item Value="DirEmp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="SitePer">
+      <AttrNames>
+        <Item Value="SitePer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="SiteOrg">
+      <AttrNames>
+        <Item Value="SiteOrg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Ruc">
+      <AttrNames>
+        <Item Value="Ruc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="IdOpp">
+      <AttrNames>
+        <Item Value="IdOpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="NomOpp">
+      <AttrNames>
+        <Item Value="NomOpp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="NomProd">
+      <AttrNames>
+        <Item Value="NomProd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="MontoMinimo">
+      <AttrNames>
+        <Item Value="MontoMinimo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="MontoMaximo">
+      <AttrNames>
+        <Item Value="MontoMaximo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="PlazoMinimo">
+      <AttrNames>
+        <Item Value="PlazoMinimo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="PlazoMaximo">
+      <AttrNames>
+        <Item Value="PlazoMaximo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Teamin">
+      <AttrNames>
+        <Item Value="Teamin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Teamax">
+      <AttrNames>
+        <Item Value="Teamax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Tceamin">
+      <AttrNames>
+        <Item Value="Tceamin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Tceamax">
+      <AttrNames>
+        <Item Value="Tceamax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Cuota">
+      <AttrNames>
+        <Item Value="Cuota"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TcNombrebin1">
+      <AttrNames>
+        <Item Value="TcNombrebin1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcPct1">
+      <AttrNames>
+        <Item Value="TcPct1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TcNombrebin2">
+      <AttrNames>
+        <Item Value="TcNombrebin2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcPct2">
+      <AttrNames>
+        <Item Value="TcPct2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TcNombrebin3">
+      <AttrNames>
+        <Item Value="TcNombrebin3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcPct3">
+      <AttrNames>
+        <Item Value="TcPct3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="TcNombrebin4">
+      <AttrNames>
+        <Item Value="TcNombrebin4"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcPct4">
+      <AttrNames>
+        <Item Value="TcPct4"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Flujo">
+      <AttrNames>
+        <Item Value="Flujo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="CodigoProducto">
+      <AttrNames>
+        <Item Value="CodigoProducto"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcTea1">
+      <AttrNames>
+        <Item Value="TcTea1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcTea2">
+      <AttrNames>
+        <Item Value="TcTea2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcTea3">
+      <AttrNames>
+        <Item Value="TcTea3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="TcTea4">
+      <AttrNames>
+        <Item Value="TcTea4"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="Propension">
+      <AttrNames>
+        <Item Value="Propension"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="Decil">
+      <AttrNames>
+        <Item Value="Decil"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="idGnrl">
+      <AttrNames>
+        <Item Value="idGnrl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="codCpg">
+      <AttrNames>
+        <Item Value="codCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="cantOfertasCpg">
+      <AttrNames>
+        <Item Value="cantOfertasCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="periodCpg">
+      <AttrNames>
+        <Item Value="periodCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="segCpg">
+      <AttrNames>
+        <Item Value="segCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="activoCpg">
+      <AttrNames>
+        <Item Value="activoCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="codProdCpg">
+      <AttrNames>
+        <Item Value="codProdCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator"
+                     id="porcAsigCpg">
+      <AttrNames>
+        <Item Value="porcAsigCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="fecIniCpg">
+      <AttrNames>
+        <Item Value="fecIniCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="fecFinCpg">
+      <AttrNames>
+        <Item Value="fecFinCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb8Iterator" id="nomCpg">
+      <AttrNames>
+        <Item Value="nomCpg"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

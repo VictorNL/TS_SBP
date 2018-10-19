@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_REASIG_CAN_SCTPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsCanalView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsCanalView1Iterator"/>
+    <searchRegion Binds="SbpSlsCanalView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="SbpSlsCanalView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsCanalView1Iterator" id="SbpSlsCanalView1">
+      <nodeDefinition DefName="vo.SbpSlsCanalView" Name="SbpSlsCanalView10">
+        <AttrNames>
+          <Item Value="IdCanal"/>
+          <Item Value="NomCanal"/>
+          <Item Value="Cantidad"/>
+          <Item Value="PorcAsig"/>
+          <Item Value="IdTbl"/>
+          <Item Value="PartyNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
