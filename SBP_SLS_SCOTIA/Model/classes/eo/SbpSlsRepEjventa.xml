@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsRepEjventa"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="SBP_SLS_REP_EJVENTA"
+  AliasName="SbpSlsRepEjventa"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdEjVenta"
+    ColumnName="ID_EJ_VENTA"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="EjVenta"
+    Precision="100"
+    ColumnName="EJ_VENTA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Telf"
+    Precision="100"
+    ColumnName="TELF"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Prod"
+    Precision="100"
+    ColumnName="PROD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Dni"
+    Precision="100"
+    ColumnName="DNI"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IdTbl"
+    ColumnName="ID_TBL"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="SBP_SLS_REP_EJVENTA"
+    IsUnique="true"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Monto"
+    Precision="100"
+    ColumnName="MONTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_REP_EJVENTA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SbpslsrepejventaPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SBPSLSREPEJVENTA_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="eo.SbpSlsRepEjventa.IdTbl"/>
+    </AttrArray>
+  </Key>
+</Entity>
