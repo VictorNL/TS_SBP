@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsAsigReasReporte2"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="SBP_SLS_ASIG_REAS_REPORTE"
+  AliasName="SbpSlsAsigReasReporte2"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdTbl"
+    ColumnName="ID_TBL"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UsuarioEjecucion"
+    Precision="100"
+    ColumnName="USUARIO_EJECUCION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UsuarioEjecucionPerfil"
+    Precision="100"
+    ColumnName="USUARIO_EJECUCION_PERFIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Perfil"
+    Precision="100"
+    ColumnName="PERFIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CampaniaId"
+    Precision="100"
+    ColumnName="CAMPANIA_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CampaniaNombre"
+    Precision="100"
+    ColumnName="CAMPANIA_NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CanalId"
+    Precision="100"
+    ColumnName="CANAL_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CanalNombre"
+    Precision="100"
+    ColumnName="CANAL_NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="JefeCanalId"
+    Precision="100"
+    ColumnName="JEFE_CANAL_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="JefeCanalNombre"
+    Precision="100"
+    ColumnName="JEFE_CANAL_NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SupervisorId"
+    Precision="100"
+    ColumnName="SUPERVISOR_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SupervisorNombre"
+    Precision="100"
+    ColumnName="SUPERVISOR_NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="EjecutivoId"
+    Precision="100"
+    ColumnName="EJECUTIVO_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="EjecutivoNombre"
+    Precision="100"
+    ColumnName="EJECUTIVO_NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Fecha"
+    Precision="100"
+    ColumnName="FECHA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CantidadAsignada"
+    ColumnName="CANTIDAD_ASIGNADA"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CantidadReasignada"
+    ColumnName="CANTIDAD_REASIGNADA"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RowID"
+    IsUpdateable="false"
+    ColumnName="ROWID"
+    SQLType="ROWID"
+    Type="oracle.jbo.domain.RowID"
+    ColumnType="ROWID"
+    TableName="SBP_SLS_ASIG_REAS_REPORTE"
+    PrimaryKey="true"/>
+</Entity>
