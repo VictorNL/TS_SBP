@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsUserPrmEjVentTempView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsUserPrmEjVentTemp.ID_EJE_VENT, 
+       SbpSlsUserPrmEjVentTemp.NOM_EJE_VENT"
+  FromList="SBP_SLS_USER_PRM_EJ_VENT_TEMP SbpSlsUserPrmEjVentTemp"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsUserPrmEjVentTemp"
+    Entity="eo.SbpSlsUserPrmEjVentTemp"/>
+  <ViewAttribute
+    Name="IdEjeVent"
+    PrecisionRule="true"
+    EntityAttrName="IdEjeVent"
+    EntityUsage="SbpSlsUserPrmEjVentTemp"
+    AliasName="ID_EJE_VENT"/>
+  <ViewAttribute
+    Name="NomEjeVent"
+    PrecisionRule="true"
+    EntityAttrName="NomEjeVent"
+    EntityUsage="SbpSlsUserPrmEjVentTemp"
+    AliasName="NOM_EJE_VENT"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="IdEjeVent"/>
+  </AttrArray>
+</ViewObject>
