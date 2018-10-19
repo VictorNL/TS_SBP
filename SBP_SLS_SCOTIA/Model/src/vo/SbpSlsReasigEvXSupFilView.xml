@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsReasigEvXSupFilView"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  SelectList="SbpSlsReasigEvXSupFil.ID_SUP, 
+       SbpSlsReasigEvXSupFil.NOM_SUP, 
+       SbpSlsReasigEvXSupFil.ID_EJ_VENTA, 
+       SbpSlsReasigEvXSupFil.NOM_EJ_VENTA, 
+       SbpSlsReasigEvXSupFil.ID_CANAL, 
+       SbpSlsReasigEvXSupFil.NOM_CANAL, 
+       SbpSlsReasigEvXSupFil.CANTIDAD, 
+       SbpSlsReasigEvXSupFil.PORC_ASIG, 
+       SbpSlsReasigEvXSupFil.ID_TBL"
+  FromList="SBP_SLS_REASIG_EV_X_SUP_FIL SbpSlsReasigEvXSupFil"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsReasigEvXSupFil"
+    Entity="eo.SbpSlsReasigEvXSupFil"/>
+  <ViewAttribute
+    Name="IdSup"
+    PrecisionRule="true"
+    EntityAttrName="IdSup"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="ID_SUP"/>
+  <ViewAttribute
+    Name="NomSup"
+    PrecisionRule="true"
+    EntityAttrName="NomSup"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="NOM_SUP"/>
+  <ViewAttribute
+    Name="IdEjVenta"
+    PrecisionRule="true"
+    EntityAttrName="IdEjVenta"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="ID_EJ_VENTA"/>
+  <ViewAttribute
+    Name="NomEjVenta"
+    PrecisionRule="true"
+    EntityAttrName="NomEjVenta"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="NOM_EJ_VENTA"/>
+  <ViewAttribute
+    Name="IdCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdCanal"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="ID_CANAL"/>
+  <ViewAttribute
+    Name="NomCanal"
+    PrecisionRule="true"
+    EntityAttrName="NomCanal"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="NOM_CANAL"/>
+  <ViewAttribute
+    Name="Cantidad"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="CANTIDAD"/>
+  <ViewAttribute
+    Name="PorcAsig"
+    PrecisionRule="true"
+    EntityAttrName="PorcAsig"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="PORC_ASIG"/>
+  <ViewAttribute
+    Name="IdTbl"
+    PrecisionRule="true"
+    EntityAttrName="IdTbl"
+    EntityUsage="SbpSlsReasigEvXSupFil"
+    AliasName="ID_TBL"/>
+</ViewObject>

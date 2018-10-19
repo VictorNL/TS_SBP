@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsListSupXJcTempView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsListSupXJcTemp.ID_JEF_CANAL, 
+       SbpSlsListSupXJcTemp.NOM_JEF_CANAL, 
+       SbpSlsListSupXJcTemp.ID_SUP, 
+       SbpSlsListSupXJcTemp.NOM_SUP"
+  FromList="SBP_SLS_LIST_SUP_X_JC_TEMP SbpSlsListSupXJcTemp"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsListSupXJcTemp"
+    Entity="eo.SbpSlsListSupXJcTemp"/>
+  <ViewAttribute
+    Name="IdJefCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdJefCanal"
+    EntityUsage="SbpSlsListSupXJcTemp"
+    AliasName="ID_JEF_CANAL"/>
+  <ViewAttribute
+    Name="NomJefCanal"
+    PrecisionRule="true"
+    EntityAttrName="NomJefCanal"
+    EntityUsage="SbpSlsListSupXJcTemp"
+    AliasName="NOM_JEF_CANAL"/>
+  <ViewAttribute
+    Name="IdSup"
+    PrecisionRule="true"
+    EntityAttrName="IdSup"
+    EntityUsage="SbpSlsListSupXJcTemp"
+    AliasName="ID_SUP"/>
+  <ViewAttribute
+    Name="NomSup"
+    PrecisionRule="true"
+    EntityAttrName="NomSup"
+    EntityUsage="SbpSlsListSupXJcTemp"
+    AliasName="NOM_SUP"/>
+</ViewObject>

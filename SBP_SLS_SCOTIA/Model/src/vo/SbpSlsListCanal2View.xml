@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsListCanal2View"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsListCanal2.ID_CANAL, 
+       SbpSlsListCanal2.NOM_CANAL, 
+       SbpSlsListCanal2.CANTIDAD, 
+       SbpSlsListCanal2.ID_TBL, 
+       SbpSlsListCanal2.PORC_ASIG, 
+       SbpSlsListCanal2.PARTY_NUMBER, 
+       SbpSlsListCanal2.CANTIDAD2"
+  FromList="SBP_SLS_LIST_CANAL_2 SbpSlsListCanal2"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsListCanal2"
+    Entity="eo.SbpSlsListCanal2"/>
+  <ViewAttribute
+    Name="IdCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdCanal"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="ID_CANAL"/>
+  <ViewAttribute
+    Name="NomCanal"
+    PrecisionRule="true"
+    EntityAttrName="NomCanal"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="NOM_CANAL"/>
+  <ViewAttribute
+    Name="Cantidad"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="CANTIDAD"/>
+  <ViewAttribute
+    Name="IdTbl"
+    PrecisionRule="true"
+    EntityAttrName="IdTbl"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="ID_TBL"/>
+  <ViewAttribute
+    Name="PorcAsig"
+    PrecisionRule="true"
+    EntityAttrName="PorcAsig"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="PORC_ASIG"/>
+  <ViewAttribute
+    Name="PartyNumber"
+    PrecisionRule="true"
+    EntityAttrName="PartyNumber"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="PARTY_NUMBER"/>
+  <ViewAttribute
+    Name="Cantidad2"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad2"
+    EntityUsage="SbpSlsListCanal2"
+    AliasName="CANTIDAD2"/>
+</ViewObject>

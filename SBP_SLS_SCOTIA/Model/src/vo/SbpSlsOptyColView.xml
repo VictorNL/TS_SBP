@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsOptyColView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsOptyCol.ID_OPTY_COL, 
+       SbpSlsOptyCol.OPTY_COLUMN, 
+       SbpSlsOptyCol.ESTADO, 
+       SbpSlsOptyCol.NRO_ORDEN, 
+       SbpSlsOptyCol.COD_COL, 
+       SbpSlsOptyCol.NOM_OR_COL, 
+       SbpSlsOptyCol.NOM_TAB"
+  FromList="SBP_SLS_OPTY_COL SbpSlsOptyCol"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsOptyCol"
+    Entity="eo.SbpSlsOptyCol"/>
+  <ViewAttribute
+    Name="IdOptyCol"
+    PrecisionRule="true"
+    EntityAttrName="IdOptyCol"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="ID_OPTY_COL"/>
+  <ViewAttribute
+    Name="OptyColumn"
+    PrecisionRule="true"
+    EntityAttrName="OptyColumn"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="OPTY_COLUMN"/>
+  <ViewAttribute
+    Name="Estado"
+    PrecisionRule="true"
+    EntityAttrName="Estado"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="ESTADO"/>
+  <ViewAttribute
+    Name="NroOrden"
+    PrecisionRule="true"
+    EntityAttrName="NroOrden"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="NRO_ORDEN"/>
+  <ViewAttribute
+    Name="CodCol"
+    PrecisionRule="true"
+    EntityAttrName="CodCol"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="COD_COL"/>
+  <ViewAttribute
+    Name="NomOrCol"
+    PrecisionRule="true"
+    EntityAttrName="NomOrCol"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="NOM_OR_COL"/>
+  <ViewAttribute
+    Name="NomTab"
+    PrecisionRule="true"
+    EntityAttrName="NomTab"
+    EntityUsage="SbpSlsOptyCol"
+    AliasName="NOM_TAB"/>
+  <ViewAttribute
+    Name="visibleOpty"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="IdOptyCol"/>
+  </AttrArray>
+</ViewObject>

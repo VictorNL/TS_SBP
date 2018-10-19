@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FeebackTipGestLOV"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="vo.FeebackTipGestLOV_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAccessor
+    Name="FeedBackVo1"
+    ViewObjectName="vo.FeedBackVo"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomTipGest"
+    ListVOName="FeedBackVo1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_NomTipGest_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomTipGest"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CodTipGest"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="tipoGestion"/>
+      <Item Value="codTipGest"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="tipoGestion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <SQLQuery>
+    <![CDATA[SELECT distinct COD_TIP_GEST, NOM_TIP_GEST FROM SBP_SLS_GEST_FEEDBACK where nom_tip_gest is not null]]>
+  </SQLQuery>
+  <ViewAttribute
+    Name="CodTipGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="COD_TIP_GEST"
+    Expression="COD_TIP_GEST"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NomTipGest"
+    LOVName="LOV_NomTipGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NOM_TIP_GEST"
+    Expression="NOM_TIP_GEST"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

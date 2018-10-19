@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsMaestroProdView"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  SelectList="SbpSlsMaestroProd.ID_PROD, 
+       SbpSlsMaestroProd.BIN_COD, 
+       SbpSlsMaestroProd.BIN_DESC, 
+       SbpSlsMaestroProd.ESTADO"
+  FromList="SBP_SLS_MAESTRO_PROD SbpSlsMaestroProd"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  Where="estado = '1'">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsMaestroProd"
+    Entity="eo.SbpSlsMaestroProd"/>
+  <ViewAttribute
+    Name="IdProd"
+    PrecisionRule="true"
+    EntityAttrName="IdProd"
+    EntityUsage="SbpSlsMaestroProd"
+    AliasName="ID_PROD"/>
+  <ViewAttribute
+    Name="BinCod"
+    PrecisionRule="true"
+    EntityAttrName="BinCod"
+    EntityUsage="SbpSlsMaestroProd"
+    AliasName="BIN_COD"/>
+  <ViewAttribute
+    Name="BinDesc"
+    PrecisionRule="true"
+    EntityAttrName="BinDesc"
+    EntityUsage="SbpSlsMaestroProd"
+    AliasName="BIN_DESC"/>
+  <ViewAttribute
+    Name="Estado"
+    PrecisionRule="true"
+    EntityAttrName="Estado"
+    EntityUsage="SbpSlsMaestroProd"
+    AliasName="ESTADO"/>
+</ViewObject>

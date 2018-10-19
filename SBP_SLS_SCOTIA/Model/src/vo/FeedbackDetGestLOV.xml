@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FeedbackDetGestLOV"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="vo.FeedbackDetGestLOV_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="pDescDetGest"
+    Kind="where"
+    Type="java.lang.String"/>
+  <ViewAccessor
+    Name="FeedBackVo1"
+    ViewObjectName="vo.FeedBackVo"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomDetGest"
+    ListVOName="FeedBackVo1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomDetGest"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CodDetGest"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="detGestion"/>
+      <Item Value="codDetGest"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <SQLQuery>
+    <![CDATA[select distinct NOM_DET_GEST, DESC_DET_GEST, COD_DET_GEST
+  from SBP_SLS_GEST_FEEDBACK
+ where cod_grup_gest = :pDescDetGest]]>
+  </SQLQuery>
+  <ViewAttribute
+    Name="NomDetGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NOM_DET_GEST"
+    Expression="NOM_DET_GEST"
+    SQLType="VARCHAR"
+    LOVName="LOV_NomDetGest">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DescDetGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DESC_DET_GEST"
+    Expression="DESC_DET_GEST"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CodDetGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="COD_DET_GEST"
+    Expression="COD_DET_GEST"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="DetGestLOVCriteria"
+    ViewObjectName="vo.FeedbackDetGestLOV"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow14"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="DescDetGest"
+        ViewAttribute="DescDetGest"
+        Operator="="
+        Conjunction="AND"
+        Value=":pDescDetGest"
+        UpperColumns="1"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

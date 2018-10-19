@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsContactColView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsContactCol.ID_NOM_COL, 
+       SbpSlsContactCol.NOM_COLUMN, 
+       SbpSlsContactCol.ESTADO, 
+       SbpSlsContactCol.NRO_ORDEN, 
+       SbpSlsContactCol.NOM_OR_COL, 
+       SbpSlsContactCol.NOM_TAB, 
+       SbpSlsContactCol.COD_COL"
+  FromList="SBP_SLS_CONTACT_COL SbpSlsContactCol"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="SbpSlsContactCol"
+    Entity="eo.SbpSlsContactCol"/>
+  <ViewAttribute
+    Name="IdNomCol"
+    PrecisionRule="true"
+    EntityAttrName="IdNomCol"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="ID_NOM_COL"/>
+  <ViewAttribute
+    Name="NomColumn"
+    PrecisionRule="true"
+    EntityAttrName="NomColumn"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="NOM_COLUMN"/>
+  <ViewAttribute
+    Name="Estado"
+    PrecisionRule="true"
+    EntityAttrName="Estado"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="ESTADO"/>
+  <ViewAttribute
+    Name="NroOrden"
+    PrecisionRule="true"
+    EntityAttrName="NroOrden"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="NRO_ORDEN"/>
+  <ViewAttribute
+    Name="visible"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Boolean"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="BIT">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NomOrCol"
+    PrecisionRule="true"
+    EntityAttrName="NomOrCol"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="NOM_OR_COL"/>
+  <ViewAttribute
+    Name="NomTab"
+    PrecisionRule="true"
+    EntityAttrName="NomTab"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="NOM_TAB"/>
+  <ViewAttribute
+    Name="CodCol"
+    PrecisionRule="true"
+    EntityAttrName="CodCol"
+    EntityUsage="SbpSlsContactCol"
+    AliasName="COD_COL"/>
+</ViewObject>

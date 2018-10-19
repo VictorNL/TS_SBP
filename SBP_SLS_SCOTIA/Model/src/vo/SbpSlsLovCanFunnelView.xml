@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsLovCanFunnelView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsLovCanFunnel.ID_CANAL, 
+       SbpSlsLovCanFunnel.NOM_CANAL, 
+       SbpSlsLovCanFunnel.ID_TBL"
+  FromList="SBP_SLS_LOV_CAN_FUNNEL SbpSlsLovCanFunnel"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="SbpSlsLovCanFunnelView1"
+    ViewObjectName="vo.SbpSlsLovCanFunnelView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomCanal"
+    ListVOName="SbpSlsLovCanFunnelView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_NomCanal_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomCanal"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="IdCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NomCanal"/>
+      <Item Value="IdCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NomCanal"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="SbpSlsLovCanFunnel"
+    Entity="eo.SbpSlsLovCanFunnel"/>
+  <ViewAttribute
+    Name="IdCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdCanal"
+    EntityUsage="SbpSlsLovCanFunnel"
+    AliasName="ID_CANAL"/>
+  <ViewAttribute
+    Name="NomCanal"
+    PrecisionRule="true"
+    EntityAttrName="NomCanal"
+    EntityUsage="SbpSlsLovCanFunnel"
+    AliasName="NOM_CANAL"
+    LOVName="LOV_NomCanal">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IdTbl"
+    IsUnique="true"
+    PrecisionRule="true"
+    EntityAttrName="IdTbl"
+    EntityUsage="SbpSlsLovCanFunnel"
+    AliasName="ID_TBL"/>
+</ViewObject>

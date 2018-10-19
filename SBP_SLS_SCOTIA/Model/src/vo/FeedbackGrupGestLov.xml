@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FeedbackGrupGestLov"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="vo.FeedbackGrupGestLov_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="pDescGroupGest"
+    Kind="where"
+    Type="java.lang.String">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
+  <ViewAccessor
+    Name="FeedBackVo1"
+    ViewObjectName="vo.FeedBackVo"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomGrupGest"
+    ListVOName="FeedBackVo1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="LOV_NomGrupGest_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomGrupGest"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="CodGrupGest"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="grupoGestion"/>
+      <Item Value="codGrupGest"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="grupoGestion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <SQLQuery>
+    <![CDATA[SELECT distinct COD_GRUP_GEST,
+                NOM_GRUP_GEST,
+                DESC_GRUP_GEST from SBP_SLS_GEST_FEEDBACK
+                where COD_TIP_GEST = :pDescGroupGest
+                order by DESC_GRUP_GEST]]>
+  </SQLQuery>
+  <ViewAttribute
+    Name="CodGrupGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="COD_GRUP_GEST"
+    Expression="COD_GRUP_GEST"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="NomGrupGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NOM_GRUP_GEST"
+    Expression="NOM_GRUP_GEST"
+    SQLType="VARCHAR"
+    LOVName="LOV_NomGrupGest">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DescGrupGest"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DESC_GRUP_GEST"
+    Expression="DESC_GRUP_GEST"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="GrupGestCriteria"
+    ViewObjectName="vo.FeedbackGrupGestLov"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="DescGrupGest"
+        ViewAttribute="DescGrupGest"
+        Operator="="
+        Conjunction="AND"
+        Value=":pDescGroupGest"
+        IsBindVarValue="true"
+        Required="Optional"
+        UpperColumns="1"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>
