@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SbpSlsListSupXJcView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="SbpSlsListSupXJc.ID_JEF_CANAL, 
+       SbpSlsListSupXJc.JEF_CANAL, 
+       SbpSlsListSupXJc.ID_SUP, 
+       SbpSlsListSupXJc.NOM_SUP, 
+       SbpSlsListSupXJc.CANTIDAD, 
+       SbpSlsListSupXJc.PORC_QUITAR, 
+       SbpSlsListSupXJc.ID_TBL"
+  FromList="SBP_SLS_LIST_SUP_X_JC SbpSlsListSupXJc"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="SbpSlsListSupXJcTempView1"
+    ViewObjectName="vo.SbpSlsListSupXJcTempView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_NomSup"
+    ListVOName="SbpSlsListSupXJcTempView1"
+    ListRangeSize="-1"
+    NullValueFlag="none"
+    NullValueId="LOV_NomSup_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="NomSup"/>
+    </AttrArray>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="IdSup"/>
+      <Item Value="IdJefCanal"/>
+      <Item Value="JefCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="NomSup"/>
+      <Item Value="IdSup"/>
+      <Item Value="IdJefCanal"/>
+      <Item Value="NomJefCanal"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="NomSup"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="SbpSlsListSupXJc"
+    Entity="eo.SbpSlsListSupXJc"/>
+  <ViewAttribute
+    Name="IdJefCanal"
+    PrecisionRule="true"
+    EntityAttrName="IdJefCanal"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="ID_JEF_CANAL"/>
+  <ViewAttribute
+    Name="JefCanal"
+    PrecisionRule="true"
+    EntityAttrName="JefCanal"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="JEF_CANAL"/>
+  <ViewAttribute
+    Name="IdSup"
+    PrecisionRule="true"
+    EntityAttrName="IdSup"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="ID_SUP"/>
+  <ViewAttribute
+    Name="NomSup"
+    PrecisionRule="true"
+    EntityAttrName="NomSup"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="NOM_SUP"
+    LOVName="LOV_NomSup">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Cantidad"
+    PrecisionRule="true"
+    EntityAttrName="Cantidad"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="CANTIDAD"/>
+  <ViewAttribute
+    Name="PorcQuitar"
+    PrecisionRule="true"
+    EntityAttrName="PorcQuitar"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="PORC_QUITAR"/>
+  <ViewAttribute
+    Name="IdTbl"
+    PrecisionRule="true"
+    EntityAttrName="IdTbl"
+    EntityUsage="SbpSlsListSupXJc"
+    AliasName="ID_TBL"/>
+</ViewObject>
