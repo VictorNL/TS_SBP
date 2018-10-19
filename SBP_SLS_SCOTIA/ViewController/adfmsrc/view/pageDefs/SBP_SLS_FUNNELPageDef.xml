@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_FUNNELPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsFunnelView1" RangeSize="-1"
+              DataControl="amSBPDataControl" id="SbpSlsFunnelView1Iterator"/>
+    <iterator Binds="SbpSlsLovCpgFunnelView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsLovCpgFunnelView1Iterator"/>
+    <iterator Binds="SbpSlsLovCanFunnelView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsLovCanFunnelView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsFunnelView1Iterator" id="SbpSlsFunnelView1">
+      <nodeDefinition DefName="vo.SbpSlsFunnelView" Name="SbpSlsFunnelView10">
+        <AttrNames>
+          <Item Value="IdJefCan"/>
+          <Item Value="JefCan"/>
+          <Item Value="IdSup"/>
+          <Item Value="Sup"/>
+          <Item Value="IdEjVenta"/>
+          <Item Value="EjVenta"/>
+          <Item Value="CantLeads"/>
+          <Item Value="CantFb"/>
+          <Item Value="FbLeads"/>
+          <Item Value="CantCont"/>
+          <Item Value="ContLeads"/>
+          <Item Value="CantContEf"/>
+          <Item Value="ContEfLeads"/>
+          <Item Value="CantVentas"/>
+          <Item Value="EfectBase"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <pivotTable IterBinding="SbpSlsFunnelView1Iterator" id="SbpSlsFunnelView11"
+                xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap>
+        <columns>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="CantLeads"/>
+            <item value="CantFb"/>
+            <item value="FbLeads"/>
+            <item value="CantCont"/>
+            <item value="ContLeads"/>
+            <item value="CantContEf"/>
+            <item value="ContEfLeads"/>
+            <item value="CantVentas"/>
+            <item value="EfectBase"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="JefCan"/>
+          <item value="Sup"/>
+          <item value="EjVenta"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+    <attributeValues IterBinding="SbpSlsLovCpgFunnelView1Iterator" id="IdCpg">
+      <AttrNames>
+        <Item Value="IdCpg"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsLovCpgFunnelView1Iterator" StaticList="false"
+          Uses="LOV_NomCpg" id="NomCpg" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsLovCanFunnelView1Iterator" StaticList="false"
+          Uses="LOV_NomCanal" id="NomCanal" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsLovCanFunnelView1Iterator" id="IdCanal">
+      <AttrNames>
+        <Item Value="IdCanal"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

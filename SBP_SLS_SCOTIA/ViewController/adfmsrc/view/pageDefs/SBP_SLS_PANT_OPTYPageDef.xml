@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_PANT_OPTYPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CpgOptyProdContAccFb1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb1Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb1Query"/>
+    <iterator Binds="FeedBackVo1" RangeSize="25" DataControl="amSBPDataControl"
+              id="FeedBackVo1Iterator"/>
+    <searchRegion Binds="FeedBackVo1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="FeedBackVo1Query"/>
+    <iterator Binds="CpgOptyProdContAccFb2" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb2Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb2Query"/>
+    <iterator Binds="CpgOptyProdContAccFb3" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb3Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb3Query"/>
+    <iterator Binds="CpgOptyProdContAccFb4" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb4Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb4Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb4Query"/>
+    <iterator Binds="CpgOptyProdContAccFb5" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb5Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb5Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb5Query"/>
+    <iterator Binds="CpgOptyProdContAccFb6" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb6Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb6Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb6Query"/>
+    <iterator Binds="CpgOptyProdContAccFb7" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb7Iterator"/>
+    <searchRegion Binds="CpgOptyProdContAccFb7Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="CpgOptyProdContAccFb7Query"/>
+    <iterator Binds="PopupFeedbackVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="PopupFeedbackVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CpgOptyProdContAccFb1Iterator"
+          id="CpgOptyProdContAccFb1">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb10">
+        <AttrNames>
+          <Item Value="CodTipDoc"/>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="TipoDocumento"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="NumeroDni"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="Nombre"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="SegundoNombre"/>
+          <Item Value="Banco2DeuRcctc"/>
+          <Item Value="ApellidoPaterno"/>
+          <Item Value="Banco2DeudaRccpp"/>
+          <Item Value="ApellidoMaterno"/>
+          <Item Value="BaficaedpdeuRcctc"/>
+          <Item Value="Edad"/>
+          <Item Value="BaficaedpLinRcctc"/>
+          <Item Value="Genero"/>
+          <Item Value="SbsBaficaedpRccpp"/>
+          <Item Value="EstadoCivil"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="FeedBackVo1Iterator" id="FeedBackVo1">
+      <nodeDefinition DefName="vo.FeedBackVo" Name="FeedBackVo10">
+        <AttrNames>
+          <Item Value="CanalFb"/>
+          <Item Value="CodCanalFb"/>
+          <Item Value="DescAdGestion"/>
+          <Item Value="NomCpg"/>
+          <Item Value="CodCpg"/>
+          <Item Value="Sup"/>
+          <Item Value="JefCanal"/>
+          <Item Value="EjVenta"/>
+          <Item Value="FecGestion"/>
+          <Item Value="NomFb"/>
+          <Item Value="IdFb"/>
+          <Item Value="MontoDesem"/>
+          <Item Value="MontoDesem2of"/>
+          <Item Value="telefono"/>
+          <Item Value="idEjVenta"/>
+          <Item Value="idJefCanal"/>
+          <Item Value="idSup"/>
+          <Item Value="tipoGestion"/>
+          <Item Value="codTipGest"/>
+          <Item Value="grupoGestion"/>
+          <Item Value="codGrupGest"/>
+          <Item Value="detGestion"/>
+          <Item Value="codDetGest"/>
+          <Item Value="monto"/>
+          <Item Value="nomDetGest"/>
+          <Item Value="nomGrupGest"/>
+          <Item Value="nomTipGest"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb2Iterator"
+          id="CpgOptyProdContAccFb2">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb20">
+        <AttrNames>
+          <Item Value="Telefono01"/>
+          <Item Value="Telefono02"/>
+          <Item Value="Telefono03"/>
+          <Item Value="Celular01"/>
+          <Item Value="Celular02"/>
+          <Item Value="Celular03"/>
+          <Item Value="ProvContacto"/>
+          <Item Value="DistContacto"/>
+          <Item Value="Direccion"/>
+          <Item Value="PaisContacto"/>
+          <Item Value="DeptCont"/>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="Banco1DeudaRccpp"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb3Iterator"
+          id="CpgOptyProdContAccFb3">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb30">
+        <AttrNames>
+          <Item Value="Sl01nom"/>
+          <Item Value="Cliente"/>
+          <Item Value="Email"/>
+          <Item Value="FecNacimiento"/>
+          <Item Value="FlagClubSueldo"/>
+          <Item Value="FlagAutorizacion"/>
+          <Item Value="SbsBaficaedpRccpp"/>
+          <Item Value="TipoZonaCourier"/>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="codCpg"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="cantOfertasCpg"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="periodCpg"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="segCpg"/>
+          <Item Value="Banco2DeuRcctc"/>
+          <Item Value="activoCpg"/>
+          <Item Value="Banco2DeudaRccpp"/>
+          <Item Value="codProdCpg"/>
+          <Item Value="BaficaedpdeuRcctc"/>
+          <Item Value="porcAsigCpg"/>
+          <Item Value="BaficaedpLinRcctc"/>
+          <Item Value="fecIniCpg"/>
+          <Item Value="fecFinCpg"/>
+          <Item Value="CodTipDoc"/>
+          <Item Value="nomCpg"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb4Iterator"
+          id="CpgOptyProdContAccFb4">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb40">
+        <AttrNames>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="Banco1NombreRccpp"/>
+          <Item Value="Banco2DeuRcctc"/>
+          <Item Value="Banco2DeudaRccpp"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="Banco2NombreRccpp"/>
+          <Item Value="Banco1NombreRcctc"/>
+          <Item Value="Banco2NombreRcctc"/>
+          <Item Value="BaficaedpdeuRcctc"/>
+          <Item Value="BaficaedpLinRcctc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb5Iterator"
+          id="CpgOptyProdContAccFb5">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb50">
+        <AttrNames>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="NomProd"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="MontoMinimo"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="PlazoMaximo"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="MontoMaximo"/>
+          <Item Value="Banco2DeuRcctc"/>
+          <Item Value="PlazoMinimo"/>
+          <Item Value="Banco2DeudaRccpp"/>
+          <Item Value="Teamin"/>
+          <Item Value="BaficaedpdeuRcctc"/>
+          <Item Value="Teamax"/>
+          <Item Value="BaficaedpLinRcctc"/>
+          <Item Value="SbsBaficaedpRccpp"/>
+          <Item Value="Tceamin"/>
+          <Item Value="Tceamax"/>
+          <Item Value="CodTipDoc"/>
+          <Item Value="Cuota"/>
+          <Item Value="SegundoNombre"/>
+          <Item Value="OrganizationName"/>
+          <Item Value="Sl01nom"/>
+          <Item Value="Ruc"/>
+          <Item Value="Cliente"/>
+          <Item Value="PaisEmp"/>
+          <Item Value="TipoZonaCourier"/>
+          <Item Value="DeptEmp"/>
+          <Item Value="Banco1NombreRcctc"/>
+          <Item Value="ProvEmp"/>
+          <Item Value="Banco2NombreRcctc"/>
+          <Item Value="DirEmp"/>
+          <Item Value="Banco1NombreRccpp"/>
+          <Item Value="DistEmp"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb6Iterator"
+          id="CpgOptyProdContAccFb6">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb60">
+        <AttrNames>
+          <Item Value="TcNombrebin1"/>
+          <Item Value="TcNombrebin2"/>
+          <Item Value="TcNombrebin3"/>
+          <Item Value="TcNombrebin4"/>
+          <Item Value="TcPct1"/>
+          <Item Value="TcPct2"/>
+          <Item Value="TcPct3"/>
+          <Item Value="TcPct4"/>
+          <Item Value="TcTea1"/>
+          <Item Value="TcTea2"/>
+          <Item Value="TcTea3"/>
+          <Item Value="TcTea4"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CpgOptyProdContAccFb7Iterator"
+          id="CpgOptyProdContAccFb7">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb70">
+        <AttrNames>
+          <Item Value="Propension"/>
+          <Item Value="Decil"/>
+          <Item Value="Flujo"/>
+          <Item Value="CodigoProducto"/>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="codCpg"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="cantOfertasCpg"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="periodCpg"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="segCpg"/>
+          <Item Value="Banco2DeuRcctc"/>
+          <Item Value="activoCpg"/>
+          <Item Value="Banco2DeudaRccpp"/>
+          <Item Value="codProdCpg"/>
+          <Item Value="BaficaedpdeuRcctc"/>
+          <Item Value="porcAsigCpg"/>
+          <Item Value="BaficaedpLinRcctc"/>
+          <Item Value="fecIniCpg"/>
+          <Item Value="SbsBaficaedpRccpp"/>
+          <Item Value="fecFinCpg"/>
+          <Item Value="CodTipDoc"/>
+          <Item Value="nomCpg"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codTipGest">
+      <AttrNames>
+        <Item Value="codTipGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codGrupGest">
+      <AttrNames>
+        <Item Value="codGrupGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codDetGest">
+      <AttrNames>
+        <Item Value="codDetGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idFb">
+      <AttrNames>
+        <Item Value="idFb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="telf">
+      <AttrNames>
+        <Item Value="telf"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_tipoGest" id="tipoGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_grupGest" id="grupGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_detGest" id="detGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idEjVenta">
+      <AttrNames>
+        <Item Value="idEjVenta"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="ejVenta">
+      <AttrNames>
+        <Item Value="ejVenta"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="nomFb">
+      <AttrNames>
+        <Item Value="nomFb"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="PopupFeedbackVO1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

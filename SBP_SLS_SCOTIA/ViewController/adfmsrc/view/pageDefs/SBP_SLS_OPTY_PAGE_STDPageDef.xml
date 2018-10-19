@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_OPTY_PAGE_STDPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CpgOptyProdContAccFb1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb1Iterator"/>
+    <iterator Binds="PopupFeedbackVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="PopupFeedbackVO1Iterator"/>
+    <iterator Binds="FeedBackVo1" RangeSize="25" DataControl="amSBPDataControl"
+              id="FeedBackVo1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CpgOptyProdContAccFb1Iterator" id="Nombre">
+      <AttrNames>
+        <Item Value="Nombre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb1Iterator"
+                     id="ApellidoPaterno">
+      <AttrNames>
+        <Item Value="ApellidoPaterno"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb1Iterator" id="Genero">
+      <AttrNames>
+        <Item Value="Genero"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb1Iterator"
+                     id="SegundoNombre">
+      <AttrNames>
+        <Item Value="SegundoNombre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CpgOptyProdContAccFb1Iterator" id="NomProd">
+      <AttrNames>
+        <Item Value="NomProd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="telf">
+      <AttrNames>
+        <Item Value="telf"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_tipoGest" id="tipoGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codTipGest">
+      <AttrNames>
+        <Item Value="codTipGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codGrupGest">
+      <AttrNames>
+        <Item Value="codGrupGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codDetGest">
+      <AttrNames>
+        <Item Value="codDetGest"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_grupGest" id="grupGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_detGest" id="detGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="emailAd">
+      <AttrNames>
+        <Item Value="emailAd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="direccionAd">
+      <AttrNames>
+        <Item Value="direccionAd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="telfAd">
+      <AttrNames>
+        <Item Value="telfAd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="montoDesem">
+      <AttrNames>
+        <Item Value="montoDesem"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="observaciones">
+      <AttrNames>
+        <Item Value="observaciones"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="fec2daLlam">
+      <AttrNames>
+        <Item Value="fec2daLlam"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="nomFb">
+      <AttrNames>
+        <Item Value="nomFb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="fecGestion">
+      <AttrNames>
+        <Item Value="fecGestion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idCanal">
+      <AttrNames>
+        <Item Value="idCanal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="canal">
+      <AttrNames>
+        <Item Value="canal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idJefCanal">
+      <AttrNames>
+        <Item Value="idJefCanal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="jefCanal">
+      <AttrNames>
+        <Item Value="jefCanal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idSup">
+      <AttrNames>
+        <Item Value="idSup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="sup">
+      <AttrNames>
+        <Item Value="sup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idEjVenta">
+      <AttrNames>
+        <Item Value="idEjVenta"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="ejVenta">
+      <AttrNames>
+        <Item Value="ejVenta"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="idFb">
+      <AttrNames>
+        <Item Value="idFb"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="FeedBackVo1Iterator" id="FeedBackVo1">
+      <nodeDefinition DefName="vo.FeedBackVo" Name="FeedBackVo10">
+        <AttrNames>
+          <Item Value="IdFb"/>
+          <Item Value="CanalFb"/>
+          <Item Value="CodCanalFb"/>
+          <Item Value="DescAdGestion"/>
+          <Item Value="NomCpg"/>
+          <Item Value="CodCpg"/>
+          <Item Value="Sup"/>
+          <Item Value="JefCanal"/>
+          <Item Value="EjVenta"/>
+          <Item Value="FecGestion"/>
+          <Item Value="NomFb"/>
+          <Item Value="MontoDesem"/>
+          <Item Value="MontoDesem2of"/>
+          <Item Value="TipoGestion"/>
+          <Item Value="GrupoGestion"/>
+          <Item Value="DetGestion"/>
+          <Item Value="telefono"/>
+          <Item Value="idSup"/>
+          <Item Value="idEjVenta"/>
+          <Item Value="idJefCanal"/>
+          <Item Value="tipoGestion"/>
+          <Item Value="grupoGestion"/>
+          <Item Value="detGestion"/>
+          <Item Value="codTipGest"/>
+          <Item Value="codGrupGest"/>
+          <Item Value="codDetGest"/>
+          <Item Value="monto"/>
+          <Item Value="nomTipGest"/>
+          <Item Value="nomGrupGest"/>
+          <Item Value="nomDetGest"/>
+          <Item Value="obs"/>
+          <Item Value="telfAd"/>
+          <Item Value="dirAd"/>
+          <Item Value="emailAd"/>
+          <Item Value="fec2daLlam"/>
+          <Item Value="IdLead"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

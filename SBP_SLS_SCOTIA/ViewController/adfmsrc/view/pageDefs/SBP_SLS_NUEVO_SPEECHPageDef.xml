@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="SBP_SLS_NUEVO_SPEECHPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsDeptProvDistSpeech3_1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsDeptProvDistSpeech3_1Iterator"/>
+    <iterator Binds="SbpSlsDeptProvDistSpeech4VO1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsDeptProvDistSpeech4VO1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator"
+                     id="codDist">
+      <AttrNames>
+        <Item Value="codDist"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator" StaticList="false"
+          Uses="LOV_dist" id="dist" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator"
+                     id="codProv">
+      <AttrNames>
+        <Item Value="codProv"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator" StaticList="false"
+          Uses="LOV_prov" id="prov" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator" StaticList="false"
+          Uses="LOV_dept" id="dept" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator"
+                     id="codDept">
+      <AttrNames>
+        <Item Value="codDept"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SbpSlsDeptProvDistSpeech3_1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator" StaticList="false"
+          Uses="LOV_dept" id="dept1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator"
+                     id="codDept1">
+      <AttrNames>
+        <Item Value="codDept"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator"
+                     id="codProv1">
+      <AttrNames>
+        <Item Value="codProv"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator" StaticList="false"
+          Uses="LOV_prov" id="prov1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator" StaticList="false"
+          Uses="LOV_dist" id="dist1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator"
+                     id="codDist1">
+      <AttrNames>
+        <Item Value="codDist"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SbpSlsDeptProvDistSpeech4VO1Iterator"
+            id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

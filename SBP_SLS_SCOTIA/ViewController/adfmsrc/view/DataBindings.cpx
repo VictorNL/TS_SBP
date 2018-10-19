@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.65.57" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/SBP_LIST_CAMP.jspx" usageId="view_SBP_LIST_CAMPPageDef"/>
+    <page path="/SBP_ASIG_CPG_SP.jspx" usageId="view_SBP_ASIG_CPG_SPPageDef"/>
+    <page path="/SBP_SLS_PRINC.jspx" usageId="view_SBP_SLS_PRINCPageDef"/>
+    <page path="/SBP_CREATE_CPG.jspx" usageId="view_SBP_CREATE_CPGPageDef"/>
+    <page path="/SBP_ASOG_EJ_VENT.jspx" usageId="view_SBP_ASOG_EJ_VENTPageDef"/>
+    <page path="/SBP_ASIGNACION_EJ_VENTA.jspx"
+          usageId="view_SBP_ASIGNACION_EJ_VENTAPageDef"/>
+    <page path="/SBP_CONF_CPG_SP.jspx" usageId="view_SBP_CONF_CPG_SPPageDef"/>
+    <page path="/SBP_SLS_LIST_PROD.jspx"
+          usageId="view_SBP_SLS_LIST_PRODPageDef"/>
+    <page path="/SBP_SLS_CONT_FEED.jspx"
+          usageId="view_SBP_SLS_CONT_FEEDPageDef"/>
+    <page path="/SBP_SLS_PANT_OPTY.jspx"
+          usageId="view_SBP_SLS_PANT_OPTYPageDef"/>
+    <page path="/test.jspx" usageId="view_testPageDef"/>
+    <page path="/SBP_SLS_OPP_PAGE.jspx" usageId="view_SBP_SLS_OPP_PAGEPageDef"/>
+    <page path="/SBP_SLS_LIST_SUP_X_JC.jspx"
+          usageId="view_SBP_SLS_LIST_SUP_X_JCPageDef"/>
+    <page path="/SBP_SLS_REASIG_JC_SUP.jspx"
+          usageId="view_SBP_SLS_REASIG_JC_SUPPageDef"/>
+    <page path="/SBP_SLS_LIST_EJV_X_SUP.jspx"
+          usageId="view_SBP_SLS_LIST_EJV_X_SUPPageDef"/>
+    <page path="/SBP_SLS_LIST_CANALES.jspx"
+          usageId="view_SBP_SLS_LIST_CANALESPageDef"/>
+    <page path="/SBP_SLS_REASIG_CAN_SCT.jspx"
+          usageId="view_SBP_SLS_REASIG_CAN_SCTPageDef"/>
+    <page path="/SBP_SLS_PRINC_SCT.jspx"
+          usageId="view_SBP_SLS_PRINC_SCTPageDef"/>
+    <page path="/SBP_SLS_OPTY_PAGE_STD.jspx"
+          usageId="view_SBP_SLS_OPTY_PAGE_STDPageDef"/>
+    <page path="/SBP_SLS_CPG_PAUSA.jspx"
+          usageId="view_SBP_SLS_CPG_PAUSAPageDef"/>
+    <page path="/SBP_SLS_PRINC_JEF_CAN.jspx"
+          usageId="view_SBP_SLS_PRINC_JEF_CANPageDef"/>
+    <page path="/SBP_SLS_BUSQUEDA_DNI_OPP.jspx"
+          usageId="view_SBP_SLS_BUSQUEDA_DNI_OPPPageDef"/>
+    <page path="/prueba.jspx" usageId="view_pruebaPageDef"/>
+    <page path="/SBP_SLS_OPP_PAGE_STD.jspx"
+          usageId="view_SBP_SLS_OPP_PAGE_STDPageDef"/>
+    <page path="/SBP_SLS_INF_JEF_CAN.jspx"
+          usageId="view_SBP_SLS_INF_JEF_CANPageDef"/>
+    <page path="/SBP_SLS_AS_REASIG.jspx"
+          usageId="view_SBP_SLS_AS_REASIGPageDef"/>
+    <page path="/SBP_SLS_FUNNEL.jspx" usageId="view_SBP_SLS_FUNNELPageDef"/>
+    <page path="/SBP_SLS_DELETE_LEADS.jspx"
+          usageId="view_SBP_SLS_DELETE_LEADSPageDef"/>
+    <page path="/SBP_SLS_REP_VENTA_EV.jspx"
+          usageId="view_SBP_SLS_REP_VENTA_EVPageDef"/>
+    <page path="/SBP_SLS_CARGA_MASIVA.jspx"
+          usageId="view_SBP_SLS_CARGA_MASIVAPageDef"/>
+    <page path="/SBP_SLS_KARDEX_JEF_CAN.jspx"
+          usageId="view_SBP_SLS_KARDEX_JEF_CANPageDef"/>
+    <page path="/SBP_SLS_KARDEX_SUP.jspx"
+          usageId="view_SBP_SLS_KARDEX_SUPPageDef"/>
+    <page path="/SBP_SLS_REP_AGENDAS_EJ_V.jspx"
+          usageId="view_SBP_SLS_REP_AGENDAS_EJ_VPageDef"/>
+    <page path="/SBP_SLS_VENTA_OBS_BO.jspx"
+          usageId="view_SBP_SLS_VENTA_OBS_BOPageDef"/>
+    <page path="/SBP_SLS_CARGA_FEEDBACK.jspx"
+          usageId="view_SBP_SLS_CARGA_FEEDBACKPageDef"/>
+    <page path="/SBP_SLS_VENTA_SPEECH.jspx"
+          usageId="view_SBP_SLS_VENTA_SPEECHPageDef"/>
+    <page path="/SBP_SLS_NUEVO_SPEECH.jspx"
+          usageId="view_SBP_SLS_NUEVO_SPEECHPageDef"/>
+    <page path="/SBP_SLS_SPEECH_VENTA_NEW.jspx"
+          usageId="view_SBP_SLS_SPEECH_VENTA_NEWPageDef"/>
+    <page path="/SBP_SLS_VENTAS_X_EV_OBS.jspx"
+          usageId="view_SBP_SLS_VENTAS_X_EV_OBSPageDef"/>
+    <page path="/SBP_SLS_VENTA_OBS_EJ_VENTA.jspx"
+          usageId="view_SBP_SLS_VENTA_OBS_EJ_VENTAPageDef"/>
+    <page path="/SBP_SLS_SPEECH_BACK_OFFICE.jspx"
+          usageId="view_SBP_SLS_SPEECH_BACK_OFFICEPageDef"/>
+    <page path="/SBP_SLS_REASIG_X_FILT.jspx"
+          usageId="view_SBP_SLS_REASIG_X_FILTPageDef"/>
+    <page path="/SBP_SLS_REASIG_EVENTA_NEW.jspx"
+          usageId="view_SBP_SLS_REASIG_EVENTA_NEWPageDef"/>
+    <page path="/SBP_SLS_LIST_EV_MANT.jspx"
+          usageId="view_SBP_SLS_LIST_EV_MANTPageDef"/>
+    <page path="/PRUEBA_SFTP.jspx" usageId="view_PRUEBA_SFTPPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_SBP_LIST_CAMPPageDef"
+          path="view.pageDefs.SBP_LIST_CAMPPageDef"/>
+    <page id="view_SBP_ASIG_CPG_SPPageDef"
+          path="view.pageDefs.SBP_ASIG_CPG_SPPageDef"/>
+    <page id="view_SBP_SLS_PRINCPageDef"
+          path="view.pageDefs.SBP_SLS_PRINCPageDef"/>
+    <page id="view_SBP_CREATE_CPGPageDef"
+          path="view.pageDefs.SBP_CREATE_CPGPageDef"/>
+    <page id="view_SBP_ASOG_EJ_VENTPageDef"
+          path="view.pageDefs.SBP_ASOG_EJ_VENTPageDef"/>
+    <page id="view_SBP_ASIGNACION_EJ_VENTAPageDef"
+          path="view.pageDefs.SBP_ASIGNACION_EJ_VENTAPageDef"/>
+    <page id="view_SBP_CONF_CPG_SPPageDef"
+          path="view.pageDefs.SBP_CONF_CPG_SPPageDef"/>
+    <page id="view_SBP_SLS_LIST_PRODPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_PRODPageDef"/>
+    <page id="view_SBP_SLS_CONT_FEEDPageDef"
+          path="view.pageDefs.SBP_SLS_CONT_FEEDPageDef"/>
+    <page id="view_SBP_SLS_PANT_OPTYPageDef"
+          path="view.pageDefs.SBP_SLS_PANT_OPTYPageDef"/>
+    <page id="view_testPageDef" path="view.pageDefs.testPageDef"/>
+    <page id="view_SBP_SLS_OPP_PAGEPageDef"
+          path="view.pageDefs.SBP_SLS_OPP_PAGEPageDef"/>
+    <page id="view_SBP_SLS_LIST_SUP_X_JCPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_SUP_X_JCPageDef"/>
+    <page id="view_SBP_SLS_REASIG_JC_SUPPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_JC_SUPPageDef"/>
+    <page id="view_SBP_SLS_LIST_EJV_X_SUPPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_EJV_X_SUPPageDef"/>
+    <page id="view_SBP_SLS_LIST_CANALESPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_CANALESPageDef"/>
+    <page id="view_SBP_SLS_REASIG_CAN_SCTPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_CAN_SCTPageDef"/>
+    <page id="view_SBP_SLS_PRINC_SCTPageDef"
+          path="view.pageDefs.SBP_SLS_PRINC_SCTPageDef"/>
+    <page id="view_SBP_SLS_OPTY_PAGE_STDPageDef"
+          path="view.pageDefs.SBP_SLS_OPTY_PAGE_STDPageDef"/>
+    <page id="view_SBP_SLS_CPG_PAUSAPageDef"
+          path="view.pageDefs.SBP_SLS_CPG_PAUSAPageDef"/>
+    <page id="view_SBP_SLS_PRINC_JEF_CANPageDef"
+          path="view.pageDefs.SBP_SLS_PRINC_JEF_CANPageDef"/>
+    <page id="view_SBP_SLS_BUSQUEDA_DNI_OPPPageDef"
+          path="view.pageDefs.SBP_SLS_BUSQUEDA_DNI_OPPPageDef"/>
+    <page id="view_pruebaPageDef" path="view.pageDefs.pruebaPageDef"/>
+    <page id="view_SBP_SLS_OPP_PAGE_STDPageDef"
+          path="view.pageDefs.SBP_SLS_OPP_PAGE_STDPageDef"/>
+    <page id="view_SBP_SLS_INF_JEF_CANPageDef"
+          path="view.pageDefs.SBP_SLS_INF_JEF_CANPageDef"/>
+    <page id="view_SBP_SLS_AS_REASIGPageDef"
+          path="view.pageDefs.SBP_SLS_AS_REASIGPageDef"/>
+    <page id="view_SBP_SLS_FUNNELPageDef"
+          path="view.pageDefs.SBP_SLS_FUNNELPageDef"/>
+    <page id="view_SBP_SLS_DELETE_LEADSPageDef"
+          path="view.pageDefs.SBP_SLS_DELETE_LEADSPageDef"/>
+    <page id="view_SBP_SLS_REP_VENTA_EVPageDef"
+          path="view.pageDefs.SBP_SLS_REP_VENTA_EVPageDef"/>
+    <page id="view_SBP_SLS_CARGA_MASIVAPageDef"
+          path="view.pageDefs.SBP_SLS_CARGA_MASIVAPageDef"/>
+    <page id="view_SBP_SLS_KARDEX_JEF_CANPageDef"
+          path="view.pageDefs.SBP_SLS_KARDEX_JEF_CANPageDef"/>
+    <page id="view_SBP_SLS_KARDEX_SUPPageDef"
+          path="view.pageDefs.SBP_SLS_KARDEX_SUPPageDef"/>
+    <page id="view_SBP_SLS_REP_AGENDAS_EJ_VPageDef"
+          path="view.pageDefs.SBP_SLS_REP_AGENDAS_EJ_VPageDef"/>
+    <page id="view_SBP_SLS_VENTA_OBS_BOPageDef"
+          path="view.pageDefs.SBP_SLS_VENTA_OBS_BOPageDef"/>
+    <page id="view_SBP_SLS_CARGA_FEEDBACKPageDef"
+          path="view.pageDefs.SBP_SLS_CARGA_FEEDBACKPageDef"/>
+    <page id="view_SBP_SLS_VENTA_SPEECHPageDef"
+          path="view.pageDefs.SBP_SLS_VENTA_SPEECHPageDef"/>
+    <page id="view_SBP_SLS_NUEVO_SPEECHPageDef"
+          path="view.pageDefs.SBP_SLS_NUEVO_SPEECHPageDef"/>
+    <page id="view_SBP_SLS_SPEECH_VENTA_NEWPageDef"
+          path="view.pageDefs.SBP_SLS_SPEECH_VENTA_NEWPageDef"/>
+    <page id="view_SBP_SLS_VENTAS_X_EV_OBSPageDef"
+          path="view.pageDefs.SBP_SLS_VENTAS_X_EV_OBSPageDef"/>
+    <page id="view_SBP_SLS_VENTA_OBS_EJ_VENTAPageDef"
+          path="view.pageDefs.SBP_SLS_VENTA_OBS_EJ_VENTAPageDef"/>
+    <page id="view_SBP_SLS_SPEECH_BACK_OFFICEPageDef"
+          path="view.pageDefs.SBP_SLS_SPEECH_BACK_OFFICEPageDef"/>
+    <page id="view_SBP_SLS_REASIG_X_FILTPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_X_FILTPageDef"/>
+    <page id="view_SBP_SLS_REASIG_EVENTA_NEWPageDef"
+          path="view.pageDefs.SBP_SLS_REASIG_EVENTA_NEWPageDef"/>
+    <page id="view_SBP_SLS_LIST_EV_MANTPageDef"
+          path="view.pageDefs.SBP_SLS_LIST_EV_MANTPageDef"/>
+    <page id="view_PRUEBA_SFTPPageDef" path="view.pageDefs.PRUEBA_SFTPPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="amSBPDataControl" Package="am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="amSBPLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

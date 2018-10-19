@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="SBP_SLS_REASIG_X_FILTPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsProd1VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd1VO1Iterator"/>
+    <iterator Binds="SbpSlsProd2VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd2VO1Iterator"/>
+    <iterator Binds="SbpSlsProd3VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsProd3VO1Iterator"/>
+    <iterator Binds="PopupFeedbackVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="PopupFeedbackVO1Iterator"/>
+    <iterator Binds="SbpSlsReasigEvXSupFilView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsReasigEvXSupFilView1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="SbpSlsProd1VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsProd2VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsProd3VO1Iterator" StaticList="false"
+          Uses="LOV_descBin" id="descBin2" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <action IterBinding="SbpSlsProd1VO1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="SbpSlsProd2VO1Iterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="SbpSlsProd3VO1Iterator" id="CreateInsert2"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_tipoGest" id="tipoGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_grupGest" id="grupGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="PopupFeedbackVO1Iterator" StaticList="false"
+          Uses="LOV_detGest" id="detGest" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codTipGest">
+      <AttrNames>
+        <Item Value="codTipGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codGrupGest">
+      <AttrNames>
+        <Item Value="codGrupGest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PopupFeedbackVO1Iterator" id="codDetGest">
+      <AttrNames>
+        <Item Value="codDetGest"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="SbpSlsReasigEvXSupFilView1Iterator"
+          id="SbpSlsReasigEvXSupFilView1">
+      <nodeDefinition DefName="vo.SbpSlsReasigEvXSupFilView"
+                      Name="SbpSlsReasigEvXSupFilView10">
+        <AttrNames>
+          <Item Value="IdSup"/>
+          <Item Value="NomSup"/>
+          <Item Value="IdEjVenta"/>
+          <Item Value="NomEjVenta"/>
+          <Item Value="Cantidad"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="SbpSlsProd1VO1Iterator" id="codBin">
+      <AttrNames>
+        <Item Value="codBin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SbpSlsProd2VO1Iterator" id="codBin1">
+      <AttrNames>
+        <Item Value="codBin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SbpSlsProd3VO1Iterator" id="codBin2">
+      <AttrNames>
+        <Item Value="codBin"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="PopupFeedbackVO1Iterator" id="CreateInsert3"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

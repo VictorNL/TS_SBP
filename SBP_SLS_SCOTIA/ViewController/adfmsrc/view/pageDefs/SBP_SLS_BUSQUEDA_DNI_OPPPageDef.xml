@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_BUSQUEDA_DNI_OPPPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CpgOptyProdContAccFb8" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="CpgOptyProdContAccFb8Iterator"/>
+    <iterator Binds="SbpSlsLeadXDniView1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsLeadXDniView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CpgOptyProdContAccFb8Iterator"
+          id="CpgOptyProdContAccFb8">
+      <nodeDefinition DefName="vo.CpgOptyProdContAccFb"
+                      Name="CpgOptyProdContAccFb80">
+        <AttrNames>
+          <Item Value="Banco1DeuRcctc"/>
+          <Item Value="Nombre"/>
+          <Item Value="Banco1DeudaRccpp"/>
+          <Item Value="NomProd"/>
+          <Item Value="Banco1LinRcctc"/>
+          <Item Value="MonLead"/>
+          <Item Value="NomLead"/>
+          <Item Value="montoLead"/>
+          <Item Value="Banco2LinRcctc"/>
+          <Item Value="IdLead"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SbpSlsLeadXDniView1Iterator" id="SbpSlsLeadXDniView1">
+      <nodeDefinition DefName="vo.SbpSlsLeadXDniView"
+                      Name="SbpSlsLeadXDniView10">
+        <AttrNames>
+          <Item Value="NomCont"/>
+          <Item Value="LeadName"/>
+          <Item Value="Producto"/>
+          <Item Value="Monto"/>
+          <Item Value="IdLead"/>
+          <Item Value="IdTbl"/>
+          <Item Value="TcNomBin1"/>
+          <Item Value="TcNomBin2"/>
+          <Item Value="TcNomBin3"/>
+          <Item Value="Dni"/>
+          <Item Value="Telefono"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

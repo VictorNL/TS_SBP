@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_ASIGNACION_EJ_VENTAPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsAsigCpgEjecVentView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsAsigCpgEjecVentView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="SbpSlsAsigCpgEjecVentView1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="amSBPDataControl"/>
+    <button IterBinding="SbpSlsAsigCpgEjecVentView1Iterator"
+            id="borrarRegistro" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="borrarRegistro"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+  </bindings>
+</pageDefinition>

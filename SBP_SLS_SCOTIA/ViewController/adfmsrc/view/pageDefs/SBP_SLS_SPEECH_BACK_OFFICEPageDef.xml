@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="SBP_SLS_SPEECH_BACK_OFFICEPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsUbigeoEvVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsUbigeoEvVO1Iterator"/>
+    <iterator Binds="SbpSlsUbigeo2VO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsUbigeo2VO1Iterator"/>
+  </executables>
+  <bindings>
+    <list IterBinding="SbpSlsUbigeoEvVO1Iterator" StaticList="false"
+          Uses="LOV_dept" id="dept" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsUbigeoEvVO1Iterator" id="codDept">
+      <AttrNames>
+        <Item Value="codDept"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsUbigeoEvVO1Iterator" StaticList="false"
+          Uses="LOV_prov" id="prov" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsUbigeoEvVO1Iterator" id="codProv">
+      <AttrNames>
+        <Item Value="codProv"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsUbigeoEvVO1Iterator" StaticList="false"
+          Uses="LOV_dist" id="dist" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsUbigeoEvVO1Iterator" id="codDist">
+      <AttrNames>
+        <Item Value="codDist"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SbpSlsUbigeoEvVO1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <attributeValues IterBinding="SbpSlsUbigeo2VO1Iterator" id="codDept1">
+      <AttrNames>
+        <Item Value="codDept"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsUbigeo2VO1Iterator" StaticList="false"
+          Uses="LOV_dept" id="dept1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="SbpSlsUbigeo2VO1Iterator" StaticList="false"
+          Uses="LOV_prov" id="prov1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsUbigeo2VO1Iterator" id="codProv1">
+      <AttrNames>
+        <Item Value="codProv"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="SbpSlsUbigeo2VO1Iterator" StaticList="false"
+          Uses="LOV_dist" id="dist1" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="SbpSlsUbigeo2VO1Iterator" id="codDist1">
+      <AttrNames>
+        <Item Value="codDist"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="SbpSlsUbigeo2VO1Iterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

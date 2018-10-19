@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="SBP_SLS_REASIG_EVENTA_NEWPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsReasigEvXSupView1" RangeSize="25"
+              DataControl="amSBPDataControl"
+              id="SbpSlsReasigEvXSupView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsReasigEvXSupView1Iterator"
+          id="SbpSlsReasigEvXSupView1">
+      <nodeDefinition DefName="vo.SbpSlsReasigEvXSupView"
+                      Name="SbpSlsReasigEvXSupView10">
+        <AttrNames>
+          <Item Value="IdEjVenta"/>
+          <Item Value="NomEjVenta"/>
+          <Item Value="Cantidad"/>
+          <Item Value="IdSup"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

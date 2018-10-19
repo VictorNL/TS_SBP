@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="SBP_SLS_VENTA_OBS_BOPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SbpSlsRepBackOfVO1" RangeSize="25"
+              DataControl="amSBPDataControl" id="SbpSlsRepBackOfVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SbpSlsRepBackOfVO1Iterator" id="SbpSlsRepBackOfVO1">
+      <nodeDefinition DefName="vo.SbpSlsRepBackOfVO" Name="SbpSlsRepBackOfVO10">
+        <AttrNames>
+          <Item Value="idEjVenta"/>
+          <Item Value="ejVenta"/>
+          <Item Value="dni"/>
+          <Item Value="producto"/>
+          <Item Value="monto"/>
+          <Item Value="telf"/>
+          <Item Value="leadName"/>
+          <Item Value="idLead"/>
+          <Item Value="estado"/>
+          <Item Value="motivo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
